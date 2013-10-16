@@ -1,9 +1,8 @@
 
 var app = app || {};
 
-app.Liturgy = Backbone.Model.extend({
-	urlRoot: "liturgies"
-});
+// COMPOSER
+// ................
 
 app.Composer = Backbone.Model.extend({
 	defaults: {
@@ -25,6 +24,8 @@ app.Composers = Backbone.Collection.extend({
 	model: app.Composer
 });
 
+// MEDIA
+// ................
 app.Medium = Backbone.Model.extend({
 	defaults: {
 		"medium"	: "medium not set"
@@ -43,6 +44,8 @@ app.Media = Backbone.Collection.extend({
 	model: app.Medium
 });
 
+// SONG
+// ................
 app.Song = Backbone.Model.extend({
 	urlRoot: "liturgies",
 
@@ -72,16 +75,74 @@ app.Song = Backbone.Model.extend({
 	}
 });
 
+app.Item = Backbone.Model.extend({
+	initialize: function(){
+		this.part = this.get( 'part' );
+		this.song = new app.Song( this.get ('song') );
+	}
+});
+
+app.Items = Backbone.Collection.extend({
+	model: app.Item
+});
+
+// SECTION
+// ................
+app.Section = Backbone.Model.extend({
+	initialize: function(){
+		this.name = this.get( 'name' );
+		this.items = new app.Items( this.get( 'items' ) );
+		this.items.parent = this;
+	},
+
+	parse: function( response ){
+		this.items.reset( response.items );
+		delete response.items;
+		return response;
+	}
+});
+
+app.Sections = Backbone.Collection.extend({
+	model: app.Section
+});
+
+// LITURGY
+// ................
+
+app.Liturgy = Backbone.Model.extend({
+	urlRoot: "liturgies",
+
+	defaults: {
+		"_id"	: "not set",
+		"name"	: "not set",
+		"date"	: "not set"
+	},	
+
+	initialize: function() {
+		this._id 	= this.get( '_id' );
+		this.name 	= this.get( 'name' );
+		this.date 	= this.get( 'date' );
+
+		this.sections = new app.Sections( this.get( 'sections' ) );
+	},
+
+	parse: function( response ){
+		this.sections.reset( response.sections );
+		delete response.sections;
+		return response;
+	}
+});
+
+// ................
+//       MAIN
+// ................
+
 $(function() {
 	liturgy = new app.Liturgy();
-	liturgy.fetch();
-
-	song = new app.Song();
-	song.fetch({
+	liturgy.fetch({
 		success: function(response,xhr) {
 			console.log("Inside success");
 			console.log(response);
-			console.log( "composers.length: " + response.composers.length );
 		},
 		error: function (errorResponse) {
 			console.log(errorResponse)

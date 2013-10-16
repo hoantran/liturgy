@@ -9,12 +9,7 @@ class LiturgyController extends \BaseController {
 	 */
 	public function index()
 	{
-		// return json_decode('{"panda":"Awesome!"}', true);
-		// return json_decode( '{ "Coords": [{ "Accuracy": "30", "Latitude": "53.2778273", "Longitude": "-9.0121648", "Timestamp": "Fri Jun 28 2013 11:43:57 GMT+0100 (IST)" }, { "Accuracy": "30", "Latitude": "53.2778273", "Longitude": "-9.0121648", "Timestamp": "Fri Jun 28 2013 11:43:57 GMT+0100 (IST)" }, { "Accuracy": "30", "Latitude": "53.2778273", "Longitude": "-9.0121648", "Timestamp": "Fri Jun 28 2013 11:43:57 GMT+0100 (IST)" }, { "Accuracy": "30", "Latitude": "53.2778339", "Longitude": "-9.0121466", "Timestamp": "Fri Jun 28 2013 11:45:54 GMT+0100 (IST)" }, { "Accuracy": "30", "Latitude": "53.2778159", "Longitude": "-9.0121201", "Timestamp": "Fri Jun 28 2013 11:45:58 GMT+0100 (IST)" }] }', true );
-		// return json_decode( $this->getSongMedium( "listen" ), true );
-		// return $this->getSongMedium( "listen" );	
-		// $str = "{" . $this->getSongMedium( "listen" ) . "}";
-		$str = $this->getSong();
+		$str = $this->getLiturgy();
 		Log::info( "response:" . $str );
 		return json_decode( $str, true );
 	}
@@ -103,10 +98,10 @@ class LiturgyController extends \BaseController {
 		return '{ "_id": "david id", "firstName": "David", "lastName": "Haas", "picUrl": "url" }';
 	}
 
-	private function getSong() {
+	private function getSong( $id, $title ) {
 		$str = "{";
-		$str .= "\"id\":2,";
-		$str .= "\"title\": \"All the Ends of the Earth\",";
+		$str .= "\"_id\":\"" . $id ."\",";
+		$str .= "\"title\": \"" . $title . "\",";
 		$str .= $this->getComposers() . ",";
 		$str .= $this->getSongMedia();		
 		$str .= "}";
@@ -156,4 +151,61 @@ class LiturgyController extends \BaseController {
 		return $str;
 	}
 
+	private function getAnItem( $part, $songId, $songTitle ){
+		$str = "";
+		$str .= "{";
+		$str .= "\"" . "part\":\"" . $part . "\",";
+		$str .= "\"" . "song\":" . $this->getSong( $songId, $songTitle ) ;
+		$str .= "}";
+
+		return $str;
+	}
+
+	private function getLiturgyItems(){
+		$str = "";
+		$str .= "\"" . "items" . "\"" . ": [";
+		$str .= $this->getAnItem( "Processional", "3", "All the Ends of the Earth" );
+		$str .= ",";
+		$str .= $this->getAnItem( "Responsorial", "78", "Ps 34: Taste and See" );
+		$str .= "]";
+
+		return $str;		
+	}
+
+	private function getALiturgySection( $sectionName ){
+		$str = "";
+		$str .= "{";
+		$str .= "\"" . "name\":\"" . $sectionName . "\",";
+		$str .= $this->getLiturgyItems();
+		$str .= "}";
+
+		return $str;
+	}
+
+	private function getSections(){
+		$str = "";
+		$str .= "\"" . "sections" . "\"" . ": [";
+		$str .= $this->getALiturgySection( "Intro Rite" );
+		$str .= ",";
+		$str .= $this->getALiturgySection( "Liturgy of the Eucharist" );
+		$str .= "]";
+
+		return $str;		
+	}
+
+	private function getLiturgy(){
+		$id = 54;
+		$name = "Twenty-Eight Sunday in Ordinary Time";
+		$date = "Oct 23, 2033";
+
+		$str = "";
+		$str .= "{";
+		$str .= "\"" . "_id\":\"" . $id . "\",";
+		$str .= "\"" . "name\":\"" . $name . "\",";
+		$str .= "\"" . "date\":\"" . $date . "\",";
+		$str .= $this->getSections();
+		$str .= "}";
+
+		return $str;
+	}
 }

@@ -40,9 +40,9 @@ A LITURGY
 	"sections"				: [
 		{
 			"name"			: "section name",
-			"songs"			: [
+			"items"			: [
 				{
-					"function"	: "function of the song",
+					"part"	: "function of the song",
 					"song"		: "song json structure"
 				}
 			]
