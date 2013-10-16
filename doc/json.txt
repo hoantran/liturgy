@@ -1,0 +1,51 @@
+
+A SONG
+
+{
+	"_id"			: "song id",
+	"title"			: "All the Ends of the Earth",
+	"composers"		: [
+		{
+			"_id"			: "david id",
+			"firstName"		: "David",
+			"lastName"		: "Haas",
+			"picUrl"		: "url"
+		},
+		{
+			"_id"			: "marty id",
+			"firstName"		: "Marty",
+			"lastName"		: "Haugen",
+			"picUrl"		: "url"
+		}
+	],
+	"media"			: [
+		{
+			"medium"		: "listen | guitar | piano | vocal | solo | others | links",
+			"mediumList"	: [
+				"listenUrl.1",
+				"listenUrl.2"
+			]
+		}
+	]
+}
+
+
+
+A LITURGY
+
+{
+	"_id"					: "liturgy id",
+	"name"					: "name of the liturgy",
+	"date"					: "date of the liturgy",
+	"sections"				: [
+		{
+			"name"			: "section name",
+			"songs"			: [
+				{
+					"function"	: "function of the song",
+					"song"		: "song json structure"
+				}
+			]
+		}
+	]
+}
