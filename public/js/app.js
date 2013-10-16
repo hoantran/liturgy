@@ -17,6 +17,10 @@ app.Composer = Backbone.Model.extend({
 		this.firstName 	= this.get( 'firstName' );
 		this.lastName 	= this.get( 'lastName' );
 		this.picUrl 	= this.get( 'picUrl' );
+
+		this.on( "change", function( model ){
+			console.log( 'a composer changed!' );
+		} );		
 	}
 });
 
@@ -32,7 +36,7 @@ app.Medium = Backbone.Model.extend({
 	},
 
 	initialize: function () {
-		console.log ("mediumList: " + this.get( 'mediumList' ) );
+		// console.log ("mediumList: " + this.get( 'mediumList' ) );
 
 		if( !this.get( 'mediumList' )){
 			this.set( {mediumList: new Array() } );
@@ -50,7 +54,7 @@ app.Song = Backbone.Model.extend({
 	urlRoot: "liturgies",
 
 	initialize: function(){
-		console.log ("Song: media :" + this.get( 'media' ) );
+		// console.log ("Song: media :" + this.get( 'media' ) );
 
 		this.media = new app.Media( this.get( 'media' ) );
 		this.media.parent = this;
@@ -62,8 +66,8 @@ app.Song = Backbone.Model.extend({
 	},
 
 	parse: function( response ){
-		console.log ( "response.media:", response.media );
-		console.log ( "response.composers:", response.composers );
+		// console.log ( "response.media:", response.media );
+		// console.log ( "response.composers:", response.composers );
 
 		this.media.reset( response.media );
 		delete response.media;
@@ -93,6 +97,17 @@ app.Section = Backbone.Model.extend({
 		this.name = this.get( 'name' );
 		this.items = new app.Items( this.get( 'items' ) );
 		this.items.parent = this;
+
+		// this.on( "all", function( model ){
+		// 	console.log( 'A SECTION changed!' );
+		// }, this );		
+		this.on ( 'all', this.logChange, this );		
+
+		console.log( 'a SECTION INIT-ed' );
+	},
+
+	logChange: function() {
+		console.log( 'A SECTION  changed!' );
 	},
 
 	parse: function( response ){
@@ -103,7 +118,20 @@ app.Section = Backbone.Model.extend({
 });
 
 app.Sections = Backbone.Collection.extend({
-	model: app.Section
+	model: app.Section,
+
+	initialize: function(){
+		// this.on( "change", function( model ){
+		// 	console.log( 'SECTIONS changed!' );
+		// } );
+		this.on ( 'all', this.logChange, this );		
+		// this.on( ‘change’, this.someChange, this);	
+	
+	},
+
+	logChange: function() {
+		console.log( 'SECTIONS changed!' );
+	}
 });
 
 // LITURGY
@@ -124,6 +152,10 @@ app.Liturgy = Backbone.Model.extend({
 		this.date 	= this.get( 'date' );
 
 		this.sections = new app.Sections( this.get( 'sections' ) );
+
+		this.on( "change", function( model ){
+			console.log( 'LITURGY changed!' );
+		} );
 	},
 
 	parse: function( response ){
@@ -141,7 +173,7 @@ $(function() {
 	liturgy = new app.Liturgy();
 	liturgy.fetch({
 		success: function(response,xhr) {
-			console.log("Inside success");
+			// console.log("Inside success");
 			console.log(response);
 		},
 		error: function (errorResponse) {
