@@ -23,4 +23,5 @@ Route::get('/', function()
 
 
 
+Route::resource('/test-js/liturgies', 'LiturgyController');
 Route::resource('liturgies', 'LiturgyController');

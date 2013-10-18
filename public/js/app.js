@@ -170,6 +170,28 @@ app.Liturgy = Backbone.Model.extend({
 // ................
 
 $(function() {
+	//  VIEWS
+	// .............
+	app.LiturgyView = Backbone.View.extend({
+		el: '#container',
+
+		initialize: function(){
+			this.render();
+			this.model.on( "all", this.render, this );
+		},
+
+		template: _.template( $('#liturgy-template').html() ),
+
+		render: function() {
+			// tmpl is a function that takes a JSON object and returns html
+			// this.el is what we defined in tagName. use $el to get access
+			// to jQuery html() function
+			this.$el.html( this.template( this.model.toJSON() ));
+			return this;
+		}
+	});
+
+
 	liturgy = new app.Liturgy();
 	liturgy.fetch({
 		success: function(response,xhr) {
@@ -180,4 +202,6 @@ $(function() {
 			console.log(errorResponse)
 		}
 	});
+
+	liturgyView = new app.LiturgyView( { model: liturgy } );
 });
