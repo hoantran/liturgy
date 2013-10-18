@@ -204,4 +204,7 @@ $(function() {
 	});
 
 	liturgyView = new app.LiturgyView( { model: liturgy } );
+
+	///// EFFECTS
+	
 });

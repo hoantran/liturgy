@@ -9,10 +9,8 @@ html{
 	}
 
 body{
-	font-size: 14px;
-	line-height: 20px;
 	color: #464646;
-	font-family: rooney-web, Georgia, Times New Roman, Times, serif;
+	font-family: OswaldLight;
 	background-color: #fff;
 	text-shadow: 0px 1px 0px #fff;
 	}
@@ -36,28 +34,82 @@ body{
 	background-color: #f4f4f4;
 	color: #fff;
 	text-shadow: none;
-	font-size: 36px;
-	line-height: 40px;
 	color: #333;
 	max-width: 900px;
-	margin-right: auto;
-	margin-left: auto;
+	margin: 10px auto;
+	/*margin-left: auto;*/
 }
 
 .listing {
 	font-size: 18px;	
 }
 
+.medium-listing {
+	float: left;
+	width: 100px;
+}
+
+.medium-listing ul {
+	list-style-type: none;	
+}
+
+.detail-header {
+	font-weight: normal;
+	font-style: italic;
+}
+
+.detail-medium {
+	font-weight: normal;
+}
+
+img.detail-image
+{
+	width: 24px;
+	height: 24px;
+	background:url(img/play-24.png) 0 0;
+}
+
+img.detail-image:hover
+{
+	width: 24px;
+	height: 24px;
+	background:url(img/play-24-hover.png) 0 0;
+}
+
+img.detail-image-pdf
+{
+	width: 24px;
+	height: 24px;
+	background:url(img/pdf-24.png) 0 0;
+}
+
+img.detail-image-pdf:hover
+{
+	width: 24px;
+	height: 24px;
+	background:url(img/pdf-24-hover.png) 0 0;
+}
+
+
+.song-details {
+	text-align: left;
+	margin-left: 160px;
+	display: none;
+}
 
 
 #liturgy-name {
-  font-size: large;
+  /*font-size: large;*/
   font-weight: bold;
   text-align: left;
+  line-height: 50px;
+  font-size: 30px;
+  background-color: #e0e0e0;
 }
 #liturgy-date {
-  font-size: small;
+  font-size: 14px;
   text-align: left;
+  line-height: 10px;
 }
 
 
@@ -98,6 +150,11 @@ body{
 
 .song-title {
 	font-weight: bold;
+}
+
+.song-title:hover {
+	font-weight: normal;
+	color: red;
 }
 
 .song-composers {

@@ -1,14 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head>
-  
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <title>Liturgy Song Planning</title>
+<html><head>  
+  	<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  	<title>Liturgy Song Planning</title>
+  	<link rel="stylesheet" href="lit.css" type="text/css">
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>  
+</head>
 
-  
-  
-  <link rel="stylesheet" href="lit.css" type="text/css">
-
-</head><body>
+<body>
 <div class="container">
 
 	<p id="liturgy-name">Twenty-Seventh Sunday in Ordinary Time</p>
@@ -23,13 +21,53 @@
 				<div id="part-title" class="part-cell">Processional</div>
 				<div id="part-song" class="part-cell"><span class="song-title">All the Ends of the Earth</span><span class="song-composers">(Schutte)</span></div>
 			</div>
+			<div class="song-details">
+				<!-- one medium -->
+				<div class="medium-listing">
+					<ul>
+						<li class="detail-header">listen</li>
+						<li class="detail-medium"><img class="detail-image" /></li>
+						<li class="detail-medium"><img class="detail-image" /></li>
+					</ul>
+				</div>
+				<!-- one medium -->
+				<div class="medium-listing">
+					<ul>
+						<li class="detail-header">guitar</li>
+						<li class="detail-medium"><img class="detail-image-pdf" /></li>
+						<li class="detail-medium"><img class="detail-image-pdf" /></li>
+					</ul>
+				</div>
+				<!-- one medium -->
+				<div class="medium-listing">
+					<ul>
+						<li class="detail-header">vocal</li>
+						<li class="detail-medium"><img class="detail-image-pdf" /></li>
+						<li class="detail-medium"><img class="detail-image-pdf" /></li>
+						<li class="detail-medium"><img class="detail-image-pdf" /></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end song-details -->
+			<div class="part-divider"></div>
 
 			<div class="section-row">
 				<div id="part-title" class="part-cell">Responsorial</div>
 				<div id="part-song" class="part-cell"><span class="song-title">Ps 23: Shepherd Me, O God</span><span class="song-composers">(Haugen)</span></div>
 			</div>
+			<div class="song-details">
+				<div class="medium-listing">
+					<ul>
+						<li class="detail-header">listen</li>
+						<li class="detail-medium"><a href="#">file 1</a></li>
+						<li class="detail-medium"><a href="#">file 2</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end song-details -->
+			<div class="part-divider"></div>
 		</div>
-
+		<!-- end one section -->
 
 		<!-- one section -->
 		<div class="section-name">B</div>
@@ -49,5 +87,13 @@
 	</div>
 	<!-- end listing -->
 </div>
+
+<script>
+	$(function() {
+		$( ".song-title" ).click(function() {
+	  		$( ".song-details" ).toggle( "slow" );
+		});
+	});
+</script>
 
 </body></html>
