@@ -90,6 +90,19 @@ img.detail-image-pdf:hover
 	background:url(img/pdf-24-hover.png) 0 0;
 }
 
+img.detail-image-link
+{
+	width: 24px;
+	height: 24px;
+	background:url(img/link-24.png) 0 0;
+}
+
+img.detail-image-link:hover
+{
+	width: 24px;
+	height: 24px;
+	background:url(img/link-24-hover.png) 0 0;
+}
 
 .song-details {
 	text-align: left;
