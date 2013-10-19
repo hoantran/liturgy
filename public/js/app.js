@@ -172,26 +172,114 @@ app.Liturgy = Backbone.Model.extend({
 $(function() {
 	//  VIEWS
 	// .............
+
+	app.ItemView = Backbone.View.extend( {
+		template: _.template( $( '#item-template' ).html() ),
+
+		render: function() {
+			this.$el.html( this.template() );
+			return this;
+		}
+	} );
+
+	app.SectionView = Backbone.View.extend( {
+
+		initialize: function( section ){
+			this.section = section ;
+			this.render();
+		},
+
+		template: _.template( $( '#section-template' ).html() ),
+
+		render: function() {
+			this.$el.html( this.template( this.model.toJSON() ));
+			$( '.section-content', this.$el ).html( 'Can not seem to let you go!' );
+			// var rumble = $( '.section-content', this.$el );
+			// console.log( 'CONTENT: ' + rumble.html() );
+			return this;
+		}
+	} );
+
+
+	// LISTING
+	app.ListingView = Backbone.View.extend({
+		el: '.listing',
+
+		initialize: function( mySections ){
+			this.sections = mySections;
+			this.render();
+		},
+
+		// template: _.template( $( '#listing-template' ).html() ),
+
+		render: function() {
+			// this.$el.html( this.template() );
+
+			// var meat = $( this.$el ).html();
+			// console.log( "MEAT: " + meat );
+
+			// console.log( 'subview: ' + listingView.render().el );
+			// this.$el.append( listingView.render().el );
+
+			var sections = this.sections;
+			if( sections !== null && typeof sections !== 'undefined'){
+				// 1. collect all rendered DOM elements from child views
+				var domEl = $([]);
+				sections.each( function( aSection ) {
+					var sectionView = new app.SectionView( {
+						model: aSection
+					});
+					domEl.push( sectionView.render().el );
+				}, this );
+
+				// 2. then stick it in the document
+				this.$el.html( domEl );
+			}
+
+			return this;
+		}
+	});
+
+	// LITURGY
 	app.LiturgyView = Backbone.View.extend({
-		el: '#container',
+		el: '.container',
 
 		initialize: function(){
 			this.render();
 			this.model.on( "all", this.render, this );
+			console.log( "EL:" + this.el );
 		},
 
-		template: _.template( $('#liturgy-template').html() ),
+		template: _.template( $( '#liturgy-template' ).html() ),
 
 		render: function() {
 			// tmpl is a function that takes a JSON object and returns html
 			// this.el is what we defined in tagName. use $el to get access
 			// to jQuery html() function
 			this.$el.html( this.template( this.model.toJSON() ));
+
+			var sections = this.model.sections;
+			var listingView = new app.ListingView( sections );
+			listingView.render();
+			// console.log( 'subview: ' + listingView.render().el );
+			// this.$el.append( listingView.render().el );
+
+			// if( sections !== null && typeof sections !== 'undefined'){
+			// 	sections.each( function( aSection ) {
+			// 		// console.log( "SECTION:" + aSection );
+			// 		console.log( 'sec:' + aSection.get( 'name' ));
+
+			// 	}, this );
+			// }
+
+
 			return this;
 		}
 	});
 
 
+	// BIG INSTANTIATION
+	// .................
 	liturgy = new app.Liturgy();
 	liturgy.fetch({
 		success: function(response,xhr) {

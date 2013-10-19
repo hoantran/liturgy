@@ -169,7 +169,7 @@ class LiturgyController extends \BaseController {
 		$str .= $this->getAnItem( "Responsorial", "78", "Ps 34: Taste and See" );
 		$str .= "]";
 
-		return $str;		
+		return $str;
 	}
 
 	private function getALiturgySection( $sectionName ){
@@ -185,12 +185,12 @@ class LiturgyController extends \BaseController {
 	private function getSections(){
 		$str = "";
 		$str .= "\"" . "sections" . "\"" . ": [";
-		$str .= $this->getALiturgySection( "Intro Rite" );
+		$str .= $this->getALiturgySection( "A" );
 		$str .= ",";
-		$str .= $this->getALiturgySection( "Liturgy of the Eucharist" );
+		$str .= $this->getALiturgySection( "B" );
 		$str .= "]";
 
-		return $str;		
+		return $str;
 	}
 
 	private function getLiturgy(){
