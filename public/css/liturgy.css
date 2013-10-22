@@ -139,23 +139,23 @@ img.detail-image-link:hover
 	width: 100%;
 }
 
-.section-row {
+.item-row {
 	display: table;
 }
-.part-cell {
+.item-cell {
 	display: table-cell;
 }
 
-#part-title {
+#item-title {
 	width: 200px;
 }
 
-#part-song {
+#item-song {
 	width: 400px;
 
 }
 
-.part-divider {
+.item-divider {
 	display: block;
 	clear: both;
 	width: 100%;

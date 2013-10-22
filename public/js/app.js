@@ -9,7 +9,7 @@ app.Composer = Backbone.Model.extend({
 		"_id"			: "not set",
 		"firstName"		: "not set",
 		"lastName"		: "not set",
-		"picUrl"		: "not set"		
+		"picUrl"		: "not set"
 	},
 
 	initialize: function() {
@@ -20,7 +20,7 @@ app.Composer = Backbone.Model.extend({
 
 		this.on( "change", function( model ){
 			console.log( 'a composer changed!' );
-		} );		
+		} );
 	}
 });
 
@@ -62,7 +62,7 @@ app.Song = Backbone.Model.extend({
 		this.composers = new app.Composers( this.get( 'composers' ) );
 		this.composers.parent = this;
 
-		this.title = this.get( 'title' );		
+		this.title = this.get( 'title' );
 	},
 
 	parse: function( response ){
@@ -76,7 +76,53 @@ app.Song = Backbone.Model.extend({
 		delete response.composers;
 
 		return response;
+	},
+
+	getComposerLastNames: function() {
+		var lComposers = this.composers;
+		var lastNames = "";
+		lComposers.each( function( aComposer ) {
+			var aLastName = aComposer.get( 'lastName' );
+			var aFirstName = aComposer.get( 'firstName' );
+			if( this.getString( aLastName )){
+				lastNames += aLastName + ", ";
+			}
+			else {
+				if( this.getString( aFirstName )){
+					lastNames += aFirstName + ", ";
+				}
+			}
+		}, this );
+
+		if( lastNames ){
+			lastNames = lastNames.substring(0, lastNames.length - 2);
+		}
+
+		return lastNames;
+	},
+
+	getString: function ( str ){
+		if( typeof str !== 'undefined' && str ){
+			return str;
+		}
+		else {
+			return '';
+		}
+	},
+
+	getSongTitle: function() {
+		return this.getString( this.get( 'title' ));
 	}
+});
+
+// ROW
+
+app.Row = Backbone.Model.extend( {
+	defaults: {
+		"part"			: "not set",
+		"title"			: "not set",
+		"composers"		: "not set"
+	},
 });
 
 app.Item = Backbone.Model.extend({
@@ -100,8 +146,8 @@ app.Section = Backbone.Model.extend({
 
 		// this.on( "all", function( model ){
 		// 	console.log( 'A SECTION changed!' );
-		// }, this );		
-		this.on ( 'all', this.logChange, this );		
+		// }, this );
+		this.on ( 'all', this.logChange, this );
 
 		console.log( 'a SECTION INIT-ed' );
 	},
@@ -124,9 +170,9 @@ app.Sections = Backbone.Collection.extend({
 		// this.on( "change", function( model ){
 		// 	console.log( 'SECTIONS changed!' );
 		// } );
-		this.on ( 'all', this.logChange, this );		
-		// this.on( ‘change’, this.someChange, this);	
-	
+		this.on ( 'all', this.logChange, this );
+		// this.on( ‘change’, this.someChange, this);
+
 	},
 
 	logChange: function() {
@@ -144,7 +190,7 @@ app.Liturgy = Backbone.Model.extend({
 		"_id"	: "not set",
 		"name"	: "not set",
 		"date"	: "not set"
-	},	
+	},
 
 	initialize: function() {
 		this._id 	= this.get( '_id' );
@@ -173,15 +219,63 @@ $(function() {
 	//  VIEWS
 	// .............
 
+	// ROW
+	//
+	// Backbone View automatically inserts an empty <div> if el is not specified
+	// That presents a choice for the developer: lousy CSS or lousy javascript code
+	//
+	// LOUSY CSS wins!
+	//
+	// http://bit.ly/182YhKW
+	// http://bit.ly/1dcptyH
+	//
+	app.RowView = Backbone.View.extend( {
+		tagName: 'div',
+		className: 'item-row',
+
+		template: _.template( $( '#row-template' ).html() ),
+
+		render: function() {
+			this.$el.html( this.template( this.model.toJSON() ));
+			return this;
+		}
+	});
+
+	// ITEM
+	// an item has:
+	// [] a row containing title, song-name, and composers
+	// [] song details and
+	// [] a simple divider
 	app.ItemView = Backbone.View.extend( {
 		template: _.template( $( '#item-template' ).html() ),
 
 		render: function() {
 			this.$el.html( this.template() );
+
+			// $( '.item-row', this.$el ).html( this.model.get( 'part' ));
+
+			var rowView = new app.RowView( {
+				model: new app.Row({
+					part: 		this.model.get( 'part' ),
+					title: 		this.model.song.getSongTitle(),
+					composers: 	this.model.song.getComposerLastNames()
+				})
+			})
+			$( '.item-row-container', this.$el ).html( rowView.render().el );
+			// $( '.item-row', this.$el ).html( "ROW VIEW" );
+
+			console.log( "rowView: " + rowView.render().el.innerHTML );
+
+			// var songView = new app.SongView( {
+			// 	model: song-model
+			// });
+			// $( '.song-details', this.$el ).html( songView.render().el );
+
 			return this;
 		}
 	} );
 
+	// SECTION
 	app.SectionView = Backbone.View.extend( {
 
 		initialize: function( section ){
@@ -193,9 +287,27 @@ $(function() {
 
 		render: function() {
 			this.$el.html( this.template( this.model.toJSON() ));
-			$( '.section-content', this.$el ).html( 'Can not seem to let you go!' );
+
+			// $( '.section-content', this.$el ).html( 'Can not seem to let you go!' );
 			// var rumble = $( '.section-content', this.$el );
 			// console.log( 'CONTENT: ' + rumble.html() );
+
+			var items = this.model.items;
+			if( items !== null && typeof items !== 'undefined' ){
+				// 1. collect all rendered DOM elements from child views
+				var domEl = $([]);
+				items.each( function( anItem ) {
+					var itemView = new app.ItemView( {
+						model: anItem
+					});
+					domEl.push( itemView.render().el );
+				}, this );
+
+				// 2. then squeeze it in the document
+				$( '.section-content', this.$el ).html( domEl );
+				// this.$el.html( domEl );
+			}
+
 			return this;
 		}
 	} );
@@ -247,7 +359,6 @@ $(function() {
 		initialize: function(){
 			this.render();
 			this.model.on( "all", this.render, this );
-			console.log( "EL:" + this.el );
 		},
 
 		template: _.template( $( '#liturgy-template' ).html() ),
