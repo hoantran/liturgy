@@ -103,7 +103,7 @@ class LiturgyController extends \BaseController {
 		$str .= "\"_id\":\"" . $id ."\",";
 		$str .= "\"title\": \"" . $title . "\",";
 		$str .= $this->getComposers() . ",";
-		$str .= $this->getSongMedia();		
+		$str .= $this->getSongMedia();
 		$str .= "}";
 
 		return $str;
@@ -117,7 +117,9 @@ class LiturgyController extends \BaseController {
 		$str .= "\"" . "media" . "\"" . ": [";
 		$str .= $this->getSongMedium( "listen" );
 		$str .= ",";
-		$str .= $this->getSongMedium( "guitar" );		
+		$str .= $this->getSongMedium( "vocal" );
+		$str .= ",";
+		$str .= $this->getSongMedium( "link" );
 		$str .= "]";
 
 		Log::info( "media:" . $str );
@@ -133,14 +135,22 @@ class LiturgyController extends \BaseController {
 	// 		]
 	// 	}
 
-	private function getSongMedium( $medium )  
+	private function getSongMedium( $medium )
 	{
 		$str = "{";
 		$str .= "\"" . "medium\":\"" . $medium . "\",";
 		$str .= "\"" . "mediumList" . "\"" . ": [";
-		for ( $count = 1 ; $count < 3; $count++ ) 
+		for ( $count = 1 ; $count < 3; $count++ )
 		{
-			$str .= "\"" . $medium . "Url." . $count . "\"";
+			if( $medium === "listen" ){
+				$str .= "\"" . "media/fun/other.mp3" . "\"";
+			}
+			else if( $medium === "link" ){
+				$str .= "\"" . "http://www.google.com" . "\"";
+			}
+			else {
+				$str .= "\"" . "media/fun/kyrie.vocal.1.pdf" . "\"";
+			}
 			$str .= ",";
 		}
 		$str = substr($str, 0, -1);

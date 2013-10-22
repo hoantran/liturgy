@@ -50,7 +50,7 @@ body{
 }
 
 .medium-listing ul {
-	list-style-type: none;	
+	list-style-type: none;
 }
 
 .detail-header {
@@ -66,45 +66,45 @@ img.detail-image
 {
 	width: 24px;
 	height: 24px;
-	background:url(img/play-24.png) 0 0;
+	background:url(../img/play-24.png) 0 0;
 }
 
 img.detail-image:hover
 {
 	width: 24px;
 	height: 24px;
-	background:url(img/play-24-hover.png) 0 0;
+	background:url(../img/play-24-hover.png) 0 0;
 }
 
 img.detail-image-pdf
 {
 	width: 24px;
 	height: 24px;
-	background:url(img/pdf-24.png) 0 0;
+	background:url(../img/pdf-24.png) 0 0;
 }
 
 img.detail-image-pdf:hover
 {
 	width: 24px;
 	height: 24px;
-	background:url(img/pdf-24-hover.png) 0 0;
+	background:url(../img/pdf-24-hover.png) 0 0;
 }
 
 img.detail-image-link
 {
 	width: 24px;
 	height: 24px;
-	background:url(img/link-24.png) 0 0;
+	background:url(../img/link-24.png) 0 0;
 }
 
 img.detail-image-link:hover
 {
 	width: 24px;
 	height: 24px;
-	background:url(img/link-24-hover.png) 0 0;
+	background:url(../img/link-24-hover.png) 0 0;
 }
 
-.song-details {
+.song-details-container {
 	text-align: left;
 	margin-left: 160px;
 	display: none;

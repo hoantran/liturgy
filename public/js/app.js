@@ -36,8 +36,6 @@ app.Medium = Backbone.Model.extend({
 	},
 
 	initialize: function () {
-		// console.log ("mediumList: " + this.get( 'mediumList' ) );
-
 		if( !this.get( 'mediumList' )){
 			this.set( {mediumList: new Array() } );
 		}
@@ -54,7 +52,6 @@ app.Song = Backbone.Model.extend({
 	urlRoot: "liturgies",
 
 	initialize: function(){
-		// console.log ("Song: media :" + this.get( 'media' ) );
 
 		this.media = new app.Media( this.get( 'media' ) );
 		this.media.parent = this;
@@ -66,9 +63,6 @@ app.Song = Backbone.Model.extend({
 	},
 
 	parse: function( response ){
-		// console.log ( "response.media:", response.media );
-		// console.log ( "response.composers:", response.composers );
-
 		this.media.reset( response.media );
 		delete response.media;
 
@@ -216,8 +210,51 @@ app.Liturgy = Backbone.Model.extend({
 // ................
 
 $(function() {
+
+	// .............
 	//  VIEWS
 	// .............
+
+	// MEDIUM
+	app.MediumView = Backbone.View.extend({
+		tagName: 'div',
+		className: 'medium-listing',
+
+		// template: _.template( $( '#'+ this.model.get( 'medium' ) + '-medium-template' ).html() ),
+		template: function( data ) {
+			return _.template( $( '#'+ this.model.get( 'medium' ) + '-medium-template' ).html(), data )
+		},
+
+		render: function() {
+			this.$el.html( this.template( this.model.toJSON() ));
+			return this;
+		}
+	});
+
+	// SONG
+	app.SongView = Backbone.View.extend({
+		tagName: 'div',
+		className: 'song-details',
+
+		render: function(){
+			var media = this.model.media;
+			if( media !== null && typeof media !== 'undefined'){
+				// 1. collect all rendered DOM elements from child views
+				var domEl = $([]);
+				media.each( function( medium ) {
+					var mediumView = new app.MediumView( {
+						model: medium
+					});
+					domEl.push( mediumView.render().el );
+				}, this );
+
+				// 2. then stick it in the document
+				this.$el.html( domEl );
+			}
+
+			return this;
+		}
+	});
 
 	// ROW
 	//
@@ -262,14 +299,11 @@ $(function() {
 				})
 			})
 			$( '.item-row-container', this.$el ).html( rowView.render().el );
-			// $( '.item-row', this.$el ).html( "ROW VIEW" );
 
-			console.log( "rowView: " + rowView.render().el.innerHTML );
-
-			// var songView = new app.SongView( {
-			// 	model: song-model
-			// });
-			// $( '.song-details', this.$el ).html( songView.render().el );
+			var songView = new app.SongView( {
+				model: this.model.song
+			});
+			$( '.song-details-container', this.$el ).html( songView.render().el );
 
 			return this;
 		}
@@ -288,10 +322,6 @@ $(function() {
 		render: function() {
 			this.$el.html( this.template( this.model.toJSON() ));
 
-			// $( '.section-content', this.$el ).html( 'Can not seem to let you go!' );
-			// var rumble = $( '.section-content', this.$el );
-			// console.log( 'CONTENT: ' + rumble.html() );
-
 			var items = this.model.items;
 			if( items !== null && typeof items !== 'undefined' ){
 				// 1. collect all rendered DOM elements from child views
@@ -305,7 +335,6 @@ $(function() {
 
 				// 2. then squeeze it in the document
 				$( '.section-content', this.$el ).html( domEl );
-				// this.$el.html( domEl );
 			}
 
 			return this;
@@ -322,17 +351,7 @@ $(function() {
 			this.render();
 		},
 
-		// template: _.template( $( '#listing-template' ).html() ),
-
 		render: function() {
-			// this.$el.html( this.template() );
-
-			// var meat = $( this.$el ).html();
-			// console.log( "MEAT: " + meat );
-
-			// console.log( 'subview: ' + listingView.render().el );
-			// this.$el.append( listingView.render().el );
-
 			var sections = this.sections;
 			if( sections !== null && typeof sections !== 'undefined'){
 				// 1. collect all rendered DOM elements from child views
@@ -372,17 +391,11 @@ $(function() {
 			var sections = this.model.sections;
 			var listingView = new app.ListingView( sections );
 			listingView.render();
-			// console.log( 'subview: ' + listingView.render().el );
-			// this.$el.append( listingView.render().el );
 
-			// if( sections !== null && typeof sections !== 'undefined'){
-			// 	sections.each( function( aSection ) {
-			// 		// console.log( "SECTION:" + aSection );
-			// 		console.log( 'sec:' + aSection.get( 'name' ));
-
-			// 	}, this );
-			// }
-
+			///// EFFECTS
+			$( ".song-title" ).click(function() {
+		  		$( ".song-details-container" ).toggle( "slow" );
+			});
 
 			return this;
 		}
@@ -395,8 +408,8 @@ $(function() {
 	liturgy.fetch({
 		success: function(response,xhr) {
 			// console.log("Inside success");
-			console.log(response);
-		},
+			// console.log(response);
+	},
 		error: function (errorResponse) {
 			console.log(errorResponse)
 		}
@@ -404,6 +417,4 @@ $(function() {
 
 	liturgyView = new app.LiturgyView( { model: liturgy } );
 
-	///// EFFECTS
-	
-});
+} );
