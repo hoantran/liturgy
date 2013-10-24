@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "edf532f051d0591aaeee4a0f517129dc",
+    "hash": "1fcd0934baccf22c8c1aa9699870fb68",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -51,6 +51,83 @@
                 "preload"
             ],
             "time": "2013-06-24 22:58:34"
+        },
+        {
+            "name": "d11wtq/boris",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/d11wtq/boris.git",
+                "reference": "fe10592039c35b6f9178c0b91593973f2e6c54f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/d11wtq/boris/zipball/fe10592039c35b6f9178c0b91593973f2e6c54f2",
+                "reference": "fe10592039c35b6f9178c0b91593973f2e6c54f2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "ext-pcntl": "*",
+                "ext-posix": "*",
+                "ext-readline": "*"
+            },
+            "bin": [
+                "bin/boris"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Boris": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2013-10-07 01:48:26"
+        },
+        {
+            "name": "davejamesmiller/laravel-boris",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davejamesmiller/laravel-boris.git",
+                "reference": "5f1813a1e87981ad3e5ed04a29bb019b6edd4e1e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davejamesmiller/laravel-boris/zipball/5f1813a1e87981ad3e5ed04a29bb019b6edd4e1e",
+                "reference": "5f1813a1e87981ad3e5ed04a29bb019b6edd4e1e",
+                "shasum": ""
+            },
+            "require": {
+                "d11wtq/boris": "dev-master",
+                "illuminate/support": ">=4.0",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "DaveJamesMiller\\Boris": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "Dave James Miller",
+                    "email": "dave@davejamesmiller.com",
+                    "homepage": "http://davejamesmiller.com/"
+                }
+            ],
+            "description": "Adds an 'artisan boris' command to run the Boris REPL in the Laravel environment.",
+            "homepage": "https://github.com/davejamesmiller/laravel-boris",
+            "keywords": [
+                "laravel"
+            ],
+            "time": "2013-10-13 10:02:25"
         },
         {
             "name": "doctrine/annotations",
@@ -667,12 +744,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "bf4ddbdaec0b673f7aab010890b70e3a6d63f27e"
+                "reference": "1dd5eb268e2b1ad8d0a45ece8aa7b22ee99ab30d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/bf4ddbdaec0b673f7aab010890b70e3a6d63f27e",
-                "reference": "bf4ddbdaec0b673f7aab010890b70e3a6d63f27e",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/1dd5eb268e2b1ad8d0a45ece8aa7b22ee99ab30d",
+                "reference": "1dd5eb268e2b1ad8d0a45ece8aa7b22ee99ab30d",
                 "shasum": ""
             },
             "require": {
@@ -730,10 +807,10 @@
                 "illuminate/workbench": "self.version"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "2.2.*",
-                "iron-io/iron_mq": "1.4.4",
+                "aws/aws-sdk-php": "2.4.*",
+                "iron-io/iron_mq": "1.4.*",
                 "mockery/mockery": "0.8.0",
-                "pda/pheanstalk": "2.0.*",
+                "pda/pheanstalk": "2.1.*",
                 "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
@@ -772,7 +849,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2013-10-14 21:59:45"
+            "time": "2013-10-22 01:45:48"
         },
         {
             "name": "monolog/monolog",
@@ -780,12 +857,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "8e5a671eef6e1096d764e6f3524e6f732afa53b4"
+                "reference": "620922356a36d8903d213c986568fe159b530747"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/8e5a671eef6e1096d764e6f3524e6f732afa53b4",
-                "reference": "8e5a671eef6e1096d764e6f3524e6f732afa53b4",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/620922356a36d8903d213c986568fe159b530747",
+                "reference": "620922356a36d8903d213c986568fe159b530747",
                 "shasum": ""
             },
             "require": {
@@ -835,7 +912,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2013-10-11 16:18:40"
+            "time": "2013-10-16 16:27:10"
         },
         {
             "name": "mustache/mustache",
@@ -1578,12 +1655,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "ae8f725b270b670fb431ce6c01d30d242e5df943"
+                "reference": "8f383fa5e4b66b66ba2d09e502e8bf73bdd04901"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/ae8f725b270b670fb431ce6c01d30d242e5df943",
-                "reference": "ae8f725b270b670fb431ce6c01d30d242e5df943",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/8f383fa5e4b66b66ba2d09e502e8bf73bdd04901",
+                "reference": "8f383fa5e4b66b66ba2d09e502e8bf73bdd04901",
                 "shasum": ""
             },
             "require": {
@@ -1619,7 +1696,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2013-10-13 06:32:10"
+            "time": "2013-10-17 11:48:01"
         },
         {
             "name": "symfony/http-kernel",
@@ -1956,7 +2033,8 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "way/generators": 20
+        "way/generators": 20,
+        "davejamesmiller/laravel-boris": 20
     },
     "platform": [
 
