@@ -1,17 +1,26 @@
 <?php
 
-class Songs extends Eloquent {
+class Song extends Eloquent {
 	protected $guarded = array();
 	public static $main_song_directory = "songs";
 
 	public static $rules = array();
 
+	public function media() {
+		return $this->hasMany( 'Medium' );
+	}
+
+	public function composers() {
+		return $this->belongsToMany( 'Composer' );
+	}
+
+
 
 	public static function classifySongMedia(){
-		foreach( Songs::all() as $song ) {
+		foreach( Song::all() as $song ) {
 			echo "............ \n";
 			// echo "SONG: " . $song->title . "\n";
-			$mediaEntries = Songs::getSongContents( $song );
+			$mediaEntries = Song::getSongContents( $song );
 
 			if( null != $mediaEntries ){
 				foreach ( $mediaEntries as $entry ) {
@@ -29,17 +38,40 @@ class Songs extends Eloquent {
 					}
 				}
 			}
+		}
+	}
 
+	public static function updateAllSongMedia(){
+		foreach( Song::all() as $song ) {
+			// wipe out old records
+			Medium::deleteSong( $song->id );
+
+			// insert new records
+			$mediaEntries = Song::getSongContents( $song );
+
+			if( null != $mediaEntries ){
+				foreach ( $mediaEntries as $entry ) {
+					$blowup = explode( '.', $entry );
+					$entryCount = count( $blowup );
+					if( 0 == strcmp( $entry, '.DS_Store' )) {
+						// skip
+					}
+					else {
+						$medium = new Medium( array( 'file_name' => $entry ) );
+						$medium = $song->media()->save( $medium );
+					}
+				}
+			}
 		}
 	}
 
 	public static function getSongContents( $song ){
 		$mainDir = getcwd() . "/public";
-		$url = Songs::getUrl( $song );
+		$url = Song::getUrl( $song );
 		if( $url == null ){
 			return null;
 		} else {
-			$songDir = $mainDir . "/" . Songs::getUrl( $song );
+			$songDir = $mainDir . "/" . Song::getUrl( $song );
 			echo "SONG (" . $song->id . "): " . $songDir . "\n";
 			$contents = scandir( $songDir );
 			for($index = count( $contents ) - 1; $index >= 0; $index-- ){
@@ -52,9 +84,9 @@ class Songs extends Eloquent {
 	}
 
 	public static function getUrl( $song ){
-		$directory = Songs::getSongDirectory( Songs::lookupPrefix( $song ));
+		$directory = Song::getSongDirectory( Song::lookupPrefix( $song ));
 		if( $directory != null ){
-			return Songs::$main_song_directory . "/" . $directory;
+			return Song::$main_song_directory . "/" . $directory;
 		}
 		else {
 			return null;
@@ -62,7 +94,7 @@ class Songs extends Eloquent {
 	}
 
 	public static function lookupPrefix( $song ){
-        // $song = Songs::find( $id );
+        // $song = Song::find( $id );
         if( isset( $song ) ){
         	$prefix = null;
         	if( isset( $song->vocalprefix ) && !empty( $song->vocalprefix ) ){
