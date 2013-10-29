@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.0.*",
 		"way/generators": "dev-master",
-        "davejamesmiller/laravel-boris": "dev-master"
+        "davejamesmiller/laravel-boris": "dev-master",
+        "loic-sharma/profiler": "1.1.*"
 	},
 	"autoload": {
 		"classmap": [

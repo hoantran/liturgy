@@ -3,8 +3,13 @@
 class Song extends Eloquent {
 	protected $guarded = array();
 	public static $main_song_directory = "songs";
+	public $timestamps = false;
 
 	public static $rules = array();
+
+
+
+
 
 	public function media() {
 		return $this->hasMany( 'Medium' );
@@ -14,6 +19,73 @@ class Song extends Eloquent {
 		return $this->belongsToMany( 'Composer' );
 	}
 
+	public static function getSongData( $song ){
+		$data = array(
+			"_id"			=> $song->id,
+			"title"			=> $song->title,
+			"composers"		=> Song::getComposers( $song ),
+			'media' 		=> Song::getMedia( $song )
+		);
+
+		return $data;
+	}
+
+	/**
+	 * Get the composers of this song
+	 * @param  object of the song $song
+	 * @return array of composers
+	 */
+	public static function getComposers( $song ){
+		$composers = $song->composers->toArray();
+
+		// delete the pivot array
+		foreach ($composers as $key => $composer) {
+			foreach ($composer as $element => $value) {
+				if( 0 == strcmp( $element, 'pivot' )){
+					echo "pivot \n";
+					unset( $composers[ $key ][ 'pivot' ] );
+				}
+			}
+		}
+
+		return $composers;
+	}
+
+	public static function getMedia( $song ){
+		$media = $song->media;
+		// $url = Song::getUrl( $song );
+		$url = $song->path;
+		$master = array();
+
+		foreach( $media as $medium ){
+			$fileName = $medium->file_name;
+			$blowup = explode( '.', $fileName );
+			$entryCount = count( $blowup );
+			$type = 'other';
+			if( 0 != strcmp( $fileName, '.DS_Store' ) && $entryCount >= 3 ) {
+				$type = $blowup[ count( $blowup ) - 3 ];
+			}
+			if( !array_key_exists( $type, $master )){
+				$master[ $type ] = array();
+			}
+			array_push( $master[ $type ], $url . "/" . $fileName );
+		}
+
+		return Song::formatMedia( $master );
+	}
+
+	public static function formatMedia( $master ){
+		$list = array();
+		foreach( $master as $key => $value ){
+			$medium = array(
+				'medium'		=> $key,
+				'mediumList'	=> $value
+			);
+			array_push( $list, $medium );
+		}
+		// return array( 'media' => $list );
+		return $list;
+	}
 
 
 	public static function classifySongMedia(){
@@ -41,6 +113,10 @@ class Song extends Eloquent {
 		}
 	}
 
+	/**
+	 * Go through all songs in the database and refresh its contents
+	 * Noted: it does not go through directories
+	 */
 	public static function updateAllSongMedia(){
 		foreach( Song::all() as $song ) {
 			// wipe out old records
@@ -80,6 +156,13 @@ class Song extends Eloquent {
 				}
 			}
 			return $contents;
+		}
+	}
+
+	public static function saveAllPaths() {
+		foreach( Song::all() as $song ) {
+			$song->path = Song::getUrl( $song );
+			$song->save();
 		}
 	}
 
