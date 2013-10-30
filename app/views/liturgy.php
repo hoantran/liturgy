@@ -33,7 +33,7 @@
             <div id="item-song" class="item-cell"><span class="song-title"><%= title %></span><span class="song-composers"><%= composers %></span></div>
         </script>
 
-        <script type="text/template" id="listen-medium-template">
+        <script type="text/template" id="mp3-medium-template">
             <ul>
                 <li class="detail-header"><%= medium %></li>
                 <% _.each( mediumList, function(entry) { %>

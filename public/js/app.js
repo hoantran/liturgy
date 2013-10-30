@@ -407,7 +407,7 @@ $(function() {
 	liturgy = new app.Liturgy();
 	liturgy.fetch({
 		success: function(response,xhr) {
-			// console.log("Inside success");
+			console.log("Inside success");
 			// console.log(response);
 	},
 		error: function (errorResponse) {

@@ -9,7 +9,7 @@ class LiturgiesTableSeeder extends Seeder {
 		Liturgy::truncate();
 
 		$liturgies = array(
-			array( 
+			array(
 				'title'		=> 'Thirty-Third Sunday in Ordinary Time',
 				'date'		=> '2013-11-17 09:30:00',
 				'location'	=>	'St. Elizabeth'
@@ -37,3 +37,6 @@ class LiturgiesTableSeeder extends Seeder {
 	}
 
 }
+
+
+// find  . -type f -exec dos2unix {} +

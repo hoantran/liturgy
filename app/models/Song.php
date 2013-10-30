@@ -19,15 +19,22 @@ class Song extends Eloquent {
 		return $this->belongsToMany( 'Composer' );
 	}
 
-	public static function getSongData( $song ){
-		$data = array(
-			"_id"			=> $song->id,
-			"title"			=> $song->title,
-			"composers"		=> Song::getComposers( $song ),
-			'media' 		=> Song::getMedia( $song )
-		);
+	public static function getSongData( $song_id ){
+		$song = Song::find( $song_id );
 
-		return $data;
+		if( NULL == $song ){
+			return NULL;
+		}
+		else {
+			$data = array(
+				"_id"			=> $song->id,
+				"title"			=> $song->title,
+				"composers"		=> Song::getComposers( $song ),
+				'media' 		=> Song::getMedia( $song )
+			);
+
+			return $data;
+		}
 	}
 
 	/**
@@ -42,7 +49,7 @@ class Song extends Eloquent {
 		foreach ($composers as $key => $composer) {
 			foreach ($composer as $element => $value) {
 				if( 0 == strcmp( $element, 'pivot' )){
-					echo "pivot \n";
+					// echo "pivot \n";
 					unset( $composers[ $key ][ 'pivot' ] );
 				}
 			}
@@ -131,6 +138,7 @@ class Song extends Eloquent {
 					$entryCount = count( $blowup );
 					if( 0 == strcmp( $entry, '.DS_Store' )) {
 						// skip
+						// this condition should never be met
 					}
 					else {
 						$medium = new Medium( array( 'file_name' => $entry ) );
@@ -148,13 +156,16 @@ class Song extends Eloquent {
 			return null;
 		} else {
 			$songDir = $mainDir . "/" . Song::getUrl( $song );
-			echo "SONG (" . $song->id . "): " . $songDir . "\n";
+			// echo "SONG (" . $song->id . "): " . $songDir . "\n";
 			$contents = scandir( $songDir );
 			for($index = count( $contents ) - 1; $index >= 0; $index-- ){
 				if( is_dir( $mainDir . "/" . $contents[ $index ] )){
 					unset( $contents[ $index ] );
+				} elseif ( 0 == strcmp( $contents[ $index ], '.DS_Store' )) {
+					unset( $contents[ $index ] );
 				}
 			}
+
 			return $contents;
 		}
 	}
