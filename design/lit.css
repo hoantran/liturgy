@@ -10,106 +10,27 @@ html{
 
 body{
 	color: #464646;
-	font-family: OswaldLight;
+  	font-family: proxima-nova,sans-serif;
 	background-color: #fff;
-	text-shadow: 0px 1px 0px #fff;
+	margin: 0px;
+	padding: 0px;
 	}
 	
-.wrapper{
+
+#container {
+	background-color: #f4f4f4;
+	text-shadow: none;
+	color: #333;
+	width: 900px;
 	margin: 0 auto;
-	width: 90%;
-	max-width: 1080px;
-	}
-
-
+	/*margin-left: auto;*/
+}
 
 
 
 /************************************************************************/
 /*		LITURGY			*/
 /************************************************************************/
-
-.container {
-  	font-family: proxima-nova,sans-serif;
-	background-color: #f4f4f4;
-	color: #fff;
-	text-shadow: none;
-	color: #333;
-	max-width: 900px;
-	margin: 10px auto;
-	/*margin-left: auto;*/
-}
-
-.listing {
-	font-size: 18px;	
-}
-
-.medium-listing {
-	float: left;
-	width: 100px;
-}
-
-.medium-listing ul {
-	list-style-type: none;	
-}
-
-.detail-header {
-	font-weight: normal;
-	font-style: italic;
-}
-
-.detail-medium {
-	font-weight: normal;
-}
-
-img.detail-image
-{
-	width: 24px;
-	height: 24px;
-	background:url(img/play-24.png) 0 0;
-}
-
-img.detail-image:hover
-{
-	width: 24px;
-	height: 24px;
-	background:url(img/play-24-hover.png) 0 0;
-}
-
-img.detail-image-pdf
-{
-	width: 24px;
-	height: 24px;
-	background:url(img/pdf-24.png) 0 0;
-}
-
-img.detail-image-pdf:hover
-{
-	width: 24px;
-	height: 24px;
-	background:url(img/pdf-24-hover.png) 0 0;
-}
-
-img.detail-image-link
-{
-	width: 24px;
-	height: 24px;
-	background:url(img/link-24.png) 0 0;
-}
-
-img.detail-image-link:hover
-{
-	width: 24px;
-	height: 24px;
-	background:url(img/link-24-hover.png) 0 0;
-}
-
-.song-details {
-	text-align: left;
-	margin-left: 160px;
-	display: none;
-}
-
 
 #liturgy-name {
   /*font-size: large;*/
@@ -118,41 +39,73 @@ img.detail-image-link:hover
   line-height: 50px;
   font-size: 30px;
   background-color: #e0e0e0;
+  margin: 0px;
+  padding: 0px;
 }
+
 #liturgy-date {
   font-size: 14px;
   text-align: left;
-  line-height: 10px;
+  line-height: 20px;
+  margin: 0px;
+  padding: 0px;
 }
 
+/************************************************************************/
+/*		LISTING			*/
+/************************************************************************/
 
+
+#listing {
+	font-size: 18px;
+}
+
+/************************************************************************/
+/*		SECTION			*/
+/************************************************************************/
 .section-name {
-	float: left;
 	width: 25px;
-	padding: 2px 2px 10px 10px;
-	display: block;
-}
-.section-content {
-	margin-left: 26px;
+	/*height: 400px;*/
+	padding: 0px;
+	/*background: red;*/
 	float: left;
-	display: block;
-	width: 100%;
+	/*margin: 0px;*/
+	/*display: inline;*/
 }
 
-.item-row {
+.section-content {
+	width: 875px;
+	/*background: blue;*/
+	/*height: 400px;*/
+	margin-left: 25px;
+/*	float: left;
+*/	/*display: inline;*/
+	/*padding: 0px;*/
+	padding-bottom: 20px;
+}
+
+/************************************************************************/
+/*		ROW			*/
+/************************************************************************/
+/*.item-row {
 	display: table;
+	margin: 0px;
+	padding: 0px;
 }
 .item-cell {
 	display: table-cell;
+	margin: 0px;
+	padding: 0px;
+}*/
+
+.item-title {
+	width: 25%;
+	float: left;
 }
 
-#item-title {
-	width: 200px;
-}
-
-#item-song {
-	width: 400px;
-
+.item-song {
+	margin-left: 25%;
+	width: 75%;
 }
 
 .item-divider {
@@ -167,11 +120,94 @@ img.detail-image-link:hover
 
 .song-title:hover {
 	font-weight: normal;
-	color: red;
+	color: blue;
 }
 
 .song-composers {
 	font-size: 12px;
 	padding-left: 5px;
 }
+/************************************************************************/
+/*		SONG DETAILS			*/
+/************************************************************************/
+.song-details {
+	text-align: left;
+	margin-left: 25%;
+	/*margin-bottom: 25px;*/
+	/*padding-bottom: 100px;*/
+	display: none;
+}
+
+.medium-listing {
+	float: left;
+	width: 100px;
+	/*overflow:hidden;*/
+	margin-left: auto;
+	margin-right: 0px;
+}
+
+.medium-listing ul {
+	list-style-type: none;
+	padding: 0pt;
+	margin: 0pt;
+}
+
+.detail-header {
+	font-weight: normal;
+	font-style: italic;
+}
+
+.detail-medium {
+	font-weight: normal;
+}
+
+img.detail-image
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background:url(img/play-24.png) 0 0;
+}
+
+img.detail-image:hover
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background:url(img/play-24-hover.png) 0 0;
+}
+
+img.detail-image-pdf
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background:url(img/pdf-24.png) 0 0;
+}
+
+img.detail-image-pdf:hover
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background:url(img/pdf-24-hover.png) 0 0;
+}
+
+img.detail-image-link
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background:url(img/link-24.png) 0 0;
+}
+
+img.detail-image-link:hover
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background:url(img/link-24-hover.png) 0 0;
+}
+
+
 

@@ -12,7 +12,7 @@
         <script type="text/template" id="liturgy-template">
                 <p id="liturgy-name"><%= name %></p>
                 <p id="liturgy-date"><%= date %></p>
-                <div class="listing"></div>
+                <div id="listing"></div>
                 <!-- end listing -->
                 <div class="item-divider"></div>
         </script>
@@ -29,8 +29,8 @@
         </script>
 
         <script type="text/template" id="row-template">
-            <div id="item-title" class="item-cell"><%= part %></div>
-            <div id="item-song" class="item-cell"><span class="song-title"><%= title %></span><span class="song-composers"><%= composers %></span></div>
+            <div class="item-title"><%= part %></div>
+            <div class="item-song"><span class="song-title"><%= title %></span><span class="song-composers"><%= composers %></span></div>
         </script>
 
         <script type="text/template" id="mp3-medium-template">
@@ -91,7 +91,7 @@
         </script>
 
         <!-- MEAT -->
-        <div class="container"></div>
+        <div id="container"></div>
 
         <!-- LIBRARIES -->
         <script src="js/lib/jquery-1.9.0.js"></script>

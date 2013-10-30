@@ -268,7 +268,7 @@ $(function() {
 	//
 	app.RowView = Backbone.View.extend( {
 		tagName: 'div',
-		className: 'item-row',
+		// className: 'item-row',
 
 		template: _.template( $( '#row-template' ).html() ),
 
@@ -344,7 +344,7 @@ $(function() {
 
 	// LISTING
 	app.ListingView = Backbone.View.extend({
-		el: '.listing',
+		el: '#listing',
 
 		initialize: function( mySections ){
 			this.sections = mySections;
@@ -373,7 +373,7 @@ $(function() {
 
 	// LITURGY
 	app.LiturgyView = Backbone.View.extend({
-		el: '.container',
+		el: '#container',
 
 		initialize: function(){
 			this.render();
