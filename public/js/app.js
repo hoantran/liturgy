@@ -6,17 +6,17 @@ var app = app || {};
 
 app.Composer = Backbone.Model.extend({
 	defaults: {
-		"_id"			: "not set",
-		"firstName"		: "not set",
-		"lastName"		: "not set",
-		"picUrl"		: "not set"
+		"_id"			: "",
+		"firstName"		: "",
+		"lastName"		: "",
+		"picUrl"		: ""
 	},
 
 	initialize: function() {
-		this._id 		= this.get( '_id' );
-		this.firstName 	= this.get( 'firstName' );
-		this.lastName 	= this.get( 'lastName' );
-		this.picUrl 	= this.get( 'picUrl' );
+		// this._id 		= this.get( '_id' );
+		// this.firstName 	= this.get( 'firstName' );
+		// this.lastName 	= this.get( 'lastName' );
+		// this.picUrl 	= this.get( 'picUrl' );
 
 		this.on( "change", function( model ){
 			console.log( 'a composer changed!' );
@@ -32,7 +32,7 @@ app.Composers = Backbone.Collection.extend({
 // ................
 app.Medium = Backbone.Model.extend({
 	defaults: {
-		"medium"	: "medium not set"
+		"medium"	: ""
 	},
 
 	initialize: function () {
@@ -113,9 +113,9 @@ app.Song = Backbone.Model.extend({
 
 app.Row = Backbone.Model.extend( {
 	defaults: {
-		"part"			: "not set",
-		"title"			: "not set",
-		"composers"		: "not set"
+		"part"			: "",
+		"title"			: "",
+		"composers"		: ""
 	},
 });
 
@@ -134,7 +134,7 @@ app.Items = Backbone.Collection.extend({
 // ................
 app.Section = Backbone.Model.extend({
 	initialize: function(){
-		this.name = this.get( 'name' );
+		// this.name = this.get( 'name' );
 		this.items = new app.Items( this.get( 'items' ) );
 		this.items.parent = this;
 
@@ -181,15 +181,15 @@ app.Liturgy = Backbone.Model.extend({
 	urlRoot: "liturgies",
 
 	defaults: {
-		"_id"	: "not set",
-		"name"	: "not set",
-		"date"	: "not set"
+		"_id"	: "",
+		"name"	: "",
+		"date"	: ""
 	},
 
 	initialize: function() {
-		this._id 	= this.get( '_id' );
-		this.name 	= this.get( 'name' );
-		this.date 	= this.get( 'date' );
+		// this._id 	= this.get( '_id' );
+		// this.name 	= this.get( 'name' );
+		// this.date 	= this.get( 'date' );
 
 		this.sections = new app.Sections( this.get( 'sections' ) );
 
@@ -313,7 +313,7 @@ $(function() {
 	app.SectionView = Backbone.View.extend( {
 
 		initialize: function( section ){
-			this.section = section ;
+			// this.section = section ;
 			this.render();
 		},
 
@@ -386,6 +386,21 @@ $(function() {
 			// tmpl is a function that takes a JSON object and returns html
 			// this.el is what we defined in tagName. use $el to get access
 			// to jQuery html() function
+			// var t = this.model.get('date').split(/[- :]/);
+			// var d = new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5]);
+			// this.model.set( { 'date': d.toLocaleString()} );
+			// if( typeof this.model.get( 'date' ) == 'undefined' ){
+			// var dateAttr = this.model.get( 'date' );
+			// console.log( '1', dateAttr );
+			// if( dateAttr ){
+			// 	console.log( '2', dateAttr );
+			// 	var t = this.model.get('date').split(/[- :]/);
+			// 	console.log( '3', t );
+			// 	var d = new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5]);
+			// 	console.log( '4', d );
+			// 	this.model.set( { 'date': d.toLocaleString()} );
+			// }
+			// console.log('date:', this.model.get( 'date' ));
 			this.$el.html( this.template( this.model.toJSON() ));
 
 			var sections = this.model.sections;

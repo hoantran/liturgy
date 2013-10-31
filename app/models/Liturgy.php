@@ -18,14 +18,18 @@ class Liturgy extends Eloquent {
 			return NULL;
 		}
 		else {
+
+			$date = DateTime::createFromFormat( 'Y-m-d H:i:s', $liturgy->date );
+
 			return array(
 				'_id'		=> $liturgy->id,
 				'name'		=> $liturgy->title,
-				'date'		=> $liturgy->date,
+				'date'		=> $date->format('D m/d/Y H:i A'),
 				'sections'	=> Liturgy::unpackParts( $liturgy->parts )
 			);
 		}
 	}
+
 	public static function unpackParts( $parts ){
 		$master = array();
 		foreach( $parts as $p ){
