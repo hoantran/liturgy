@@ -37,7 +37,7 @@
             <ul>
                 <li class="detail-header"><%= medium %></li>
                 <% _.each( mediumList, function(entry) { %>
-                    <li class="detail-medium"><a href="<%=entry%>"><img class="detail-image" /></a></li>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image" /></a></li>
                 <% } ); %>
             </ul>
         </script>
@@ -45,7 +45,7 @@
             <ul>
                 <li class="detail-header"><%= medium %></li>
                 <% _.each( mediumList, function(entry) { %>
-                    <li class="detail-medium"><a href="<%=entry%>"><img class="detail-image-pdf" /></a></li>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image-pdf" /></a></li>
                 <% } ); %>
             </ul>
         </script>
@@ -53,7 +53,7 @@
             <ul>
                 <li class="detail-header"><%= medium %></li>
                 <% _.each( mediumList, function(entry) { %>
-                    <li class="detail-medium"><a href="<%=entry%>"><img class="detail-image-pdf" /></a></li>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image-pdf" /></a></li>
                 <% } ); %>
             </ul>
         </script>
@@ -61,7 +61,7 @@
             <ul>
                 <li class="detail-header"><%= medium %></li>
                 <% _.each( mediumList, function(entry) { %>
-                    <li class="detail-medium"><a href="<%=entry%>"><img class="detail-image-pdf" /></a></li>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image-pdf" /></a></li>
                 <% } ); %>
             </ul>
         </script>
@@ -69,7 +69,7 @@
             <ul>
                 <li class="detail-header"><%= medium %></li>
                 <% _.each( mediumList, function(entry) { %>
-                    <li class="detail-medium"><a href="<%=entry%>"><img class="detail-image-pdf" /></a></li>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image-pdf" /></a></li>
                 <% } ); %>
             </ul>
         </script>
@@ -85,7 +85,7 @@
             <ul>
                 <li class="detail-header"><%= medium %></li>
                 <% _.each( mediumList, function(entry) { %>
-                    <li class="detail-medium"><a href="<%=entry%>"><img class="detail-image-ppt" /></a></li>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image-ppt" /></a></li>
                 <% } ); %>
             </ul>
         </script>
