@@ -26,7 +26,23 @@ body{
 	/*margin-left: auto;*/
 }
 
-
+/************************************************************************/
+/*		HEADER			*/
+/************************************************************************/
+#home {
+	/*text-align: right;*/
+	font-weight: bold;
+	margin: auto;
+	padding: auto;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	padding-top: 5px;
+	/*padding-left: 25 px;*/
+	font-size: 17px;
+	color: blue;
+	width: 100%;
+}
 
 /************************************************************************/
 /*		LITURGY			*/
