@@ -13,18 +13,29 @@ class Liturgy extends Eloquent {
 	}
 
 	public static function getLineups(){
-		$results = array(
-			array(
-				'date'			=>	'Sun Oct 1, 2013',
-				'title'			=>	'First Sunday of Advent',
-				'liturgy_id'	=> 	1
-			),
-			array(
-				'date'			=>	'Sun Oct 12, 2013',
-				'title'			=>	'Second Sunday of Advent',
-				'liturgy_id'	=> 	2
-			)
-		);
+		$results = array();
+		// $results = array(
+		// 	array(
+		// 		'date'			=>	'Sun Oct 1, 2013',
+		// 		'title'			=>	'First Sunday of Advent',
+		// 		'liturgy_id'	=> 	1
+		// 	),
+		// 	array(
+		// 		'date'			=>	'Sun Oct 12, 2013',
+		// 		'title'			=>	'Second Sunday of Advent',
+		// 		'liturgy_id'	=> 	2
+		// 	)
+		// );
+
+		// later there will be a need to limit the query, instead of getting all liturgies
+		foreach ( Liturgy::all() as $liturgy ) {
+			$date = DateTime::createFromFormat( 'Y-m-d H:i:s', $liturgy->date );
+			array_push( $results, array(
+				'date'			=>	$date->format('D M d, Y'),
+				'title'			=>	$liturgy->title,
+				'liturgy_id'	=> 	$liturgy->id
+			));
+		}
 
 		return $results;
 	}
