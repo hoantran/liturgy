@@ -178,7 +178,7 @@ app.Sections = Backbone.Collection.extend({
 // ................
 
 app.Liturgy = Backbone.Model.extend({
-	urlRoot: "liturgies",
+	urlRoot: "/liturgies",
 
 	defaults: {
 		"_id"	: "",
@@ -204,6 +204,30 @@ app.Liturgy = Backbone.Model.extend({
 		return response;
 	}
 });
+
+// COMPOSER
+// ................
+
+app.Lineup = Backbone.Model.extend({
+	defaults: {
+		"date"			: "",
+		"title"			: "",
+		"liturgy_id"	: ""
+	},
+
+	initialize: function() {
+		this.on( "change", function( model ){
+			console.log( 'a lineup changed!' );
+		} );
+	}
+});
+
+app.Lineups = Backbone.Collection.extend({
+	model: 	app.Lineup,
+
+	url: 	"liturgies"
+});
+
 
 // ................
 //       MAIN
@@ -373,34 +397,20 @@ $(function() {
 
 	// LITURGY
 	app.LiturgyView = Backbone.View.extend({
-		el: '#container',
+		el: '#contents',
 
 		initialize: function(){
-			this.render();
-			this.model.on( "all", this.render, this );
+			console.log( 'LIT VIEW: init' );
+			// this.render();
+			this.model.on( "change", this.render, this );
 		},
 
 		template: _.template( $( '#liturgy-template' ).html() ),
 
 		render: function() {
-			// tmpl is a function that takes a JSON object and returns html
-			// this.el is what we defined in tagName. use $el to get access
-			// to jQuery html() function
-			// var t = this.model.get('date').split(/[- :]/);
-			// var d = new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5]);
-			// this.model.set( { 'date': d.toLocaleString()} );
-			// if( typeof this.model.get( 'date' ) == 'undefined' ){
-			// var dateAttr = this.model.get( 'date' );
-			// console.log( '1', dateAttr );
-			// if( dateAttr ){
-			// 	console.log( '2', dateAttr );
-			// 	var t = this.model.get('date').split(/[- :]/);
-			// 	console.log( '3', t );
-			// 	var d = new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5]);
-			// 	console.log( '4', d );
-			// 	this.model.set( { 'date': d.toLocaleString()} );
-			// }
-			// console.log('date:', this.model.get( 'date' ));
+			console.log( 'LIT VIEW: render' );
+
+			// this.$el.html( 'this.template( this.model.toJSON()' );
 			this.$el.html( this.template( this.model.toJSON() ));
 
 			var sections = this.model.sections;
@@ -412,24 +422,192 @@ $(function() {
 		  		$( ".song-details-container" ).toggle( "slow" );
 			});
 
+			// $( "#home" ).click( function(){
+			// 	console.log( 'CLICK' );
+			// });
+
+			return this;
+		}
+	});
+
+	// LINEUP
+	app.LineupView = Backbone.View.extend({
+		el: '#contents',
+
+		initialize: function(){
+			// this.collection = lineups;
+            _.bindAll(this, "render");
+            this.collection.bind( "reset", this.render );
+			// this.render();
+			// this.model.on( "all", this.render, this );
+		},
+
+		template: _.template( $( '#lineup-template' ).html() ),
+
+		render: function() {
+			console.log( 'LINEUP-RENDER: ', this.collection.toJSON() );
+			this.$el.html( this.template( { lineupList: this.collection.models } ));
+
+			///// EFFECTS
+			// $( ".song-title" ).click(function() {
+		 //  		$( ".song-details-container" ).toggle( "slow" );
+			// });
+
 			return this;
 		}
 	});
 
 
-	// BIG INSTANTIATION
-	// .................
-	liturgy = new app.Liturgy();
-	liturgy.fetch({
-		success: function(response,xhr) {
-			console.log("Inside success");
-			// console.log(response);
-	},
-		error: function (errorResponse) {
-			console.log(errorResponse)
+	// NAVIGATION
+	app.NavigationView = Backbone.View.extend({
+		el: '#navigation',
+
+		initialize: function( router ){
+			console.log( 'Nav INIT' );
+			this.render();
+			this.router = router;
+			// this.model.on( "all", this.render, this );
+			// _.bindAll(this);
+		},
+
+		events: {
+			'click #home': 'displayHome'
+			// 'click': 'displayHome'
+		},
+
+		template: _.template( $( '#navigation-template' ).html() ),
+
+		render: function() {
+			console.log( 'NavigationView: RENDER' );
+			this.$el.html( this.template() );
+			this.delegateEvents();
+			return this;
+		},
+
+		displayHome: function( e ){
+			//update url and pass true to execute route method
+			 e.preventDefault(); 
+			console.log( 'displayHome' );
+			console.log( 'displayHome', this.router );
+			this.router.navigate( 'home', {trigger: true, replace: true } );
+			return false;
 		}
 	});
 
-	liturgyView = new app.LiturgyView( { model: liturgy } );
+	// BIG INSTANTIATION
+	// .................
+	// liturgy = new app.Liturgy();
+	// liturgy.fetch({
+	// 	success: function(response,xhr) {
+	// 		console.log("Inside success");
+	// 		// console.log(response);
+	// },
+	// 	error: function (errorResponse) {
+	// 		console.log(errorResponse)
+	// 	}
+	// });
 
+	// liturgyView = new app.LiturgyView( { model: liturgy } );
+
+	//
+	app.LiturgyRouter = Backbone.Router.extend({
+		routes: {
+			'': 'home',
+			'home': 'home',
+			'liturgies/:id': 'getLiturgy',
+			'rum': 	'rum'
+		},
+
+		rum: function(){
+			console.log( 'RUM' );
+			var $contents = $( '#contents' );
+			$contents.empty();
+		},
+
+		initialize: function() {
+			console.log( 'Router- INIT' );
+			// this.liturgy = new app.Liturgy();
+			// this.liturgy.fetch({
+			// 	success: function(response,xhr) {
+			// 		console.log("Inside success");
+			// 		// console.log(response);
+			// },
+			// 	error: function (errorResponse) {
+			// 		console.log(errorResponse)
+			// 	}
+			// });
+
+			this.lineups = new app.Lineups();
+			this.lineups.fetch({
+				success: function(response,xhr) {
+					console.log("Inside success");
+					// console.log(response);
+			},
+				error: function (errorResponse) {
+					console.log(errorResponse)
+				}
+			});
+
+			// this.liturgyView = new app.LiturgyView( { model: this.liturgy } );
+			this.navigationView = new app.NavigationView ( this );
+			this.lineupView = new app.LineupView( { collection: this.lineups } );
+		},
+
+		deselectNavigationButtons: function(){
+			$('.navigation-button').removeClass('active');
+		},
+
+		selectNavigationButton: function( buttonSelector ){
+			this.deselectNavigationButtons();
+            $(buttonSelector).addClass('active');
+		},
+
+		home: function() {
+			console.log( 'router: HOME' );
+			var $navigation = $( '#navigation' );
+			$navigation.empty();
+			$navigation.append( this.navigationView.render().el );
+
+			var $contents = $( '#contents' );
+			$contents.empty();
+			// $container.append( this.navigationView.render().el );
+			// $container.append( this.liturgyView.render().el );
+			$contents.append( this.lineupView.render().el );
+			console.log( 'router: lineupView render: ', this.lineupView.render().el );
+			// this.selectNavigationButton( '#home' );
+		},
+
+		getLiturgy: function( liturgy_id ){
+			console.log( 'lit id:', liturgy_id );
+			this.liturgy = new app.Liturgy( {id: liturgy_id });
+			this.liturgy.fetch({
+				success: function(response,xhr) {
+					console.log("Liturgy FETCH-ED");
+					// console.log(response);
+			},
+				error: function (errorResponse) {
+					console.log(errorResponse)
+				}
+			});
+			var $contents = $( '#contents' );
+			$contents.empty();
+			this.liturgyView = new app.LiturgyView( { model: this.liturgy } );
+			// $container.append( this.navigationView.render().el );
+			$contents.append( this.liturgyView.render().el );
+			// $container.append( 'this.liturgyView.render().el' );
+			// console.log( 'LV:', this.liturgyView.render().el );
+		}
+	});
+
+
+	app.router = new app.LiturgyRouter;
+	// Backbone.history.start({pushState: true});
+	Backbone.history.start();
+
+	// app.router.navigate( 'home', {trigger: true} );
+
+	// this.navigationView = new app.NavigationView;
+	// var $container = $( '#container' );
+	// $container.empty();
+	// $container.append( this.navigationView.render().el );
 } );

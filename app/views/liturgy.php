@@ -90,8 +90,36 @@
             </ul>
         </script>
 
+        <script type="text/template" id="navigation-template">
+            <div id="home" class="navigation-button large button gray">home</div>
+            <div id="about" class="navigation-button large button gray">about</div>
+            <div class="navigation-separator"></div>
+        </script>
+
+        <script type="text/template" id="lineup-template">
+            <div id="lineup-title">Faith Choir Song Lineups</div>
+            <div class="blank-line"></div>
+            <div id="lineup-listing">
+            <ul>
+                <% _.each( lineupList, function( lineup, i ){ %>
+                    <li class="lineup-item">
+                        <div class="lineup-date">
+                            <%=lineup.get("date")%>
+                        </div>
+                        <div class="lineup-title">
+                            <a href="#liturgies/<%=lineup.get('liturgy_id')%>"><%=lineup.get("title")%></a>
+                        </div>
+                    </li>
+                <% } ); %>
+            </ul>
+            </div>
+        </script>
+
         <!-- MEAT -->
-        <div id="container"></div>
+        <div id="container">
+            <div id="navigation"></div>
+            <div id="contents"> </div>
+        </div>
 
         <!-- LIBRARIES -->
         <script src="js/lib/jquery-1.9.0.js"></script>

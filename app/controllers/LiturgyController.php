@@ -9,15 +9,11 @@ class LiturgyController extends \BaseController {
 	 */
 	public function index()
 	{
-		// $str = $this->getLiturgy();
-		// Log::info( "response:" . $str );
-		// return json_decode( $str, true );
-		//
 		// return json_encode( Liturgy::getLiturgyData( 1 ) );
-		$t = Liturgy::getLiturgyData( 1 );
-		// // Log::info( "INDEX: ", $t );
-		// // print_r( $t );
 		// return json_encode( $t, JSON_UNESCAPED_SLASHES );
+
+		// $t = Liturgy::getLiturgyData( 1 );
+		$t = Liturgy::getLineups();
 		return json_encode( $t );
 	}
 
@@ -47,9 +43,10 @@ class LiturgyController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show( $id )
 	{
-		//
+		$t = Liturgy::getLiturgyData( $id );
+		return json_encode( $t );
 	}
 
 	/**

@@ -12,6 +12,23 @@ class Liturgy extends Eloquent {
 					->join( 'songs', 'song_id', '=', 'songs.id' );
 	}
 
+	public static function getLineups(){
+		$results = array(
+			array(
+				'date'			=>	'Sun Oct 1, 2013',
+				'title'			=>	'First Sunday of Advent',
+				'liturgy_id'	=> 	1
+			),
+			array(
+				'date'			=>	'Sun Oct 12, 2013',
+				'title'			=>	'Second Sunday of Advent',
+				'liturgy_id'	=> 	2
+			)
+		);
+
+		return $results;
+	}
+
 	public static function getLiturgyData( $liturgy_id ){
 		$liturgy = Liturgy::find( $liturgy_id );
 		if( NULL == $liturgy ){
