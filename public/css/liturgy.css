@@ -151,6 +151,17 @@ body{
 */	/*display: inline;*/
 	/*padding: 0px;*/
 	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+.lineup-title:hover {
+	font-weight: normal;
+	color: blue;
+	cursor: pointer;
+}
+
+.lineup-title a {
+	text-decoration: none !important;
 }
 
 /************************************************************************/
