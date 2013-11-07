@@ -3,9 +3,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
-        <title>Liturgy Song Planning</title>
+        <title>Faith Choir - Liturgy Song Planning</title>
         <!-- <link rel="stylesheet" href="css/screen.css"> -->
         <link rel="stylesheet" href="css/liturgy.css">
+        <link rel="shortcut icon" href="http://faith.bluepego.com/favicon.ico?v=2" />
     </head>
     <body>
         <!-- VIEW TEMPLATES  -->

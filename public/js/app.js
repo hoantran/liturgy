@@ -310,6 +310,14 @@ $(function() {
 	app.ItemView = Backbone.View.extend( {
 		template: _.template( $( '#item-template' ).html() ),
 
+		events: {
+			"click span.song-title": "clicked"
+		},
+
+		clicked: function(){
+			$( "div.song-details-container" + "." + this.cid ).toggle( "slow" );
+		},
+
 		render: function() {
 			this.$el.html( this.template() );
 
@@ -323,11 +331,14 @@ $(function() {
 				})
 			})
 			$( '.item-row-container', this.$el ).html( rowView.render().el );
+			$( '.song-title', this.$el ).addClass( this.cid );
 
 			var songView = new app.SongView( {
 				model: this.model.song
 			});
+
 			$( '.song-details-container', this.$el ).html( songView.render().el );
+			$( '.song-details-container', this.$el ).addClass( this.cid );
 
 			return this;
 		}
@@ -418,9 +429,9 @@ $(function() {
 			listingView.render();
 
 			///// EFFECTS
-			$( ".song-title" ).click(function() {
-		  		$( ".song-details-container" ).toggle( "slow" );
-			});
+			// $( ".song-title" ).click(function() {
+		 //  		$( ".song-details-container" ).toggle( "slow" );
+			// });
 
 			// $( "#home" ).click( function(){
 			// 	console.log( 'CLICK' );
