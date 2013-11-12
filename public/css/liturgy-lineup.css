@@ -1,0 +1,68 @@
+/************************************************************************/
+/*		LITURGY			*/
+/************************************************************************/
+
+#liturgy-name, #lineup-title {
+  /*font-size: large;*/
+  font-weight: bold;
+  text-align: left;
+  line-height: 50px;
+  font-size: 30px;
+  background-color: #e0e0e0;
+  margin: 0px;
+  padding: 0px;
+}
+
+#liturgy-date {
+  font-size: 14px;
+  text-align: left;
+  line-height: 20px;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+
+/************************************************************************/
+/*		LINEUP			*/
+/************************************************************************/
+#lineup-listing ul {
+	list-style-type: none;
+	padding: 0pt;
+	margin: 0pt;
+}
+.blank-line {
+	padding: 20px;
+	margin: 0px;
+}
+
+.lineup-date {
+	width: 200px;
+	/*height: 400px;*/
+	padding: 0px;
+	/*background: red;*/
+	float: left;
+	/*margin: 0px;*/
+	/*display: inline;*/
+}
+
+.lineup-title {
+	width: 700px;
+	/*background: blue;*/
+	/*height: 400px;*/
+	margin-left: 200px;
+/*	float: left;
+*/	/*display: inline;*/
+	/*padding: 0px;*/
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+.lineup-title:hover {
+	font-weight: normal;
+	color: blue;
+	cursor: pointer;
+}
+
+.lineup-title a {
+	text-decoration: none !important;
+}

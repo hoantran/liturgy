@@ -1,0 +1,82 @@
+
+/************************************************************************/
+/*		SONG DETAILS			*/
+/************************************************************************/
+.song-details-container {
+	text-align: left;
+	margin-left: 25%;
+	/*margin-bottom: 25px;*/
+	/*padding-bottom: 100px;*/
+	display: none;
+}
+
+.medium-listing {
+	float: left;
+	width: 100px;
+	/*overflow:hidden;*/
+	margin-left: auto;
+	margin-right: 0px;
+}
+
+.medium-listing ul {
+	list-style-type: none;
+	padding: 0pt;
+	margin: 0pt;
+}
+
+.detail-header {
+	font-weight: normal;
+	font-style: italic;
+}
+
+.detail-medium {
+	font-weight: normal;
+}
+
+img.detail-image
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background:url(../img/play-24.png) 0 0;
+}
+
+img.detail-image:hover
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background:url(../img/play-24-hover.png) 0 0;
+}
+
+img.detail-image-pdf
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background:url(../img/pdf-24.png) 0 0;
+}
+
+img.detail-image-pdf:hover
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background:url(../img/pdf-24-hover.png) 0 0;
+}
+
+img.detail-image-link
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background:url(../img/link-24.png) 0 0;
+}
+
+img.detail-image-link:hover
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background:url(../img/link-24-hover.png) 0 0;
+}

@@ -1,0 +1,16 @@
+            <div id="lineup-title">Faith Choir Song Lineups</div>
+            <div class="blank-line"></div>
+            <div id="lineup-listing">
+            <ul>
+                <% _.each( lineupList, function( lineup, i ){ %>
+                    <li class="lineup-item">
+                        <div class="lineup-date">
+                            <%=lineup.get("date")%>
+                        </div>
+                        <div class="lineup-title">
+                            <a href="#liturgies/<%=lineup.get('liturgy_id')%>"><%=lineup.get("title")%></a>
+                        </div>
+                    </li>
+                <% } ); %>
+            </ul>
+            </div>

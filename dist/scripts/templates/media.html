@@ -1,0 +1,60 @@
+    <!-- THE ENCLOSING <DIV> is !IMPORTANT -->
+    <!-- WITHOUT IT, REQUIRE JS WILL NOT FIND THE TEMPLATES -->
+    <div>
+        <script type="text/template" id="mp3-medium-template">
+            <ul>
+                <li class="detail-header"><%= medium %></li>
+                <% _.each( mediumList, function(entry) { %>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image" /></a></li>
+                <% } ); %>
+            </ul>
+        </script>
+        <script type="text/template" id="vocal-medium-template">
+            <ul>
+                <li class="detail-header"><%= medium %></li>
+                <% _.each( mediumList, function(entry) { %>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image-pdf" /></a></li>
+                <% } ); %>
+            </ul>
+        </script>
+        <script type="text/template" id="guitar-medium-template">
+            <ul>
+                <li class="detail-header"><%= medium %></li>
+                <% _.each( mediumList, function(entry) { %>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image-pdf" /></a></li>
+                <% } ); %>
+            </ul>
+        </script>
+        <script type="text/template" id="piano-medium-template">
+            <ul>
+                <li class="detail-header"><%= medium %></li>
+                <% _.each( mediumList, function(entry) { %>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image-pdf" /></a></li>
+                <% } ); %>
+            </ul>
+        </script>
+        <script type="text/template" id="solo-medium-template">
+            <ul>
+                <li class="detail-header"><%= medium %></li>
+                <% _.each( mediumList, function(entry) { %>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image-pdf" /></a></li>
+                <% } ); %>
+            </ul>
+        </script>
+        <script type="text/template" id="link-medium-template">
+            <ul>
+                <li class="detail-header"><%= medium %></li>
+                <% _.each( mediumList, function(entry) { %>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image-link" /></a></li>
+                <% } ); %>
+            </ul>
+        </script>
+        <script type="text/template" id="ppt-medium-template">
+            <ul>
+                <li class="detail-header"><%= medium %></li>
+                <% _.each( mediumList, function(entry) { %>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image-ppt" /></a></li>
+                <% } ); %>
+            </ul>
+        </script>
+    </div>
