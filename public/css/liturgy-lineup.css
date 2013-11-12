@@ -2,7 +2,7 @@
 /*		LITURGY			*/
 /************************************************************************/
 
-#liturgy-name, #lineup-title {
+#liturgy-name, #lineup-title, .main-header {
   /*font-size: large;*/
   font-weight: bold;
   text-align: left;
