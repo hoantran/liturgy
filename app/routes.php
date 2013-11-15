@@ -21,7 +21,11 @@ Route::get('/', function()
 	return View::make('liturgy');
 });
 
-
+Route::get('auto', function()
+{
+	return View::make('auto');
+});
 
 Route::resource('/test-js/liturgies', 'LiturgyController');
 Route::resource('liturgies', 'LiturgyController');
+Route::resource('song', 'SongController');

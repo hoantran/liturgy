@@ -7,13 +7,15 @@ define([
 	'views/medium',
 	'db/medium',
 	'views/liturgy',
-	'views/about'
-], function( $, Lineups, NavigationView, LineupView, Liturgy, MediumView, Medium, LiturgyView, AboutView ) {
+	'views/about',
+	'views/addliturgy'
+], function( $, Lineups, NavigationView, LineupView, Liturgy, MediumView, Medium, LiturgyView, AboutView, AddLiturgyView ) {
 	var Router = Backbone.Router.extend({
 		routes: {
 			'': 'home',
 			'home': 'home',
 			'about': 'about',
+			'add': 'addLiturgy',
 			'liturgies/:id': 'getLiturgy'
 		},
 
@@ -75,6 +77,18 @@ define([
 			var $contents = $( '#contents' );
 			$contents.empty();
 			$contents.append( this.aboutView.render().el );
+		},
+
+		addLiturgy: function() {
+			console.log( 'Router:Add Lit' );
+			// var $navigation = $( '#navigation' );
+			// $navigation.empty();
+			// $navigation.append( this.navigationView.render().el );
+
+			var addLiturgyView = new AddLiturgyView;
+			var $contents = $( '#contents' );
+			$contents.empty();
+			$contents.append( addLiturgyView.render().el );
 		},
 
 		// paintLiturgy: function() {

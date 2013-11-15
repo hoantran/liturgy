@@ -29,12 +29,15 @@ class Liturgy extends Eloquent {
 
 		// later there will be a need to limit the query, instead of getting all liturgies
 		foreach ( Liturgy::all() as $liturgy ) {
-			$date = DateTime::createFromFormat( 'Y-m-d H:i:s', $liturgy->date );
-			array_push( $results, array(
-				'date'			=>	$date->format('D M d, Y'),
-				'title'			=>	$liturgy->title,
-				'liturgy_id'	=> 	$liturgy->id
-			));
+			if( $liturgy->enable ){
+				$date = DateTime::createFromFormat( 'Y-m-d H:i:s', $liturgy->date );
+				array_push( $results, array(
+					'id'			=>	$liturgy->id,
+					'date'			=>	$date->format('D M d, Y'),
+					'title'			=>	$liturgy->title,
+					'liturgy_id'	=> 	$liturgy->id
+				));
+			}
 		}
 
 		return $results;
@@ -68,7 +71,8 @@ class Liturgy extends Eloquent {
  			// $master[ $section ][ $p->part ] = $p->pivot->song_id;
  			$master[ $section ][] = array(
  				'order'		=> $p->part_order,
- 				$p->part 	=> $p->pivot->song_id
+ 				$p->part 	=> $p->pivot->song_id,
+ 				'id'		=> $p->id
  			);
 		}
 
@@ -90,18 +94,19 @@ class Liturgy extends Eloquent {
 				return $value[ 'order' ];
 			}));
 
-			foreach ($parts as $p ) {
-				// each part - $p - should have only two elements: 
-				// 'order' and
-				// 'whatever the part name is' e.g. Processional, Kyrie ... etc
-				foreach ($p as $key => $value) {
-					if ( 0 != strcmp( $key, 'order' ) ) {
-						$items[ $key ] = $value;
-						break;
-					}
-				}
-			}
-			$results[ $sectionName ] = $items;
+			// foreach ($parts as $p ) {
+			// 	// each part - $p - should have only two elements:
+			// 	// 'order' and
+			// 	// 'whatever the part name is' e.g. Processional, Kyrie ... etc
+			// 	foreach ($p as $key => $value) {
+			// 		if ( 0 != strcmp( $key, 'order' ) ) {
+			// 			$items[ $key ] = $value;
+			// 			break;
+			// 		}
+			// 	}
+			// }
+			// $results[ $sectionName ] = $items;
+			$results[ $sectionName ] = $parts;
 		}
 
 		return $results;
@@ -116,13 +121,46 @@ class Liturgy extends Eloquent {
 			);
 
 			$items = array();
-			foreach ($parts as $part => $song_id) {
+			foreach ( $parts as $aPart ) {
+				// there are only three items in the array - $aPart
+				// 'id': the id of the part
+				// 'order': order of appearance of the part within the section
+				// 'part_title': whatever the title of the part is
+				//
+				//	need to delete 'order', and leave everything else in
+				// must use foreach loop since we don't know what the key for the part is
+				$id = null;
+				$part = null;
+				$songID = null;
+
+				foreach ($aPart as $key => $value) {
+					if( 0 == strcmp( $key, 'order' )){
+						continue;
+					}
+					elseif (0 == strcmp( $key, 'id' )) {
+						$id = $value;
+					}
+					else{
+						$part = $key;
+						$songID = $value;
+					}
+				}
+
 				array_push( $items, array(
+					'id'	=> $id,
 					'part'	=> $part,
-					'song'	=> Song::getSongData( $song_id )
+					'song'	=> Song::getSongData( $songID )
 				));
-				// $items[ $part ] = Song::getSongData( $song_id );
 			}
+
+
+			// foreach ($parts as $part => $song_id) {
+			// 	array_push( $items, array(
+			// 		'part'	=> $part,
+			// 		'song'	=> Song::getSongData( $song_id )
+			// 	));
+			// 	// $items[ $part ] = Song::getSongData( $song_id );
+			// }
 			$s[ 'items' ] = $items;
 
 			array_push( $results, $s );

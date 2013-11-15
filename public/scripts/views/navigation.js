@@ -1,26 +1,31 @@
 define([
 	'underscore',
   	'backbone',
+  	'db/menu',
   	'text!templates/navigation.html'
-], function( _, Backbone, NavigationTemplate ){
+], function( _, Backbone, Menu, NavigationTemplate ){
 	var NavigationView = Backbone.View.extend({
 		el: '#navigation',
 
 		initialize: function( router ){
-			this.render();
+			console.log( 'INIT' );
 			this.router = router;
+			this.model = new Menu;
+			console.log ( 'menu', this.model );
+			this.render();
 		},
 
 		events: {
 			'click #home': 'displayHome',
-			'click #about': 'displayAbout'
+			'click #about': 'displayAbout',
+			'click #add': 'displayAdd'
 		},
 
 		template: _.template( NavigationTemplate ),
 
 		render: function() {
-			// console.log( 'template: NAV RENDER' );
-			this.$el.html( this.template() );
+			console.log( 'template: NAV RENDER' );
+			this.$el.html( this.template( this.model.toJSON() ) );
 			this.delegateEvents();
 			return this;
 		},
@@ -34,10 +39,15 @@ define([
 
 		displayAbout: function( e ){
 			//update url and pass true to execute route method
-			console.log( 'displayAbout' );
-			console.log( 'Nav Router: ', this.router );
 			 e.preventDefault();
 			this.router.navigate( 'about', {trigger: true, replace: true } );
+			return false;
+		},
+
+		displayAdd: function( e ){
+			//update url and pass true to execute route method
+			 e.preventDefault();
+			this.router.navigate( 'add', {trigger: true, replace: true } );
 			return false;
 		}
 	});
