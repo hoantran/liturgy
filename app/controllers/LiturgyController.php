@@ -82,6 +82,13 @@ class LiturgyController extends \BaseController {
 		//
 	}
 
+
+
+	//...........................................................
+	// METHODS FOR CREATING FAKE LITURGY DATA DURING DESIGN PHASE
+	//...........................................................
+
+
 	private function getComposers(){
 		$str = "";
 		$str .= "\"" . "composers" . "\"" . ": [";
@@ -95,7 +102,7 @@ class LiturgyController extends \BaseController {
 	}
 
 	private function getHaugen(){
-		return '{ "_id": "marty id", "firstName": "Marty", "lastName": "Haugen", "picUrl": "url" }';		
+		return '{ "_id": "marty id", "firstName": "Marty", "lastName": "Haugen", "picUrl": "url" }';
 	}
 
 	private function getHaas(){

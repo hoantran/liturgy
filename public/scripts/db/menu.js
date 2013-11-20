@@ -5,7 +5,7 @@ define([
 		defaults: {
 			"home"			: true,
 			"about"			: true,
-			"addLiturgy"	: false
+			"addLiturgy"	: true
 		}
 	});
 

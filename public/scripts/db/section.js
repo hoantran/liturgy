@@ -8,6 +8,10 @@ define([
 			this.items.parent = this;
 		},
 
+		getJSON: function(){
+			return this.items.getJSON();
+		},
+
 		parse: function( response ){
 			this.items.reset( response.items );
 			delete response.items;

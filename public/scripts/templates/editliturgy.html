@@ -1,0 +1,20 @@
+<form class="form" id="editLiturgy" action="#" autocomplete="off">
+	<input class = "liturgy-inputs" type="hidden" name="liturgyid" value="<%=id%>">
+
+	<label for="title">Liturgy Title: </label>
+	<input class = "liturgy-inputs" id="title" data_id="title" value="<%=name%>"type="text" autocomplete="off" />
+
+	<label for="date">Liturgy Date: </label>
+	<input class = "liturgy-inputs" id="date" data_id="date" value="<%=date%>"type="text" autocomplete="off" />
+
+	<% if( typeof items !== 'undefined' && items.length > 0 ) { %>
+	        <div>
+	      		<% _.each( items, function( item, i ){ %>
+	                <label for="<%=item.labeid%>"><%=item.label%>: </label>
+	                <input class = "liturgy-inputs song-input" data_id="<%=item.labelid%>"  data_songid="<%=item.songid%>" value="<%=item.songtitle%>" type="text" autocomplete="off" />
+        		<% }); %>
+	        </div>
+	 <% } %>
+
+	 <button class="button submit-button" id="add">Add</button>
+</form>

@@ -8,14 +8,27 @@ define([
 	'db/medium',
 	'views/liturgy',
 	'views/about',
-	'views/addliturgy'
-], function( $, Lineups, NavigationView, LineupView, Liturgy, MediumView, Medium, LiturgyView, AboutView, AddLiturgyView ) {
+	'views/editliturgy',
+	'db/simplifiedliturgy'
+], function(
+	$,
+	Lineups,
+	NavigationView,
+	LineupView,
+	Liturgy,
+	MediumView,
+	Medium,
+	LiturgyView,
+	AboutView,
+	EditLiturgyView,
+	SimplifiedLiturgy
+	) {
 	var Router = Backbone.Router.extend({
 		routes: {
 			'': 'home',
 			'home': 'home',
 			'about': 'about',
-			'add': 'addLiturgy',
+			'edit': 'editLiturgy',
 			'liturgies/:id': 'getLiturgy'
 		},
 
@@ -68,7 +81,7 @@ define([
 		},
 
 		about: function() {
-			console.log( 'Router:about' );
+			// console.log( 'Router:about' );
 			// var $navigation = $( '#navigation' );
 			// $navigation.empty();
 			// $navigation.append( this.navigationView.render().el );
@@ -79,16 +92,17 @@ define([
 			$contents.append( this.aboutView.render().el );
 		},
 
-		addLiturgy: function() {
-			console.log( 'Router:Add Lit' );
+		editLiturgy: function() {
+			// console.log( 'Router:Edit Lit' );
 			// var $navigation = $( '#navigation' );
 			// $navigation.empty();
 			// $navigation.append( this.navigationView.render().el );
 
-			var addLiturgyView = new AddLiturgyView;
+			var sl = new SimplifiedLiturgy( 2 );
+			var editLiturgyView = new EditLiturgyView ( {model: sl });
 			var $contents = $( '#contents' );
 			$contents.empty();
-			$contents.append( addLiturgyView.render().el );
+			$contents.append( editLiturgyView.render().el );
 		},
 
 		// paintLiturgy: function() {

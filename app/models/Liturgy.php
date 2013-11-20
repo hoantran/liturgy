@@ -53,7 +53,7 @@ class Liturgy extends Eloquent {
 			$date = DateTime::createFromFormat( 'Y-m-d H:i:s', $liturgy->date );
 
 			return array(
-				'_id'		=> $liturgy->id,
+				'id'		=> $liturgy->id,
 				'name'		=> $liturgy->title,
 				'date'		=> $date->format('D m/d/Y H:i A'),
 				'sections'	=> Liturgy::unpackParts( $liturgy->parts )

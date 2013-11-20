@@ -40,7 +40,7 @@ class Song extends Eloquent {
 		}
 		else {
 			$data = array(
-				"_id"			=> $song->id,
+				"id"			=> $song->id,
 				"title"			=> $song->title,
 				"composers"		=> Song::getComposers( $song ),
 				'media' 		=> Song::getMedia( $song )

@@ -1,9 +1,14 @@
 <?php
 
 class SongController extends \BaseController {
+	const SEARCH_COUNT_LIMIT = 20;
 
 	/**
 	 * Display a listing of the resource.
+	 *
+	 * Consider purifying/sanitizing the inputs:
+	 * http://bit.ly/VaJeg2
+	 * http://bit.ly/PTDcjd
 	 *
 	 * @return Response
 	 */
@@ -12,12 +17,40 @@ class SongController extends \BaseController {
 		$term = Input::get('term');
 
 		Log::info( 'term:' . $term );
-		if( !empty( $term )){
-			Log::info( 'POSITIVE' );
+		// if( !empty( $term )){
+		// 	Log::info( 'POSITIVE' );
+		// }
+
+		$search = DB::table( 'songs' )
+						->where( 'title', 'LIKE', '%'.$term.'%' )
+						->orWhere( 'firstline', 'LIKE', '%'.$term.'%' )
+						->take( self::SEARCH_COUNT_LIMIT )
+						->get();
+		Log::info( 'search:', $search );
+
+		$data = array();
+		foreach ($search as $song) {
+			array_push( $data, array(
+				'label'			=>	$song->title,
+				'data'			=>	$song->id
+			));
 		}
 
-		$t = '[{"label":"rocky", "value":"32"}, {"label":"annie", "value":"31"}]';
-		return json_decode( $t );
+		// $t = '[{"label":"bulwinkle", "data":"sail"}, {"label":"rocky", "data":"lalala"}, {"label":"annie", "data":"bicycle"}]';
+		// return json_decode( $t );
+		return json_encode( $data );
+	}
+
+	//DB::table( 'songs' )->where( 'title', 'LIKE', "%there%" )->orWhere( 'firstline', 'LIKE', '%there%' )->take( 5 )->get();
+
+	static public function replacePunctuationWithSpace( $term ){
+		if( !self::IsNullOrEmptyString( $term )){
+			return preg_replace("/[\.\,\:\;\?\-\!]/i", " ", $term);
+		}
+	}
+
+	static public function IsNullOrEmptyString($question){
+    	return (!isset($question) || trim($question)==='');
 	}
 
 	/**

@@ -88,6 +88,7 @@
             console.log( 'testData', testData );
 
             $(".user-input").autocomplete({ //Line 30
+              self: this,
               source    : 'song',
               // source: testData,
               // source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ],
@@ -98,11 +99,19 @@
               select    : function(event, ui){ //Line 33
                 console.log( 'event: ', event );
                 console.log( 'ui: ', ui );
+                console.log( 'data: ', $( ui ).attr( 'data' ) );
                 console.log( 'selected:', ui.item ? ui.item.value :  "Nothing selected");
+                console.log( 'this: ', this );
+                console.log( 'self: ', self );
+                console.log( 'val: ', $( this ).val() );
 
-                var id = ui.item.value;
-                var name = ui.item.label;
-                $(".user-input").val(name);
+                $( this ).attr( 'fx', 'rumble' );
+                console.log( 'fx: ', $( this ).attr('fx') );
+
+                // var id = ui.item.value;
+                // var name = ui.item.label;
+
+                // $(".user-input").val(name);
 
                 // ui.item.value = 'funny';
                 // var selectedModel = users.where({name: ui.item.value})[0];
@@ -114,9 +123,10 @@
                     console.log( 'el: ', el );
                     console.log( 'val: ', $( el ).val() );
                     console.log( 'data:', $( el ).attr( 'data' ));
+                    console.log( 'sel:', $( el ).attr( 'sel' ));
                 });
 
-                return false;
+                // return false;
               }
             });
           });

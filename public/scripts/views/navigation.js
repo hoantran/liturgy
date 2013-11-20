@@ -8,23 +8,21 @@ define([
 		el: '#navigation',
 
 		initialize: function( router ){
-			console.log( 'INIT' );
 			this.router = router;
 			this.model = new Menu;
-			console.log ( 'menu', this.model );
+			// console.log ( 'menu', this.model );
 			this.render();
 		},
 
 		events: {
 			'click #home': 'displayHome',
 			'click #about': 'displayAbout',
-			'click #add': 'displayAdd'
+			'click #edit': 'displayEdit'
 		},
 
 		template: _.template( NavigationTemplate ),
 
 		render: function() {
-			console.log( 'template: NAV RENDER' );
 			this.$el.html( this.template( this.model.toJSON() ) );
 			this.delegateEvents();
 			return this;
@@ -44,10 +42,10 @@ define([
 			return false;
 		},
 
-		displayAdd: function( e ){
+		displayEdit: function( e ){
 			//update url and pass true to execute route method
 			 e.preventDefault();
-			this.router.navigate( 'add', {trigger: true, replace: true } );
+			this.router.navigate( 'edit', {trigger: true, replace: true } );
 			return false;
 		}
 	});
