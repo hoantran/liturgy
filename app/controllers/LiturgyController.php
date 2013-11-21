@@ -24,7 +24,7 @@ class LiturgyController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		Log::info( 'create' );
 	}
 
 	/**
@@ -34,7 +34,36 @@ class LiturgyController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		Log::info( 'store' );
+
+		// .......
+		// NEW Liturgy
+		$liturgy = new Liturgy;
+		self::reviseWithNewInfo( $liturgy );
+	}
+
+	private function reviseWithNewInfo( $liturgy ){
+		$liturgy->title = Input::get( 'name' );
+
+		// input date format: 11/20/2013 12:45 AM
+		// output date format: Y-m-d H:i:s
+		$date = DateTime::createFromFormat( 'D m/d/Y h:i A', Input::get( 'date' ) );
+		if( isset( $date )){
+			$liturgy->date = $date->format( 'Y-m-d H:i:s' );
+		}
+		else {
+			Log::error( 'Can not retrieve the date. Possibly user enter the unexpected format.' );
+		}
+
+		$liturgy->enable = Input::get( 'enable' );
+		$liturgy->save();
+
+		// SAVE parts
+		$liturgy->parts()->detach(); // delete all existing entries for this liturgy in pivot table
+		$items = Input::get( 'items' );
+		foreach ($items as $item) {
+			$liturgy->parts()->attach( $item[ 'item_id' ], array( 'song_id' => $item[ 'song_id' ] ));
+		}
 	}
 
 	/**
@@ -57,7 +86,7 @@ class LiturgyController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		Log::info( 'edit: ' . $id );
 	}
 
 	/**
@@ -68,7 +97,48 @@ class LiturgyController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		Log::info( 'update: ' . $id );
+
+		// .......
+		// SAVE Liturgy
+		$liturgy = Liturgy::find( $id );
+		self::reviseWithNewInfo( $liturgy );
+
+		// // Log::info( 'JSON: ' , Input::json() );
+		// $data = Input::json();
+		// Log::info( Input::get('name') );
+
+		// // .......
+		// // SAVE Liturgy
+		// $liturgy = Liturgy::find( $id );
+		// $liturgy->title = Input::get( 'name' );
+
+		// // input date format: 11/20/2013 12:45 AM
+		// // output date format: Y-m-d H:i:s
+		// $date = DateTime::createFromFormat( 'D m/d/Y h:i A', Input::get( 'date' ) );
+		// if( isset( $date )){
+		// 	$liturgy->date = $date->format( 'Y-m-d H:i:s' );
+		// }
+		// else {
+		// 	Log::error( 'Can not retrieve the date. Possibly user enter the unexpected format.' );
+		// }
+
+		// $liturgy->enable = Input::get( 'enable' );
+		// $liturgy->save();
+
+		// // SAVE parts
+		// $liturgy->parts()->detach(); // delete all existing entries for this liturgy in pivot table
+		// $items = Input::get( 'items' );
+		// foreach ($items as $item) {
+		// 	$liturgy->parts()->attach( $item[ 'item_id' ], array( 'song_id' => $item[ 'song_id' ] ));
+		// 	// Log::info( '...' );
+
+		// 	// // Log::info( $value->item_id );
+		// 	// // Log::info( $value->item_songid );
+		// 	// Log::info( print_r( $key, true ) );
+		// 	// Log::info( print_r( $value, true ) );
+		// 	// Log::info( $value[ 'item_id' ]);
+		// }
 	}
 
 	/**
@@ -79,7 +149,7 @@ class LiturgyController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		Log::info( 'destroy: ' . $id );
 	}
 
 

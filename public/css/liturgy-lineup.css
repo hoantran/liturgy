@@ -2,7 +2,7 @@
 /*		LITURGY			*/
 /************************************************************************/
 
-#liturgy-name, #lineup-title, .main-header {
+#liturgy-name, #lineup-title, .main-header, #edit-liturgy-title {
   /*font-size: large;*/
   font-weight: bold;
   text-align: left;
@@ -39,6 +39,7 @@
 	width: 200px;
 	/*height: 400px;*/
 	padding: 0px;
+	margin-left: 25px;
 	/*background: red;*/
 	float: left;
 	/*margin: 0px;*/
@@ -66,3 +67,39 @@
 .lineup-title a {
 	text-decoration: none !important;
 }
+
+.lineup-icon {
+	float: left;
+	margin: 0;
+	margin-left: 5px;
+	padding: 0;
+	/*display: block;*/
+	width: 18px;
+	height: 18px;
+}
+
+.lineup-icon.lineup-icon-edit {
+	background:url(../img/lineup/edit.inactive.18.png) no-repeat top;
+}
+
+.lineup-icon-edit:hover {
+	background:url(../img/lineup/edit.active.18.png) no-repeat top;
+}
+
+.lineup-icon-edit:active {
+	background:url(../img/lineup/edit.clicked.18.png) no-repeat bottom;
+}
+
+.lineup-icon-duplicate {
+	background:url(../img/lineup/duplicate.inactive.18.png) 0 0;
+}
+
+.lineup-icon-duplicate:hover {
+	background:url(../img/lineup/duplicate.active.18.png) 0 0;
+}
+
+.lineup-icon-duplicate:active {
+	background:url(../img/lineup/duplicate.clicked.18.png) 0 0;
+}
+
+

@@ -1,8 +1,15 @@
+<p id="edit-liturgy-title"><%=taskTitle%> A Liturgy</p>
+<div class="item-divider"></div>
+
 <form class="form" id="editLiturgy" action="#" autocomplete="off">
-	<input class = "liturgy-inputs" type="hidden" name="liturgyid" value="<%=id%>">
+	<input class = "liturgy-inputs" type="hidden" name="liturgyid" data_id="liturgy_id" value="<%=id%>">
+
+	<label for="title">Enable: </label>
+	<input class = "liturgy-inputs" id="enable" data_id="enable" type="checkbox" autocomplete="off" <% if( 1== enable){%>checked<%}%>/>
 
 	<label for="title">Liturgy Title: </label>
-	<input class = "liturgy-inputs" id="title" data_id="title" value="<%=name%>"type="text" autocomplete="off" />
+	<input class = "liturgy-inputs" id="title" data_id="title" value="<%=name%>" type="text" autocomplete="off" />
+
 
 	<label for="date">Liturgy Date: </label>
 	<input class = "liturgy-inputs" id="date" data_id="date" value="<%=date%>"type="text" autocomplete="off" />
@@ -16,5 +23,5 @@
 	        </div>
 	 <% } %>
 
-	 <button class="button submit-button" id="add">Add</button>
+	 <button class="button submit-button" id="save">Save</button>
 </form>

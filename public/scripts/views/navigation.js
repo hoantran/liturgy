@@ -16,8 +16,7 @@ define([
 
 		events: {
 			'click #home': 'displayHome',
-			'click #about': 'displayAbout',
-			'click #edit': 'displayEdit'
+			'click #about': 'displayAbout'
 		},
 
 		template: _.template( NavigationTemplate ),
@@ -41,13 +40,6 @@ define([
 			this.router.navigate( 'about', {trigger: true, replace: true } );
 			return false;
 		},
-
-		displayEdit: function( e ){
-			//update url and pass true to execute route method
-			 e.preventDefault();
-			this.router.navigate( 'edit', {trigger: true, replace: true } );
-			return false;
-		}
 	});
 
 	return NavigationView;

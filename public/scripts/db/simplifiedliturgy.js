@@ -26,8 +26,20 @@ define([
 			"id"	: "",
 			"name"	: "",
 			"date"	: "",
+			"enable": "",
 			"items"	: []
+		},
 
+		addItem: function( item_id, song_id ){
+			console.log( 'item: ', item_id );
+			console.log( 'song: ', song_id );
+			if(typeof this.get( 'items' ) === 'undefined'){
+				this.set( 'items', [] );
+			}
+			this.get( 'items' ).push( {
+				'item_id': item_id,
+				'song_id': song_id
+			});
 		},
 
 		initialize: function( liturgy_id ) {
@@ -69,6 +81,7 @@ define([
 			json[ 'id' ] = this.model.get( 'id' );
 			json[ 'name' ] = this.model.get( 'name' );
 			json[ 'date' ] = this.model.get( 'date' );
+			json[ 'enable' ] = this.model.get( 'enable' );
 			if( typeof this.model.sections !== 'undefined') {
 				json[ 'items' ] = this.model.sections.getJSON();
 			}

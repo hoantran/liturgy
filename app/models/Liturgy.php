@@ -56,6 +56,7 @@ class Liturgy extends Eloquent {
 				'id'		=> $liturgy->id,
 				'name'		=> $liturgy->title,
 				'date'		=> $date->format('D m/d/Y H:i A'),
+				'enable'	=> $liturgy->enable,
 				'sections'	=> Liturgy::unpackParts( $liturgy->parts )
 			);
 		}
@@ -78,7 +79,7 @@ class Liturgy extends Eloquent {
 
 		$master = Liturgy::sortParts( $master );
 
-		Log::info( "unpack:", $master );
+		// Log::info( "unpack:", $master );
 
 		return Liturgy::getFormattedSections( $master );
 	}
@@ -166,7 +167,7 @@ class Liturgy extends Eloquent {
 			array_push( $results, $s );
 		}
 
-		Log::info( "FORMATTED:", $results );
+		// Log::info( "FORMATTED:", $results );
 		return $results;
 	}
 
