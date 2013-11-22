@@ -1,8 +1,9 @@
 define([
 	'underscore',
   	'backbone',
+  	'db/acl',
   	'text!templates/lineup.html'
-], function( _, Backbone, LineupTemplate ){
+], function( _, Backbone, ACL, LineupTemplate ){
 	var LineupView = Backbone.View.extend({
 		el: '#contents',
 
@@ -36,7 +37,8 @@ define([
 
 		render: function() {
 			// TODO: 'admin' ACL needs to be more centrally controlled
-			this.$el.html( this.template( { lineupList: this.collection.models, admin: "1" } ));
+			var acl = new ACL;
+			this.$el.html( this.template( { lineupList: this.collection.models, admin: acl.get( 'admin' ) } ));
 			return this;
 		}
 	});

@@ -28,7 +28,8 @@ class Liturgy extends Eloquent {
 		// );
 
 		// later there will be a need to limit the query, instead of getting all liturgies
-		foreach ( Liturgy::all() as $liturgy ) {
+		$liturgies = Liturgy::orderBy('date', 'ASC')->get();
+		foreach ( $liturgies as $liturgy ) {
 			if( $liturgy->enable ){
 				$date = DateTime::createFromFormat( 'Y-m-d H:i:s', $liturgy->date );
 				array_push( $results, array(
