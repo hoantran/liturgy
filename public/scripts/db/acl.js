@@ -3,7 +3,7 @@ define([
 ], function( Backbone ){
 	var ACL = Backbone.Model.extend({
 		defaults: {
-			"admin"			: 1
+			"admin"			: 0
 		}
 	});
 
