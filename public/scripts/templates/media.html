@@ -57,4 +57,12 @@
                 <% } ); %>
             </ul>
         </script>
+        <script type="text/template" id="other-medium-template">
+            <ul>
+                <li class="detail-header"><%= medium %></li>
+                <% _.each( mediumList, function(entry) { %>
+                    <li class="detail-medium"><a href="<%=entry%>" target="_blank"><img class="detail-image-pdf" /></a></li>
+                <% } ); %>
+            </ul>
+        </script>
     </div>
