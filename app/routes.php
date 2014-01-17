@@ -18,7 +18,8 @@
 
 Route::get('/', function()
 {
-	return View::make('liturgy');
+	// return View::make('liturgy');
+	return View::make('marionette');
 });
 
 Route::get('auto', function()
