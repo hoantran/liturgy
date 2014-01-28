@@ -26,7 +26,7 @@
             // App Environment
             // ---------------
             //  Tip: Set to true to turn on "production" mode
-            var production = true,
+            var production = false,
                     filesToLoad,
             //BoilerplateMVC Helper Methods
                     boilerplateMVC = {
@@ -142,8 +142,14 @@
 
 </head>
 <body>
+    <div id="navigation">
+    </div>
+    <div id="main">
+    </div>
+    <div id="footer">
+    </div>
 
-<div data-role="page">
+<!-- <div data-role="page">
 
     <header data-role="header"></header>
 
@@ -155,7 +161,7 @@
         </p>
     </footer>
 
-</div>
+</div> -->
 
 </body>
 </html>
