@@ -12,6 +12,9 @@ define(['App', 'backbone', 'marionette', 'views/CalendarLayout', 'views/Calendar
 
             var liturgyCollection = new LiturgyItemCollection([
                     { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
+                    { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
+                    { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
+                    { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
                     { date: 'Nov 12, 2014',  title: 'Fourth Sunday of Lent' }
                 ]);
             var calendarView = new CalendarView({

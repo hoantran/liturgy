@@ -3,7 +3,7 @@ define(['jquery', 'hbs!templates/calendarListing', 'views/LiturgyItemView', 'bac
         //ItemView provides some default rendering logic
         return Backbone.Marionette.CompositeView.extend({
         	tagName: "table",
-        	classname: "table table-hover",
+        	className: "table table-striped table-hover",
             template:template,
             itemView: LiturgyItemView,
             itemViewContainer: "tbody"
