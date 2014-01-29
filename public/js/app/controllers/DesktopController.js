@@ -1,5 +1,5 @@
-define(['App', 'backbone', 'marionette', 'views/CalendarLayout', 'views/CalendarPanelView', 'collections/LiturgyItemCollection', 'views/CalendarView', 'views/MainLayout', 'views/DesktopNavigationView', 'views/JumbotronView', 'views/ContentView', 'views/FooterView' ],
-    function (App, Backbone, Marionette, CalendarLayout, CalendarPanelView, LiturgyItemCollection, CalendarView, MainLayout, DesktopNavigationView, JumbotronView, ContentView, FooterView ) {
+define(['App', 'backbone', 'marionette', 'views/CalendarLayout', 'views/CalendarPanelView', 'entities/CalendarLiturgies', 'views/CalendarView', 'views/MainLayout', 'views/DesktopNavigationView', 'views/JumbotronView', 'views/ContentView', 'views/FooterView' ],
+    function (App, Backbone, Marionette, CalendarLayout, CalendarPanelView, CalendarLiturgies, CalendarView, MainLayout, DesktopNavigationView, JumbotronView, ContentView, FooterView ) {
     return Backbone.Marionette.Controller.extend({
         initialize:function (options) {
             var mainLayout = new MainLayout();
@@ -10,13 +10,16 @@ define(['App', 'backbone', 'marionette', 'views/CalendarLayout', 'views/Calendar
 
             var panel = new CalendarPanelView();
 
-            var liturgyCollection = new LiturgyItemCollection([
-                    { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
-                    { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
-                    { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
-                    { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
-                    { date: 'Nov 12, 2014',  title: 'Fourth Sunday of Lent' }
-                ]);
+            var entities = new CalendarLiturgies();
+            var liturgyCollection = App.request( "calendar:liturgies" );
+
+            // var liturgyCollection = new LiturgyItemCollection([
+            //         { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
+            //         { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
+            //         { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
+            //         { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
+            //         { date: 'Nov 12, 2014',  title: 'Fourth Sunday of Lent' }
+            //     ]);
             var calendarView = new CalendarView({
                 collection: liturgyCollection
             });
