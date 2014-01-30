@@ -5,8 +5,8 @@ define(['jquery', 'hbs!templates/calendarLayout', 'backbone', 'marionette'],
             template: template,
 
             regions: {
-	            panelRegion:       "#panel-region",
-	            calendarRegion:    "#calendar-region",
+                panelRegion:       "#panel-region",
+                calendarRegion:    "#calendar-region"
             }
         });
     });

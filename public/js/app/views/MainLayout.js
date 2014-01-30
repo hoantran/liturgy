@@ -5,8 +5,8 @@ define(['jquery', 'hbs!templates/main', 'backbone', 'marionette'],
             template: template,
 
             regions: {
-	            jumbotronRegion:    "#jumbotron",
-	            contentRegion:      "#content",
+                jumbotronRegion:    "#jumbotron",
+                contentRegion:      "#content"
             }
         });
     });
