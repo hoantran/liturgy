@@ -17,11 +17,51 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
             // mainRegion:"#main"
         });
 
-        App.addInitializer(function () {
-            Backbone.history.start();
+        App.navigate = function(route,  options){
+            options = options || {};
+            Backbone.history.navigate(route, options);
+        };
+
+        App.getCurrentRoute = function(){
+            return Backbone.history.fragment;
+        };
+
+        App.startSubApp = function(appName, args){
+            var currentApp = appName ? App.module(appName) : null;
+            if (App.currentApp === currentApp){ return; }
+
+            if (App.currentApp){
+                App.currentApp.stop();
+            }
+
+            App.currentApp = currentApp;
+            if(currentApp){
+                currentApp.start(args);
+            }
+        };
+
+        App.on("initialize:after", function(){
+            if(Backbone.history){
+                // require([ "subapps/navigation/NavigationApp"  ], function ( NavigationApp ) {
+                require([ "subapps/calendar/CalendarApp"  ], function ( CalendarApp ) {
+                    Backbone.history.start();
+
+                    if(App.getCurrentRoute() === ""){
+                        App.trigger("calendar:list");
+                    }
+                });
+            }
+        });
+
+        App.on( 'start', function() {
+            console.log( 'starting MAIN APP ...' );
         });
 
         App.mobile = isMobile();
+
+        console.log( 'App Started.' );
+
+        console.log( App );
 
         return App;
     });
