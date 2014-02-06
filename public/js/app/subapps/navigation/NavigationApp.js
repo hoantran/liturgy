@@ -7,6 +7,6 @@ define( ["App"], function(App){
 
         NavigationApp.onStop = function(){
             console.log("stopping NavigationApp !!!");
-        }
+        };
     });
 });

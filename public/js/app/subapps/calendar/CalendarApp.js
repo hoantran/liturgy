@@ -7,7 +7,7 @@ define( ["App"], function(App){
 
         CalendarApp.onStop = function(){
             console.log("stopping CalendarApp !!!");
-        }
+        };
     });
 
     App.module("Routers.CalendarApp", function(CalendarAppRouter, App, Backbone, Marionette, $, _){
@@ -32,7 +32,7 @@ define( ["App"], function(App){
                     console.log( 'ListController:', ListController );
                     executeAction(ListController.listCalendar);
                 });
-            },
+            }
 
           // showContact: function(id){
           //   require(["apps/contacts/show/show_controller"], function(ShowController){

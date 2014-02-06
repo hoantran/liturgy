@@ -36,7 +36,7 @@ define( [ "App", "views/MainLayout", "subapps/calendar/list/CalendarLayout", "su
                     });
                 });
             }
-        }
+        };
     });
 
     return App.CalendarApp.List.Controller;
