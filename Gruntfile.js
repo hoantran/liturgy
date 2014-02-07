@@ -1,3 +1,6 @@
+//
+///// https://github.com/jrburke/r.js/blob/master/build/example.build.js
+//
 module.exports = function(grunt) {
 
     grunt.initConfig({
@@ -12,6 +15,7 @@ module.exports = function(grunt) {
                     preserveLicenseComments: false,
                     optimize: "uglify",
                     optimizeCss: "standard",
+                    findNestedDependencies: true,
                     mainConfigFile: "public/js/app/config/config.js",
                     include: ["init/MobileInit"],
                     out: "public/js/app/init/MobileInit.min.js",
@@ -43,6 +47,7 @@ module.exports = function(grunt) {
             },
             mobileCSS: {
                 options: {
+                    logLevel: 1,
                     optimizeCss: "standard",
                     cssIn: "./public/css/mobile.css",
                     out: "./public/css/mobile.min.css"
@@ -56,6 +61,7 @@ module.exports = function(grunt) {
                     name: "../libs/almond",
                     preserveLicenseComments: false,
                     optimize: "uglify",
+                    findNestedDependencies: true,
                     mainConfigFile: "public/js/app/config/config.js",
                     include: ["init/DesktopInit"],
                     out: "public/js/app/init/DesktopInit.min.js"
@@ -63,6 +69,7 @@ module.exports = function(grunt) {
             },
             desktopCSS: {
                 options: {
+                    logLevel: 1,
                     optimizeCss: "standard",
                     cssIn: "./public/css/desktop.css",
                     out: "./public/css/desktop.min.css"

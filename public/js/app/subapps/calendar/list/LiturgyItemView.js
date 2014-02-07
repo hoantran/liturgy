@@ -10,7 +10,9 @@ define(['jquery', 'hbs!subapps/calendar/list/tpl/liturgyItem', 'backbone', 'mari
             template:template,
 
             onRender: function(){
-                // set up final bits just before rendering the view's `el`
+                // manipulate the `el` here. it's already
+                // been rendered, and is full of the view's
+                // HTML, ready to go.
                 if( this.model.get( 'highLight' )){
                     console.log( this.model.get( 'date' ));
                     this.$el.addClass( highlight );
@@ -18,18 +20,45 @@ define(['jquery', 'hbs!subapps/calendar/list/tpl/liturgyItem', 'backbone', 'mari
             },
 
             events: {
-                "mousedown" :   "emphasize",
-                "mouseup"   :   "deEmphasize"
+                "mousedown td a.js-edit"    : "doNothing",
+                "mouseup td a.js-edit"      : "editClicked",
+                "mousedown button.js-delete": "doNothing",
+                "mouseup button.js-delete"  : "deleteClicked",
+                "mousedown"                 : "emphasize",
+                "mouseup"                   : "deEmphasize"
             },
 
-            emphasize: function(){
+            doNothing: function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('do nothing');
+            },
+
+            emphasize: function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('....');
                 console.log( 'emphasize' );
                 this.$el.addClass( mouse );
             },
 
-            deEmphasize: function(){
+            deEmphasize: function(e){
+                e.preventDefault();
+                e.stopPropagation();
                 console.log( 'deEmphasize' );
                 this.$el.removeClass( mouse );
+            },
+
+            editClicked: function(e){
+                console.log('editClicked');
+                e.preventDefault();
+                e.stopPropagation();
+            },
+
+            deleteClicked: function(e){
+                console.log('deleteClicked');
+                e.preventDefault();
+                e.stopPropagation();
             }
         });
     });

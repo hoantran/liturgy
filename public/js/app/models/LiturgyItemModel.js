@@ -5,7 +5,6 @@ define(["jquery", "backbone"],
 
             // Model Constructor
             initialize: function() {
-                console.log( 'LiturgyItemModel initializing ...' );
             },
 
             // Default values for all of the Model attributes
@@ -18,7 +17,6 @@ define(["jquery", "backbone"],
 
             // Get's called automatically by Backbone when the set and/or save methods are called (Add your own logic)
             validate: function(attrs) {
-
             }
 
         });
