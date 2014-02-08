@@ -13,3 +13,13 @@ footer {
     margin: 40px 0px;
     padding: 20px 0px;
 }
+
+.padding-ontop {
+    padding-top: 60px;
+    /*color: #d6d6d6;*/
+}
+
+body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

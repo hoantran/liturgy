@@ -146,8 +146,8 @@
     </div>
     <div id="main">
     </div>
-    <div id="footer">
-    </div>
+    <footer id="footer">
+    </footer>
 
 <!-- <div data-role="page">
 

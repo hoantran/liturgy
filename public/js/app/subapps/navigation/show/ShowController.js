@@ -1,36 +1,17 @@
-define(["app", "apps/contacts/show/show_view"], function(ContactManager, View){
-  ContactManager.module("ContactsApp.Show", function(Show, ContactManager, Backbone, Marionette, $, _){
-    Show.Controller = {
-      showContact: function(id){
-        require(["common/views", "entities/contact"], function(CommonViews){
-          var loadingView = new CommonViews.Loading({
-            title: "Artificial Loading Delay",
-            message: "Data loading is delayed to demonstrate using a loading view."
-          });
-          ContactManager.mainRegion.show(loadingView);
+define(["App", "subapps/navigation/show/ShowView"], function(App, View){
+    return {
+        showNavigation: function(){
+            var view = new View.Message();
 
-          var fetchingContact = ContactManager.request("contact:entity", id);
-          $.when(fetchingContact).done(function(contact){
-            var contactView;
-            if(contact !== undefined){
-              contactView = new View.Contact({
-                model: contact
-              });
+            view.on("home:clicked", function(childView, model){
+                App.trigger("calendar:list");
+            });
 
-              contactView.on("contact:edit", function(contact){
-                ContactManager.trigger("contact:edit", contact.get("id"));
-              });
-            }
-            else{
-              contactView = new View.MissingContact();
-            }
+            view.on("brand:clicked", function(childView, model){
+                App.trigger("calendar:list");
+            });
 
-            ContactManager.mainRegion.show(contactView);
-          });
-        });
-      }
+            App.navigationRegion.show(view);
+        }
     };
-  });
-
-  return ContactManager.ContactsApp.Show.Controller;
 });

@@ -7,8 +7,12 @@ require.config({
         "jquery":"../libs/jquery",
         "jqueryui":"../libs/jqueryui",
         "jquerymobile":"../libs/jquery.mobile",
+        "spin": "../libs/spin",
+        "spin.jquery": "../libs/spin.jquery",
         "underscore":"../libs/lodash.underscore",
         "backbone":"../libs/backbone",
+        "backbone.babysitter":"../libs/backbone.babysitter",
+        "backbone.wreqr":"../libs/backbone.wreqr",
         "marionette":"../libs/backbone.marionette",
         "handlebars":"../libs/handlebars",
         "hbs":"../libs/hbs",
@@ -31,19 +35,22 @@ require.config({
         "jqueryui":["jquery"],
         // jQuery mobile
         "jquerymobile":["jqueryui"],
+        // jQuery spinning wheel - http://fgnass.github.io/spin.js/
+        "spin.jquery": ["spin", "jquery"],
 
-        // Backbone
-        "backbone":{
-            // Depends on underscore/lodash and jQuery
-            "deps":["underscore", "jquery"],
-            // Exports the global window.Backbone object
-            "exports":"Backbone"
-        },
-        //Marionette
-        "marionette":{
-            "deps":["underscore", "backbone", "jquery"],
-            "exports":"Marionette"
-        },
+        // // Backbone
+        // "backbone":{
+        //     // Depends on underscore/lodash and jQuery
+        //     "deps":["underscore", "jquery"],
+        //     // Exports the global window.Backbone object
+        //     "exports":"Backbone"
+        // },
+        // //Marionette
+        // "marionette":{
+        //     "deps":["underscore", "backbone", "jquery"],
+        //     "exports":"Marionette"
+        // },
+
         //Handlebars
         "handlebars":{
             "exports":"Handlebars"

@@ -13,6 +13,7 @@ class LiturgyController extends \BaseController {
 		// return json_encode( $t, JSON_UNESCAPED_SLASHES );
 
 		// $t = Liturgy::getLiturgyData( 1 );
+		// sleep(10);
 		$t = Liturgy::getLineups();
 		return json_encode( $t );
 	}
@@ -74,8 +75,15 @@ class LiturgyController extends \BaseController {
 	 */
 	public function show( $id )
 	{
+		// sleep(10);
+
 		$t = Liturgy::getLiturgyData( $id );
-		return json_encode( $t );
+		if( is_null( $t ) ){
+			return Response::json('liturgy('. $id . ') not found', 404);
+		}
+		else {
+			return json_encode( $t );
+		}
 	}
 
 	/**

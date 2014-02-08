@@ -47,18 +47,21 @@ define(['jquery', 'hbs!subapps/calendar/list/tpl/liturgyItem', 'backbone', 'mari
                 e.stopPropagation();
                 console.log( 'deEmphasize' );
                 this.$el.removeClass( mouse );
+                this.trigger("calendar:show", this.model);
             },
 
             editClicked: function(e){
                 console.log('editClicked');
                 e.preventDefault();
                 e.stopPropagation();
+                this.trigger("litury:edit", this.model);
             },
 
             deleteClicked: function(e){
                 console.log('deleteClicked');
                 e.preventDefault();
                 e.stopPropagation();
+                this.trigger("litury:delete", this.model);
             }
         });
     });

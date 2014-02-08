@@ -1,27 +1,5 @@
-// define(['App', 'backbone', 'marionette', 'collections/LiturgyItemCollection' ],
-//     function (App, Backbone, Marionette, LiturgyItemCollection ) {
-//     return Backbone.Marionette.Controller.extend({
-//         initialize:function (options) {
-//             console.log( 'initializing calendar:liturgies ...' );
-
-//             var liturgyCollection = new LiturgyItemCollection([
-//                     { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
-//                     { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
-//                     { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
-//                     { date: 'Feb 1, 2014',  title: 'Third Sunday of Lent' },
-//                     { date: 'Nov 12, 2014',  title: 'Fourth Sunday of Lent' }
-//                 ]);
-
-//             // App.reqres.addHandler( "calendar:liturgies", function(){
-//             App.reqres.setHandler( "calendar:liturgies", function(){
-//                 return liturgyCollection;
-//             });
-//         }
-//     });
-// });
-
-define(['App', 'backbone', 'marionette', 'collections/LiturgyItemCollection' ],
-    function (App, Backbone, Marionette, LiturgyItemCollection ) {
+define(['App', 'backbone', 'marionette', 'collections/LiturgyItemCollection', 'models/LiturgyModel' ],
+    function (App, Backbone, Marionette, LiturgyItemCollection, LiturgyModel ) {
 
     console.log( 'initializing calendar:liturgies ...' );
 
@@ -42,7 +20,6 @@ define(['App', 'backbone', 'marionette', 'collections/LiturgyItemCollection' ],
 
     var API = {
         getLiturgyCalendar: function() {
-            console.log( 'hello' );
             var lineups = new LiturgyItemCollection();
             var defer = $.Deferred();
             lineups.fetch({
@@ -61,7 +38,39 @@ define(['App', 'backbone', 'marionette', 'collections/LiturgyItemCollection' ],
             });
 
             return promise;
+        },
+
+        getLiturgy: function(liturgyID) {
+            console.log('getLiturgy:', liturgyID);
+            var liturgy = new LiturgyModel({ id:liturgyID });
+            var defer = $.Deferred();
+            liturgy.fetch({
+                success: function( data ){
+                    defer.resolve( data );
+                },
+                error: function( data ){
+                    defer.resolve( undefined );
+                }
+            });
+
+            return defer.promise();
         }
+
+      // getContactEntity: function(contactId){
+      //   var contact = new Entities.Contact({id: contactId});
+      //   var defer = $.Deferred();
+      //   setTimeout(function(){
+      //     contact.fetch({
+      //       success: function(data){
+      //         defer.resolve(data);
+      //       },
+      //       error: function(data){
+      //         defer.resolve(undefined);
+      //       }
+      //     });
+      //   }, 2000);
+      //   return defer.promise();
+      // }
     };
 
     //   getContactEntities: function(){
@@ -84,10 +93,12 @@ define(['App', 'backbone', 'marionette', 'collections/LiturgyItemCollection' ],
     //   },
     // };
 
-
-    // App.reqres.addHandler( "calendar:liturgies", function(){
     App.reqres.setHandler( "calendar:liturgies", function(){
         return API.getLiturgyCalendar();
+    });
+
+    App.reqres.setHandler( "calendar:liturgy", function(liturgyID){
+        return API.getLiturgy(liturgyID);
     });
 
     return;

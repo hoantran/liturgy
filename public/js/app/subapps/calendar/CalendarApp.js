@@ -13,7 +13,8 @@ define( ["App"], function(App){
     App.module("Routers.CalendarApp", function(CalendarAppRouter, App, Backbone, Marionette, $, _){
         CalendarAppRouter.Router = Marionette.AppRouter.extend({
             appRoutes: {
-            "calendar": "listCalendar"
+            "calendar"      : "listCalendar",
+            "calendar/:id"  : "showLiturgy"
             // "contacts(/filter/criterion::criterion)": "listContacts",
             // "contacts/:id": "showContact",
             // "contacts/:id/edit": "editContact"
@@ -23,16 +24,24 @@ define( ["App"], function(App){
         var executeAction = function(action, arg){
             App.startSubApp("CalendarApp");
             action(arg);
-            App.execute("set:active:header", "calendar");
+            // App.execute("set:active:header", "calendar");
+            // console.log('executeAction:', action, arg);
         };
 
         var API = {
             listCalendar: function(){
                 require(["subapps/calendar/list/ListController"], function(ListController){
-                    console.log( 'ListController:', ListController );
                     executeAction(ListController.listCalendar);
                 });
+            },
+
+            showLiturgy: function(id){
+                console.log('showing:', id);
+                require(["subapps/calendar/show/ShowController"], function(ShowController){
+                    executeAction(ShowController.showLiturgy, id);
+                });
             }
+
 
           // showContact: function(id){
           //   require(["apps/contacts/show/show_controller"], function(ShowController){
@@ -50,6 +59,11 @@ define( ["App"], function(App){
         App.on("calendar:list", function(){
             App.navigate("calendar");
             API.listCalendar();
+        });
+
+        App.on("calendar:show", function(id){
+            App.navigate("calendar/"+id);
+            API.showLiturgy(id);
         });
 
         // App.on("contacts:filter", function(criterion){

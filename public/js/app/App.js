@@ -43,18 +43,23 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
         App.on("initialize:after", function(){
             if(Backbone.history){
                 // require([ "subapps/navigation/NavigationApp"  ], function ( NavigationApp ) {
-                require([ "subapps/calendar/CalendarApp"  ], function ( CalendarApp ) {
+                // require([ "subapps/calendar/CalendarApp", "subapps/navigation/NavigationApp"  ], function ( CalendarApp, NavigationApp ) {
+                // require([ "subapps/calendar/CalendarApp"  ], function ( CalendarApp ) {
+                require([ "subapps/navigation/NavigationApp", "subapps/calendar/CalendarApp", "subapps/footer/FooterApp"  ], function () {
                     Backbone.history.start();
 
                     if(App.getCurrentRoute() === ""){
                         App.trigger("calendar:list");
                     }
+
+                    App.trigger('navigation:show');
+                    App.trigger('footer:show');
                 });
             }
         });
 
         App.on( 'start', function() {
-            console.log( 'starting MAIN APP ...' );
+            console.log( 'MAIN APP on start ...' );
         });
 
         App.mobile = isMobile();
