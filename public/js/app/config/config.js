@@ -8,7 +8,7 @@ require.config({
         "jqueryui":"../libs/jqueryui",
         "jquerymobile":"../libs/jquery.mobile",
         "spin": "../libs/spin",
-        "spin.jquery": "../libs/spin.jquery",
+        "spin.jquery": "../libs/spin.jquery",           // originally named jquery.spin.js
         "underscore":"../libs/lodash.underscore",
         "backbone":"../libs/backbone",
         "backbone.babysitter":"../libs/backbone.babysitter",
@@ -38,18 +38,8 @@ require.config({
         // jQuery spinning wheel - http://fgnass.github.io/spin.js/
         "spin.jquery": ["spin", "jquery"],
 
-        // // Backbone
-        // "backbone":{
-        //     // Depends on underscore/lodash and jQuery
-        //     "deps":["underscore", "jquery"],
-        //     // Exports the global window.Backbone object
-        //     "exports":"Backbone"
-        // },
-        // //Marionette
-        // "marionette":{
-        //     "deps":["underscore", "backbone", "jquery"],
-        //     "exports":"Marionette"
-        // },
+        // using AMD versions of backbone and Marionette, according to the post on:
+        // https://github.com/jrburke/requirejs/issues/987
 
         //Handlebars
         "handlebars":{
