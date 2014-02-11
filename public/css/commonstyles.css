@@ -23,3 +23,225 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.table-borderless tbody tr td,
+.table-borderless tbody tr th {
+    border: 0;
+}
+
+.calendar-lineup {
+    font-size: medium;
+}
+
+div.lineup-liturgy-title {
+    font-size: xx-large;
+    padding: 20px 0;
+    background: #b7b7b7;
+    color: white;
+}
+
+div.lineup-liturgy-date {
+    font-size: small;
+    font-weight: bold;
+    padding: 7px 0;
+}
+
+.lineup-panel {
+    padding: 5px 0;
+    border-bottom: thin solid black;
+}
+.lineup-song-title {
+    font-size: large;
+}
+
+.lineup-song-composer {
+    font-size: small;
+    color: #9e9e9e;
+    padding: 0 10px;
+}
+
+/*.lineup-icon {
+    display:block;
+    width: 24px;
+    height: 24px;
+    padding: 5px 0px;
+    margin: 5px 0px;
+}*/
+
+.lineup-list{
+    list-style-type: none;
+}
+
+/*.lineup-icon {
+    display     : block;
+    height      : 24px;
+    width       : 24px;
+    text-indent :-9999px;
+    border-style      : none;
+}*/
+/*img {
+    border-style: none;
+    background-color:transparent;
+    border: none;
+    border-width:0px;
+}*/
+
+
+.lineup-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-indent: -99999px;
+    background: url(../img/lineup/acoustic-guitar-icon.png) bottom;
+}
+
+/*626262*/
+.lineup-icon-guitar {
+    background: url(../img/lineup/acoustic-guitar-icon.png) bottom;
+    /*background:url(../img/lineup/acoustic-guitar-icon.png) no-repeat top;*/
+}
+
+/*FFCC00*/
+/*FFEA94*/
+.lineup-icon-guitar:active {
+    background:url(../img/lineup/acoustic-guitar-icon-click.png) bottom;
+    /*background:url(../img/lineup/acoustic-guitar-icon-click.png) no-repeat top;*/
+}
+
+/*FF0007*/
+.lineup-icon-guitar:hover {
+    background:url(../img/lineup/acoustic-guitar-icon-hover.png) bottom;
+    /*background:url(../img/lineup/acoustic-guitar-icon-hover.png) no-repeat top;*/
+}
+
+
+/*.myButtonLink {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/lineup/acoustic-guitar-icon.png) bottom;
+    text-indent: -99999px;
+}
+*/
+
+.myButton {
+    display: block;
+    width: 24px;
+    height: 24px;
+    /*background: url(../img/lineup/acoustic-guitar-icon.png) bottom;*/
+    text-indent: -99999px;
+}
+
+.myButtonLink {
+/*    display: block;
+    width: 24px;
+    height: 24px;*/
+    background: url(../img/lineup/acoustic-guitar-icon.png) bottom;
+    /*text-indent: -99999px;*/
+}
+
+.myButtonLink:hover {
+    background: url(../img/lineup/acoustic-guitar-icon-hover.png) bottom;
+}
+.myButtonLink:active {
+    background: url(../img/lineup/acoustic-guitar-icon-click.png) bottom;
+}
+
+
+
+.my-lineup-icon  {
+    display: block;
+    width: 24px;
+    height: 24px;
+    /*background: url(../img/lineup/acoustic-guitar-icon.png) bottom;*/
+    text-indent: -99999px;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* --- */
+.my-lineup-icon-guitar {
+/*    display: block;
+    width: 24px;
+    height: 24px;*/
+    background: url(../img/lineup/guitar-icon.png) bottom;
+    /*text-indent: -99999px;*/
+}
+
+.my-lineup-icon-guitar:hover {
+    background: url(../img/lineup/guitar-icon-hover.png) bottom;
+}
+.my-lineup-icon-guitar:active {
+    background: url(../img/lineup/guitar-icon-click.png) bottom;
+}
+
+/* --- */
+.my-lineup-icon-mp3 {
+    background: url(../img/lineup/mp3-icon.png) bottom;
+}
+
+.my-lineup-icon-mp3:hover {
+    background: url(../img/lineup/mp3-icon-hover.png) bottom;
+}
+.my-lineup-icon-mp3:active {
+    background: url(../img/lineup/mp3-icon-click.png) bottom;
+}
+
+/* --- */
+.my-lineup-icon-link {
+    background: url(../img/lineup/link-icon.png) bottom;
+}
+
+.my-lineup-icon-link:hover {
+    background: url(../img/lineup/link-icon-hover.png) bottom;
+}
+.my-lineup-icon-link:active {
+    background: url(../img/lineup/link-icon-click.png) bottom;
+}
+
+/* --- */
+.my-lineup-icon-vocal {
+    background: url(../img/lineup/vocal-icon.png) bottom;
+}
+
+.my-lineup-icon-vocal:hover {
+    background: url(../img/lineup/vocal-icon-hover.png) bottom;
+}
+.my-lineup-icon-vocal:active {
+    background: url(../img/lineup/vocal-icon-click.png) bottom;
+}
+
+/* --- */
+.my-lineup-icon-piano {
+    background: url(../img/lineup/piano-icon.png) bottom;
+}
+
+.my-lineup-icon-piano:hover {
+    background: url(../img/lineup/piano-icon-hover.png) bottom;
+}
+.my-lineup-icon-piano:active {
+    background: url(../img/lineup/piano-icon-click.png) bottom;
+}
+
+/* --- */
+.my-lineup-icon-other {
+    background: url(../img/lineup/other-icon.png) bottom;
+}
+
+.my-lineup-icon-other:hover {
+    background: url(../img/lineup/other-icon-hover.png) bottom;
+}
+.my-lineup-icon-other:active {
+    background: url(../img/lineup/other-icon-click.png) bottom;
+}
+/* --- */
+.my-lineup-icon-powerpoint {
+    background: url(../img/lineup/powerpoint-icon.png) bottom;
+}
+
+.my-lineup-icon-powerpoint:hover {
+    background: url(../img/lineup/powerpoint-icon-hover.png) bottom;
+}
+.my-lineup-icon-powerpoint:active {
+    background: url(../img/lineup/powerpoint-icon-click.png) bottom;
+}
