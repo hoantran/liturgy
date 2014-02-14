@@ -66,7 +66,5 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
 
         console.log( 'App Started.' );
 
-        console.log( App );
-
         return App;
     });

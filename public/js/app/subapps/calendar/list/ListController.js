@@ -3,7 +3,6 @@ define( [ "App", "views/MainLayout", "subapps/calendar/list/CalendarLayout", "su
     App.module( "CalendarApp.List", function(List, ContactManager, Backbone, Marionette, $, _){
         List.Controller = {
             listCalendar: function(){
-                console.log ( 'Inside ListController:listCalendar' );
                 var mainLayout = new MainLayout();
                 mainLayout.render();
 
@@ -28,7 +27,6 @@ define( [ "App", "views/MainLayout", "subapps/calendar/list/CalendarLayout", "su
                         });
 
                         calendarView.on("itemview:calendar:show", function(childView, model){
-                            console.log('ta con em');
                             App.trigger("calendar:show", model.get("id"));
                         });
 

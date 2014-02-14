@@ -40,6 +40,26 @@ class Song extends Eloquent {
 		}
 		else {
 			$data = array(
+				"title"			=> $song->title,
+				"shortNames"	=> Song::getComposerShortNames( $song ),
+				'song' 			=> Song::getDetails( $song )
+			);
+
+			return $data;
+		}
+	}
+
+	/**
+	 * Get detailed info about a song
+	 * @param  Integer $song song object
+	 * @return Array          info for a song
+	 */
+	public static function getDetails( $song ){
+		if( NULL == $song ){
+			return NULL;
+		}
+		else {
+			$data = array(
 				"id"			=> $song->id,
 				"title"			=> $song->title,
 				"composers"		=> Song::getComposers( $song ),
@@ -48,6 +68,37 @@ class Song extends Eloquent {
 
 			return $data;
 		}
+	}
+
+	/**
+	 * Get the composers of this song
+	 * @param  object of the song $song
+	 * @return array of composers
+	 */
+	public static function getComposerShortNames( $song ){
+		$composers = $song->composers->toArray();
+		$shortNames = "";
+
+		// get either last or first names
+		foreach ($composers as $key => $composer) {
+			$lastName = $composer['lastName'];
+			$firstName = $composer['firstName'];
+
+			if( (isset($lastName) && trim($lastName)!=='') ){
+				if(trim($shortNames)!==''){
+					$shortNames .= ", ";
+				}
+				$shortNames .= $lastName;
+			}
+			elseif ((isset($firstName) && trim($firstName)!=='') ) {
+				if(trim($shortNames)!==''){
+					$shortNames .= ", ";
+				}
+				$shortNames .= $firstName;
+			}
+		}
+
+		return $shortNames;
 	}
 
 	/**
@@ -106,13 +157,26 @@ class Song extends Eloquent {
 	 */
 	public static function formatMedia( $master ){
 		$list = array();
-		foreach( $master as $key => $value ){
-			$medium = array(
-				'medium'		=> $key,
-				'mediumList'	=> $value
-			);
-			array_push( $list, $medium );
+		foreach( $master as $medium => $mediumList ){
+			// $mediumSet = array(
+			// 	'medium'		=> $medium,
+			// 	'mediumList'	=> $mediumList
+			// );
+			// array_push( $list, $mediumSet );
+			array_push( $list, Song::getDenormalizedMedium( $medium, $mediumList) );
 		}
+		return $list;
+	}
+
+	public static function getDenormalizedMedium($medium, $mediumList ){
+		$list = array();
+		foreach( $mediumList as $link ){
+			array_push( $list, array(
+				'medium'		=> $medium,
+				'link'			=> $link
+			));
+		}
+
 		return $list;
 	}
 

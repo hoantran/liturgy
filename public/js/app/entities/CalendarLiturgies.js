@@ -1,7 +1,5 @@
-define(['App', 'backbone', 'marionette', 'collections/LiturgyItemCollection', 'models/LiturgyModel' ],
-    function (App, Backbone, Marionette, LiturgyItemCollection, LiturgyModel ) {
-
-    console.log( 'initializing calendar:liturgies ...' );
+define(['App', 'backbone', 'marionette', 'collections/LiturgyItemCollection', 'models/liturgy' ],
+    function (App, Backbone, Marionette, LiturgyItemCollection, Liturgy ) {
 
     var initializeLineups = function(){
         var lineups = new LiturgyItemCollection([
@@ -42,7 +40,7 @@ define(['App', 'backbone', 'marionette', 'collections/LiturgyItemCollection', 'm
 
         getLiturgy: function(liturgyID) {
             console.log('getLiturgy:', liturgyID);
-            var liturgy = new LiturgyModel({ id:liturgyID });
+            var liturgy = new Liturgy({ id:liturgyID });
             var defer = $.Deferred();
             liturgy.fetch({
                 success: function( data ){

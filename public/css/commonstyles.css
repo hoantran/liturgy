@@ -15,8 +15,7 @@ footer {
 }
 
 .padding-ontop {
-    padding-top: 60px;
-    /*color: #d6d6d6;*/
+    padding-top: 40px;
 }
 
 body {
@@ -60,112 +59,34 @@ div.lineup-liturgy-date {
     padding: 0 10px;
 }
 
-/*.lineup-icon {
-    display:block;
-    width: 24px;
-    height: 24px;
-    padding: 5px 0px;
-    margin: 5px 0px;
-}*/
-
 .lineup-list{
     list-style-type: none;
 }
-
-/*.lineup-icon {
-    display     : block;
-    height      : 24px;
-    width       : 24px;
-    text-indent :-9999px;
-    border-style      : none;
-}*/
-/*img {
-    border-style: none;
-    background-color:transparent;
-    border: none;
-    border-width:0px;
-}*/
-
-
-.lineup-icon {
-    display: block;
-    width: 24px;
-    height: 24px;
-    text-indent: -99999px;
-    background: url(../img/lineup/acoustic-guitar-icon.png) bottom;
-}
-
-/*626262*/
-.lineup-icon-guitar {
-    background: url(../img/lineup/acoustic-guitar-icon.png) bottom;
-    /*background:url(../img/lineup/acoustic-guitar-icon.png) no-repeat top;*/
-}
-
-/*FFCC00*/
-/*FFEA94*/
-.lineup-icon-guitar:active {
-    background:url(../img/lineup/acoustic-guitar-icon-click.png) bottom;
-    /*background:url(../img/lineup/acoustic-guitar-icon-click.png) no-repeat top;*/
-}
-
-/*FF0007*/
-.lineup-icon-guitar:hover {
-    background:url(../img/lineup/acoustic-guitar-icon-hover.png) bottom;
-    /*background:url(../img/lineup/acoustic-guitar-icon-hover.png) no-repeat top;*/
-}
-
-
-/*.myButtonLink {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background: url(../img/lineup/acoustic-guitar-icon.png) bottom;
-    text-indent: -99999px;
-}
-*/
-
-.myButton {
-    display: block;
-    width: 24px;
-    height: 24px;
-    /*background: url(../img/lineup/acoustic-guitar-icon.png) bottom;*/
-    text-indent: -99999px;
-}
-
-.myButtonLink {
-/*    display: block;
-    width: 24px;
-    height: 24px;*/
-    background: url(../img/lineup/acoustic-guitar-icon.png) bottom;
-    /*text-indent: -99999px;*/
-}
-
-.myButtonLink:hover {
-    background: url(../img/lineup/acoustic-guitar-icon-hover.png) bottom;
-}
-.myButtonLink:active {
-    background: url(../img/lineup/acoustic-guitar-icon-click.png) bottom;
-}
-
-
 
 .my-lineup-icon  {
     display: block;
     width: 24px;
     height: 24px;
-    /*background: url(../img/lineup/acoustic-guitar-icon.png) bottom;*/
     text-indent: -99999px;
     padding: 5px;
     margin: 5px;
 }
 
+.transparent-background{
+    background-color: transparent;
+}
+
+.lineup-media-border {
+    border-top: thin solid #d6d6d6;
+}
+
+.section-border {
+    border-bottom: thin solid #d6d6d6;
+}
+
 /* --- */
 .my-lineup-icon-guitar {
-/*    display: block;
-    width: 24px;
-    height: 24px;*/
     background: url(../img/lineup/guitar-icon.png) bottom;
-    /*text-indent: -99999px;*/
 }
 
 .my-lineup-icon-guitar:hover {
@@ -244,4 +165,9 @@ div.lineup-liturgy-date {
 }
 .my-lineup-icon-powerpoint:active {
     background: url(../img/lineup/powerpoint-icon-click.png) bottom;
+}
+
+.highlight-hover:hover {
+    background-color: #efefef;
+    cursor: pointer;
 }

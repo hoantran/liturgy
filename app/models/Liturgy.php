@@ -148,11 +148,16 @@ class Liturgy extends Eloquent {
 					}
 				}
 
-				array_push( $items, array(
-					'id'	=> $id,
-					'part'	=> $part,
-					'song'	=> Song::getSongData( $songID )
-				));
+				$songData = Song::getSongData( $songID );
+				$songData[ 'id' ] = $id;
+				$songData[ 'part' ] = $part;
+				array_push( $items, $songData );
+
+				// array_push( $items, array(
+				// 	'id'	=> $id,
+				// 	'part'	=> $part,
+				// 	'song'	=> Song::getSongData( $songID )
+				// ));
 			}
 
 
