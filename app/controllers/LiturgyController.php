@@ -44,7 +44,7 @@ class LiturgyController extends \BaseController {
 	}
 
 	private function reviseWithNewInfo( $liturgy ){
-		$liturgy->title = Input::get( 'name' );
+		$liturgy->title = Input::get( 'title' );
 
 		// input date format: 11/20/2013 12:45 AM
 		// output date format: Y-m-d H:i:s

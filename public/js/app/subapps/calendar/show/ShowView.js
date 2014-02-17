@@ -1,23 +1,7 @@
 define(["App",
-        "hbs!subapps/calendar/show/tpl/missing",
         "hbs!subapps/calendar/show/tpl/view"],
-        function(App, missingTpl, viewTpl){
+        function(App, viewTpl){
     App.module("CalendarApp.Show.View", function(View, App, Backbone, Marionette, $, _){
-        // missing view
-        View.MissingLiturgy = Marionette.ItemView.extend({
-            template: missingTpl,
-
-            initialize: function(options){
-                this.liturgyID = options.liturgyID || "unknown";
-            },
-
-            serializeData: function(){
-                return {
-                    liturgyID: this.liturgyID
-                };
-            }
-        });
-
         // lineup view
         View.Liturgy = Marionette.ItemView.extend({
             template: viewTpl,

@@ -13,8 +13,6 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
             navigationRegion:   "#navigation",
             mainRegion:         "#main",
             footerRegion:       "#footer"
-            // headerRegion:"header",
-            // mainRegion:"#main"
         });
 
         App.navigate = function(route,  options){
@@ -42,9 +40,6 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
 
         App.on("initialize:after", function(){
             if(Backbone.history){
-                // require([ "subapps/navigation/NavigationApp"  ], function ( NavigationApp ) {
-                // require([ "subapps/calendar/CalendarApp", "subapps/navigation/NavigationApp"  ], function ( CalendarApp, NavigationApp ) {
-                // require([ "subapps/calendar/CalendarApp"  ], function ( CalendarApp ) {
                 require([ "subapps/navigation/NavigationApp", "subapps/calendar/CalendarApp", "subapps/footer/FooterApp"  ], function () {
                     Backbone.history.start();
 
@@ -56,10 +51,6 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
                     App.trigger('footer:show');
                 });
             }
-        });
-
-        App.on( 'start', function() {
-            console.log( 'MAIN APP on start ...' );
         });
 
         App.mobile = isMobile();

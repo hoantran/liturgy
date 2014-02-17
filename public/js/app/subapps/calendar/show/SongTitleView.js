@@ -9,6 +9,7 @@ define(['jquery', 'hbs!subapps/calendar/show/tpl/songTitle', 'backbone', 'marion
                 "click .js-songTitle"    : "songClicked"
             },
 
+            // toggle a song's media pane on/off
             songClicked: function(e){
                 e.preventDefault();
                 e.stopPropagation();

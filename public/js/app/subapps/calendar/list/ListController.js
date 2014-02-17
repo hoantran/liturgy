@@ -1,6 +1,6 @@
 define( [ "App", "views/MainLayout", "subapps/calendar/list/CalendarLayout", "subapps/calendar/list/CalendarPanelView", "subapps/calendar/list/CalendarView", "views/JumbotronView" ],
     function( App, MainLayout, CalendarLayout, CalendarPanelView, CalendarView, JumbotronView ){
-    App.module( "CalendarApp.List", function(List, ContactManager, Backbone, Marionette, $, _){
+    App.module( "CalendarApp.List", function(List, App, Backbone, Marionette, $, _){
         List.Controller = {
             listCalendar: function(){
                 var mainLayout = new MainLayout();

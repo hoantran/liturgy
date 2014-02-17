@@ -39,7 +39,6 @@ define(['App', 'backbone', 'marionette', 'collections/LiturgyItemCollection', 'm
         },
 
         getLiturgy: function(liturgyID) {
-            console.log('getLiturgy:', liturgyID);
             var liturgy = new Liturgy({ id:liturgyID });
             var defer = $.Deferred();
             liturgy.fetch({

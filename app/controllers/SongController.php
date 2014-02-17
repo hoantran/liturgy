@@ -26,13 +26,17 @@ class SongController extends \BaseController {
 						->orWhere( 'firstline', 'LIKE', '%'.$term.'%' )
 						->take( self::SEARCH_COUNT_LIMIT )
 						->get();
-		Log::info( 'search:', $search );
+		// Log::info( 'search:', $search );
 
 		$data = array();
 		foreach ($search as $song) {
+			// finding short last names of composer for each incurs another DB hit
+			$songHandle = Song::find( $song->id );
+			$shortNames = Song::getComposerShortNames( $songHandle );
 			array_push( $data, array(
 				'label'			=>	$song->title,
-				'data'			=>	$song->id
+				'data'			=>	$song->id,
+				'composers'		=>	$shortNames
 			));
 		}
 

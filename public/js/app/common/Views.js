@@ -1,4 +1,4 @@
-define(["App", "hbs!common/tpl/loading", "spin.jquery"], function(App, loadingTpl){
+define(["App", "hbs!common/tpl/loading", "hbs!common/tpl/missing", "spin.jquery"], function(App, loadingTpl, missingTpl){
     App.module("Common.Views", function(Views, App, Backbone, Marionette, $, _){
         Views.Loading = Marionette.ItemView.extend({
             template: loadingTpl,
@@ -38,6 +38,23 @@ define(["App", "hbs!common/tpl/loading", "spin.jquery"], function(App, loadingTp
                 $("#spinner").spin(opts);
             }
         });
+
+
+        // missing view
+        Views.MissingLiturgy = Marionette.ItemView.extend({
+            template: missingTpl,
+
+            initialize: function(options){
+                this.liturgyID = options.liturgyID || "unknown";
+            },
+
+            serializeData: function(){
+                return {
+                    liturgyID: this.liturgyID
+                };
+            }
+        });
+
     });
 
     return App.Common.Views;

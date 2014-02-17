@@ -1,20 +1,3 @@
-// define(['jquery', 'subapps/calendar/show/SongLayout', 'backbone', 'marionette'],
-//     function ($, ItemView, Backbone) {
-//         //ItemView provides some default rendering logic
-//         return Backbone.Marionette.CollectionView.extend({
-//                 initialize: function(){
-//                     console.log('SectionView:model:', this.model);
-//                     this.collection = new Backbone.Collection(this.model.get('items'));
-//                 },
-//                 // tagName: "ul",
-//                 // className: "",
-//                 itemView: ItemView
-//                 // initialize: function() {
-//                 //     this.listenTo(this.collection, "add", this.render);
-//                 // }
-//         });
-//     });
-
 define(['jquery', 'hbs!subapps/calendar/show/tpl/section', 'subapps/calendar/show/SongLayout', 'backbone', 'marionette'],
     function ($, template, ItemView, Backbone) {
         //ItemView provides some default rendering logic

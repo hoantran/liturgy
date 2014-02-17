@@ -1,0 +1,64 @@
+<div class="container padding-ontop">
+    <div class="row lineup-liturgy-title">
+        Editing A Liturgy
+    </div>
+    <div class="row" style="padding-top:30px;">
+        <form class="form-horizontal" role="form" autocomplete="off">
+
+            <!-- liturgy id -->
+            <input class = "js-liturgy-inputs" type="hidden" name="liturgyid" data_id="liturgy_id" value="{{ id }}">
+
+            <!-- title -->
+            <div class="form-group">
+                <label for="title" class="col-sm-2 control-label">Liturgy Title</label>
+                <div class="col-sm-10">
+                    <input class = "js-liturgy-inputs form-control" id="title" data_id="title" value="{{ title }}" placeholder="Liturgy Title" type="text" autocomplete="off" />
+                </div>
+            </div>
+
+            <!-- date -->
+            <div class="form-group">
+                <label for="date" class="col-sm-2 control-label">Date</label>
+                <div class="col-sm-10">
+                    <input class = "js-liturgy-inputs form-control" id="date" data_id="date" value="{{ date }}" placeholder="Liturgy date" type="text" autocomplete="off" />
+                </div>
+            </div>
+
+            <!-- items in the lineup -->
+            {{#each sections}}
+                    <div class="row section-border"></div>
+                    {{#each items}}
+                        <div class="form-group">
+                            <label for="{{ part }}" class="col-sm-2 control-label">{{ part }}</label>
+                            <div class="col-sm-10">
+                                <input class = "js-liturgy-inputs song-input form-control" id="{{ part }}" data_id="{{ id }}" data_songid="{{ song.id }}" value="{{ title }}" placeholder="Song title" type="text" autocomplete="off" />
+                            </div>
+                        </div>
+                    {{/each}}
+            {{/each}}
+
+            <!-- enable -->
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input class = "js-liturgy-inputs" id="enable" data_id="enable" type="checkbox" autocomplete="off"
+                                {{#if enable}}
+                                    checked
+                                {{/if}}
+                            /> Enable
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAVE button -->
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default js-edit-submit">Save</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

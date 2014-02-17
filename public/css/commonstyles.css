@@ -59,6 +59,12 @@ div.lineup-liturgy-date {
     padding: 0 10px;
 }
 
+.form-error {
+    font-size: small;
+    font-style:italic;
+    color: red;
+}
+
 .lineup-list{
     list-style-type: none;
 }
@@ -82,6 +88,7 @@ div.lineup-liturgy-date {
 
 .section-border {
     border-bottom: thin solid #d6d6d6;
+    margin-bottom: 5px;
 }
 
 /* --- */

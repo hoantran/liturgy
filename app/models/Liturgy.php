@@ -55,7 +55,7 @@ class Liturgy extends Eloquent {
 
 			return array(
 				'id'		=> $liturgy->id,
-				'name'		=> $liturgy->title,
+				'title'		=> $liturgy->title,
 				'date'		=> $date->format('D m/d/Y H:i A'),
 				'enable'	=> $liturgy->enable,
 				'sections'	=> Liturgy::unpackParts( $liturgy->parts )

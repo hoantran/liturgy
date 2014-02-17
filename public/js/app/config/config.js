@@ -7,6 +7,7 @@ require.config({
         "jquery":"../libs/jquery",
         "jqueryui":"../libs/jqueryui",
         "jquerymobile":"../libs/jquery.mobile",
+        "timepicker":"../libs/jquery-ui-timepicker-addon",
         "spin": "../libs/spin",
         "spin.jquery": "../libs/spin.jquery",           // originally named jquery.spin.js
         "underscore":"../libs/lodash.underscore",
@@ -35,6 +36,8 @@ require.config({
         "jqueryui":["jquery"],
         // jQuery mobile
         "jquerymobile":["jqueryui"],
+        // jQuery date time picker addon:  http://bit.ly/amuj8J
+        "timepicker":["jqueryui"],
         // jQuery spinning wheel - http://fgnass.github.io/spin.js/
         "spin.jquery": ["spin", "jquery"],
 
