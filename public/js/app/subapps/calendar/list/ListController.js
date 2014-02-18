@@ -30,6 +30,10 @@ define( [ "App", "views/MainLayout", "subapps/calendar/list/CalendarLayout", "su
                             App.trigger("calendar:show", model.get("id"));
                         });
 
+                        calendarView.on("itemview:liturgy:duplicate", function(childView, model){
+                            App.trigger("calendar:duplicate", model.get("id"));
+                        });
+
                         App.mainRegion.show                 (mainLayout);
                         mainLayout.jumbotronRegion.show     ( new JumbotronView() );
                         mainLayout.contentRegion.show       ( calendarLayout );

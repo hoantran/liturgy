@@ -41,6 +41,8 @@ class LiturgyController extends \BaseController {
 		// NEW Liturgy
 		$liturgy = new Liturgy;
 		self::reviseWithNewInfo( $liturgy );
+		Log::info( $liturgy->id );
+		return self::show( $liturgy->id );
 	}
 
 	private function reviseWithNewInfo( $liturgy ){

@@ -17,7 +17,8 @@ define( ["App"], function(App){
             "calendar/:id"  : "showLiturgy",
             // "contacts(/filter/criterion::criterion)": "listContacts",
             // "contacts/:id": "showContact",
-            "calendar/:id/edit": "editLiturgy"
+            "calendar/:id/edit": "editLiturgy",
+            "calendar/:id/duplicate": "duplicateLiturgy"
             }
         });
 
@@ -43,7 +44,13 @@ define( ["App"], function(App){
 
             editLiturgy: function(id){
                 require(["subapps/calendar/edit/EditController"], function(EditController){
-                    executeAction(EditController.editLiturgy, id);
+                    executeAction(EditController.editLiturgy, {id: id, duplicateFlag: false});
+                });
+            },
+
+            duplicateLiturgy: function(id){
+                require(["subapps/calendar/edit/EditController"], function(EditController){
+                    executeAction(EditController.editLiturgy, {id: id, duplicateFlag: true});
                 });
             }
 
@@ -73,9 +80,13 @@ define( ["App"], function(App){
         });
 
         App.on("calendar:edit", function(id){
-            console.log("rx:", id);
             App.navigate("calendar/" + id + "/edit");
             API.editLiturgy(id);
+        });
+
+        App.on("calendar:duplicate", function(id){
+            App.navigate("calendar/" + id + "/duplicate");
+            API.duplicateLiturgy(id);
         });
 
         // App.on("contacts:filter", function(criterion){

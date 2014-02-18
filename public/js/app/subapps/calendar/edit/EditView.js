@@ -52,8 +52,8 @@ define(["App",
 
                 // clear only on first click
                 // http://bit.ly/17KSMl6
-                // $('input', this.el).one('focus', function(){
-                $('input', this.el).focus( function(){   // every time
+                $('input', this.el).one('focus', function(){
+                // $('input', this.el).focus( function(){   // every time
                     this.value = '';
                 });
 

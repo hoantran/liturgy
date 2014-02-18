@@ -20,12 +20,14 @@ define(['jquery', 'hbs!subapps/calendar/list/tpl/liturgyItem', 'backbone', 'mari
             },
 
             events: {
-                "mousedown td a.js-edit"    : "doNothing",
-                "mouseup td a.js-edit"      : "editClicked",
-                "mousedown button.js-delete": "doNothing",
-                "mouseup button.js-delete"  : "deleteClicked",
-                "mousedown"                 : "emphasize",
-                "mouseup"                   : "deEmphasize"
+                "mousedown td a.js-edit"        : "doNothing",
+                "mouseup td a.js-edit"          : "editClicked",
+                "mousedown button.js-delete"    : "doNothing",
+                "mouseup button.js-delete"      : "deleteClicked",
+                "mousedown button.js-duplicate" : "doNothing",
+                "mouseup button.js-duplicate"   : "duplicateClicked",
+                "mousedown"                     : "emphasize",
+                "mouseup"                       : "deEmphasize"
             },
 
             doNothing: function(e){
@@ -59,6 +61,13 @@ define(['jquery', 'hbs!subapps/calendar/list/tpl/liturgyItem', 'backbone', 'mari
                 e.preventDefault();
                 e.stopPropagation();
                 this.trigger("litury:delete", this.model);
+            },
+
+            duplicateClicked: function(e){
+                console.log('duplicateClicked');
+                e.preventDefault();
+                e.stopPropagation();
+                this.trigger("liturgy:duplicate", this.model);
             }
         });
     });
