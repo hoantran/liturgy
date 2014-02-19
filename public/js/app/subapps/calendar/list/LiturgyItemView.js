@@ -53,14 +53,14 @@ define(['jquery', 'hbs!subapps/calendar/list/tpl/liturgyItem', 'backbone', 'mari
                 console.log('editClicked');
                 e.preventDefault();
                 e.stopPropagation();
-                this.trigger("litury:edit", this.model);
+                this.trigger("liturgy:edit", this.model);
             },
 
             deleteClicked: function(e){
                 console.log('deleteClicked');
                 e.preventDefault();
                 e.stopPropagation();
-                this.trigger("litury:delete", this.model);
+                this.trigger("liturgy:delete", this.model);
             },
 
             duplicateClicked: function(e){

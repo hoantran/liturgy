@@ -12,6 +12,17 @@ class Liturgy extends Eloquent {
 					->join( 'songs', 'song_id', '=', 'songs.id' );
 	}
 
+	public static function deleteALiturgy ( $liturgy_id ){
+		$liturgy = Liturgy::find( $liturgy_id );
+
+		if( NULL != $liturgy ){
+			// delete pivot entries
+			$liturgy->parts()->detach();
+			// delete liturgy
+			$liturgy->delete();
+		}
+	}
+
 	public static function getLineups(){
 		$results = array();
 		// $results = array(
@@ -56,7 +67,7 @@ class Liturgy extends Eloquent {
 			return array(
 				'id'		=> $liturgy->id,
 				'title'		=> $liturgy->title,
-				'date'		=> $date->format('D m/d/Y H:i A'),
+				'date'		=> $date->format('D m/d/Y h:i A'),
 				'enable'	=> $liturgy->enable,
 				'sections'	=> Liturgy::unpackParts( $liturgy->parts )
 			);

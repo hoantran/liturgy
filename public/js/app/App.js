@@ -12,7 +12,8 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
         App.addRegions({
             navigationRegion:   "#navigation",
             mainRegion:         "#main",
-            footerRegion:       "#footer"
+            footerRegion:       "#footer",
+            dialogRegion:       "#dialog"
         });
 
         App.navigate = function(route,  options){

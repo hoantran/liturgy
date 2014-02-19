@@ -45,13 +45,15 @@ class LiturgyController extends \BaseController {
 		return self::show( $liturgy->id );
 	}
 
+	//// TO DO: need validations here
 	private function reviseWithNewInfo( $liturgy ){
 		$liturgy->title = Input::get( 'title' );
 
 		// input date format: 11/20/2013 12:45 AM
 		// output date format: Y-m-d H:i:s
+		Log::info( Input::get( 'date'  )) ;
 		$date = DateTime::createFromFormat( 'D m/d/Y h:i A', Input::get( 'date' ) );
-		if( isset( $date )){
+		if( $date && isset( $date )){
 			$liturgy->date = $date->format( 'Y-m-d H:i:s' );
 		}
 		else {
@@ -160,6 +162,7 @@ class LiturgyController extends \BaseController {
 	public function destroy($id)
 	{
 		Log::info( 'destroy: ' . $id );
+		Liturgy::deleteALiturgy( $id );
 	}
 
 

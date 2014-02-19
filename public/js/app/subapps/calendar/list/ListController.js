@@ -38,6 +38,25 @@ define( [ "App", "views/MainLayout", "subapps/calendar/list/CalendarLayout", "su
                         mainLayout.jumbotronRegion.show     ( new JumbotronView() );
                         mainLayout.contentRegion.show       ( calendarLayout );
 
+                        calendarView.on("itemview:liturgy:delete", function(childView, model){
+                            require( [ "common/Views" ], function( CommonViews ){
+                                var dialogView = new CommonViews.Dialog({
+                                    title: "Deleting A Liturgy",
+                                    message: "Are you sure you want to delete \"" + model.get('title') + "\"?",
+                                    dismiss: "Cancel",
+                                    operation: "Delete",
+                                    triggerSignal: "liturgy:confirm:delete"
+                                });
+
+                                dialogView.on("liturgy:confirm:delete", function(){
+                                    model.destroy();
+                                    App.trigger("calendar:list");
+                                });
+                                App.dialogRegion.show(dialogView);
+                            });
+
+                        });
+
 
 
                     });

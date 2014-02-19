@@ -8,7 +8,7 @@ define( [   "App",
     App.module( "CalendarApp.Edit", function(Edit, App, Backbone, Marionette, $, _){
         Edit.Controller = {
             editLiturgy: function(options){
-                require(["common/views", "models/liturgy", "entities/CalendarLiturgies"], function(CommonViews, Liturgy){
+                require(["common/Views", "models/liturgy", "entities/CalendarLiturgies"], function(CommonViews, Liturgy){
                     // loading view
                     var loadingView = new CommonViews.Loading({
                         title: "Loading ...",
@@ -36,6 +36,8 @@ define( [   "App",
                                 /// in which the corresponding subclasses only need to overwrite a few parameters
                                 /// for its own cases.
                                 if(options.duplicateFlag){
+                                    // for duplicating a liturgy, take out the 'id' attribute so that
+                                    // the laravel 4 on the server end would call 'store' method on the controller
                                     model.unset( 'id', { silent: true });
                                     if(model.save( null, {
                                             success: function( data ){
@@ -75,8 +77,3 @@ define( [   "App",
 
     return App.CalendarApp.Edit.Controller;
 });
-
-            // for duplicating a liturgy, take out the 'id' attribute so that
-            // the laravel 4 on the server end would call 'store' method on the controller
-            // console.log( 'DuplicateView: preSave' );
-            // this.model.unset( 'id', { silent: true });
