@@ -41,7 +41,7 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
 
         App.on("initialize:after", function(){
             if(Backbone.history){
-                require([ "subapps/navigation/NavigationApp", "subapps/calendar/CalendarApp", "subapps/footer/FooterApp"  ], function () {
+                require([ "subapps/navigation/NavigationApp", "subapps/calendar/CalendarApp", "subapps/footer/FooterApp", "subapps/song/SongApp"  ], function () {
                     Backbone.history.start();
 
                     if(App.getCurrentRoute() === ""){

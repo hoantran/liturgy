@@ -1,21 +1,32 @@
-define(['jquery', 'hbs!subapps/calendar/show/tpl/songLayout',
-        'subapps/calendar/show/SongTitleView',
-        'subapps/calendar/show/MediaView',
-        "collections/MediaList",
-        'backbone', 'marionette'],
-    function ($, template, SongTitleView, MediaView, MediaList, Backbone) {
-        //ItemView provides some default rendering logic
-        return Backbone.Marionette.Layout.extend({
-            template: template,
+define(["App",
+        'jquery',
+        'hbs!common/song/tpl/songLayout',
+        'common/song/SongTitleView',
+        'common/song/MediaView',
+        'collections/MediaList',
+        'backbone', 'marionette'
+        ], function(
+            App,
+            $,
+            songLayoutTpl,
+            SongTitleView,
+            MediaView,
+            MediaList,
+            Backbone
+        ){
+    App.module("Common.SongViews", function(Views, App, Backbone, Marionette, $, _){
+
+        // missing view
+        Views.SongLayout = Backbone.Marionette.Layout.extend({
+            template: songLayoutTpl,
 
             regions: {
                 songRegion  : ".song-region",
                 mediaRegion : ".media-region"
             },
 
-            showViews: function(){
+            onShow: function(){
                 var songTitleView = new SongTitleView({model:this.model});
-                // layout.lineupRegion.show( songTitleView );
 
                 // // parent init: model undefined but collection defined in constructor
                 // // child init: model is passed in for each, one member of the parent's collection per child. collection is undefined.
@@ -28,10 +39,9 @@ define(['jquery', 'hbs!subapps/calendar/show/tpl/songLayout',
 
                 this.songRegion.show( songTitleView );
                 this.mediaRegion.show( mediaView );
-            },
-
-            onShow: function(){
-                this.showViews();
             }
         });
     });
+
+    return App.Common.SongViews;
+});

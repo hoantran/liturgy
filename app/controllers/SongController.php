@@ -15,18 +15,41 @@ class SongController extends \BaseController {
 	public function index()
 	{
 		$term = Input::get('term');
+		$searchTerm = Input::get('searchTerm');
 
-		Log::info( 'term:' . $term );
-		// if( !empty( $term )){
-		// 	Log::info( 'POSITIVE' );
-		// }
+		// search and return a BRIEF collection of possible songs
+		if( !empty( $term )){
+			return self::getBriefResults( $term );
+		}
+		// search and return a DETAILED collection of possible songs
+		elseif (!empty( $searchTerm )) {
+			return self::getDetailedResults( $searchTerm );
+		}
+		// list songs?
+		else {
+		}
+	}
 
+	/**
+	 * search db for title or firstline that is similar to the term passed in
+	 * @param  String $term search term
+	 * @return array       array of objects from the db containing only: id and title columns
+	 */
+	private function searchSong( $term ){
 		$search = DB::table( 'songs' )
 						->where( 'title', 'LIKE', '%'.$term.'%' )
 						->orWhere( 'firstline', 'LIKE', '%'.$term.'%' )
 						->take( self::SEARCH_COUNT_LIMIT )
-						->get();
+						->get( array( 'id', 'title' )) ;
 		// Log::info( 'search:', $search );
+
+		return $search;
+	}
+
+	private function getBriefResults( $term ){
+		// Log::info( 'term is :' . $term );
+
+		$search = self::searchSong( $term );
 
 		$data = array();
 		foreach ($search as $song) {
@@ -40,7 +63,21 @@ class SongController extends \BaseController {
 			));
 		}
 
-		// $t = '[{"label":"bulwinkle", "data":"sail"}, {"label":"rocky", "data":"lalala"}, {"label":"annie", "data":"bicycle"}]';
+		// return json_decode( $t );
+		return json_encode( $data );
+	}
+
+	private function getDetailedResults( $term ){
+		// Log::info( 'search term is :' . $term );
+
+		$search = self::searchSong( $term );
+
+		$data = array();
+		foreach ($search as $song) {
+			// $songData = Song::getSongData( $song->id );
+			array_push( $data, Song::getSongData( $song->id ) );
+		}
+
 		// return json_decode( $t );
 		return json_encode( $data );
 	}
@@ -85,7 +122,14 @@ class SongController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		Log::info( 'show' );
+		Log::info( 'showing song(' . $id . ')' );
+		$t = Song::getSongData( $id );
+		if( is_null( $t ) ){
+			return Response::json('song ('. $id . ') not found', 404);
+		}
+		else {
+			return json_encode( $t );
+		}
 	}
 
 	/**

@@ -4,28 +4,35 @@ define([
   'models/composers'
 ], function( Backbone, Media, Composers  ){
 	var Song = Backbone.Model.extend({
-		urlRoot: "liturgies",
+		urlRoot: "song",
 
-		initialize: function(){
-
-			this.media = new Media( this.get( 'media' ) );
-			this.media.parent = this;
-
-			this.composers = new Composers( this.get( 'composers' ) );
-			this.composers.parent = this;
-
-			this.title = this.get( 'title' );
+		defaults: {
+			id: "",
+			title: "",
+            shortNames: "",
+            song: {}
 		},
 
-		parse: function( response ){
-			this.media.reset( response.media );
-			delete response.media;
+		//initialize: function(){
 
-			this.composers.reset( response.composers );
-			delete response.composers;
+		//	this.media = new Media( this.get( 'media' ) );
+		//	this.media.parent = this;
 
-			return response;
-		},
+		//	this.composers = new Composers( this.get( 'composers' ) );
+		//	this.composers.parent = this;
+
+		//	this.title = this.get( 'title' );
+		//},
+
+		//parse: function( response ){
+		//	this.media.reset( response.media );
+		//	delete response.media;
+
+		//	this.composers.reset( response.composers );
+		//	delete response.composers;
+
+		//	return response;
+		//},
 
 		getComposerLastNames: function() {
 			var lComposers = this.composers;

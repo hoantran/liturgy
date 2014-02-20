@@ -1,5 +1,6 @@
-define(['jquery', 'hbs!subapps/calendar/show/tpl/section', 'subapps/calendar/show/SongLayout', 'backbone', 'marionette'],
-    function ($, template, ItemView, Backbone) {
+// define(['jquery', 'hbs!subapps/calendar/show/tpl/section', 'subapps/calendar/show/SongLayout', 'backbone', 'marionette'],
+define(['jquery', 'hbs!subapps/calendar/show/tpl/section', 'common/song/Views', 'backbone', 'marionette'],
+    function ($, template, Views, Backbone) {
         //ItemView provides some default rendering logic
         return Backbone.Marionette.CompositeView.extend({
                 initialize: function(){
@@ -13,6 +14,6 @@ define(['jquery', 'hbs!subapps/calendar/show/tpl/section', 'subapps/calendar/sho
                 tagName: "div",
                 className: "section-border",
                 itemViewContainer: "#js-section-container",
-                itemView: ItemView
+                itemView: Views.SongLayout
         });
     });

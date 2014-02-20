@@ -1,4 +1,4 @@
-define(['jquery', 'hbs!subapps/calendar/show/tpl/songTitle', 'backbone', 'marionette'],
+define(['jquery', 'hbs!common/song/tpl/songTitle', 'backbone', 'marionette'],
     function ($, template, Backbone) {
         //ItemView provides some default rendering logic
         return Backbone.Marionette.ItemView.extend({

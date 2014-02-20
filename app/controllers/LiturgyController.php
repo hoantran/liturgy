@@ -51,7 +51,7 @@ class LiturgyController extends \BaseController {
 
 		// input date format: 11/20/2013 12:45 AM
 		// output date format: Y-m-d H:i:s
-		Log::info( Input::get( 'date'  )) ;
+		// Log::info( Input::get( 'date'  )) ;
 		$date = DateTime::createFromFormat( 'D m/d/Y h:i A', Input::get( 'date' ) );
 		if( $date && isset( $date )){
 			$liturgy->date = $date->format( 'Y-m-d H:i:s' );

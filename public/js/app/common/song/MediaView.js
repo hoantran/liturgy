@@ -1,4 +1,4 @@
-define(['jquery', 'hbs!subapps/calendar/show/tpl/media','subapps/calendar/show/MediumView', 'backbone', 'marionette'],
+define(['jquery', 'hbs!common/song/tpl/media','common/song/MediumView', 'backbone', 'marionette'],
     function ($, template, ItemView, Backbone) {
         //ItemView provides some default rendering logic
         return Backbone.Marionette.CompositeView.extend({

@@ -42,6 +42,43 @@ define(["marionette", "hbs!subapps/navigation/show/tpl/navigation"], function(Ma
                 e.preventDefault();
                 // e.stopPropagation();
                 console.log('navigation clickLogin');
+            },
+
+            onRender: function(){
+                // autocomplete
+                // http://bit.ly/1eqIHMQ
+                var self = this;
+                $(".js-search-input", this.el).autocomplete({ //Line 30
+                    self      : this,
+                    source    : 'song',
+                    minLength : 2,
+                    delay     : 100,
+                    select    : function(event, ui){ //Line 33
+                        $( this ).attr( 'data_songid', ui.item.data );
+                        // console.log( 'data_songid: ', $( this ).attr('data_songid') );
+                        // console.log('ui:', ui);
+                        self.trigger('song:search', ui.item.value);
+                    }
+                }).each(function(){
+                    // http://bit.ly/1f3Im8h
+                    // http://bit.ly/MpjBag
+                    $(this).data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+                        // console.log('item:', item );
+                        return $( "<li></li>" )
+                            .data( "item.autocomplete", item )
+                            .append( "<a><strong>" + item.label + "</strong> <small> " + item.composers + " </small></a>" )
+                            .appendTo( ul );
+                    };
+                }).keypress(function (e) {
+                    if (e.which == 13) {
+                        e.preventDefault();
+                        // console.log('e:', e );
+                        // console.log('this.value:', this.value);
+                        self.trigger('song:search', this.value);
+                        // console.log('data_songid:', $(this).attr('data_songid')) ;
+                        $(this).autocomplete("close");
+                    }
+                });
             }
         })
     };
