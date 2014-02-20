@@ -2,23 +2,11 @@ define(["App",
         "hbs!subapps/song/show/tpl/layout",
         "hbs!subapps/song/show/tpl/search",
         "hbs!subapps/song/show/tpl/result",
+        "hbs!subapps/song/show/tpl/nosong",
         "common/song/Views"
         ],
-        function(App, layoutTpl, searchTpl, resultTpl, CommonSongViews ){
+        function(App, layoutTpl, searchTpl, resultTpl, nosongTpl, CommonSongViews ){
     App.module("SongApp.Show.View", function(View, App, Backbone, Marionette, $, _){
-        // lineup view
-        // View.Liturgy = Marionette.ItemView.extend({
-        //     template: viewTpl,
-
-        //     events: {
-        //         "click a.js-edit": "editClicked"
-        //     },
-
-        //     editClicked: function(e){
-        //         e.preventDefault();
-        //         this.trigger("song:edit", this.model);
-        //     }
-        // });
 
         View.Layout = Marionette.Layout.extend({
           template: layoutTpl,
@@ -33,24 +21,23 @@ define(["App",
           template: searchTpl
         });
 
-        // View.Results = Backbone.Marionette.CollectionView.extend({
-        //     // tagName: "ul",
-        //     itemView: CommonSongViews.SongLayout,
-        //     className: "section-border",
-        //     // initialize: function() {
-        //     //     this.listenTo(this.collection, "add", this.render);
-        //     // }
-        // });
-
-
-        View.Results = Backbone.Marionette.CompositeView.extend({
-            template: resultTpl,
-            tagName: "div",
+        View.EachResult = Backbone.Marionette.CollectionView.extend({
+            itemView: CommonSongViews.SongLayout,
             className: "section-border",
-            itemViewContainer: ".js-result-container",
-            itemView: CommonSongViews.SongLayout
+            initialize: function() {
+                if(this.model){
+                    this.collection = new Backbone.Collection(this.model);
+                }
+            }
         });
 
+        View.Results = Backbone.Marionette.CollectionView.extend({
+            itemView: View.EachResult
+        });
+
+        View.NoSong = Marionette.ItemView.extend({
+            template: nosongTpl
+        });
     });
 
     return App.SongApp.Show.View;

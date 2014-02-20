@@ -12,7 +12,6 @@ define(["App", "subapps/navigation/show/ShowView"], function(App, View){
             });
 
             view.on("song:search", function(searchTerm){
-                console.log('searchTerm:', searchTerm);
                 App.trigger("song:search", searchTerm);
             });
 

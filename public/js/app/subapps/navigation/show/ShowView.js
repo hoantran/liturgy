@@ -8,7 +8,8 @@ define(["marionette", "hbs!subapps/navigation/show/tpl/navigation"], function(Ma
                 "click ul li a.js-home"     : "clickHome",
                 "click ul li a.js-whoweare" : "clickWhoWeAre",
                 "click ul li a.js-photos"   : "clickPhotos",
-                "click ul li a.js-login"    : "clickLogin"
+                "click ul li a.js-login"    : "clickLogin",
+                "click .js-search-submit"   : "clickSubmit"
             },
 
             clickBrand: function(e){
@@ -42,6 +43,14 @@ define(["marionette", "hbs!subapps/navigation/show/tpl/navigation"], function(Ma
                 e.preventDefault();
                 // e.stopPropagation();
                 console.log('navigation clickLogin');
+            },
+
+            clickSubmit: function(e){
+                e.preventDefault();
+                // e.stopPropagation();
+                console.log('navigation clickSubmit');
+                var searchTerm = $(".js-search-input", this.el).val();
+                this.trigger('song:search', searchTerm);
             },
 
             onRender: function(){

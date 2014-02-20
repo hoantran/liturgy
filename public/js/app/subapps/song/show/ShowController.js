@@ -73,8 +73,9 @@ define([    "App",
 
                     var searchingSongs = App.request("song:search:term", searchTerm);
                     $.when(searchingSongs).done(function(songData){
-                        if(songData !== undefined){
+                        if(songData !== undefined && songData.length > 0){
                             // console.log('songData:', songData);
+                            // console.log('len:', songData.length);
 
                             var layout = new View.Layout();
                             App.mainRegion.show( layout );
@@ -91,7 +92,7 @@ define([    "App",
                             layout.resultsRegion.show( songLayout );
                         }
                         else {
-                            console.log('displaying can not find song');
+                            App.mainRegion.show( new View.NoSong() );
                         }
                     });
 
