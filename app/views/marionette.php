@@ -142,6 +142,7 @@
 
 </head>
 <body>
+    <div id="fb-root"></div>
     <div id="navigation">
     </div>
     <div id="dialog">

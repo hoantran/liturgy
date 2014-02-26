@@ -21,6 +21,7 @@ require.config({
         "json2":"../libs/json2",
         "jasmine": "../libs/jasmine",
         "jasmine-html": "../libs/jasmine-html",
+        "facebook": "//connect.facebook.net/en_US/all",
 
         // Plugins
         "backbone.validateAll":"../libs/plugins/Backbone.validateAll",
@@ -50,6 +51,10 @@ require.config({
         },
         // Backbone.validateAll plugin that depends on Backbone
         "backbone.validateAll":["backbone"],
+
+        "facebook" : {
+            exports: "FB"
+        },
 
         "jasmine": {
             // Exports the global 'window.jasmine' object

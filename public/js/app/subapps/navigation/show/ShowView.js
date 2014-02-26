@@ -3,13 +3,26 @@ define(["marionette", "hbs!subapps/navigation/show/tpl/navigation"], function(Ma
         Message: Marionette.ItemView.extend({
             template: template,
 
+            initialize: function(){
+                console.log('model:', this.model);
+            },
+
             events: {
                 "click div a.js-brand"      : "clickBrand",
                 "click ul li a.js-home"     : "clickHome",
                 "click ul li a.js-whoweare" : "clickWhoWeAre",
                 "click ul li a.js-photos"   : "clickPhotos",
-                "click ul li a.js-login"    : "clickLogin",
+                "click .js-login"           : "clickLogin",
+                "click .js-logout"          : "clickLogout",
                 "click .js-search-submit"   : "clickSubmit"
+            },
+
+            modelEvents: {
+                "change": "render"
+            },
+
+            modelChanged: function(){
+                console.log('model changed:', this.model);
             },
 
             clickBrand: function(e){
@@ -41,9 +54,49 @@ define(["marionette", "hbs!subapps/navigation/show/tpl/navigation"], function(Ma
 
             clickLogin: function(e){
                 e.preventDefault();
-                // e.stopPropagation();
+                e.stopPropagation();
                 console.log('navigation clickLogin');
+                $(document).trigger('login');
+                // $(document).trigger('test:register');
+
             },
+
+            clickLogout: function(e){
+                e.preventDefault();
+                console.log('navigation clickLogout');
+                $(document).trigger('logout');
+                // $(document).trigger('test:register');
+
+            },
+
+updateButton: function(response) {
+  Log.info('Updating Button', response);
+  var button = $('.js-login');
+  // var button = document.getElementById('fb-auth');
+
+  if (response.status === 'connected') {
+    button.innerHTML = 'Logout';
+    button.className = 'btn btn-danger';
+    button.onclick = function() {
+      FB.logout(function(response) {
+        Log.info('FB.logout callback', response);
+      });
+    };
+  } else {
+    button.innerHTML = 'Login';
+    button.className = 'btn btn-success';
+    button.onclick = function() {
+      FB.login(function(response) {
+        Log.info('FB.login callback', response);
+        if (response.status === 'connected') {
+          Log.info('User is logged in');
+        } else {
+          Log.info('User is logged out');
+        }
+      });
+    };
+  }
+},
 
             clickSubmit: function(e){
                 e.preventDefault();
@@ -54,6 +107,7 @@ define(["marionette", "hbs!subapps/navigation/show/tpl/navigation"], function(Ma
             },
 
             onRender: function(){
+                // console.log('my model:', this.model);
                 // autocomplete
                 // http://bit.ly/1eqIHMQ
                 var self = this;
@@ -88,6 +142,14 @@ define(["marionette", "hbs!subapps/navigation/show/tpl/navigation"], function(Ma
                         $(this).autocomplete("close");
                     }
                 });
+
+                // $('.js-login').on('click', function () {
+                //     console.log('logging in...');
+                //     // require([ "acl/fb" ], function () {
+                //     //     // FB.getLoginStatus(this.updateButton);
+                //     // });
+                // });
+
             }
         })
     };

@@ -1,13 +1,13 @@
 <?php
 
-class Composer extends Eloquent {
+class Authorization extends Eloquent {
 	protected $guarded = array();
 	public static $rules = array();
-
     public $timestamps = false;
     public $incrementing = false;
 
-	public function songs() {
-		return $this->belongsToMany( 'Song' );
-	}
+
+    public function user() {
+        return $this->belongs_to( 'User' );
+    }
 }

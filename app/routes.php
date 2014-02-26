@@ -30,3 +30,4 @@ Route::get('auto', function()
 Route::resource('/test-js/liturgies', 'LiturgyController');
 Route::resource('liturgies', 'LiturgyController');
 Route::resource('song', 'SongController');
+Route::resource('session', 'SessionController');
