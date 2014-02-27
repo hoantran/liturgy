@@ -12,10 +12,13 @@ class LiturgyController extends \BaseController {
 		// return json_encode( Liturgy::getLiturgyData( 1 ) );
 		// return json_encode( $t, JSON_UNESCAPED_SLASHES );
 
-		// $t = Liturgy::getLiturgyData( 1 );
 		// sleep(10);
-		$t = Liturgy::getLineups();
-		return json_encode( $t );
+		return json_encode(
+			Authorization::insertWritableToArray (
+				Liturgy::getLineups(),
+				Authorization::isWritingPermitted( "calendar:list" )
+			)
+		);
 	}
 
 	/**
@@ -36,13 +39,18 @@ class LiturgyController extends \BaseController {
 	public function store()
 	{
 		Log::info( 'store' );
+		return self::save( new Liturgy );
+	}
 
-		// .......
-		// NEW Liturgy
-		$liturgy = new Liturgy;
-		self::reviseWithNewInfo( $liturgy );
-		Log::info( $liturgy->id );
-		return self::show( $liturgy->id );
+	private function save( $liturgy ){
+		if( Authorization::isWritingPermitted( "liturgy:save" ) ){
+			self::reviseWithNewInfo( $liturgy );
+			return self::show( $liturgy->id );
+		}
+		else {
+			Log::info('Current user does not have permission to create a new liturgy');
+			return Response::json('Current user does not have permission to create a new liturgy', 403);
+		}
 	}
 
 	//// TO DO: need validations here
@@ -86,7 +94,13 @@ class LiturgyController extends \BaseController {
 			return Response::json('liturgy('. $id . ') not found', 404);
 		}
 		else {
-			return json_encode( $t );
+			return json_encode(
+				Authorization::insertWritable (
+					$t,
+					Authorization::isWritingPermitted( "liturgy:list" )
+				)
+			);
+			// return json_encode( $t );
 		}
 	}
 
@@ -113,8 +127,17 @@ class LiturgyController extends \BaseController {
 
 		// .......
 		// SAVE Liturgy
-		$liturgy = Liturgy::find( $id );
-		self::reviseWithNewInfo( $liturgy );
+		// $liturgy = Liturgy::find( $id );
+		// self::reviseWithNewInfo( $liturgy );
+
+		return self::save( Liturgy::find( $id ) );
+
+
+
+
+
+
+
 
 		// // Log::info( 'JSON: ' , Input::json() );
 		// $data = Input::json();
@@ -162,7 +185,14 @@ class LiturgyController extends \BaseController {
 	public function destroy($id)
 	{
 		Log::info( 'destroy: ' . $id );
-		Liturgy::deleteALiturgy( $id );
+
+		if( Authorization::isWritingPermitted( "liturgy:delete" ) ){
+			Liturgy::deleteALiturgy( $id );
+			return Response::json('Liturgy deleted', 200);
+		}
+		else {
+			return Response::json('Current user does not have permission to delete a liturgy', 403);
+		}
 	}
 
 

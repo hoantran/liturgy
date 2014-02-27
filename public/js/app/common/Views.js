@@ -1,4 +1,4 @@
-define(["App", "hbs!common/tpl/loading", "hbs!common/tpl/missing", "hbs!common/tpl/dialog", "spin.jquery"], function(App, loadingTpl, missingTpl, dialogTpl){
+define(["App", "hbs!common/tpl/loading", "hbs!common/tpl/missing", "hbs!common/tpl/dialog", "hbs!common/tpl/status", "spin.jquery"], function(App, loadingTpl, missingTpl, dialogTpl, statusTpl){
     App.module("Common.Views", function(Views, App, Backbone, Marionette, $, _){
         Views.Loading = Marionette.ItemView.extend({
             template: loadingTpl,
@@ -45,6 +45,28 @@ define(["App", "hbs!common/tpl/loading", "hbs!common/tpl/missing", "hbs!common/t
             }
         });
 
+        Views.Status = Marionette.ItemView.extend({
+            template: statusTpl,
+
+            initialize: function(params){
+                var options;
+                if(params) {
+                    options = params;
+                }
+                else {
+                    options = {};
+                }
+                this.title = options.title || "Status title";
+                this.message = options.message || "Status message";
+            },
+
+            serializeData: function(){
+                return {
+                    title: this.title,
+                    message: this.message
+                };
+            }
+        });
 
         // missing view
         Views.MissingLiturgy = Marionette.ItemView.extend({

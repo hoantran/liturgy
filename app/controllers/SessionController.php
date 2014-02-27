@@ -38,14 +38,6 @@ class SessionController extends BaseController {
         $fbid = Input::get('fbid');
         Log::info($fbname);
         Log::info($fbid);
-        // Log::info(base64_encode(openssl_random_pseudo_bytes(16)));
-        // if( 0===strcmp($fbname, "rum")){
-        // 	Session::put('name', $fbname);
-        // 	Log::info('stored session');
-        // }
-        // else {
-        // 	Log::info(Session::get('name'));
-        // }
 
         $user = User::where('fbid', '=', $fbid)->first();
         if(is_null($user)){

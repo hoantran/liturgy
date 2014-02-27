@@ -21,7 +21,8 @@ require.config({
         "json2":"../libs/json2",
         "jasmine": "../libs/jasmine",
         "jasmine-html": "../libs/jasmine-html",
-        "facebook": "//connect.facebook.net/en_US/all",
+        "facebook": "../libs/facebook",
+        // "facebook": "//connect.facebook.net/en_US/all",
 
         // Plugins
         "backbone.validateAll":"../libs/plugins/Backbone.validateAll",

@@ -14,7 +14,23 @@ define( [ "App", "views/MainLayout", "subapps/calendar/list/CalendarLayout", "su
                 require( [ "entities/CalendarLiturgies" ], function( CalendarLiturgies ){
                     var fetchingLineups = App.request( "calendar:liturgies" );
 
+                    // var extractLineups = function(package){
+                    //     var     lineups = new Backbone.Collection(),
+                    //             attrs = package.models[0].attributes,
+                    //             writable = attrs.writable;
+                    //     _.each( attrs, function(attr){
+                    //         if( attr instanceof Object ){
+                    //             attr.writable = writable;
+                    //             lineups.add( attr );
+                    //         }
+                    //     });
+
+                    //     return lineups;
+                    // };
+
                     $.when( fetchingLineups ).done( function( lineups ){
+                        // console.log( 'lineups:', lineups );
+
                         var calendarView = new CalendarView({
                             collection: lineups
                         });
@@ -49,8 +65,18 @@ define( [ "App", "views/MainLayout", "subapps/calendar/list/CalendarLayout", "su
                                 });
 
                                 dialogView.on("liturgy:confirm:delete", function(){
-                                    model.destroy();
-                                    App.trigger("calendar:list");
+                                    model.destroy({
+                                        success: function(){
+                                            App.trigger("calendar:list");
+                                        },
+                                        error: function(){
+                                            var statusView = new CommonViews.Status({
+                                                title: "DELETE ERROR",
+                                                message: "Can not delete the liturgy, probable due to not having permission to do so."
+                                            });
+                                            App.mainRegion.show(statusView);
+                                        }
+                                    });
                                 });
                                 App.dialogRegion.show(dialogView);
                             });

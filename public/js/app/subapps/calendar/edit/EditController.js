@@ -28,42 +28,32 @@ define( [   "App",
                             App.mainRegion.show( view );
 
                             view.on("liturgy:form:submit", function(model){
-                                ///.....
-                                /// This duplicateFlag complicates this code
-                                /// Because editing and duplicating a liturgy is so much alike,
-                                /// the best solution is finding away to abstract out EditController and its EditView
-                                /// so that they can be subclassed and used for both editing and duplicating,
-                                /// in which the corresponding subclasses only need to overwrite a few parameters
-                                /// for its own cases.
+                                console.log('liturgy:form:submit');
                                 if(options.duplicateFlag){
                                     // for duplicating a liturgy, take out the 'id' attribute so that
                                     // the laravel 4 on the server end would call 'store' method on the controller
                                     model.unset( 'id', { silent: true });
-                                    if(model.save( null, {
-                                            success: function( data ){
-                                                App.trigger( "calendar:show", data.get('id') );
-                                            },
-                                            error: function( data ){
-                                                console.log( 'calendar/edit/EditController error data:', data );
-                                            }
-                                        })) {
-                                        // App.trigger("calendar:show", model.get('id'));
-                                    }
-                                    else {
-                                        view.triggerMethod("form:data:invalid", model.validationError);
-                                    }
                                 }
 
-                                ///// .....
-                                else {
-                                    console.log('saving model:', model);
-                                    if(model.save()){
+                                if(model.save(null, {
+                                    success: function( data ){
                                         App.trigger("calendar:show", model.get('id'));
+                                    },
+                                    error: function( data ){
+                                        var statusView = new CommonViews.Status({
+                                            title: "SAVING ERROR",
+                                            message: "Can not save the liturgy, probable due to not having permission to do so."
+                                        });
+                                        App.mainRegion.show(statusView);
                                     }
-                                    else {
-                                        view.triggerMethod("form:data:invalid", model.validationError);
-                                    }
+                                })){
+                                    // App.trigger("calendar:show", model.get('id'));
                                 }
+                                else {
+                                    view.triggerMethod("form:data:invalid", model.validationError);
+                                }
+
+
                             });
                         }
                         else{
@@ -74,6 +64,5 @@ define( [   "App",
             }
         };
     });
-
     return App.CalendarApp.Edit.Controller;
 });

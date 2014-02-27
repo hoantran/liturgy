@@ -51,6 +51,11 @@ SERVER:     when the authenication request comes:
             }
 
 
+BUG:        There is a known 'bug':
+            Facebook sessions status does not communicate immediately across browser tabs (pages)
+            Currently, the status is checked every 30s.
+            i.e. this app checkes for FB status change every 30s,
+            in case FB status or user login identity changes.
 
 */
 
@@ -59,12 +64,12 @@ SERVER:     when the authenication request comes:
 define(['App','facebook'], function(App){
 // define(['App'], function(App){
 
-    FB.init({
-        appId      : '151285299151',
-        cookie     : true,
-        status     : true,
-        xfbml      : true
-    });
+    // FB.init({
+    //     appId      : '151285299151',
+    //     cookie     : true,
+    //     status     : true,
+    //     xfbml      : true
+    // });
 
     FB.Event.subscribe('auth.authResponseChange', function(response) {
         if (response.status === 'connected') {
@@ -94,8 +99,9 @@ define(['App','facebook'], function(App){
                         } else {
                             var token = userSession.get('token');
                             console.log('userSession:', userSession);
-                            App.request("entities:session:loggedIn", token);
+                            App.request('entities:session:loggedIn', token);
                             session.set('pic', 'http://graph.facebook.com/' + response.id + '/picture/');
+                            App.trigger('view:refresh');
                         }
                     });
                 });
@@ -104,8 +110,9 @@ define(['App','facebook'], function(App){
 
         } else {
             // FB.login();
-            console.log('Logged out');
-            App.trigger("fb:loggedout");
+            console.log('Logged out --- ');
+            App.request("entities:session:loggedOut");
+            App.trigger("view:refresh");
         }
     });
 
@@ -114,9 +121,20 @@ define(['App','facebook'], function(App){
     // http://bit.ly/Okib2f
     // http://bit.ly/1myRcyS
     $(document).on('login', function() {
+        FB.init({
+            appId      : '151285299151',
+            cookie     : true,
+            status     : true,
+            xfbml      : true
+        });
+
         FB.login(function(response) {}, {
             scope: 'publish_actions'
         });
+
+        // check Facebook status every 30s
+        window.setInterval(FB.getLoginStatus, 30000);
+
         return false;
     });
 
@@ -133,6 +151,7 @@ define(['App','facebook'], function(App){
     $(document).on('logout', function () {
         FB.logout();
         App.request("entities:session:loggedOut");
+        App.trigger('view:refresh');
         return false;
     });
 

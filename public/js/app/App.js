@@ -39,6 +39,10 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
             }
         };
 
+        App.on("view:refresh", function(){
+            Backbone.history.loadUrl(App.getCurrentRoute());
+        });
+
         App.on("initialize:after", function(){
             if(Backbone.history){
                 require([ "subapps/navigation/NavigationApp", "subapps/calendar/CalendarApp", "subapps/footer/FooterApp", "subapps/song/SongApp"  ], function () {

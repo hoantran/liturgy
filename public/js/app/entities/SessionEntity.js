@@ -55,13 +55,22 @@ define(["App"], function(App){
         },
 
         loggedIn: function(session,token){
+            console.log('logged in');
             session.set('token', token);
             session.setLoggedIn();
-            console.log('model:', session);
+
+            // the use of ajaxSetup is generally not recommended for it may screw up jquery plugins
+            $.ajaxSetup({
+                headers: {'X-CSRF-Token': token}
+            });
         },
 
         loggedOut: function(session){
+            console.log('logged out');
             session.clear().set(session.defaults);
+            $.ajaxSetup({
+                headers: ""
+            });
         }
 
     };
