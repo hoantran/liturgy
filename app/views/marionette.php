@@ -11,7 +11,9 @@
          More info: h5bp.com/i/378 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Marionette-Require Boilerplate</title>
+<!--     Boilerplate based on : Marionette and Require.js Boilerplate Library
+        http://bit.ly/1cZD1wg -->
+    <title>Liturgy Planning</title>
     <meta name="description" content="Marionette and Require.js Boilerplate Library">
 
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
@@ -26,7 +28,7 @@
             // App Environment
             // ---------------
             //  Tip: Set to true to turn on "production" mode
-            var production = true,
+            var production = false,
                     filesToLoad,
             //BoilerplateMVC Helper Methods
                     boilerplateMVC = {
@@ -151,21 +153,5 @@
     </div>
     <footer id="footer">
     </footer>
-
-
-<!-- <div data-role="page">
-
-    <header data-role="header"></header>
-
-    <div id="main" class="container-fluid" data-role="content"></div>
-
-    <footer data-role="footer" class="footer navbar navbar-fixed-bottom">
-        <p>
-            <a href="https://github.com/brettjonesdev" target="_blank">Brett Jones</a> of <a href="https://github.com/BoilerplateMVC">BoilerplateMVC</a>
-        </p>
-    </footer>
-
-</div> -->
-
 </body>
 </html>

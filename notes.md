@@ -20,6 +20,12 @@ TO BUILD
     grunt
 
 
+GIT: fatal: CRLF would be replaced by LF
+==========================
+* sudo apt-get install dos2unix
+* find . -type f -exec dos2unix {} +
+* http://bit.ly/1lol4MI
+
 
 HOW TO MIGRATE LITURGY
 ======================

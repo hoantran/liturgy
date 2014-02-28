@@ -8,7 +8,7 @@ define( [   "App",
     App.module( "CalendarApp.Edit", function(Edit, App, Backbone, Marionette, $, _){
         Edit.Controller = {
             editLiturgy: function(options){
-                require(["common/Views", "models/liturgy", "entities/CalendarLiturgies"], function(CommonViews, Liturgy){
+                require(["common/views/Views", "models/liturgy", "entities/CalendarLiturgies"], function(CommonViews, Liturgy){
                     // loading view
                     var loadingView = new CommonViews.Loading({
                         title: "Loading ...",

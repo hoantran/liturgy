@@ -19,7 +19,22 @@ class User extends Eloquent {
     /// UTILITIES /////////////////
     ///////////////////////////////
 
-    public static function insertAUser( $fbid, $fbname ){
+    /**
+     * Retrieve a user with this Facebook ID
+     * @param  int $fbid Facebook ID
+     * @return User       the first user instance, if it exists
+     */
+    public static function get( $fbid ){
+        return self::where('fbid', '=', $fbid)->first();
+    }
+
+    /**
+     * Insert a new user into the database
+     * @param  int $fbid   Facebook ID
+     * @param  String $fbname Facebook name
+     * @return User         the just created user instance
+     */
+    public static function insert( $fbid, $fbname ){
         $user = new User;
         $user->fbid = $fbid;
         $user->fbname = $fbname;

@@ -74,18 +74,8 @@ define(['App','facebook'], function(App){
     FB.Event.subscribe('auth.authResponseChange', function(response) {
         if (response.status === 'connected') {
             console.log('Logged in');
-            // FB.api(
-            //     "/me/picture",
-            //     function (response) {
-            //         if (response && !response.error) {
-            //             console.log('pix:', response);
-            //         }
-            //     }
-            // );
 
              FB.api('/me', function (response) {
-                // fb.user.set(response); // Store the newly authenticated FB user
-                // App.trigger('fb:loggedin', response);
                 console.log('resp:', response);
                 require( [ "entities/SessionEntity" ], function( CalendarLiturgies ){
                     var session = App.request("entities:session");
@@ -109,7 +99,6 @@ define(['App','facebook'], function(App){
             });
 
         } else {
-            // FB.login();
             console.log('Logged out --- ');
             App.request("entities:session:loggedOut");
             App.trigger("view:refresh");
@@ -138,67 +127,10 @@ define(['App','facebook'], function(App){
         return false;
     });
 
-    // $(document).on('fbStatusChange', function (event, data) {
-    //     if (data.status === 'connected') {
-    //         FB.api('/me', function (response) {
-    //             fb.user.set(response); // Store the newly authenticated FB user
-    //         });
-    //     } else {
-    //         fb.user.set(fb.user.defaults); // Reset current FB user
-    //     }
-    // });
-
     $(document).on('logout', function () {
         FB.logout();
         App.request("entities:session:loggedOut");
         App.trigger('view:refresh');
         return false;
     });
-
-    // $(document).on('test:register', function () {
-    //         require( [ "entities/SessionEntity" ], function( CalendarLiturgies ){
-    //             var session = App.request("entities:session");
-    //             session.set('fbname', 'hoan');
-    //             session.set('fbid', 1234);
-    //             session.set('token', '');
-    //             console.log('session:', session);
-    //             var fetchingSession = App.request( "entities:session:register" );
-    //             $.when( fetchingSession ).done( function( userSession ){
-    //                 if(userSession === undefined){
-    //                     console.log('can not register with server');
-    //                 } else {
-    //                     var token = userSession.get('token');
-    //                     console.log('userSession:', userSession);
-    //                     App.request("entities:session:loggedIn", token);
-    //                 }
-    //             });
-    //         });
-    // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // FB.getLoginStatus(function(response) {
-    //     console.log(response);
-    //     if(response.status !== 'connected'){
-    //         console.log('trying to login');
-    //         // FB.login();
-    //         $(document).trigger('login');
-    //     }
-    // });
-
-    // FB.getLoginStatus(function(response) {
-    //     console.log(response);
-    // });
 });

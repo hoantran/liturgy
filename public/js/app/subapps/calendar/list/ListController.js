@@ -1,4 +1,4 @@
-define( [ "App", "views/MainLayout", "subapps/calendar/list/CalendarLayout", "subapps/calendar/list/CalendarPanelView", "subapps/calendar/list/CalendarView", "views/JumbotronView" ],
+define( [ "App", "subapps/calendar/list/MainLayout", "subapps/calendar/list/CalendarLayout", "subapps/calendar/list/CalendarPanelView", "subapps/calendar/list/CalendarView", "subapps/calendar/list/JumbotronView" ],
     function( App, MainLayout, CalendarLayout, CalendarPanelView, CalendarView, JumbotronView ){
     App.module( "CalendarApp.List", function(List, App, Backbone, Marionette, $, _){
         List.Controller = {
@@ -13,20 +13,6 @@ define( [ "App", "views/MainLayout", "subapps/calendar/list/CalendarLayout", "su
 
                 require( [ "entities/CalendarLiturgies" ], function( CalendarLiturgies ){
                     var fetchingLineups = App.request( "calendar:liturgies" );
-
-                    // var extractLineups = function(package){
-                    //     var     lineups = new Backbone.Collection(),
-                    //             attrs = package.models[0].attributes,
-                    //             writable = attrs.writable;
-                    //     _.each( attrs, function(attr){
-                    //         if( attr instanceof Object ){
-                    //             attr.writable = writable;
-                    //             lineups.add( attr );
-                    //         }
-                    //     });
-
-                    //     return lineups;
-                    // };
 
                     $.when( fetchingLineups ).done( function( lineups ){
                         // console.log( 'lineups:', lineups );
@@ -55,7 +41,7 @@ define( [ "App", "views/MainLayout", "subapps/calendar/list/CalendarLayout", "su
                         mainLayout.contentRegion.show       ( calendarLayout );
 
                         calendarView.on("itemview:liturgy:delete", function(childView, model){
-                            require( [ "common/Views" ], function( CommonViews ){
+                            require( [ "common/views/Views" ], function( CommonViews ){
                                 var dialogView = new CommonViews.Dialog({
                                     title: "Deleting A Liturgy",
                                     message: "Are you sure you want to delete \"" + model.get('title') + "\"?",

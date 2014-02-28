@@ -40,12 +40,6 @@ define([
 			if( !attrs.date ){
 				errors.date = "Liturgy date can not be blank";
 			}
-			//_.each( attrs.items, function( item, index ){
-			//	var song_id = item.song_id;
-			//	if( !_.isNumber( song_id )){
-			//		errors.items[ index ].song_id = "Song selected does not seem valid.";
-			//	}
-			//});
 
 			if( !_.isEmpty( errors )){
 				return errors;

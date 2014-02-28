@@ -1,4 +1,4 @@
-define(['jquery', 'hbs!templates/jumbotron', 'backbone', 'marionette'],
+define(['jquery', 'hbs!subapps/calendar/list/tpl/jumbotron', 'backbone', 'marionette'],
     function ($, template, Backbone) {
         //ItemView provides some default rendering logic
         return Backbone.Marionette.ItemView.extend({

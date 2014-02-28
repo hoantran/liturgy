@@ -27,7 +27,7 @@ class SessionController extends BaseController {
 	}
 
 	/**
-	 * Store a newly created resource in storage.
+	 * Create a new session
 	 *
 	 * @return Response
 	 */
@@ -35,20 +35,14 @@ class SessionController extends BaseController {
 	{
         Log::info('Session:store');
         $fbname = Input::get('fbname');
-        $fbid = Input::get('fbid');
-        Log::info($fbname);
-        Log::info($fbid);
+        $fbid   = Input::get('fbid');
 
-        $user = User::where('fbid', '=', $fbid)->first();
+        $user = User::get( $fbid );
         if(is_null($user)){
-        	$user = new User;
-        	$user->fbname = $fbname;
-        	$user->fbid = $fbid;
-        	$user->save();
+        	$user = User::insert( $fbid, $fbname );
         }
 
 		$response = array("fbname"=>$fbname, "fbid"=>$fbid, "token"=>base64_encode(openssl_random_pseudo_bytes(16)));
-		// $_SESSION['user'] = $response;
         Session::put('user', $response);
 		return json_encode($response);
 	}

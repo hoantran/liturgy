@@ -52,43 +52,7 @@ define(['App', 'backbone', 'marionette', 'collections/LiturgyItemCollection', 'm
 
             return defer.promise();
         }
-
-      // getContactEntity: function(contactId){
-      //   var contact = new Entities.Contact({id: contactId});
-      //   var defer = $.Deferred();
-      //   setTimeout(function(){
-      //     contact.fetch({
-      //       success: function(data){
-      //         defer.resolve(data);
-      //       },
-      //       error: function(data){
-      //         defer.resolve(undefined);
-      //       }
-      //     });
-      //   }, 2000);
-      //   return defer.promise();
-      // }
     };
-
-    //   getContactEntities: function(){
-    //     var contacts = new Entities.ContactCollection();
-    //     var defer = $.Deferred();
-    //     contacts.fetch({
-    //       success: function(data){
-    //         defer.resolve(data);
-    //       }
-    //     });
-    //     var promise = defer.promise();
-    //     $.when(promise).done(function(contacts){
-    //       if(contacts.length === 0){
-    //         // if we don't have any contacts yet, create some for convenience
-    //         var models = initializeContacts();
-    //         contacts.reset(models);
-    //       }
-    //     });
-    //     return promise;
-    //   },
-    // };
 
     App.reqres.setHandler( "calendar:liturgies", function(){
         return API.getLiturgyCalendar();

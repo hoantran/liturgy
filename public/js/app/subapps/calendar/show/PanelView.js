@@ -7,12 +7,6 @@ define(['jquery', 'hbs!subapps/calendar/show/tpl/panel', 'backbone', 'marionette
                 "click .js-liturgy-edit": "editClicked"
             },
 
-            // initialize: function(){
-            //     this.on("liturgy:edit", function(hey){
-            //         console.log('hey:', hey);
-            //     });
-            // },
-
             editClicked: function(e){
                 e.preventDefault();
                 e.stopPropagation();

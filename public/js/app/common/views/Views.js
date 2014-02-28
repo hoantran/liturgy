@@ -1,4 +1,4 @@
-define(["App", "hbs!common/tpl/loading", "hbs!common/tpl/missing", "hbs!common/tpl/dialog", "hbs!common/tpl/status", "spin.jquery"], function(App, loadingTpl, missingTpl, dialogTpl, statusTpl){
+define(["App", "hbs!common/views/tpl/loading", "hbs!common/views/tpl/missing", "hbs!common/views/tpl/dialog", "hbs!common/views/tpl/status", "spin.jquery"], function(App, loadingTpl, missingTpl, dialogTpl, statusTpl){
     App.module("Common.Views", function(Views, App, Backbone, Marionette, $, _){
         Views.Loading = Marionette.ItemView.extend({
             template: loadingTpl,

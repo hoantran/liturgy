@@ -57,7 +57,6 @@ define(["marionette", "hbs!subapps/navigation/show/tpl/navigation"], function(Ma
                 e.stopPropagation();
                 console.log('navigation clickLogin');
                 $(document).trigger('login');
-                // $(document).trigger('test:register');
 
             },
 
@@ -65,38 +64,8 @@ define(["marionette", "hbs!subapps/navigation/show/tpl/navigation"], function(Ma
                 e.preventDefault();
                 console.log('navigation clickLogout');
                 $(document).trigger('logout');
-                // $(document).trigger('test:register');
 
             },
-
-updateButton: function(response) {
-  Log.info('Updating Button', response);
-  var button = $('.js-login');
-  // var button = document.getElementById('fb-auth');
-
-  if (response.status === 'connected') {
-    button.innerHTML = 'Logout';
-    button.className = 'btn btn-danger';
-    button.onclick = function() {
-      FB.logout(function(response) {
-        Log.info('FB.logout callback', response);
-      });
-    };
-  } else {
-    button.innerHTML = 'Login';
-    button.className = 'btn btn-success';
-    button.onclick = function() {
-      FB.login(function(response) {
-        Log.info('FB.login callback', response);
-        if (response.status === 'connected') {
-          Log.info('User is logged in');
-        } else {
-          Log.info('User is logged out');
-        }
-      });
-    };
-  }
-},
 
             clickSubmit: function(e){
                 e.preventDefault();
@@ -107,7 +76,6 @@ updateButton: function(response) {
             },
 
             onRender: function(){
-                // console.log('my model:', this.model);
                 // autocomplete
                 // http://bit.ly/1eqIHMQ
                 var self = this;
@@ -126,7 +94,6 @@ updateButton: function(response) {
                     // http://bit.ly/1f3Im8h
                     // http://bit.ly/MpjBag
                     $(this).data( "ui-autocomplete" )._renderItem = function( ul, item ) {
-                        // console.log('item:', item );
                         return $( "<li></li>" )
                             .data( "item.autocomplete", item )
                             .append( "<a><strong>" + item.label + "</strong> <small> " + item.composers + " </small></a>" )
@@ -135,21 +102,10 @@ updateButton: function(response) {
                 }).keypress(function (e) {
                     if (e.which == 13) {
                         e.preventDefault();
-                        // console.log('e:', e );
-                        // console.log('this.value:', this.value);
                         self.trigger('song:search', this.value);
-                        // console.log('data_songid:', $(this).attr('data_songid')) ;
                         $(this).autocomplete("close");
                     }
                 });
-
-                // $('.js-login').on('click', function () {
-                //     console.log('logging in...');
-                //     // require([ "acl/fb" ], function () {
-                //     //     // FB.getLoginStatus(this.updateButton);
-                //     // });
-                // });
-
             }
         })
     };

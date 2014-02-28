@@ -94,10 +94,16 @@ class Authorization extends Eloquent {
         return Authorization::select('activity')->distinct()->lists('activity');
     }
 
-    // Whenever an operation needs authorization:
-    // * check that the CSRF header matches the user session's
-    // * check that the user is in the system and authorized for the operation
-    // Based on recommedations at: http://bit.ly/1hUqAGH
+
+    /**
+     * Check if the user in the current has the write permission for the requested activity
+     * Whenever an operation needs authorization:
+     * check that the CSRF header matches the user session's
+     * check that the user is in the system and authorized for the operation
+     * Based on recommedations at: http://bit.ly/1hUqAGH
+     * @param  String  $activity the activity to ask write permission
+     * @return boolean           writable
+     */
     public static function isWritingPermitted( $activity ) {
         Log::info( 'Querying if (' . $activity . ') is permitted' );
 
@@ -124,6 +130,12 @@ class Authorization extends Eloquent {
         return false;
     }
 
+    /**
+     * Get write permission for the user
+     * @param  User  $user     user instance
+     * @param  String  $activity the activity to ask write permission
+     * @return boolean           writable
+     */
     private static function isWritable($user, $activity){
         Log::info($activity);
         $isWritable = $user->authorizations()->where('activity', '=', $activity)->first();
@@ -135,6 +147,10 @@ class Authorization extends Eloquent {
         }
     }
 
+    /**
+     * Extract the user embedded in the current session
+     * @return [type] [description]
+     */
     private static function getSessionUser(){
         $user = null;
         if(array_key_exists('fbid', Session::get('user'))){
@@ -150,6 +166,10 @@ class Authorization extends Eloquent {
 
     // http://bit.ly/1bMOlxE
     // Function for basic field validation (present and neither empty nor only white space
+    /**
+     * Field validation: is there anything there
+     * @param String $question the string to check for null or empty
+     */
     private static function IsNullOrEmptyString($question){
         return (!isset($question) || trim($question)==='');
     }

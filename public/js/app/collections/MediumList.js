@@ -6,8 +6,6 @@ define(["jquery","backbone","underscore","models/MediumModel"],
             model: Model,
 
             initialize: function(options){
-                // console.log('medium list collection init');
-                // console.log('medium list options:', options);
                 // if(options.list){
                 //     this.parseMediumData(options.list);
                 // }
@@ -16,13 +14,9 @@ define(["jquery","backbone","underscore","models/MediumModel"],
             parseMediumData: function(mediumData){
                 var medium = mediumData.get('medium');
                 var mediumList = mediumData.get('mediumList');
-                // console.log('mediumData:', mediumData);
-                // console.log('medium:', medium);
-                // console.log('mediumData.get(mediumList):', mediumList);
                 if(mediumData && mediumList){
                     var list = this;
                     _.each(mediumList, function(link){
-                        // console.log('medium list adding link:', link);
                         list.add({
                             medium  : medium,
                             link    : link
