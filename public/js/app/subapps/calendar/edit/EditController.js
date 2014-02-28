@@ -29,6 +29,7 @@ define( [   "App",
 
                             view.on("liturgy:form:submit", function(model){
                                 console.log('liturgy:form:submit');
+                                $(document).trigger('fb:status:check');
                                 if(options.duplicateFlag){
                                     // for duplicating a liturgy, take out the 'id' attribute so that
                                     // the laravel 4 on the server end would call 'store' method on the controller

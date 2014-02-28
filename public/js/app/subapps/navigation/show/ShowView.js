@@ -56,14 +56,14 @@ define(["marionette", "hbs!subapps/navigation/show/tpl/navigation"], function(Ma
                 e.preventDefault();
                 e.stopPropagation();
                 console.log('navigation clickLogin');
-                $(document).trigger('login');
+                $(document).trigger('fb:login');
 
             },
 
             clickLogout: function(e){
                 e.preventDefault();
                 console.log('navigation clickLogout');
-                $(document).trigger('logout');
+                $(document).trigger('fb:logout');
 
             },
 

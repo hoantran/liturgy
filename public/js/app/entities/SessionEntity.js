@@ -11,7 +11,7 @@ define(["App"], function(App){
         defaults: {
             "fbname": "Login",
             "pic"   : "",
-            "uid"   : "",
+            "fbid"   : "",
             "token" : "",
             "loggedIn"  : false
         },
@@ -22,6 +22,10 @@ define(["App"], function(App){
 
         setLoggedIn: function(){
             this.set('loggedIn', true);
+        },
+
+        isDifferentUser: function( fbid ){
+            return this.get('fbid') !== fbid;
         },
 
 

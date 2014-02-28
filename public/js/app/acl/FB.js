@@ -71,45 +71,63 @@ define(['App','facebook'], function(App){
     //     xfbml      : true
     // });
 
-    FB.Event.subscribe('auth.authResponseChange', function(response) {
+    var checkStatus = function( response ){
         if (response.status === 'connected') {
             console.log('Logged in');
 
              FB.api('/me', function (response) {
-                console.log('resp:', response);
-                require( [ "entities/SessionEntity" ], function( CalendarLiturgies ){
+                console.log('response for /me:', response);
+                require( [ "entities/SessionEntity" ], function(){
                     var session = App.request("entities:session");
-                    session.set('fbname', response.name);
-                    session.set('fbid', response.id);
-                    session.set('token', '');
-                    var fetchingSession = App.request( "entities:session:register" );
-                    $.when( fetchingSession ).done( function( userSession ){
-                        if(userSession === undefined){
-                            console.log('can not register with server');
-                        } else {
-                            var token = userSession.get('token');
-                            console.log('userSession:', userSession);
-                            App.request('entities:session:loggedIn', token);
-                            session.set('pic', 'http://graph.facebook.com/' + response.id + '/picture/');
-                            App.trigger('view:refresh');
-                        }
-                    });
+                    if( session.isDifferentUser( response.id )){
+                        session.set('fbname', response.name);
+                        session.set('fbid', response.id);
+                        session.set('token', '');
+                        var fetchingSession = App.request( "entities:session:register" );
+                        $.when( fetchingSession ).done( function( userSession ){
+                            if(userSession === undefined){
+                                console.log('can not register with server');
+                            } else {
+                                var token = userSession.get('token');
+                                App.request('entities:session:loggedIn', token);
+                                session.set('pic', 'http://graph.facebook.com/' + response.id + '/picture/');
+                                App.trigger('view:refresh');
+                            }
+                        });
+                    }
+                    else {
+                        console.log('same user');
+                    }
                 });
-
             });
 
         } else {
             console.log('Logged out --- ');
-            App.request("entities:session:loggedOut");
-            App.trigger("view:refresh");
+            require( [ "entities/SessionEntity" ], function(){
+                var session = App.request("entities:session");
+                if( session.isLoggedIn()){
+                    App.request("entities:session:loggedOut");
+                    App.trigger("view:refresh");
+                }
+                else {
+                    console.log('already logged out');
+                }
+            });
         }
+    };
+
+
+    FB.Event.subscribe('auth.authResponseChange', function(response) {
+    // FB.Event.subscribe('auth.statusChange', function(response) {
+        console.log('authResponseChange response:', response );
+        checkStatus( response );
     });
 
 
     // the login is here as to circumvent popup blocker, especially on chrome
     // http://bit.ly/Okib2f
     // http://bit.ly/1myRcyS
-    $(document).on('login', function() {
+    $(document).on('fb:login', function() {
         FB.init({
             appId      : '151285299151',
             cookie     : true,
@@ -121,13 +139,22 @@ define(['App','facebook'], function(App){
             scope: 'publish_actions'
         });
 
-        // check Facebook status every 30s
-        window.setInterval(FB.getLoginStatus, 30000);
+        // check Facebook status every minute
+        window.setInterval(FB.getLoginStatus, 60000);
 
         return false;
     });
 
-    $(document).on('logout', function () {
+    $(document).on('fb:status:check', function () {
+        console.log('FB.getLoginStatus');
+        FB.getLoginStatus(function( response ) {
+            console.log('response:', response);
+            checkStatus( response );
+        }, true); // force checking, not using cached response
+        return false;
+    });
+
+    $(document).on('fb:logout', function () {
         FB.logout();
         App.request("entities:session:loggedOut");
         App.trigger('view:refresh');

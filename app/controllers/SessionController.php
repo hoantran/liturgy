@@ -37,14 +37,19 @@ class SessionController extends BaseController {
         $fbname = Input::get('fbname');
         $fbid   = Input::get('fbid');
 
-        $user = User::get( $fbid );
-        if(is_null($user)){
-        	$user = User::insert( $fbid, $fbname );
-        }
+        // Log::info( 'fbname:' . $fbname );
+        // Log::info( 'fbid:' . $fbid );
 
-		$response = array("fbname"=>$fbname, "fbid"=>$fbid, "token"=>base64_encode(openssl_random_pseudo_bytes(16)));
-        Session::put('user', $response);
-		return json_encode($response);
+        if( !self::IsNullOrEmptyString( $fbname ) && !self::IsNullOrEmptyString( $fbid )){
+            $user = User::get( $fbid );
+            if(is_null($user)){
+            	$user = User::insert( $fbid, $fbname );
+            }
+
+    		$response = array("fbname"=>$fbname, "fbid"=>$fbid, "token"=>base64_encode(openssl_random_pseudo_bytes(16)));
+            Session::put('user', $response);
+    		return json_encode($response);
+        }
 	}
 
 	/**
@@ -91,4 +96,13 @@ class SessionController extends BaseController {
         Log::info('Session:destroy');
 	}
 
+    // http://bit.ly/1bMOlxE
+    // Function for basic field validation (present and neither empty nor only white space
+    /**
+     * Field validation: is there anything there
+     * @param String $question the string to check for null or empty
+     */
+    private static function IsNullOrEmptyString($question){
+        return (!isset($question) || trim($question)==='');
+    }
 }

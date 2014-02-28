@@ -70,21 +70,25 @@ define( ["App"], function(App){
         };
 
         App.on("calendar:list", function(){
+            $(document).trigger('fb:status:check');
             App.navigate("calendar");
             API.listCalendar();
         });
 
         App.on("calendar:show", function(id){
+            $(document).trigger('fb:status:check');
             App.navigate("calendar/"+id);
             API.showLiturgy(id);
         });
 
         App.on("calendar:edit", function(id){
+            $(document).trigger('fb:status:check');
             App.navigate("calendar/" + id + "/edit");
             API.editLiturgy(id);
         });
 
         App.on("calendar:duplicate", function(id){
+            $(document).trigger('fb:status:check');
             App.navigate("calendar/" + id + "/duplicate");
             API.duplicateLiturgy(id);
         });
