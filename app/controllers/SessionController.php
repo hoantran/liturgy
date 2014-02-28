@@ -48,7 +48,8 @@ class SessionController extends BaseController {
         }
 
 		$response = array("fbname"=>$fbname, "fbid"=>$fbid, "token"=>base64_encode(openssl_random_pseudo_bytes(16)));
-		$_SESSION['user'] = $response;
+		// $_SESSION['user'] = $response;
+        Session::put('user', $response);
 		return json_encode($response);
 	}
 

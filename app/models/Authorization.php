@@ -100,9 +100,9 @@ class Authorization extends Eloquent {
     // Based on recommedations at: http://bit.ly/1hUqAGH
     public static function isWritingPermitted( $activity ) {
         Log::info( 'Querying if (' . $activity . ') is permitted' );
-        // First, check to see if the user is logged in at all
-        if(!empty($_SESSION['user']) && array_key_exists('HTTP_X_CSRF_TOKEN', $_SERVER)) {
-            if($_SESSION['user']['token'] == $_SERVER['HTTP_X_CSRF_TOKEN']) {
+
+        if( Session::has('user') && array_key_exists('HTTP_X_CSRF_TOKEN', $_SERVER)) {
+            if(Session::get('user')['token'] == $_SERVER['HTTP_X_CSRF_TOKEN']) {
 
                 $user = self::getSessionUser();
                 if(null != $user){
@@ -137,8 +137,8 @@ class Authorization extends Eloquent {
 
     private static function getSessionUser(){
         $user = null;
-        if(array_key_exists('fbid', $_SESSION['user'])){
-            $fbid = $_SESSION['user']['fbid'];
+        if(array_key_exists('fbid', Session::get('user'))){
+            $fbid = Session::get('user')['fbid'];
             if( !self::IsNullOrEmptyString( $fbid )){
                 $user = User::where('fbid', '=', $fbid)->first();
             }
