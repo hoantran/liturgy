@@ -129,7 +129,8 @@ define(['App','facebook'], function(App){
     // http://bit.ly/1myRcyS
     $(document).on('fb:login', function() {
         FB.init({
-            appId      : '151285299151',
+            // appId      : '151285299151', // dev
+            appId      : '490457897731520', // prod
             cookie     : true,
             status     : true,
             xfbml      : true

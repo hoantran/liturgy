@@ -27,8 +27,11 @@ ON TO SHARED HOSTING
 * update lavavel:
     php-cli /home4/bluepego/bin/composer.phar update
 
-* copy the files over (there's a commented out line for 1st time push):
+* copy the files over:
     extra/scripts/push.sh
+    note:
+        - modify dst and src, if needed
+        - there's a commented out line for 1st time push
 
 * first time:
     change the 'public' path in:
