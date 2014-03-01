@@ -21,6 +21,8 @@ TO BUILD
 
 ON TO SHARED HOSTING
 --------------------
+http://bit.ly/1bTqhck
+
 * clone the depository
 * update: composer:
     php-cli /home4/bluepego/bin/composer.phar self-update

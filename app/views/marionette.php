@@ -91,7 +91,10 @@
                     };
 
             // Mobile/Tablet Logic
-            if((/iPhone|iPod|iPad|Android|BlackBerry|Opera Mini|IEMobile/).test(ua)) {
+            // if((/iPhone|iPod|iPad|Android|BlackBerry|Opera Mini|IEMobile/).test(ua)) {
+            if(false) {
+                console.log('ua:', ua);
+                console.log('MOBILE');
 
                 // Mobile/Tablet CSS and JavaScript files to load
                 filesToLoad = {
@@ -112,6 +115,8 @@
 
             // Desktop Logic
             else {
+                console.log('ua:', ua);
+                console.log('DESKTOP');
 
                 // Desktop CSS and JavaScript files to load
                 filesToLoad = {

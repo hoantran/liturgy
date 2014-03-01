@@ -2,13 +2,19 @@
 require(["App", "jquery", "routers/AppRouter", "controllers/MobileController", "backbone", "marionette", "jquerymobile", "backbone.validateAll"],
     function (App, $, AppRouter, AppController) {
         // Prevents all anchor click handling
-        $.mobile.linkBindingEnabled = false;
-        // Disabling this will prevent jQuery Mobile from handling hash changes
-        $.mobile.hashListeningEnabled = false;
+        // $.mobile.linkBindingEnabled = false;
+        // // Disabling this will prevent jQuery Mobile from handling hash changes
+        // $.mobile.hashListeningEnabled = true;
 
-        App.appRouter = new AppRouter({
-            controller:new AppController()
-        });
+        // $.mobile.ajaxEnabled = false;
+        // $.mobile.linkBindingEnabled = false;
+        // $.mobile.hashListeningEnabled = false;
+        // $.mobile.pushStateEnabled = false;
+
+
+        // App.appRouter = new AppRouter({
+        //     controller:new AppController()
+        // });
 
         App.start();
     });
