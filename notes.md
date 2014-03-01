@@ -19,6 +19,28 @@ TO BUILD
 * to build:
     grunt
 
+ON TO SHARED HOSTING
+--------------------
+* clone the depository
+* update: composer:
+    php-cli /home4/bluepego/bin/composer.phar self-update
+* update lavavel:
+    php-cli /home4/bluepego/bin/composer.phar update
+
+* copy the files over (there's a commented out line for 1st time push):
+    extra/scripts/push.sh
+
+* first time:
+    change the 'public' path in:
+        bootstrap/paths.php
+    tell
+        'YOUR_WWW_DIRECTORY/index.php'
+    where autoload.php and start.php are, such as:
+        require __DIR__.'/../../apps/liturgy/bootstrap/autoload.php';
+
+    modify mysql connection to reflect local environment:
+        app/config/database.php:
+
 
 GIT: fatal: CRLF would be replaced by LF
 ==========================
@@ -101,4 +123,12 @@ TO INSTALL NPM, GRUNT
 * If you have installed Grunt globally in the past, you will need to remove it first by typing npm uninstall -g grunt. If it complains about user permissions, type sudo npm uninstall -g grunt.
 * Next, install the latest version of Grunt (http://gruntjs.com/ ) by typing npm install -g grunt-cli. If it complains about user permissions, type sudo npm install -g grunt-cli.
 * Navigate to inside of the Backbone-Require-Boilerplate folder and type npm install
+
+
+
+
+
+
+
+
 

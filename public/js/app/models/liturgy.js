@@ -4,7 +4,7 @@ define([
   'models/sections'
 ], function( Backbone, _, Sections ){
 	var Liturgy = Backbone.Model.extend({
-		urlRoot: "/liturgies",
+		urlRoot: "liturgies",
 
 		defaults: {
 			// "_id"	: "",
