@@ -11,7 +11,7 @@ define( [ "App", "subapps/calendar/list/MainLayout", "subapps/calendar/list/Cale
 
                 var panel = new CalendarPanelView();
 
-                require( [ "entities/CalendarLiturgies" ], function( CalendarLiturgies ){
+                require( [ "entities/CalendarLiturgies", "entities/Choir" ], function( CalendarLiturgies, Choir ){
                     var fetchingLineups = App.request( "calendar:liturgies" );
 
                     $.when( fetchingLineups ).done( function( lineups ){
@@ -36,8 +36,9 @@ define( [ "App", "subapps/calendar/list/MainLayout", "subapps/calendar/list/Cale
                             App.trigger("calendar:duplicate", model.get("id"));
                         });
 
+                        var choir = App.request( 'choir:choir' );
                         App.mainRegion.show                 (mainLayout);
-                        mainLayout.jumbotronRegion.show     ( new JumbotronView() );
+                        mainLayout.jumbotronRegion.show     ( new JumbotronView({ model:choir }) );
                         mainLayout.contentRegion.show       ( calendarLayout );
 
                         calendarView.on("itemview:liturgy:delete", function(childView, model){

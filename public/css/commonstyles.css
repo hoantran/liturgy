@@ -1,7 +1,7 @@
 .jumbotron {
     margin-top: 40px;
-    background: url("../img/featured.jpg") bottom center no-repeat;
-    background-size: cover;
+    /*background: url("../img/featured.jpg") bottom center no-repeat;*/
+    /*background-size: cover;*/
     color: #FFFFFF;
 }
 .jumbotron h1 {

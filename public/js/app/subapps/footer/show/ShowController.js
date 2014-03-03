@@ -1,8 +1,11 @@
 define(["App", "subapps/footer/show/ShowView"], function(App, View){
     return {
         showFooter: function(){
-            var view = new View.Message();
-            App.footerRegion.show(view);
+            require([ "entities/Choir"], function(Choir){
+                var choir = App.request("choir:choir");
+                var view = new View.Message({model: choir});
+                App.footerRegion.show(view);
+            });
         }
     };
 });

@@ -2,7 +2,7 @@
 <nav class="navbar navbar-default footer-top" role="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">Serving St. Elizabeth Parish 9:30 AM Sunday Community, Milpitas, CA</div>
+            <div class="col-md-4">{{ serving }}</div>
             <div class="col-md-4">
                 <ul class="nav nav-pills">
 
@@ -12,12 +12,12 @@
                     </li>
  -->
                     <li>
-                        <a href="http://www.stelizabethmilpitas.org">Parish Website</a>
+                        <a href="{{ parishUrl }}">Parish Website</a>
                     </li>
                 </ul>
             </div>
             <div class="col-md-4">
-                <h3 class="text-right">Faith Choir</h3>
+                <h3 class="text-right">{{ name }}</h3>
             </div>
         </div>
     </div>

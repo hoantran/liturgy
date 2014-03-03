@@ -1,8 +1,10 @@
-define(["App", "subapps/navigation/show/ShowView"], function(App, View){
+define(["App", "subapps/navigation/show/ShowView", "underscore" ], function(App, View){
     return {
         showNavigation: function(){
-            require([ "entities/SessionEntity" ], function () {
+            require([ "entities/SessionEntity", "entities/Choir" ], function () {
                 var session = App.request("entities:session");
+                var choir = App.request("choir:choir");
+                _.extend( session, choir );
                 var view = new View.Message({model:session});
 
                 view.on("home:clicked", function(childView, model){
