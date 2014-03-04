@@ -1,6 +1,7 @@
 <?php
 
 class Composer extends Eloquent {
+    protected $connection = 'worship';
 	protected $guarded = array();
 	public static $rules = array();
 

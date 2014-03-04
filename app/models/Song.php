@@ -5,7 +5,8 @@ class Song extends Eloquent {
 	const NEW_DIRECTORY 		= '1';
 	const MISSING_DIRECTORY 	= '2';
 
-	protected $guarded = array();
+    protected $connection = 'worship';
+   	protected $guarded = array();
 	public static $main_song_directory = "songs";
 	public $timestamps = false;
 

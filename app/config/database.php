@@ -52,10 +52,21 @@ return array(
 			'prefix'   => '',
 		),
 
-		'mysql' => array(
+		'worship' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'liturgy',
+			'database'  => 'worship',
+			'username'  => 'root',
+			'password'  => '',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+
+		'choir' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'faith',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',

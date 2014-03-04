@@ -1,6 +1,7 @@
 <?php
 
 class Authorization extends Eloquent {
+    protected $connection = 'choir';
 	protected $guarded = array();
 	public static $rules = array();
     public $timestamps = false;

@@ -1,7 +1,8 @@
 <?php
 
 class Medium extends Eloquent {
-	protected $guarded = array();
+    protected $connection = 'worship';
+   	protected $guarded = array();
 	public $timestamps = false;
 	public $incrementing = false;
 

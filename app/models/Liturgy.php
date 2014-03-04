@@ -1,13 +1,17 @@
 <?php
 
 class Liturgy extends Eloquent {
+    protected $connection = 'choir';
 	protected $guarded = array();
 	public static $rules = array();
 
 	public $timestamps = false;
 
 	public function parts() {
-		return $this->belongsToMany( 'Part' )
+		// does having 'Part' in a different database
+		// significantly affect performance?
+		$choirDB = Config::get('database.connections.choir.database');
+		return $this->belongsToMany( 'Part', $choirDB . '.liturgy_part' )
 					->withPivot( 'song_id' )
 					->join( 'songs', 'song_id', '=', 'songs.id' );
 	}
