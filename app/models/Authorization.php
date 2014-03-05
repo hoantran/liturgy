@@ -105,29 +105,44 @@ class Authorization extends Eloquent {
      * @param  String  $activity the activity to ask write permission
      * @return boolean           writable
      */
-    public static function isWritingPermitted( $activity ) {
-        Log::info( 'Querying if (' . $activity . ') is permitted' );
-
-        if( Session::has('user') && array_key_exists('HTTP_X_CSRF_TOKEN', $_SERVER)) {
-            if(Session::get('user')['token'] == $_SERVER['HTTP_X_CSRF_TOKEN']) {
-
-                $user = self::getSessionUser();
-                if(null != $user){
-                    //User is logged in
-                    return self::isWritable( $user, $activity );
-                }
-            } else {
-                // If a user is logged in, but doesn't have permissions, return 403
-                // $app->halt(403, 'ACCESS DENIED');
-                Log::info('User Does Not Have Write Access');
+    public static function isWritingPermitted( $activity, $checkCSRF = true ) {
+        if( $checkCSRF ){
+            if( self::isPassedCSRF() ){
+                return self::getWritability( $activity );
             }
-        } else {
-            // If a user is not logged in at all, return a 401
-            // $app->halt(401, 'PLEASE LOGIN FIRST');
-            Log::info('User Not Logged In');
+        }
+        else {
+            return self::getWritability( $activity );
         }
 
-        Log::info('Writing Not Permitted');
+        return false;
+    }
+
+    /**
+     * Checks to see if the current user has writability prilege for an activity
+     * @param  String $activity an activity to check
+     * @return boolean           whether the user has writiability for the activity
+     */
+    private static function getWritability( $activity ){
+        $user = self::getSessionUser();
+        if(null == $user){
+            return false;
+        } else {
+            //User is logged in
+            return self::isWritable( $user, $activity );
+        }
+    }
+
+    /**
+     * Makes sure the current user's session match CSRF token
+     * @return boolean whether user's session match CSRF token
+     */
+    private static function isPassedCSRF() {
+        if( Session::has('user') && array_key_exists('HTTP_X_CSRF_TOKEN', $_SERVER)) {
+            if(Session::get('user')['token'] == $_SERVER['HTTP_X_CSRF_TOKEN']) {
+                return true;
+            }
+        }
         return false;
     }
 

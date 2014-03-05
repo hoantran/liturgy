@@ -11,8 +11,6 @@ class SessionController extends BaseController {
 	{
         // return View::make('sessions.index');
         Log::info('Session:index');
-        $name = Input::get('name');
-        Log::info($name);
 	}
 
 	/**
@@ -27,7 +25,7 @@ class SessionController extends BaseController {
 	}
 
 	/**
-	 * Create a new session
+	 * Create a new session for a user
 	 *
 	 * @return Response
 	 */
@@ -45,9 +43,15 @@ class SessionController extends BaseController {
             if(is_null($user)){
             	$user = User::insert( $fbid, $fbname );
             }
+            $response = array(
+                                "fbname"            => $fbname,
+                                "fbid"              => $fbid,
+                                "token"             => base64_encode(openssl_random_pseudo_bytes(16))
+                                );
+            Session::put('user', $response); // gotta put user the session before writing permission can be checked
+            $response["isWritableComposer"] = Authorization::isWritingPermitted( "composer:edit", false);
+            $response["isWritableSong"] = Authorization::isWritingPermitted( "song:edit", false);
 
-    		$response = array("fbname"=>$fbname, "fbid"=>$fbid, "token"=>base64_encode(openssl_random_pseudo_bytes(16)));
-            Session::put('user', $response);
     		return json_encode($response);
         }
 	}
