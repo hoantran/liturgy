@@ -36,7 +36,7 @@ class SongController extends \BaseController {
 	 * @return array       array of objects from the db containing only: id and title columns
 	 */
 	private function searchSong( $term ){
-		$search = DB::table( 'songs' )
+		$search = DB::connection('worship')->table( 'songs' )
 						->where( 'title', 'LIKE', '%'.$term.'%' )
 						->orWhere( 'firstline', 'LIKE', '%'.$term.'%' )
 						->take( self::SEARCH_COUNT_LIMIT )
