@@ -303,7 +303,12 @@ class Song extends Eloquent {
 	}
 
 	public static function getSongsPath(){
-		return getcwd() . "/public/" . Song::$main_song_directory;
+		if (App::environment('local')){
+			return getcwd() . "/public/" . Song::$main_song_directory;
+		}
+		else {
+			return Config::get('liturgy.public') . Song::$main_song_directory;
+		}
 	}
 
 
