@@ -66,7 +66,7 @@ return array(
 		'choir' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'faith',
+			'database'  => 'flock',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',
