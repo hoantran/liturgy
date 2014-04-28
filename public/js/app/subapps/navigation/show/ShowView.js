@@ -12,6 +12,8 @@ define(["marionette", "hbs!subapps/navigation/show/tpl/navigation"], function(Ma
                 "click ul li a.js-home"     : "clickHome",
                 "click ul li a.js-whoweare" : "clickWhoWeAre",
                 "click ul li a.js-photos"   : "clickPhotos",
+                "click .js-add-song"        : "clickAddSong",
+                "click .js-add-composer"    : "clickAddComposer",
                 "click .js-login"           : "clickLogin",
                 "click .js-logout"          : "clickLogout",
                 "click .js-search-submit"   : "clickSubmit"
@@ -73,6 +75,18 @@ define(["marionette", "hbs!subapps/navigation/show/tpl/navigation"], function(Ma
                 console.log('navigation clickSubmit');
                 var searchTerm = $(".js-search-input", this.el).val();
                 this.trigger('song:search', searchTerm);
+            },
+
+            clickAddSong: function(e){
+                e.preventDefault();
+                // e.stopPropagation();
+                console.log('navigation clickAddSong');
+            },
+
+            clickAddComposer: function(e){
+                e.preventDefault();
+                // e.stopPropagation();
+                console.log('navigation clickAddComposer');
             },
 
             onRender: function(){
