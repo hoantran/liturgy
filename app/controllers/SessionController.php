@@ -49,8 +49,12 @@ class SessionController extends BaseController {
                                 "token"             => base64_encode(openssl_random_pseudo_bytes(16))
                                 );
             Session::put('user', $response); // gotta put user the session before writing permission can be checked
-            $response["isWritableComposer"] = Authorization::isWritingPermitted( "composer:edit", false);
-            $response["isWritableSong"] = Authorization::isWritingPermitted( "song:edit", false);
+            $isEditableComposer =  Authorization::isWritingPermitted( "composer:edit", false);
+            $isEditableSong =  Authorization::isWritingPermitted( "song:edit", false);
+
+            $response["isEditableComposer"] = $isEditableComposer;
+            $response["isEditableSong"]     = $isEditableSong;
+            $response["isAdmin"]            = $isEditableComposer || $isEditableSong;
 
     		return json_encode($response);
         }
