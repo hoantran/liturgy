@@ -54,7 +54,7 @@ return array(
 
 		'worship' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
+			'host'      => '127.0.0.1',
 			'database'  => 'worship',
 			'username'  => 'root',
 			'password'  => '',
@@ -65,7 +65,7 @@ return array(
 
 		'choir' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
+			'host'      => '127.0.0.1',
 			// 'database'  => 'flock',
 			'database'  => 'faith',
 			'username'  => 'root',
