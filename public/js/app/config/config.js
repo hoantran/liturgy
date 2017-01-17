@@ -23,6 +23,7 @@ require.config({
         "jasmine-html": "../libs/jasmine-html",
         "facebook": "../libs/facebook",
         // "facebook": "//connect.facebook.net/en_US/all",
+        // 'facebook': '//connect.facebook.net/en_US/sdk',
 
         // Plugins
         "backbone.validateAll":"../libs/plugins/Backbone.validateAll",

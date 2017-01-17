@@ -131,6 +131,7 @@ define(['App','facebook'], function(App){
         FB.init({
             appId      : '151285299151', // dev
             // appId      : '490457897731520', // prod
+            version    : 'v2.8',
             cookie     : true,
             status     : true,
             xfbml      : true
