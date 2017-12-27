@@ -6,7 +6,7 @@ One of those is at: http://flock.bluepego.com
 
 Laravel and MySQL provide the backend services.
 
-While front-end uses Backbone, it utilizes Marionette to simplify and to reduce boilerplate code inherent in Backbone. Bootstrap and jQuery provides the skin and utilities CSS styling for responsive layout, for both desktop and mobile clients.
+While front-end uses Backbone, it utilizes Marionette to simplify and to reduce boilerplate code inherent in Backbone. Bootstrap and jQuery provide CSS styling for responsive layout, for both desktop and mobile clients.
 
 It also uses standard tools such as Require, Uglify ...etc. to package and compact the frontend network load.
 
