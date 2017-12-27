@@ -13,5 +13,6 @@ It also uses standard tools such as Require, Uglify ...etc. to package and compa
 Refer to other readme's for further info:
 
 [Laravel!](https://github.com/hoantran/liturgy/blob/marionette/readme-laravel.md)
+
 [Frontend!](https://github.com/hoantran/liturgy/blob/marionette/readme-marionette-require-boilerplate.md)
 
