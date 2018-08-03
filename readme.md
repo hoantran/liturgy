@@ -1,18 +1,9 @@
 SONG LINEUP FOR LITURGY
 ==================================
-The code is in production at multiple parishes.
 
+This project is to develop a website to communicate weekly (music, and maybe at most other liturgical ministry) needs of a choir within its members
+
+This is the 3rd version of the project.
+
+The 2nd version is on the marionette branch. Its code is in production at multiple parishes.
 One of those is at: http://flock.bluepego.com
-
-Laravel and MySQL provide the backend services.
-
-While front-end uses Backbone, it utilizes Marionette to simplify and to reduce boilerplate code inherent in Backbone. Bootstrap and jQuery provide CSS styling for responsive layout, for both desktop and mobile clients.
-
-It also uses standard tools such as Require, Uglify ...etc. to package and compact the frontend network load.
-
-Refer to other readme's for further info:
-
-[Laravel!](https://github.com/hoantran/liturgy/blob/marionette/readme-laravel.md)
-
-[Frontend!](https://github.com/hoantran/liturgy/blob/marionette/readme-marionette-require-boilerplate.md)
-
