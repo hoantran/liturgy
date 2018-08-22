@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import FirebaseTest from '@/components/FirebaseTest'
+import Menu from '@/components/Menu'
 
 Vue.use(Router)
 
@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'FirebaseTest',
-      component: FirebaseTest
+      name: 'Menu',
+      component: Menu
     }
   ]
 })
