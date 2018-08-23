@@ -19,9 +19,9 @@
 -- Current Database: `bluepego_flock`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `bluepego_flock` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `flock` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
 
-USE `bluepego_flock`;
+USE `flock`;
 
 --
 -- Table structure for table `authorizations`

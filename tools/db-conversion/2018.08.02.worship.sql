@@ -19,9 +19,9 @@
 -- Current Database: `bluepego_worship`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `bluepego_worship` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `worship` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
 
-USE `bluepego_worship`;
+USE `worship`;
 
 --
 -- Table structure for table `composer_song`
