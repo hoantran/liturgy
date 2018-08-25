@@ -18,7 +18,9 @@
   </div>
 </template>
 <script>
+console.log('Menu.vue script')
 export default {
+  name: 'menux',
   data () {
     return {
     }
@@ -30,6 +32,8 @@ export default {
         console.log('Adding a class')
         // add a class here like:
         // $('nav').addClass('black')
+        // console.log(this.$options.parent)
+        // console.log('options.name:' + this.$options.name)
       } else {
         console.log('Remove class')
         // remove that class like:
@@ -117,7 +121,7 @@ export default {
   section.sec1 {
     width: 100%;
     height: 100vh;
-    background: url(../assets/BG.jpg);
+    background: url(../../assets/BG.jpg);
     background-size: cover;
     background-position: center;
   }
