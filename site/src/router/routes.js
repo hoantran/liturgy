@@ -1,7 +1,10 @@
 import Error404Page from '@/pages/public/error/Error404Page.vue'
-import IndexPage from '@/pages/public/IndexPage.vue'
+// import IndexPage from '@/pages/public/IndexPage.vue'
 import AccountDashboardPage from '@/pages/account/AccountDashboardPage.vue'
 import ProfileSettingsPage from '@/pages/account/ProfileSettingsPage.vue'
+import LiturgyListPage from '@/pages/liturgy-list/LiturgyListPage.vue'
+import LoginPage from '@/pages/login/LoginPage.vue'
+import LiturgyPage from '@/pages/liturgy/LiturgyPage.vue'
 
 const meta = {
   public: {
@@ -12,7 +15,20 @@ const meta = {
     section: 'account',
     layout: 'AccountLayout',
     auth: true // it's here only for eexample and really not handled in this sandbox
+  },
+  magic: {
+    section: 'magic',
+    layout: 'MagicLayout'
+  },
+  login: {
+    section: 'login',
+    layout: 'LoginLayout'
+  },
+  liturgy: {
+    section: 'liturgy',
+    layout: 'MagicLayout'
   }
+
 }
 
 /**
@@ -23,9 +39,25 @@ const routes = [
   {
     name: 'index',
     path: '/',
-    component: IndexPage,
+    component: LiturgyListPage,
     meta: {
-      ...meta.public
+      ...meta.magic
+    }
+  },
+  {
+    name: 'liturgy',
+    path: '/liturgy/:id',
+    component: LiturgyPage,
+    meta: {
+      ...meta.magic
+    }
+  },
+  {
+    name: 'login',
+    path: '/login',
+    component: LoginPage,
+    meta: {
+      ...meta.login
     }
   },
   {

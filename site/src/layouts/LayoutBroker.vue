@@ -16,13 +16,13 @@ export default {
     layoutClasses: {
       type: [Object, Array],
       default () {
-        return ['layout']
+        return ['']
       }
     },
     pageWrapperClasses: {
       type: [Object, Array],
       default () {
-        return ['page-wrapper']
+        return ['']
       }
     }
   },
