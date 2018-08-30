@@ -45,8 +45,10 @@ DIST_DIR="$SITE_DIR/dist/"
 REMOTE_DIR="./html/liturgy"
 ARCHIVE_DIR="archive"
 CONTENTS="index.html static"
+HTACCESS="$SITE_DIR/htaccess"
 
 COPY="scp -r -o User=$SSH_USER -o StrictHostKeyChecking=no $DIST_DIR/* $HOST_URL:$REMOTE_DIR"
+COPY_HTACCESS="scp -r -o User=$SSH_USER -o StrictHostKeyChecking=no $HTACCESS $HOST_URL:$REMOTE_DIR/.htaccess"
 
 build() {
     echo "Building dist ..."
@@ -64,6 +66,7 @@ push() {
     echo "......................"
     $SSH $HOST_URL "cd $REMOTE_DIR; rm -rf $ARCHIVE_DIR 2>/dev/null; mkdir $ARCHIVE_DIR; cp -R $CONTENTS $ARCHIVE_DIR; rm -rf $CONTENTS"
     $COPY
+    $COPY_HTACCESS
 }
 
 
