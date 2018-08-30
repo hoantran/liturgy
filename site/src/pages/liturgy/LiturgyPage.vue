@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped>
-/* Do it here instead of styling index.html with <html class="has-navbar-fixed-top"> */
+/* Do it here INSTEAD of styling index.html with <html class="has-navbar-fixed-top"> */
 .liturgy {
   padding-top: 5px;
 }
