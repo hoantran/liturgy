@@ -8,7 +8,7 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
  string           : first lines   
 [uuid]            : [composer id]
  string           : directory where song files are
-[string : uuid]   : [media name: media type] : 
+[string : uuid]   : [{media name: string, media type:string},...] 
 [string]          : [tag]
 [uuid]            : [publisher]
 ```
