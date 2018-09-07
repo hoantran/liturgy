@@ -16,7 +16,20 @@
                 <router-link class="navbar-item" :to="{name: 'index'}">Home</router-link>
                 <!-- <router-link class="navbar-item" :to="{name: 'profile'}">Add</router-link> -->
                 <!-- <router-link class="navbar-item" :to="{name: 'account-index'}">Admin</router-link> -->
-                <router-link class="navbar-item" :to="{name: 'index'}">Admin</router-link>
+              <!--<router-link class="navbar-item" :to="{name: 'huy'}">Huy</router-link>-->
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="#">
+                  Admin
+                </a>
+                <div class="navbar-dropdown is-boxed">
+                  <a class="navbar-item" href="#">
+                    <router-link :to="{name: 'huy'}">Basketball Update</router-link>
+                  </a>
+                  <a class="navbar-item" href="#">
+                    <router-link :to="{name: 'sleeping'}">Sleeping</router-link>
+                  </a>
+                </div>
+              </div>
                 <router-link class="navbar-item" :to="{name: 'login'}">Login</router-link>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="#">

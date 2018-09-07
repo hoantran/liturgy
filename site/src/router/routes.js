@@ -5,6 +5,8 @@ import ProfileSettingsPage from '@/pages/account/ProfileSettingsPage.vue'
 import LiturgyListPage from '@/pages/liturgy-list/LiturgyListPage.vue'
 import LoginPage from '@/pages/login/LoginPage.vue'
 import LiturgyPage from '@/pages/liturgy/LiturgyPage.vue'
+import HuyPage from '@/pages/huy/HuyPage.vue'
+import SleepingPage from '@/pages/sleeping/SleepingPage.vue'
 
 const meta = {
   public: {
@@ -58,6 +60,22 @@ const routes = [
     component: LoginPage,
     meta: {
       ...meta.login
+    }
+  },
+  {
+    name: 'huy',
+    path: '/huy',
+    component: HuyPage,
+    meta: {
+      ...meta.magic
+    }
+  },
+  {
+    name: 'sleeping',
+    path: '/sleeping',
+    component: SleepingPage,
+    meta: {
+      ...meta.magic
     }
   },
   {
