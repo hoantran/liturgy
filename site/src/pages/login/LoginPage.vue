@@ -9,16 +9,16 @@
                           <figure class="avatar">
                               <img class="login-logo" src="../../assets/robert-logo.png">
                           </figure>
-                          <form>
+                          <form @submit.prevent="processForm">
                               <div class="field">
                                   <div class="control">
-                                      <input class="input is-large" type="email" placeholder="Your Email" autofocus="">
+                                      <input class="input is-large" type="email" placeholder="Your Email" autofocus="" v-model="email">
                                   </div>
                               </div>
 
                               <div class="field">
                                   <div class="control">
-                                      <input class="input is-large" type="password" placeholder="Your Password">
+                                      <input class="input is-large" type="password" placeholder="Your Password" v-model="password">
                                   </div>
                               </div>
                               <div class="field">
@@ -41,9 +41,22 @@
       </section>
 </template>
 <script>
+
 export default {
-  name: 'LoginPage'
+  name: 'LoginPage',
+  data () {
+    return {
+      email: '',
+      password: ''
+    }
+  },
+  methods: {
+    processForm: function () {
+      console.log('EMAIL: ' + this.email + ', PASSWORD: ' + this.password)
+    }
+  }
 }
+
 </script>
 
 <style scoped>
