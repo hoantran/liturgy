@@ -2,6 +2,12 @@
 
 These are root level collections, [as suggested by Firebase] (https://firebase.google.com/docs/firestore/manage-data/structure-data)
 
+# Publisher
+```
+ string              : name
+ string              : website url
+```
+
 # Song
 ```
  string           : title
