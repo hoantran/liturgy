@@ -30,7 +30,8 @@
                   </a>
                 </div>
               </div>
-                <router-link class="navbar-item" :to="{name: 'login'}">Login</router-link>
+                <!-- <router-link class="navbar-item" :to="{name: 'login'}">Login</router-link> -->
+                <a class="navbar-item" @click="logout">Logout</a>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="#">
                         Merchandise
@@ -63,7 +64,7 @@
 </template>
 
 <script>
-console.log('MagicMenu.vue script')
+import { auth } from '../../firebase/FirebaseInit'
 export default {
   name: 'MagicMenu',
   data () {
@@ -71,6 +72,14 @@ export default {
     }
   },
   methods: {
+    logout () {
+      auth.signOut().then(() => {
+        this.$store.dispatch('clearData')
+        this.$router.push('/login')
+      }).catch(err => {
+        console.log(err)
+      })
+    },
     handleScroll () {
       console.log('scrolling...')
       if (window.scrollY > 0) {

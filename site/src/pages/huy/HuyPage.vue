@@ -12,7 +12,7 @@
 
 <script>
 
-console.log('hello')
+console.log('hello, HuyPage')
 
 export default {
   name: 'HuyPage'

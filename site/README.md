@@ -45,3 +45,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
   `git push origin version3`
 
 **DO NOT BREAK THE BUILD!**
+
+## Useful links
+* https://savvyapps.com/blog/definitive-guide-building-web-app-vuejs-firebase
