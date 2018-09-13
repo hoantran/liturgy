@@ -14,7 +14,6 @@ export const store = new Vuex.Store({
       commit('setUserProfile', {})
     },
     fetchUserProfile ({commit, state}) {
-      console.log('usersCollection: ' + usersCollection)
       usersCollection.doc(state.currentUser.uid).get().then(res => {
         commit('setUserProfile', res.data())
       }).catch(err => {

@@ -1,15 +1,22 @@
 <template>
   <section class="hero is-fullheight">
           <div class="hero-body">
+              <transition name="fade">
+                <div v-if="performingRequest" class="loading">
+                    <p>Loading...</p>
+                </div>
+              </transition>
+
               <div class="container has-text-centered">
-                  <div class="column is-4 is-offset-4">
+                  <!-- LOGIN FORM -->
+                  <div v-if="showLoginForm" class="column is-4 is-offset-4">
                       <h3 class="title has-text-grey">Login</h3>
                       <p class="subtitle has-text-grey">Please login to proceed.</p>
                       <div class="box">
                           <figure class="avatar">
                               <img class="login-logo" src="../../assets/robert-logo.png">
                           </figure>
-                          <form v-if="showLoginForm" @submit.prevent="login">
+                          <form @submit.prevent="login">
                               <div class="field">
                                   <div class="control">
                                       <input class="input is-large" type="email" placeholder="Your Email" autofocus="" v-model.trim="loginForm.email">
@@ -31,11 +38,74 @@
                           </form>
                       </div>
                       <p class="has-text-grey">
-                          <a href="../">Sign Up</a> &nbsp;·&nbsp;
-                          <a href="../">Forgot Password</a> &nbsp;·&nbsp;
+                          <a @click="toggleForm">Sign Up</a> &nbsp;·&nbsp;
+                          <a @click="togglePasswordReset">Forgot Password</a> &nbsp;·&nbsp;
                           <a href="../">Need Help?</a>
                       </p>
                   </div>
+                  <!-- SIGNUP FORM -->
+                  <div v-if="!showLoginForm && !showForgotPassword" class="column is-4 is-offset-4">
+                      <h3 class="title has-text-grey">Sign Up</h3>
+                      <p class="subtitle has-text-grey">Please enter information to sign up.</p>
+                      <div class="box">
+                          <form @submit.prevent="signup">
+                              <div class="field">
+                                  <div class="control">
+                                      <input class="input is-large" type="text" placeholder="Your Name" autofocus="" v-model.trim="signupForm.name">
+                                  </div>
+                              </div>
+
+                              <div class="field">
+                                  <div class="control">
+                                      <input class="input is-large" type="email" placeholder="Your Email" autofocus="" v-model.trim="signupForm.email">
+                                  </div>
+                              </div>
+
+                              <div class="field">
+                                  <div class="control">
+                                      <input class="input is-large" type="password" placeholder="Your Password" v-model.trim="signupForm.password">
+                                  </div>
+                              </div>
+                              <button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
+                          </form>
+                      </div>
+                      <p class="has-text-grey">
+                          <a @click="toggleForm">Sign In</a> &nbsp;·&nbsp;
+                      </p>
+                  </div>
+                  <!-- FORGOT PASSWORD FORM -->
+                  <div v-if="showForgotPassword" class="column is-4 is-offset-4">
+                      <div v-if="!passwordResetSuccess">
+                        <h3 class="title has-text-grey">Reset Password</h3>
+                        <p class="subtitle has-text-grey">We will send you an email to reset your password.</p>
+                        <div class="box">
+                            <form @submit.prevent="resetPassword">
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input is-large" type="email" placeholder="Your Email" autofocus="" v-model.trim="passwordForm.email">
+                                    </div>
+                                </div>
+
+                                <button class="button is-block is-info is-large is-fullwidth">Submit</button>
+                            </form>
+                        </div>
+                        <p class="has-text-grey">
+                            <a @click="togglePasswordReset">Sign In</a> &nbsp;·&nbsp;
+                        </p>
+                      </div>
+                      <div v-else>
+                      <h1>Email sent</h1>
+                      <p>Check your email for a link to reset your password.</p>
+                      <p class="has-text-grey">
+                        <a @click="togglePasswordReset">Back to sign In</a> &nbsp;·&nbsp;
+                      </p>
+                  </div>
+                  </div>
+                  <transition name="fade">
+                    <div v-if="errorMsg !== ''" class="message is-danger">
+                        <p>{{ errorMsg }}</p>
+                    </div>
+                  </transition>
               </div>
           </div>
       </section>
@@ -44,7 +114,7 @@
 // import firebase from 'firebase/app'
 // import 'firebase/auth'
 // const auth = firebase.auth()
-import { auth } from '../../firebase/FirebaseInit'
+import { auth, usersCollection } from '../../firebase/FirebaseInit'
 console.log('auth: ' + auth)
 
 export default {
@@ -72,7 +142,26 @@ export default {
     }
   },
   methods: {
+    toggleForm () {
+      this.errorMsg = ''
+      this.showLoginForm = !this.showLoginForm
+    },
+    togglePasswordReset: function () {
+      if (this.showForgotPassword) {
+        console.log('showForgotPassword == true')
+        this.showLoginForm = true
+        this.showForgotPassword = false
+        this.passwordResetSuccess = false
+      } else {
+        console.log('showForgotPassword == false')
+        this.showLoginForm = false
+        this.showForgotPassword = true
+      }
+    },
     login: function () {
+      this.performingRequest = true
+      console.log('login: ' + this.loginForm)
+      console.log('signupForm: ' + this.signupForm)
       console.log('EMAIL: ' + this.loginForm.email + ', PASSWORD: ' + this.loginForm.password)
       this.performingRequest = true
       auth.signInWithEmailAndPassword(this.loginForm.email, this.loginForm.password).then(user => {
@@ -87,7 +176,46 @@ export default {
       }).catch(err => {
         console.log(err)
         this.performingRequest = false
-        this.errorMsg = err.errorMsg
+        this.errorMsg = err.message
+        console.log(err.message)
+      })
+    },
+    signup: function () {
+      this.performingRequest = true
+      console.log('login: ' + this.loginForm)
+      console.log('signupForm: ' + this.signupForm)
+      console.log('EMAIL: ' + this.signupForm.email + ', PASSWORD: ' + this.signupForm.password + ', NAME: ' + this.signupForm.name)
+      auth.createUserWithEmailAndPassword(this.signupForm.email, this.signupForm.password).then(user => {
+        this.$store.commit('setCurrentUser', user.user)
+        console.log('success obj: %o', user.user)
+        console.log('success id: %o', user.user.uid)
+        console.log('usersCollection signup: %o', usersCollection)
+        usersCollection.doc(user.user.uid).set({
+          name: this.signupForm.name
+        }).then(() => {
+          this.$store.dispatch('fetchUserProfile')
+          this.performingRequest = false
+          this.$router.push('/')
+        }).catch(err => {
+          console.log(err)
+          this.performingRequest = false
+          this.errorMsg = err.message
+        })
+      }).catch(err => {
+        console.log('Sign Up error: ' + err)
+        this.performingRequest = false
+        this.errorMsg = err.message
+      })
+    },
+    resetPassword: function () {
+      auth.sendPasswordResetEmail(this.passwordForm.email).then(() => {
+        this.performingRequest = false
+        this.passwordResetSuccess = true
+        this.passwordForm.email = ''
+      }).catch(err => {
+        console.log(err)
+        this.performingRequest = false
+        this.errorMsg = err.message
       })
     }
   }
