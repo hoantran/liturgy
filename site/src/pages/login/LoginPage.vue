@@ -115,7 +115,6 @@
 // import 'firebase/auth'
 // const auth = firebase.auth()
 import { auth, usersCollection } from '../../firebase/FirebaseInit'
-console.log('auth: ' + auth)
 
 export default {
   name: 'LoginPage',
@@ -148,27 +147,18 @@ export default {
     },
     togglePasswordReset: function () {
       if (this.showForgotPassword) {
-        console.log('showForgotPassword == true')
         this.showLoginForm = true
         this.showForgotPassword = false
         this.passwordResetSuccess = false
       } else {
-        console.log('showForgotPassword == false')
         this.showLoginForm = false
         this.showForgotPassword = true
       }
     },
     login: function () {
       this.performingRequest = true
-      console.log('login: ' + this.loginForm)
-      console.log('signupForm: ' + this.signupForm)
-      console.log('EMAIL: ' + this.loginForm.email + ', PASSWORD: ' + this.loginForm.password)
       this.performingRequest = true
       auth.signInWithEmailAndPassword(this.loginForm.email, this.loginForm.password).then(user => {
-        console.log('success: user : ' + user)
-        console.log('my object: %o', user)
-        console.log('my user user: %o', user.user)
-        console.log('my user id: %o', user.user.uid)
         this.$store.commit('setCurrentUser', user.user)
         this.$store.dispatch('fetchUserProfile')
         this.performingRequest = false
@@ -177,19 +167,12 @@ export default {
         console.log(err)
         this.performingRequest = false
         this.errorMsg = err.message
-        console.log(err.message)
       })
     },
     signup: function () {
       this.performingRequest = true
-      console.log('login: ' + this.loginForm)
-      console.log('signupForm: ' + this.signupForm)
-      console.log('EMAIL: ' + this.signupForm.email + ', PASSWORD: ' + this.signupForm.password + ', NAME: ' + this.signupForm.name)
       auth.createUserWithEmailAndPassword(this.signupForm.email, this.signupForm.password).then(user => {
         this.$store.commit('setCurrentUser', user.user)
-        console.log('success obj: %o', user.user)
-        console.log('success id: %o', user.user.uid)
-        console.log('usersCollection signup: %o', usersCollection)
         usersCollection.doc(user.user.uid).set({
           name: this.signupForm.name
         }).then(() => {
