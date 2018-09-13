@@ -43,7 +43,8 @@ const routes = [
     path: '/',
     component: LiturgyListPage,
     meta: {
-      ...meta.magic
+      ...meta.magic,
+      requiresAuth: true
     }
   },
   {
@@ -51,7 +52,8 @@ const routes = [
     path: '/liturgy/:id',
     component: LiturgyPage,
     meta: {
-      ...meta.magic
+      ...meta.magic,
+      requiresAuth: true
     }
   },
   {
@@ -67,7 +69,8 @@ const routes = [
     path: '/huy',
     component: HuyPage,
     meta: {
-      ...meta.magic
+      ...meta.magic,
+      requiresAuth: true
     }
   },
   {
@@ -75,7 +78,8 @@ const routes = [
     path: '/sleeping',
     component: SleepingPage,
     meta: {
-      ...meta.magic
+      ...meta.magic,
+      requiresAuth: true
     }
   },
   {
