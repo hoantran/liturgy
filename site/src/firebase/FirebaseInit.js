@@ -9,6 +9,7 @@ const settings = {timestampsInSnapshots: true}
 firestore.settings(settings)
 const usersCollection = firestore.collection('users')
 const publishersCollection = firestore.collection('publishers')
+const choirsCollection = firestore.collection('choirs')
 
 const auth = firebase.auth()
 const currentUser = auth.currentUser
@@ -18,5 +19,6 @@ export {
   auth,
   currentUser,
   usersCollection,
-  publishersCollection
+  publishersCollection,
+  choirsCollection
 }

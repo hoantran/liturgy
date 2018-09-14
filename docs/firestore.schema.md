@@ -26,7 +26,14 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
 [string]          : url to portrait
 ```
 
-# Parish (collection) - (uuid):Liturgy (collection)
+# Choir 
+```
+ string           : name
+ string           : parish name
+ string           : mass time
+```
+
+# Choir (collection) - (uuid):Liturgy (collection)
 ```
  name             : name of the liturgy
  timestamp        : liturgy date and time
