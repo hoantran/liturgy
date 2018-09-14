@@ -59,8 +59,6 @@
                     </div>
                 </div>
                 <a class="navbar-item" @click="logout">Logout</a>
-
-              </div>
             </div>
         </div>
     </nav>
