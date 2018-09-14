@@ -31,7 +31,7 @@
                 </div>
               </div>
                 <!-- <router-link class="navbar-item" :to="{name: 'login'}">Login</router-link> -->
-                <a class="navbar-item" @click="logout">Logout</a>
+                <!--<a class="navbar-item" @click="logout">Logout</a>-->
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="#">
                         Merchandise
@@ -58,6 +58,9 @@
                         </div>
                     </div>
                 </div>
+                <a class="navbar-item" @click="logout">Logout</a>
+
+              </div>
             </div>
         </div>
     </nav>
