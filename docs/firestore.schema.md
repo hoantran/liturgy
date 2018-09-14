@@ -10,6 +10,7 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
 
 # Song
 ```
+ uuid            : song_id
  string           : title
  string           : first lines   
 [uuid]            : [composer id]
@@ -22,21 +23,30 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
 ```
  string           : first name
  string           : last name
-[publisher]       : [uuid]
+[string]          : publisher
 [string]          : url to portrait
 ```
 
-# Choir 
+# Choir (collection)
 ```
- string           : name
- string           : parish name
- string           : mass time
+ string         : name of choir
+ string         : location of choir
+ string         : comments
 ```
 
-# Choir (collection) - (uuid):Liturgy (collection)
+# Liturgy (collection)
 ```
- name             : name of the liturgy
- timestamp        : liturgy date and time
- string           : location 
-[string]          : comments
-```
+ uuid           : id
+ uuid           : choir_id
+ string         : title
+ timestamp      : date
+ [Song_Assignment] : [Song Assignment (collection)]
+ 
+ ```
+# Song Assignment (collection)
+ 
+ ```
+ string : part_name
+ uuid : song_id
+ int : order
+ 
