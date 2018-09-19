@@ -22,6 +22,9 @@
                   Admin
                 </a>
                 <div class="navbar-dropdown is-boxed">
+                  <a class="navbar-item">
+                    <router-link :to="{name: 'populate'}">Peeing in the Genepool</router-link>
+                  </a>
                   <a class="navbar-item" href="#">
                     <router-link :to="{name: 'huy'}">Basketball Update</router-link>
                   </a>

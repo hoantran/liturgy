@@ -10,6 +10,8 @@ firestore.settings(settings)
 const usersCollection = firestore.collection('users')
 const publishersCollection = firestore.collection('publishers')
 const choirsCollection = firestore.collection('choirs')
+const liturgiesCollection = firestore.collection('liturgies')
+const songsCollection = firestore.collection('songs')
 
 const auth = firebase.auth()
 const currentUser = auth.currentUser
@@ -20,5 +22,7 @@ export {
   currentUser,
   usersCollection,
   publishersCollection,
-  choirsCollection
+  choirsCollection,
+  liturgiesCollection,
+  songsCollection
 }

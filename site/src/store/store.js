@@ -5,13 +5,18 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
+    choirID: null,
     currentUser: null,
     userProfile: {}
+  },
+  getters: {
+    choirID: state => state.choirID
   },
   actions: {
     clearData ({ commit }) {
       commit('setCurrentUser', null)
       commit('setUserProfile', {})
+      commit('choirID', null)
     },
     fetchUserProfile ({commit, state}) {
       usersCollection.doc(state.currentUser.uid).get().then(res => {
@@ -27,6 +32,11 @@ export const store = new Vuex.Store({
     },
     setUserProfile (state, val) {
       state.userProfile = val
+    },
+    setChoirID (state, val) {
+      console.log('setting:' + val)
+      state.choirID = val
+      console.log('verifying: ' + state.choirID)
     }
   }
 })

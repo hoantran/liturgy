@@ -2,7 +2,7 @@
   <section class="hero is-fullheight">
           <div class="hero-body">
               <transition name="fade">
-                <div v-if="performingRequest" class="loading">
+                <div v-if="performingRequest" class="fas fa-spinner fa-pulse">
                     <p>Loading...</p>
                 </div>
               </transition>

@@ -7,6 +7,7 @@ import LoginPage from '@/pages/login/LoginPage.vue'
 import LiturgyPage from '@/pages/liturgy/LiturgyPage.vue'
 import HuyPage from '@/pages/huy/HuyPage.vue'
 import SleepingPage from '@/pages/sleeping/SleepingPage.vue'
+import PopulatePage from '@/pages/populate/PopulatePage.vue'
 
 const meta = {
   public: {
@@ -62,6 +63,15 @@ const routes = [
     component: LoginPage,
     meta: {
       ...meta.login
+    }
+  },
+  {
+    name: 'populate',
+    path: '/populate',
+    component: PopulatePage,
+    meta: {
+      ...meta.magic,
+      requiresAuth: true
     }
   },
   {

@@ -4,6 +4,15 @@
 
   <div class="container has-text-centered liturgy-list">
     <div class="has-text-centered">
+      <div v-if="isLoading">
+          <p >Waiting to acquire choir ID from the server ...</p>
+          <a class="button is-info is-loading">Loading</a>
+      </div>
+      <div v-if="!isLoading && liturgies.length == 0">
+        <a class="has-text-primary" href="#">
+          <router-link :to="{name: 'populate'}">FLOCK choir not found. Wanna go the restroom?</router-link>
+        </a>
+      </div>
       <table v-if="liturgies.length" class="table is-responsive">
         <thead>
           <tr>
@@ -26,18 +35,7 @@
   </section>
 </template>
 <script>
-import { choirsCollection } from '../../firebase/FirebaseInit'
-
-// // adding a choir
-// choirsCollection.add({
-//   name: 'Faith',
-//   parish: 'St. Elizabeth of Portugal',
-//   mass: 'Sundays 9:30 AM'
-// }).then(function (docRef) {
-//   console.log('choir written with ID: ', docRef.id)
-// }).catch(function (error) {
-//   console.error('Error adding choir: ', error)
-// })
+import { choirsCollection, liturgiesCollection } from '../../firebase/FirebaseInit'
 
 export default {
   name: 'LiturgyListPage',
@@ -45,31 +43,48 @@ export default {
     return {
       choir: '',
       liturgies: [],
-      choirID: ''
+      choirID: '',
+      isLoading: true
+    }
+  },
+  methods: {
+    acquireLiturgyList (choirID) {
+      liturgiesCollection.where('choirID', '==', choirID).get().then(docs => {
+        let liturgyArray = []
+        docs.forEach(doc => {
+          let liturgy = doc.data()
+          console.log(liturgy)
+          liturgy.id = doc.id
+          liturgyArray.push(liturgy)
+        })
+        this.liturgies = liturgyArray
+      })
     }
   },
   created () {
-    choirsCollection.where('name', '==', 'FLOCK').limit(1).get().then(docs => {
-      docs.forEach(doc => {
-        this.choirID = doc.id
-        choirsCollection.doc(this.choirID).collection('liturgies').add({
-          createdOn: new Date(),
-          title: 'Twenty-fifth Sunday in Ordinary Time',
-          date: new Date(2018, 9, 23)
-        })
-
-        let liturgyArray = []
-        choirsCollection.doc(this.choirID).collection('liturgies').get().then(docs => {
+    let choirID = this.$store.getters.choirID
+    if (choirID) {
+      this.isLoading = false
+      this.acquireLiturgyList(choirID)
+    } else {
+      console.log('can not find choirID. looking for it...')
+      choirsCollection.where('name', '==', 'FLOCK').limit(1).get().then(docs => {
+        this.isLoading = false
+        if (docs.size === 0) {
+          console.log('server came back empty.')
+        } else {
           docs.forEach(doc => {
-            let liturgy = doc.data()
-            console.log(liturgy)
-            liturgy.id = doc.id
-            liturgyArray.push(liturgy)
+            let choirID = doc.id
+            console.log('got choirID: ' + choirID)
+            this.$store.commit('setChoirID', choirID)
+            this.acquireLiturgyList(choirID)
           })
-          this.liturgies = liturgyArray
-        })
+        }
+      }).catch(function (error) {
+        console.error(error)
+        console.log('Can NOT acquire choirID')
       })
-    })
+    }
   }
 }
 </script>
