@@ -1,5 +1,5 @@
 <template>
-    <section class="hero is-fullheight">
+  <section class="hero is-fullheight">
   <div class="hero-body">
 
   <div class="container has-text-centered liturgy-list">
@@ -21,9 +21,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="liturgy in liturgies" :key="liturgy.id">
-            <td>{{liturgy.date}}</td>
-            <td>{{liturgy.title}}</td>
+          <tr v-for="liturgy in liturgies" :key="liturgy.id" @click="selected(liturgy.id)">
+              <!-- <router-link :to="{ name: 'liturgy', params: { id: liturgy.id }}"> -->
+                <!-- <td><router-link :to="{ name: 'liturgy', params: { id: index }}">Sunday #{{index}} in Ordinary Time</router-link></td> -->
+                <td>{{liturgy.date}}</td>
+                <td>{{liturgy.title}}</td>
+              <!-- </router-link> -->
             <!-- {{ shoppingItems[index].name }} - {{ shoppingItems[index].price }} -->
           </tr>
         </tbody>
@@ -57,8 +60,21 @@ export default {
           liturgy.id = doc.id
           liturgyArray.push(liturgy)
         })
-        this.liturgies = liturgyArray
+        this.liturgies = this.litSort(liturgyArray)
       })
+    },
+    litSort (litArray) {
+      let finalSet = []
+      if (Array.isArray(litArray) && litArray.length) {
+        finalSet = litArray
+        finalSet.sort((a, b) => {
+          return a.date.seconds - b.date.seconds
+        })
+      }
+      return finalSet
+    },
+    selected (liturgyID) {
+      this.$router.push({ path: '/liturgy/' + liturgyID })
     }
   },
   created () {
@@ -93,5 +109,9 @@ export default {
 /* Do it here instead of styling index.html with <html class="has-navbar-fixed-top"> */
 .liturgy-list {
   padding-top: 5px;
+}
+
+tr:hover{
+    background-color:rgb(255, 255, 239);
 }
 </style>

@@ -109,7 +109,7 @@ export default {
         {
           choirID: choirID,
           createdOn: new Date(),
-          title: 'Twenty-fifth Sunday in Ordinary Time',
+          title: 'Twenty-Fifth Sunday in Ordinary Time',
           date: new Date(2018, 9, 23)
         },
         {
@@ -117,6 +117,18 @@ export default {
           createdOn: new Date(),
           title: 'Twenty-Sixth Sunday in Ordinary Time',
           date: new Date(2018, 9, 30)
+        },
+        {
+          choirID: choirID,
+          createdOn: new Date(),
+          title: 'Twenty-Seventh Sunday in Ordinary Time',
+          date: new Date(2018, 10, 7)
+        },
+        {
+          choirID: choirID,
+          createdOn: new Date(),
+          title: 'Twenty-Eigth Sunday in Ordinary Time',
+          date: new Date(2018, 10, 14)
         }
       ]
     },
