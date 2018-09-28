@@ -5,7 +5,7 @@ const admin = require('./node_modules/firebase-admin');
 const serviceAccount = require("./service-key.json");
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://project-liturgy.firebaseio.com"
+    // databaseURL: "https://project-liturgy.firebaseio.com"
 });
 
 //loading json converted sql files
@@ -33,7 +33,7 @@ media_list.forEach(function(element){
 
 //write songs collection to FireStore
 songs.forEach(function(element){
-    admin.firestore().collection("songs").doc(String(element.id)).set(element)
+    admin.firestore().collection("songs").add(element)
         .then((res) => {
                     console.log("Document successfully written!");
                 })
