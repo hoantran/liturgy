@@ -1,0 +1,1686 @@
+[
+	{
+		"song_id" : 1,
+		"composer_id" : 1
+	},
+	{
+		"song_id" : 2,
+		"composer_id" : 12
+	},
+	{
+		"song_id" : 2,
+		"composer_id" : 13
+	},
+	{
+		"song_id" : 2,
+		"composer_id" : 14
+	},
+	{
+		"song_id" : 3,
+		"composer_id" : 15
+	},
+	{
+		"song_id" : 3,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 4,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 5,
+		"composer_id" : 17
+	},
+	{
+		"song_id" : 6,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 7,
+		"composer_id" : 18
+	},
+	{
+		"song_id" : 7,
+		"composer_id" : 19
+	},
+	{
+		"song_id" : 8,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 9,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 10,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 11,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 12,
+		"composer_id" : 119
+	},
+	{
+		"song_id" : 13,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 14,
+		"composer_id" : 11
+	},
+	{
+		"song_id" : 15,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 16,
+		"composer_id" : 25
+	},
+	{
+		"song_id" : 17,
+		"composer_id" : 21
+	},
+	{
+		"song_id" : 18,
+		"composer_id" : 1
+	},
+	{
+		"song_id" : 19,
+		"composer_id" : 22
+	},
+	{
+		"song_id" : 20,
+		"composer_id" : 23
+	},
+	{
+		"song_id" : 21,
+		"composer_id" : 4
+	},
+	{
+		"song_id" : 21,
+		"composer_id" : 24
+	},
+	{
+		"song_id" : 22,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 23,
+		"composer_id" : 26
+	},
+	{
+		"song_id" : 24,
+		"composer_id" : 27
+	},
+	{
+		"song_id" : 25,
+		"composer_id" : 28
+	},
+	{
+		"song_id" : 26,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 27,
+		"composer_id" : 29
+	},
+	{
+		"song_id" : 27,
+		"composer_id" : 30
+	},
+	{
+		"song_id" : 28,
+		"composer_id" : 31
+	},
+	{
+		"song_id" : 29,
+		"composer_id" : 11
+	},
+	{
+		"song_id" : 30,
+		"composer_id" : 32
+	},
+	{
+		"song_id" : 30,
+		"composer_id" : 33
+	},
+	{
+		"song_id" : 30,
+		"composer_id" : 34
+	},
+	{
+		"song_id" : 31,
+		"composer_id" : 35
+	},
+	{
+		"song_id" : 32,
+		"composer_id" : 36
+	},
+	{
+		"song_id" : 32,
+		"composer_id" : 37
+	},
+	{
+		"song_id" : 32,
+		"composer_id" : 38
+	},
+	{
+		"song_id" : 33,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 34,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 34,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 35,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 35,
+		"composer_id" : 10
+	},
+	{
+		"song_id" : 36,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 36,
+		"composer_id" : 10
+	},
+	{
+		"song_id" : 37,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 37,
+		"composer_id" : 10
+	},
+	{
+		"song_id" : 38,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 38,
+		"composer_id" : 10
+	},
+	{
+		"song_id" : 39,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 39,
+		"composer_id" : 10
+	},
+	{
+		"song_id" : 40,
+		"composer_id" : 39
+	},
+	{
+		"song_id" : 41,
+		"composer_id" : 40
+	},
+	{
+		"song_id" : 42,
+		"composer_id" : 41
+	},
+	{
+		"song_id" : 43,
+		"composer_id" : 42
+	},
+	{
+		"song_id" : 43,
+		"composer_id" : 43
+	},
+	{
+		"song_id" : 43,
+		"composer_id" : 44
+	},
+	{
+		"song_id" : 44,
+		"composer_id" : 45
+	},
+	{
+		"song_id" : 45,
+		"composer_id" : 46
+	},
+	{
+		"song_id" : 46,
+		"composer_id" : 47
+	},
+	{
+		"song_id" : 47,
+		"composer_id" : 48
+	},
+	{
+		"song_id" : 48,
+		"composer_id" : 49
+	},
+	{
+		"song_id" : 49,
+		"composer_id" : 50
+	},
+	{
+		"song_id" : 50,
+		"composer_id" : 51
+	},
+	{
+		"song_id" : 51,
+		"composer_id" : 52
+	},
+	{
+		"song_id" : 51,
+		"composer_id" : 53
+	},
+	{
+		"song_id" : 51,
+		"composer_id" : 54
+	},
+	{
+		"song_id" : 52,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 53,
+		"composer_id" : 50
+	},
+	{
+		"song_id" : 54,
+		"composer_id" : 55
+	},
+	{
+		"song_id" : 54,
+		"composer_id" : 56
+	},
+	{
+		"song_id" : 55,
+		"composer_id" : 57
+	},
+	{
+		"song_id" : 56,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 57,
+		"composer_id" : 29
+	},
+	{
+		"song_id" : 58,
+		"composer_id" : 58
+	},
+	{
+		"song_id" : 59,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 60,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 61,
+		"composer_id" : 59
+	},
+	{
+		"song_id" : 62,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 62,
+		"composer_id" : 61
+	},
+	{
+		"song_id" : 63,
+		"composer_id" : 62
+	},
+	{
+		"song_id" : 64,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 64,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 65,
+		"composer_id" : 63
+	},
+	{
+		"song_id" : 66,
+		"composer_id" : 18
+	},
+	{
+		"song_id" : 67,
+		"composer_id" : 64
+	},
+	{
+		"song_id" : 70,
+		"composer_id" : 4
+	},
+	{
+		"song_id" : 71,
+		"composer_id" : 41
+	},
+	{
+		"song_id" : 72,
+		"composer_id" : 30
+	},
+	{
+		"song_id" : 72,
+		"composer_id" : 65
+	},
+	{
+		"song_id" : 72,
+		"composer_id" : 66
+	},
+	{
+		"song_id" : 73,
+		"composer_id" : 8
+	},
+	{
+		"song_id" : 74,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 75,
+		"composer_id" : 67
+	},
+	{
+		"song_id" : 76,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 77,
+		"composer_id" : 10
+	},
+	{
+		"song_id" : 78,
+		"composer_id" : 68
+	},
+	{
+		"song_id" : 79,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 80,
+		"composer_id" : 64
+	},
+	{
+		"song_id" : 81,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 82,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 83,
+		"composer_id" : 23
+	},
+	{
+		"song_id" : 84,
+		"composer_id" : 69
+	},
+	{
+		"song_id" : 85,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 86,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 87,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 88,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 89,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 90,
+		"composer_id" : 70
+	},
+	{
+		"song_id" : 91,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 92,
+		"composer_id" : 71
+	},
+	{
+		"song_id" : 93,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 94,
+		"composer_id" : 72
+	},
+	{
+		"song_id" : 94,
+		"composer_id" : 73
+	},
+	{
+		"song_id" : 95,
+		"composer_id" : 25
+	},
+	{
+		"song_id" : 96,
+		"composer_id" : 74
+	},
+	{
+		"song_id" : 97,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 98,
+		"composer_id" : 75
+	},
+	{
+		"song_id" : 99,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 99,
+		"composer_id" : 78
+	},
+	{
+		"song_id" : 100,
+		"composer_id" : 76
+	},
+	{
+		"song_id" : 100,
+		"composer_id" : 77
+	},
+	{
+		"song_id" : 100,
+		"composer_id" : 78
+	},
+	{
+		"song_id" : 101,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 102,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 103,
+		"composer_id" : 74
+	},
+	{
+		"song_id" : 104,
+		"composer_id" : 79
+	},
+	{
+		"song_id" : 105,
+		"composer_id" : 80
+	},
+	{
+		"song_id" : 105,
+		"composer_id" : 81
+	},
+	{
+		"song_id" : 106,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 108,
+		"composer_id" : 9
+	},
+	{
+		"song_id" : 110,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 111,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 112,
+		"composer_id" : 82
+	},
+	{
+		"song_id" : 113,
+		"composer_id" : 83
+	},
+	{
+		"song_id" : 114,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 115,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 116,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 117,
+		"composer_id" : 84
+	},
+	{
+		"song_id" : 118,
+		"composer_id" : 22
+	},
+	{
+		"song_id" : 119,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 120,
+		"composer_id" : 85
+	},
+	{
+		"song_id" : 122,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 123,
+		"composer_id" : 25
+	},
+	{
+		"song_id" : 124,
+		"composer_id" : 86
+	},
+	{
+		"song_id" : 124,
+		"composer_id" : 87
+	},
+	{
+		"song_id" : 125,
+		"composer_id" : 41
+	},
+	{
+		"song_id" : 126,
+		"composer_id" : 4
+	},
+	{
+		"song_id" : 127,
+		"composer_id" : 88
+	},
+	{
+		"song_id" : 128,
+		"composer_id" : 7
+	},
+	{
+		"song_id" : 129,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 130,
+		"composer_id" : 2
+	},
+	{
+		"song_id" : 131,
+		"composer_id" : 4
+	},
+	{
+		"song_id" : 132,
+		"composer_id" : 89
+	},
+	{
+		"song_id" : 133,
+		"composer_id" : 4
+	},
+	{
+		"song_id" : 134,
+		"composer_id" : 90
+	},
+	{
+		"song_id" : 138,
+		"composer_id" : 98
+	},
+	{
+		"song_id" : 139,
+		"composer_id" : 91
+	},
+	{
+		"song_id" : 140,
+		"composer_id" : 50
+	},
+	{
+		"song_id" : 141,
+		"composer_id" : 92
+	},
+	{
+		"song_id" : 142,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 143,
+		"composer_id" : 85
+	},
+	{
+		"song_id" : 144,
+		"composer_id" : 25
+	},
+	{
+		"song_id" : 145,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 146,
+		"composer_id" : 71
+	},
+	{
+		"song_id" : 147,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 148,
+		"composer_id" : 8
+	},
+	{
+		"song_id" : 149,
+		"composer_id" : 23
+	},
+	{
+		"song_id" : 150,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 151,
+		"composer_id" : 93
+	},
+	{
+		"song_id" : 152,
+		"composer_id" : 94
+	},
+	{
+		"song_id" : 153,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 154,
+		"composer_id" : 23
+	},
+	{
+		"song_id" : 156,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 157,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 158,
+		"composer_id" : 95
+	},
+	{
+		"song_id" : 159,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 160,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 162,
+		"composer_id" : 23
+	},
+	{
+		"song_id" : 163,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 165,
+		"composer_id" : 1
+	},
+	{
+		"song_id" : 166,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 167,
+		"composer_id" : 96
+	},
+	{
+		"song_id" : 168,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 169,
+		"composer_id" : 86
+	},
+	{
+		"song_id" : 169,
+		"composer_id" : 87
+	},
+	{
+		"song_id" : 171,
+		"composer_id" : 88
+	},
+	{
+		"song_id" : 172,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 173,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 175,
+		"composer_id" : 23
+	},
+	{
+		"song_id" : 176,
+		"composer_id" : 70
+	},
+	{
+		"song_id" : 177,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 178,
+		"composer_id" : 58
+	},
+	{
+		"song_id" : 179,
+		"composer_id" : 50
+	},
+	{
+		"song_id" : 180,
+		"composer_id" : 68
+	},
+	{
+		"song_id" : 181,
+		"composer_id" : 97
+	},
+	{
+		"song_id" : 184,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 185,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 190,
+		"composer_id" : 18
+	},
+	{
+		"song_id" : 191,
+		"composer_id" : 99
+	},
+	{
+		"song_id" : 194,
+		"composer_id" : 100
+	},
+	{
+		"song_id" : 195,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 196,
+		"composer_id" : 25
+	},
+	{
+		"song_id" : 197,
+		"composer_id" : 7
+	},
+	{
+		"song_id" : 198,
+		"composer_id" : 23
+	},
+	{
+		"song_id" : 199,
+		"composer_id" : 101
+	},
+	{
+		"song_id" : 200,
+		"composer_id" : 102
+	},
+	{
+		"song_id" : 201,
+		"composer_id" : 58
+	},
+	{
+		"song_id" : 202,
+		"composer_id" : 96
+	},
+	{
+		"song_id" : 204,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 205,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 206,
+		"composer_id" : 103
+	},
+	{
+		"song_id" : 207,
+		"composer_id" : 103
+	},
+	{
+		"song_id" : 208,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 209,
+		"composer_id" : 11
+	},
+	{
+		"song_id" : 210,
+		"composer_id" : 11
+	},
+	{
+		"song_id" : 211,
+		"composer_id" : 1
+	},
+	{
+		"song_id" : 212,
+		"composer_id" : 9
+	},
+	{
+		"song_id" : 213,
+		"composer_id" : 96
+	},
+	{
+		"song_id" : 215,
+		"composer_id" : 23
+	},
+	{
+		"song_id" : 216,
+		"composer_id" : 41
+	},
+	{
+		"song_id" : 217,
+		"composer_id" : 104
+	},
+	{
+		"song_id" : 217,
+		"composer_id" : 105
+	},
+	{
+		"song_id" : 218,
+		"composer_id" : 96
+	},
+	{
+		"song_id" : 219,
+		"composer_id" : 19
+	},
+	{
+		"song_id" : 219,
+		"composer_id" : 106
+	},
+	{
+		"song_id" : 220,
+		"composer_id" : 107
+	},
+	{
+		"song_id" : 220,
+		"composer_id" : 108
+	},
+	{
+		"song_id" : 228,
+		"composer_id" : 63
+	},
+	{
+		"song_id" : 229,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 230,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 231,
+		"composer_id" : 1
+	},
+	{
+		"song_id" : 234,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 235,
+		"composer_id" : 109
+	},
+	{
+		"song_id" : 237,
+		"composer_id" : 57
+	},
+	{
+		"song_id" : 238,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 239,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 239,
+		"composer_id" : 110
+	},
+	{
+		"song_id" : 240,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 241,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 242,
+		"composer_id" : 54
+	},
+	{
+		"song_id" : 243,
+		"composer_id" : 111
+	},
+	{
+		"song_id" : 243,
+		"composer_id" : 112
+	},
+	{
+		"song_id" : 243,
+		"composer_id" : 113
+	},
+	{
+		"song_id" : 246,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 247,
+		"composer_id" : 58
+	},
+	{
+		"song_id" : 255,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 255,
+		"composer_id" : 10
+	},
+	{
+		"song_id" : 256,
+		"composer_id" : 64
+	},
+	{
+		"song_id" : 262,
+		"composer_id" : 10
+	},
+	{
+		"song_id" : 263,
+		"composer_id" : 4
+	},
+	{
+		"song_id" : 264,
+		"composer_id" : 83
+	},
+	{
+		"song_id" : 271,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 272,
+		"composer_id" : 114
+	},
+	{
+		"song_id" : 274,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 275,
+		"composer_id" : 115
+	},
+	{
+		"song_id" : 278,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 279,
+		"composer_id" : 116
+	},
+	{
+		"song_id" : 280,
+		"composer_id" : 117
+	},
+	{
+		"song_id" : 280,
+		"composer_id" : 118
+	},
+	{
+		"song_id" : 283,
+		"composer_id" : 142
+	},
+	{
+		"song_id" : 284,
+		"composer_id" : 10
+	},
+	{
+		"song_id" : 285,
+		"composer_id" : 21
+	},
+	{
+		"song_id" : 287,
+		"composer_id" : 142
+	},
+	{
+		"song_id" : 289,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 290,
+		"composer_id" : 139
+	},
+	{
+		"song_id" : 292,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 293,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 294,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 295,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 296,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 297,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 298,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 300,
+		"composer_id" : 120
+	},
+	{
+		"song_id" : 301,
+		"composer_id" : 121
+	},
+	{
+		"song_id" : 302,
+		"composer_id" : 74
+	},
+	{
+		"song_id" : 303,
+		"composer_id" : 122
+	},
+	{
+		"song_id" : 304,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 305,
+		"composer_id" : 123
+	},
+	{
+		"song_id" : 306,
+		"composer_id" : 7
+	},
+	{
+		"song_id" : 312,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 313,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 314,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 315,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 317,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 321,
+		"composer_id" : 124
+	},
+	{
+		"song_id" : 322,
+		"composer_id" : 121
+	},
+	{
+		"song_id" : 324,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 327,
+		"composer_id" : 96
+	},
+	{
+		"song_id" : 328,
+		"composer_id" : 86
+	},
+	{
+		"song_id" : 331,
+		"composer_id" : 18
+	},
+	{
+		"song_id" : 332,
+		"composer_id" : 28
+	},
+	{
+		"song_id" : 333,
+		"composer_id" : 8
+	},
+	{
+		"song_id" : 337,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 340,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 340,
+		"composer_id" : 10
+	},
+	{
+		"song_id" : 342,
+		"composer_id" : 126
+	},
+	{
+		"song_id" : 344,
+		"composer_id" : 125
+	},
+	{
+		"song_id" : 348,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 349,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 349,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 350,
+		"composer_id" : 96
+	},
+	{
+		"song_id" : 351,
+		"composer_id" : 25
+	},
+	{
+		"song_id" : 361,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 362,
+		"composer_id" : 98
+	},
+	{
+		"song_id" : 363,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 368,
+		"composer_id" : 86
+	},
+	{
+		"song_id" : 369,
+		"composer_id" : 86
+	},
+	{
+		"song_id" : 370,
+		"composer_id" : 86
+	},
+	{
+		"song_id" : 371,
+		"composer_id" : 86
+	},
+	{
+		"song_id" : 372,
+		"composer_id" : 86
+	},
+	{
+		"song_id" : 373,
+		"composer_id" : 86
+	},
+	{
+		"song_id" : 375,
+		"composer_id" : 1
+	},
+	{
+		"song_id" : 376,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 378,
+		"composer_id" : 9
+	},
+	{
+		"song_id" : 379,
+		"composer_id" : 75
+	},
+	{
+		"song_id" : 381,
+		"composer_id" : 130
+	},
+	{
+		"song_id" : 382,
+		"composer_id" : 98
+	},
+	{
+		"song_id" : 383,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 384,
+		"composer_id" : 131
+	},
+	{
+		"song_id" : 385,
+		"composer_id" : 132
+	},
+	{
+		"song_id" : 386,
+		"composer_id" : 133
+	},
+	{
+		"song_id" : 387,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 388,
+		"composer_id" : 134
+	},
+	{
+		"song_id" : 389,
+		"composer_id" : 135
+	},
+	{
+		"song_id" : 390,
+		"composer_id" : 16
+	},
+	{
+		"song_id" : 392,
+		"composer_id" : 25
+	},
+	{
+		"song_id" : 393,
+		"composer_id" : 12
+	},
+	{
+		"song_id" : 394,
+		"composer_id" : 136
+	},
+	{
+		"song_id" : 397,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 398,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 399,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 400,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 401,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 402,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 403,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 404,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 405,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 406,
+		"composer_id" : 60
+	},
+	{
+		"song_id" : 407,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 408,
+		"composer_id" : 25
+	},
+	{
+		"song_id" : 409,
+		"composer_id" : 139
+	},
+	{
+		"song_id" : 415,
+		"composer_id" : 9
+	},
+	{
+		"song_id" : 417,
+		"composer_id" : 140
+	},
+	{
+		"song_id" : 417,
+		"composer_id" : 141
+	},
+	{
+		"song_id" : 421,
+		"composer_id" : 121
+	},
+	{
+		"song_id" : 422,
+		"composer_id" : 140
+	},
+	{
+		"song_id" : 422,
+		"composer_id" : 141
+	},
+	{
+		"song_id" : 423,
+		"composer_id" : 9
+	},
+	{
+		"song_id" : 423,
+		"composer_id" : 10
+	},
+	{
+		"song_id" : 423,
+		"composer_id" : 78
+	},
+	{
+		"song_id" : 424,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 425,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 426,
+		"composer_id" : 142
+	},
+	{
+		"song_id" : 432,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 436,
+		"composer_id" : 1
+	},
+	{
+		"song_id" : 437,
+		"composer_id" : 6
+	},
+	{
+		"song_id" : 439,
+		"composer_id" : 23
+	},
+	{
+		"song_id" : 441,
+		"composer_id" : 143
+	},
+	{
+		"song_id" : 441,
+		"composer_id" : 144
+	},
+	{
+		"song_id" : 442,
+		"composer_id" : 58
+	},
+	{
+		"song_id" : 445,
+		"composer_id" : 120
+	},
+	{
+		"song_id" : 449,
+		"composer_id" : 142
+	},
+	{
+		"song_id" : 453,
+		"composer_id" : 120
+	},
+	{
+		"song_id" : 460,
+		"composer_id" : 2
+	},
+	{
+		"song_id" : 460,
+		"composer_id" : 10
+	},
+	{
+		"song_id" : 461,
+		"composer_id" : 143
+	},
+	{
+		"song_id" : 462,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 463,
+		"composer_id" : 57
+	},
+	{
+		"song_id" : 464,
+		"composer_id" : 145
+	},
+	{
+		"song_id" : 465,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 468,
+		"composer_id" : 96
+	},
+	{
+		"song_id" : 469,
+		"composer_id" : 146
+	},
+	{
+		"song_id" : 470,
+		"composer_id" : 71
+	},
+	{
+		"song_id" : 472,
+		"composer_id" : 1
+	},
+	{
+		"song_id" : 473,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 474,
+		"composer_id" : 145
+	},
+	{
+		"song_id" : 474,
+		"composer_id" : 147
+	},
+	{
+		"song_id" : 476,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 477,
+		"composer_id" : 148
+	},
+	{
+		"song_id" : 478,
+		"composer_id" : 120
+	},
+	{
+		"song_id" : 478,
+		"composer_id" : 142
+	},
+	{
+		"song_id" : 479,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 481,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 483,
+		"composer_id" : 145
+	},
+	{
+		"song_id" : 484,
+		"composer_id" : 145
+	},
+	{
+		"song_id" : 486,
+		"composer_id" : 149
+	},
+	{
+		"song_id" : 486,
+		"composer_id" : 150
+	},
+	{
+		"song_id" : 487,
+		"composer_id" : 142
+	},
+	{
+		"song_id" : 489,
+		"composer_id" : 120
+	},
+	{
+		"song_id" : 490,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 502,
+		"composer_id" : 142
+	},
+	{
+		"song_id" : 504,
+		"composer_id" : 121
+	},
+	{
+		"song_id" : 505,
+		"composer_id" : 121
+	},
+	{
+		"song_id" : 506,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 507,
+		"composer_id" : 23
+	},
+	{
+		"song_id" : 509,
+		"composer_id" : 140
+	},
+	{
+		"song_id" : 509,
+		"composer_id" : 141
+	},
+	{
+		"song_id" : 514,
+		"composer_id" : 142
+	},
+	{
+		"song_id" : 515,
+		"composer_id" : 2
+	},
+	{
+		"song_id" : 516,
+		"composer_id" : 4
+	},
+	{
+		"song_id" : 517,
+		"composer_id" : 5
+	},
+	{
+		"song_id" : 518,
+		"composer_id" : 20
+	},
+	{
+		"song_id" : 521,
+		"composer_id" : 71
+	},
+	{
+		"song_id" : 522,
+		"composer_id" : 86
+	},
+	{
+		"song_id" : 523,
+		"composer_id" : 105
+	},
+	{
+		"song_id" : 524,
+		"composer_id" : 18
+	},
+	{
+		"song_id" : 525,
+		"composer_id" : 86
+	},
+	{
+		"song_id" : 525,
+		"composer_id" : 87
+	},
+	{
+		"song_id" : 528,
+		"composer_id" : 140
+	},
+	{
+		"song_id" : 531,
+		"composer_id" : 121
+	},
+	{
+		"song_id" : 532,
+		"composer_id" : 121
+	},
+	{
+		"song_id" : 533,
+		"composer_id" : 151
+	},
+	{
+		"song_id" : 534,
+		"composer_id" : 139
+	},
+	{
+		"song_id" : 535,
+		"composer_id" : 142
+	},
+	{
+		"song_id" : 536,
+		"composer_id" : 3
+	},
+	{
+		"song_id" : 561,
+		"composer_id" : 6
+	}
+]
