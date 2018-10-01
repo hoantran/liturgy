@@ -1,0 +1,4916 @@
+[
+	{
+		"id" : 1,
+		"title" : "All That Is Hidden",
+		"firstline" : "If you would follow me",
+		"publisherid" : 1,
+		"path" : "all that is hidden"
+	},
+	{
+		"id" : 2,
+		"title" : "Alleluia",
+		"firstline" : "Alleluia, alleluia, transform us",
+		"publisherid" : 0,
+		"path" : "alleluia francisco"
+	},
+	{
+		"id" : 3,
+		"title" : "Alleluia! Sing To Jesus",
+		"firstline" : "Alleluia! Sing to Jesus!",
+		"publisherid" : 1,
+		"path" : "alleluia! sing to jesus"
+	},
+	{
+		"id" : 4,
+		"title" : "Amor De Dios",
+		"firstline" : "O Love of God, gather us",
+		"publisherid" : 1,
+		"path" : "amor de dios"
+	},
+	{
+		"id" : 5,
+		"title" : "O Come, O Come Emmanuel",
+		"firstline" : "O come, o come Emmanuel",
+		"publisherid" : 1,
+		"path" : "o come o come emmanuel"
+	},
+	{
+		"id" : 6,
+		"title" : "Choral Intercession",
+		"firstline" : "Lord, in your mercy",
+		"publisherid" : 1,
+		"path" : "choral intercession schultz"
+	},
+	{
+		"id" : 7,
+		"title" : "Dâng Chúa Trời",
+		"firstline" : "Dâng, dâng Chúa Trời lúa thơm nho chín",
+		"publisherid" : 1,
+		"path" : "dang chua troi"
+	},
+	{
+		"id" : 8,
+		"title" : "Mass of Creation: Holy Holy",
+		"firstline" : "Holy, holy holy Lord",
+		"publisherid" : 1,
+		"path" : "mass of creation"
+	},
+	{
+		"id" : 9,
+		"title" : "Mass of Creation: Memorial Acclamation",
+		"firstline" : "Christ has died, Christ has risen",
+		"publisherid" : 1,
+		"path" : "mass of creation"
+	},
+	{
+		"id" : 10,
+		"title" : "Mass of Creation: Great Amen",
+		"firstline" : "Amen, amen, amen",
+		"publisherid" : 1,
+		"path" : "mass of creation"
+	},
+	{
+		"id" : 11,
+		"title" : "Mass of Creation: Lamb of God",
+		"firstline" : "Jesus lamb of God",
+		"publisherid" : 1,
+		"path" : "mass of creation"
+	},
+	{
+		"id" : 12,
+		"title" : "There Is A Longing",
+		"firstline" : "There is a longing in our hearts",
+		"publisherid" : 1,
+		"path" : "there is a longing"
+	},
+	{
+		"id" : 13,
+		"title" : "Only This I Want",
+		"firstline" : "Only this I want, but to know the Lord",
+		"publisherid" : 1,
+		"path" : "only this i want"
+	},
+	{
+		"id" : 14,
+		"title" : "In The Day of The Lord",
+		"firstline" : "In the day of the Lord, the sun will rise",
+		"publisherid" : 1,
+		"path" : "in the day of the lord"
+	},
+	{
+		"id" : 15,
+		"title" : "Psalm 25: To You, O God, I Lift Up My Soul",
+		"firstline" : "To you O God I lift up my soul, lift up my spirit",
+		"publisherid" : 1,
+		"path" : "ps 25 to you o god i lift up my soul"
+	},
+	{
+		"id" : 16,
+		"title" : "Maranatha",
+		"firstline" : "Maranatha, Người ơi mau đến, Người đến",
+		"publisherid" : 1,
+		"path" : "maranatha"
+	},
+	{
+		"id" : 17,
+		"title" : "Psalm 85: Let Us See Your Kindness",
+		"firstline" : "Let us see your kindness, O Lord",
+		"publisherid" : 1,
+		"path" : "ps 85 let us see your kindness"
+	},
+	{
+		"id" : 18,
+		"title" : "Christ Be Our Light",
+		"firstline" : "Longing for light, we wait in darkness",
+		"publisherid" : 1,
+		"path" : "christ be our light"
+	},
+	{
+		"id" : 19,
+		"title" : "On Eagle's Wings",
+		"firstline" : "You who dwell in the shelter of the Lord",
+		"publisherid" : 1,
+		"path" : "on eagles wings"
+	},
+	{
+		"id" : 20,
+		"title" : "Wait For The Lord",
+		"firstline" : "Wait for the Lord, whose day is near",
+		"publisherid" : 2,
+		"path" : "wait for the lord"
+	},
+	{
+		"id" : 21,
+		"title" : "Sing of the Lord's Goodness",
+		"firstline" : "Sing of the Lord's goodness, Father of all",
+		"publisherid" : 1,
+		"path" : "sing of the lord's goodness"
+	},
+	{
+		"id" : 22,
+		"title" : "Kyrie",
+		"firstline" : "Kyrie eleison",
+		"publisherid" : -1,
+		"path" : "kyrie schultz"
+	},
+	{
+		"id" : 23,
+		"title" : "Nguyện Mùa Vọng",
+		"firstline" : "Từ trần gian cho ngước trông lên",
+		"publisherid" : null,
+		"path" : "nguyen mua vong"
+	},
+	{
+		"id" : 24,
+		"title" : "Luke 1 My Soul Rejoices",
+		"firstline" : "My soul rejoices, in God, my savior",
+		"publisherid" : 1,
+		"path" : "luke 1 my soul rejoices"
+	},
+	{
+		"id" : 25,
+		"title" : "Hail Mary: Gentle Woman",
+		"firstline" : "Hail Mary, full of grace",
+		"publisherid" : null,
+		"path" : "hail mary gentle woman"
+	},
+	{
+		"id" : 26,
+		"title" : "As Water To the Thirsty",
+		"firstline" : "As water to the thirsty, as beauty to",
+		"publisherid" : 1,
+		"path" : "as water to the thirsty"
+	},
+	{
+		"id" : 27,
+		"title" : "Hail Holy Queen",
+		"firstline" : "Hail holy Queen enthroned above",
+		"publisherid" : 1,
+		"path" : "hail holy queen"
+	},
+	{
+		"id" : 28,
+		"title" : "Trời Cao",
+		"firstline" : "Trời cao hãy đổ sương xuống, và ngàn mây",
+		"publisherid" : null,
+		"path" : "troi cao"
+	},
+	{
+		"id" : 29,
+		"title" : "Psalm 89: Forever I Will Sing",
+		"firstline" : "Forever I will sing the goodness of the Lord",
+		"publisherid" : 1,
+		"path" : "ps 89 forever i will sing"
+	},
+	{
+		"id" : 30,
+		"title" : "Mary, Did You Know?",
+		"firstline" : "music will be upload by dec 5th",
+		"publisherid" : null,
+		"path" : "mary did you know"
+	},
+	{
+		"id" : 31,
+		"title" : "Servant Song",
+		"firstline" : "What do you want of me, Lord?",
+		"publisherid" : 1,
+		"path" : "servant song"
+	},
+	{
+		"id" : 32,
+		"title" : "O Come All Ye Faithful",
+		"firstline" : "O come all ye faithful, joyful and triumphant",
+		"publisherid" : 1,
+		"path" : "o come all ye faithful"
+	},
+	{
+		"id" : 33,
+		"title" : "Mass of Light: Gloria",
+		"firstline" : "Gloria to God in the highest, sing glory to God",
+		"publisherid" : 2,
+		"path" : "mass of light"
+	},
+	{
+		"id" : 34,
+		"title" : "Psalm 98: All the Ends of the Earth",
+		"firstline" : "All the ends of the earth have seen the power",
+		"publisherid" : 1,
+		"path" : "ps 98 all the ends"
+	},
+	{
+		"id" : 35,
+		"title" : "Mass of Glory: Alleluia! Give the Glory",
+		"firstline" : "Alleluia, alleluia, alleluia. Give the glory",
+		"publisherid" : 1,
+		"path" : "mass of glory"
+	},
+	{
+		"id" : 36,
+		"title" : "Mass of Glory: Holy",
+		"firstline" : "Holy holy Lord, God of power and might",
+		"publisherid" : 1,
+		"path" : "mass of glory"
+	},
+	{
+		"id" : 37,
+		"title" : "Mass of Glory: Memorial Acclamation A",
+		"firstline" : "Christ has died, Christ has risen",
+		"publisherid" : 1,
+		"path" : "mass of glory"
+	},
+	{
+		"id" : 38,
+		"title" : "Mass of Glory: Great Amen 2",
+		"firstline" : "Amen, amen, amen",
+		"publisherid" : 1,
+		"path" : "mass of glory"
+	},
+	{
+		"id" : 39,
+		"title" : "Mass of Glory: Lamb of God 2",
+		"firstline" : "Jesus Lamb of God, you take away",
+		"publisherid" : 1,
+		"path" : "mass of glory"
+	},
+	{
+		"id" : 40,
+		"title" : "What Child Is This",
+		"firstline" : "What child is this, who, laid to rest",
+		"publisherid" : 1,
+		"path" : "what child is this"
+	},
+	{
+		"id" : 41,
+		"title" : "Away In A Manger",
+		"firstline" : "Away in a manger, no crib for a bed",
+		"publisherid" : 1,
+		"path" : "away in a manger"
+	},
+	{
+		"id" : 42,
+		"title" : "Angels' Carol",
+		"firstline" : "Have you heard the news that they bring",
+		"publisherid" : null,
+		"path" : "angels' carol"
+	},
+	{
+		"id" : 43,
+		"title" : "Silent Night",
+		"firstline" : "Silent night, holy night, all is calm",
+		"publisherid" : 1,
+		"path" : "silent night"
+	},
+	{
+		"id" : 44,
+		"title" : "Angels We Have Heard On High",
+		"firstline" : "Angels we have heard on high, singing sweetly",
+		"publisherid" : 1,
+		"path" : "angels we have heard on high"
+	},
+	{
+		"id" : 45,
+		"title" : "Night of Silence/Silent Night Medley",
+		"firstline" : "Cold are the people, winter of life",
+		"publisherid" : 2,
+		"path" : "night of silence"
+	},
+	{
+		"id" : 46,
+		"title" : "Ave Maria",
+		"firstline" : "Ave Maria, Gratia plena Maria",
+		"publisherid" : 1,
+		"path" : "ave maria"
+	},
+	{
+		"id" : 47,
+		"title" : "Hang Bêlem",
+		"firstline" : "Đêm đông lạnh lẽo Chúa sinh ra đời nằm trong",
+		"publisherid" : null,
+		"path" : "hang belem"
+	},
+	{
+		"id" : 48,
+		"title" : "WeThree Kings",
+		"firstline" : "We three kings of orient are",
+		"publisherid" : 1,
+		"path" : "we three kings"
+	},
+	{
+		"id" : 49,
+		"title" : "Psalm 72: Lord Every Nation",
+		"firstline" : "Lord, every nation on earth will adore you",
+		"publisherid" : 1,
+		"path" : "ps 72 lord every nation"
+	},
+	{
+		"id" : 50,
+		"title" : "Mùa Đông Năm Ấy",
+		"firstline" : "Mùa đông năm ấy sao sáng soi",
+		"publisherid" : null,
+		"path" : "mua dong nam ay"
+	},
+	{
+		"id" : 51,
+		"title" : "Hark! The Herald Angels Sing",
+		"firstline" : "Hark! the herald angels sing: \"Glory",
+		"publisherid" : 1,
+		"path" : "hark the herald"
+	},
+	{
+		"id" : 52,
+		"title" : "All Are Welcome",
+		"firstline" : "Let us build a house where",
+		"publisherid" : 1,
+		"path" : "all are welcome"
+	},
+	{
+		"id" : 53,
+		"title" : "Psalm 40: Here I Am",
+		"firstline" : "Here I am Lord, here I am",
+		"publisherid" : 1,
+		"path" : "ps 40 here i am"
+	},
+	{
+		"id" : 54,
+		"title" : "The Summons",
+		"firstline" : "Will you come and follow me If I but",
+		"publisherid" : 1,
+		"path" : "the summons"
+	},
+	{
+		"id" : 55,
+		"title" : "Chứng Nhân Tình Yêu",
+		"firstline" : "Khi con nghe tiếng kêu mời gọi con",
+		"publisherid" : null,
+		"path" : "chung nhan tinh yeu"
+	},
+	{
+		"id" : 56,
+		"title" : "No Longer I",
+		"firstline" : "No longer I but Christ who lives within me",
+		"publisherid" : 1,
+		"path" : "no longer i"
+	},
+	{
+		"id" : 57,
+		"title" : "We Shall Overcome",
+		"firstline" : "We shall overcome, we shall over come",
+		"publisherid" : 1,
+		"path" : "we shall overcome"
+	},
+	{
+		"id" : 58,
+		"title" : "Hát Lên Bài Ca",
+		"firstline" : "Hát lên bài ca, hỡi ngàn dân",
+		"publisherid" : null,
+		"path" : "hat len bai ca"
+	},
+	{
+		"id" : 59,
+		"title" : "Pan De Vida",
+		"firstline" : "Pan de vida cuerpo del senor, cup of",
+		"publisherid" : 1,
+		"path" : "pan de vida"
+	},
+	{
+		"id" : 60,
+		"title" : "You Are Mine",
+		"firstline" : "I will come to you in the silence",
+		"publisherid" : 1,
+		"path" : "you are mine"
+	},
+	{
+		"id" : 61,
+		"title" : "Hold Me In Life",
+		"firstline" : "Hold me in life for you are my safety",
+		"publisherid" : 1,
+		"path" : "hold me in life"
+	},
+	{
+		"id" : 62,
+		"title" : "Be Not Afraid 2",
+		"firstline" : "Be not afraid, I go before you always",
+		"publisherid" : 1,
+		"path" : "be not afraid 2"
+	},
+	{
+		"id" : 63,
+		"title" : "Xuân Thanh Bình",
+		"firstline" : "A a xuân về, hôm nay xuân về",
+		"publisherid" : null,
+		"path" : "xuan thanh binh"
+	},
+	{
+		"id" : 64,
+		"title" : "Psalm 95: If Today You Hear God's Voice",
+		"firstline" : "If today you hear God's voice, harden not",
+		"publisherid" : 1,
+		"path" : "ps 95 if today you hear his voice"
+	},
+	{
+		"id" : 65,
+		"title" : "Boundless Love",
+		"firstline" : "Tình yêu Chúa cao vời biết bao",
+		"publisherid" : null,
+		"path" : "boundless love"
+	},
+	{
+		"id" : 66,
+		"title" : "Cầu Cho Cha Mẹ 2",
+		"firstline" : "Xin Chúa í a chúc lành cho đời cha mẹ",
+		"publisherid" : null,
+		"path" : "cau cho cha me 2"
+	},
+	{
+		"id" : 67,
+		"title" : "Send Us",
+		"firstline" : "O Jesus send us as your servants",
+		"publisherid" : null,
+		"path" : "send us"
+	},
+	{
+		"id" : 68,
+		"title" : "Tôi Đã Thấy Nước",
+		"firstline" : "Tôi đã thấy nước từ bên phải đền thờ",
+		"publisherid" : null,
+		"path" : "toi da thay nuoc"
+	},
+	{
+		"id" : 69,
+		"title" : "Kinh Vinh Danh",
+		"firstline" : "Vinh danh vinh danh Chúa, glory to God",
+		"publisherid" : null,
+		"path" : "kinh vinh danh"
+	},
+	{
+		"id" : 70,
+		"title" : "Celtic Alleluia",
+		"firstline" : "Alleluia, alleluia. Alleluia, alleluia",
+		"publisherid" : 1,
+		"path" : "alleluia.celtic"
+	},
+	{
+		"id" : 71,
+		"title" : "All Things Bright and Beautiful",
+		"firstline" : "All things bright and beautiful, all creatures",
+		"publisherid" : null,
+		"path" : "all things bright and beautiful"
+	},
+	{
+		"id" : 72,
+		"title" : "All Creatures of Our God and King",
+		"firstline" : "All creatures of our God and King, lift up your",
+		"publisherid" : 1,
+		"path" : "all creatures of our god and king"
+	},
+	{
+		"id" : 73,
+		"title" : "Psalm 34: The Cry of the Poor",
+		"firstline" : "The Lord hears the cry of the poor, blessed be",
+		"publisherid" : 1,
+		"path" : "cry of the poor"
+	},
+	{
+		"id" : 74,
+		"title" : "Be Not Afraid",
+		"firstline" : "You shall cross the baren the dessert",
+		"publisherid" : 1,
+		"path" : "be not afraid"
+	},
+	{
+		"id" : 75,
+		"title" : "Tin Yêu Ca",
+		"firstline" : "Dù sống trong cơ cực, dù chết nơi tù đầy",
+		"publisherid" : null,
+		"path" : "tin yeu ca"
+	},
+	{
+		"id" : 76,
+		"title" : "Don't Let Your Hearts Be Troubled",
+		"firstline" : "Don't let your hearts be troubled, don't let your",
+		"publisherid" : null,
+		"path" : "don't let your hearts be troubled"
+	},
+	{
+		"id" : 77,
+		"title" : "Fly Like A Bird",
+		"firstline" : "Fly like a bird, to the Lord, my soul",
+		"publisherid" : 1,
+		"path" : "fly like a bird"
+	},
+	{
+		"id" : 78,
+		"title" : "Xin Ban Thêm Lòng Tin",
+		"firstline" : "Xin ban thêm lòng tin nơi Chúa để đời",
+		"publisherid" : null,
+		"path" : "xin ban them long tin"
+	},
+	{
+		"id" : 79,
+		"title" : "We Will Rise Again",
+		"firstline" : "Like a shepherd I will feed you, I will gather",
+		"publisherid" : 1,
+		"path" : "we will rise again"
+	},
+	{
+		"id" : 80,
+		"title" : "Psalm 103: Loving and Forgiving",
+		"firstline" : "Loving and forgiving are you, O Lord. Slow to ange",
+		"publisherid" : 1,
+		"path" : "ps 103 loving and forgiving"
+	},
+	{
+		"id" : 81,
+		"title" : "From East and West",
+		"firstline" : "Come from the east, come from the west",
+		"publisherid" : null,
+		"path" : "from east and west"
+	},
+	{
+		"id" : 82,
+		"title" : "Psalm 100: We Are Your People",
+		"firstline" : "We are your people o Lord, we are the flock",
+		"publisherid" : null,
+		"path" : "ps 100 we are your people"
+	},
+	{
+		"id" : 83,
+		"title" : "Bless The Lord",
+		"firstline" : "Bless the Lord my soul and bless God's holy name",
+		"publisherid" : null,
+		"path" : "bless the lord"
+	},
+	{
+		"id" : 84,
+		"title" : "Amazing Grace",
+		"firstline" : "Amazing grace how great how sweet the sound that s",
+		"publisherid" : null,
+		"path" : "amazing grace"
+	},
+	{
+		"id" : 85,
+		"title" : "Hurd Mass: Holy",
+		"firstline" : "Holy, holy, holy Lord God of pow'r and might",
+		"publisherid" : null,
+		"path" : "hurd mass"
+	},
+	{
+		"id" : 86,
+		"title" : "Hurd Mass: Memorial Acclamation",
+		"firstline" : "Christ has died. Christ has risen, Christ will com",
+		"publisherid" : null,
+		"path" : "hurd mass"
+	},
+	{
+		"id" : 87,
+		"title" : "Hurd Mass: Great Amen",
+		"firstline" : "Amen, amen, amen.",
+		"publisherid" : null,
+		"path" : "hurd mass"
+	},
+	{
+		"id" : 88,
+		"title" : "Hurd Mass: Lamb of God",
+		"firstline" : "Lamb of God, you take away the sins of the world",
+		"publisherid" : null,
+		"path" : "hurd mass"
+	},
+	{
+		"id" : 89,
+		"title" : "Ven Al Banquete",
+		"firstline" : "Ven ven al banquete, ven a la fiesta de Dios",
+		"publisherid" : 1,
+		"path" : "ven al banquete"
+	},
+	{
+		"id" : 90,
+		"title" : "The Supper of the Lord",
+		"firstline" : "Precious body precious Lord. Here in bread and win",
+		"publisherid" : 1,
+		"path" : "the supper of the lord"
+	},
+	{
+		"id" : 91,
+		"title" : "Deep Within",
+		"firstline" : "Deep within, I will plant my law, not on stone, bu",
+		"publisherid" : 2,
+		"path" : "deep within"
+	},
+	{
+		"id" : 92,
+		"title" : "In These Days of Lenten Journey",
+		"firstline" : "In these days of lenten journey we have seen",
+		"publisherid" : 1,
+		"path" : "in these days of lenten journey"
+	},
+	{
+		"id" : 93,
+		"title" : "Lenten Gospel Acclamation",
+		"firstline" : "Praise to you Lord Jesus Christ, king of endless g",
+		"publisherid" : null,
+		"path" : "lenten acclamation schultz"
+	},
+	{
+		"id" : 94,
+		"title" : "Hosea",
+		"firstline" : "Come back to me, with all your heart",
+		"publisherid" : 1,
+		"path" : "hosea"
+	},
+	{
+		"id" : 96,
+		"title" : "Lead Me, Lord",
+		"firstline" : "Blessed are the poor in spirit, longing for their",
+		"publisherid" : 1,
+		"path" : "lead me lord"
+	},
+	{
+		"id" : 97,
+		"title" : "Psalm 91: Be With Me",
+		"firstline" : "Be with me Lord when I am in trouble",
+		"publisherid" : 1,
+		"path" : "ps 91 be with me"
+	},
+	{
+		"id" : 98,
+		"title" : "Lời Kinh Nguyện Trầm",
+		"firstline" : "Còn lời nào trầm như lời kinh đêm con dâng lên",
+		"publisherid" : null,
+		"path" : "loi kinh nguyen tram"
+	},
+	{
+		"id" : 99,
+		"title" : "Our Blessing Cup",
+		"firstline" : "Our blessing cup is a communion with the blood of",
+		"publisherid" : 1,
+		"path" : "our blessing cup"
+	},
+	{
+		"id" : 100,
+		"title" : "Christ Be Beside Me",
+		"firstline" : "Christ be beside me, Christ be below me",
+		"publisherid" : 1,
+		"path" : "christ be beside me"
+	},
+	{
+		"id" : 101,
+		"title" : "Óyenos, Señor",
+		"firstline" : "Óyenos, Señor. Dinggin mo kami. Listen to your peo",
+		"publisherid" : 1,
+		"path" : "oyenos senor"
+	},
+	{
+		"id" : 102,
+		"title" : "Psalm 19: Lord, You Have the Word",
+		"firstline" : "Lord, you have the word of everlasting life",
+		"publisherid" : 2,
+		"path" : "ps 19 lord you have the word"
+	},
+	{
+		"id" : 103,
+		"title" : "Come, Taste and See",
+		"firstline" : "All you who are thirsty, come to the water",
+		"publisherid" : 1,
+		"path" : "come taste and see"
+	},
+	{
+		"id" : 104,
+		"title" : "Cha Ơi Con Đã Về",
+		"firstline" : "Một người ngồi trong nắng mắt buồn đẫm lệ",
+		"publisherid" : null,
+		"path" : "cha oi con da ve"
+	},
+	{
+		"id" : 105,
+		"title" : "Cầu Xin Thánh Gia",
+		"firstline" : "Guise trong xóm nhỏ điêu tàn thuở xưa",
+		"publisherid" : null,
+		"path" : "cau xin thanh gia"
+	},
+	{
+		"id" : 106,
+		"title" : "Psalm 130: With the Lord, There Is Mercy",
+		"firstline" : "With the Lord there is mercy,, and fullness",
+		"publisherid" : 1,
+		"path" : "ps 130 with the lord there is mercy"
+	},
+	{
+		"id" : 107,
+		"title" : "Thân Phận Lưu Đầy",
+		"firstline" : "Bên sông Babilon, ngồi tôi khóc",
+		"publisherid" : null,
+		"path" : "than phan luu day"
+	},
+	{
+		"id" : 108,
+		"title" : "Open My Eyes",
+		"firstline" : "Open my eyes, Lord. Help me to see your face",
+		"publisherid" : 1,
+		"path" : "open my eyes"
+	},
+	{
+		"id" : 109,
+		"title" : "Be Thou My Vision",
+		"firstline" : "Be thou my vision o Lord of my heart",
+		"publisherid" : 1,
+		"path" : "be thou my vision"
+	},
+	{
+		"id" : 110,
+		"title" : "Psalm 51: Create In Me - Hurd",
+		"firstline" : "Create in me a clean heart",
+		"publisherid" : 1,
+		"path" : "ps 51 create in me"
+	},
+	{
+		"id" : 111,
+		"title" : "Psalm 118: Easter Sunday Psalm",
+		"firstline" : "This is the day the Lord has made; let us rejoice",
+		"publisherid" : 1,
+		"path" : "ps 118 easter sunday psalm"
+	},
+	{
+		"id" : 112,
+		"title" : "Alleluia, Alleluia, Alleluia",
+		"firstline" : "Alleluia, alleluia, alleluia.",
+		"publisherid" : 1,
+		"path" : "alleluia prochaska"
+	},
+	{
+		"id" : 113,
+		"title" : "Roll Away the Stone",
+		"firstline" : "They have been saying, all our plans are empty",
+		"publisherid" : 1,
+		"path" : "roll away the stone"
+	},
+	{
+		"id" : 114,
+		"title" : "Increase Our Faith",
+		"firstline" : "Lord, increase our faith. With all our hearts, may",
+		"publisherid" : 2,
+		"path" : "increase our faith"
+	},
+	{
+		"id" : 115,
+		"title" : "He Is Risen",
+		"firstline" : "On the third day, He rose. He rose. He rose",
+		"publisherid" : null,
+		"path" : "he is risen"
+	},
+	{
+		"id" : 116,
+		"title" : "Psalm 118: Give Thanks to the Lord",
+		"firstline" : "Give thanks to the Lord for God is good, whose mer",
+		"publisherid" : null,
+		"path" : "ps 118 give thanks to the lord"
+	},
+	{
+		"id" : 117,
+		"title" : "Alleluia! Hát Lên Người Ơi",
+		"firstline" : "Chúa yêu trần thế, alle-alleluia",
+		"publisherid" : null,
+		"path" : "alleluia hat len nguoi oi"
+	},
+	{
+		"id" : 118,
+		"title" : "We Come To Your Feast",
+		"firstline" : "We place upon your table a gleaming cloth of white",
+		"publisherid" : null,
+		"path" : "we come to your feast"
+	},
+	{
+		"id" : 119,
+		"title" : "Now We Remain",
+		"firstline" : "We hold the death of the Lord deep in our hearts",
+		"publisherid" : 1,
+		"path" : "now we remain"
+	},
+	{
+		"id" : 120,
+		"title" : "How Beautiful",
+		"firstline" : "How beautiful the hands that served the wine and t",
+		"publisherid" : null,
+		"path" : "how beautiful"
+	},
+	{
+		"id" : 121,
+		"title" : "Chist, the Lord, Is Risen Today",
+		"firstline" : "Christ the Lord is ris'n today; Christians, haste",
+		"publisherid" : 1,
+		"path" : "christ the lord is risen today"
+	},
+	{
+		"id" : 122,
+		"title" : "Sprinkling Rite",
+		"firstline" : "Wash me and I shall be clean; Purify me",
+		"publisherid" : null,
+		"path" : "sprinkling rite"
+	},
+	{
+		"id" : 123,
+		"title" : "Chúa Sống Lại Rồi",
+		"firstline" : "Chúa hóa nên người vì thương chúng ta",
+		"publisherid" : null,
+		"path" : "chua song lai roi"
+	},
+	{
+		"id" : 124,
+		"title" : "Psalm 66: Let All the Earth",
+		"firstline" : "Let all the earth cry out cry out to God",
+		"publisherid" : 1,
+		"path" : "ps 66 let all the earth"
+	},
+	{
+		"id" : 125,
+		"title" : "For the Beauty of the Earth",
+		"firstline" : "For the beauty of the earth, for the beauty of the",
+		"publisherid" : null,
+		"path" : "for the beauty of the earth"
+	},
+	{
+		"id" : 126,
+		"title" : "Because the Lord is My Shepherd",
+		"firstline" : "Because the Lord is my shepherd, I have everything",
+		"publisherid" : 1,
+		"path" : "because the lord is my shepherd"
+	},
+	{
+		"id" : 127,
+		"title" : "Center of My Life",
+		"firstline" : "O Lord you are the center of my life",
+		"publisherid" : 1,
+		"path" : "center of my life"
+	},
+	{
+		"id" : 128,
+		"title" : "Somos el Cuerpo de Cristo",
+		"firstline" : "Somos el Cuerpro de Cristo, we are the body of Chr",
+		"publisherid" : 1,
+		"path" : "somos el cuerpo de cristo"
+	},
+	{
+		"id" : 129,
+		"title" : "Psalm 118 Let Us Rejoice",
+		"firstline" : "This is the day the Lord has made, let us rejoice",
+		"publisherid" : 2,
+		"path" : "ps 118 let us rejoice"
+	},
+	{
+		"id" : 130,
+		"title" : "Psalm 98: All the Ends of the Earth - Fisher",
+		"firstline" : "All the ends of the earth sing a joyful song",
+		"publisherid" : 1,
+		"path" : "ps 98 all the ends of the earth.fisher"
+	},
+	{
+		"id" : 131,
+		"title" : "At the Name of Jesus",
+		"firstline" : "At the name of Jesus every knee shall bow",
+		"publisherid" : 1,
+		"path" : "at the name of jesus"
+	},
+	{
+		"id" : 132,
+		"title" : "Niềm Tâm Sự",
+		"firstline" : "Thầy yêu chúng con lời ai nói cho cùng",
+		"publisherid" : null,
+		"path" : "niem tam su"
+	},
+	{
+		"id" : 133,
+		"title" : "Like a Child Rests",
+		"firstline" : "Like a child rests in its mother's arms",
+		"publisherid" : 1,
+		"path" : "like a child rests"
+	},
+	{
+		"id" : 134,
+		"title" : "Jesus Chirst Is Risen Today",
+		"firstline" : "Jesus Christ is risen today, alleluia",
+		"publisherid" : 1,
+		"path" : "jesus christ is risen today"
+	},
+	{
+		"id" : 135,
+		"title" : "Joyful, Joyful, We Adore Thee",
+		"firstline" : "Joyful, joyful we adore Thee; God of glory God of",
+		"publisherid" : 1,
+		"path" : "joyful joyful we adore thee"
+	},
+	{
+		"id" : 136,
+		"title" : "Đâu Có Tình Yêu Thương",
+		"firstline" : "Đâu có tình yêu thương, thì đấy có Đức Chúa Trời",
+		"publisherid" : null,
+		"path" : "dau co tinh yeu thuong"
+	},
+	{
+		"id" : 137,
+		"title" : "We Have Been Told",
+		"firstline" : "We have been told, we've seen His face and heard H",
+		"publisherid" : 1,
+		"path" : "we have been told"
+	},
+	{
+		"id" : 138,
+		"title" : "Lift Up Your Hearts",
+		"firstline" : "Lift up your hearts to the Lord; praise God's grac",
+		"publisherid" : 1,
+		"path" : "lift up your hearts"
+	},
+	{
+		"id" : 139,
+		"title" : "Crown Him With Many Crowns",
+		"firstline" : "Crown Him with many crowns, the Lamb upon His thro",
+		"publisherid" : 1,
+		"path" : "crown him with many crowns"
+	},
+	{
+		"id" : 140,
+		"title" : "Psalm 47: For Ascension",
+		"firstline" : "God mounts his throne amid shouts of joy",
+		"publisherid" : 2,
+		"path" : "ps 47 for ascension"
+	},
+	{
+		"id" : 141,
+		"title" : "Lời Thiêng",
+		"firstline" : "Lời thiêng dâng Chúa từ trong đáy tim âm thầm",
+		"publisherid" : null,
+		"path" : "loi thieng"
+	},
+	{
+		"id" : 142,
+		"title" : "We Remember",
+		"firstline" : "We remember how you loved us to your death",
+		"publisherid" : 1,
+		"path" : "we remember"
+	},
+	{
+		"id" : 143,
+		"title" : "He Is Exalted",
+		"firstline" : "He is exalted, the King is exalted on high",
+		"publisherid" : 1,
+		"path" : "he is exalted"
+	},
+	{
+		"id" : 144,
+		"title" : "Thánh Thần Hãy Đến",
+		"firstline" : "Thánh Thần khấn xin ngự đến, hồn con đang mong chờ",
+		"publisherid" : null,
+		"path" : "thanh than hay den"
+	},
+	{
+		"id" : 145,
+		"title" : "Psalm 104: Send Down Your Holy Spirit",
+		"firstline" : "Send down your Holy Spirit Lord, renew the face of",
+		"publisherid" : null,
+		"path" : "ps 104 send out your holy spirit"
+	},
+	{
+		"id" : 146,
+		"title" : "By the Waking of Our Hearts",
+		"firstline" : "By the waking of our hearts, by the stiring of our",
+		"publisherid" : 1,
+		"path" : "by the waking of our hearts"
+	},
+	{
+		"id" : 147,
+		"title" : "Envía Tu Espíritu",
+		"firstline" : "Envía tu Espíritu, envía tu Espíritu, envía tu Esp",
+		"publisherid" : 1,
+		"path" : "envia tu espiritu"
+	},
+	{
+		"id" : 148,
+		"title" : "One Bread One Body",
+		"firstline" : "One bread one body, one Lord of all",
+		"publisherid" : 1,
+		"path" : "one bread one body"
+	},
+	{
+		"id" : 149,
+		"title" : "Veni Sancte Spiritus",
+		"firstline" : "Veni Sancte Spiritus",
+		"publisherid" : 1,
+		"path" : "veni sancte spiritus"
+	},
+	{
+		"id" : 150,
+		"title" : "Send Down the Fire",
+		"firstline" : "Send down the fire of your justice, send down the",
+		"publisherid" : 2,
+		"path" : "send down the fire"
+	},
+	{
+		"id" : 151,
+		"title" : "Resucitó",
+		"firstline" : "Alleluia, alleluia, alleluia, alleluia",
+		"publisherid" : 1,
+		"path" : "resucito"
+	},
+	{
+		"id" : 152,
+		"title" : "Ca Khúc Trầm Hương",
+		"firstline" : "Lời con như trầm hương bay lên tới thiên đường",
+		"publisherid" : null,
+		"path" : "ca khuc tram huong"
+	},
+	{
+		"id" : 153,
+		"title" : "Eye Has Not Seen",
+		"firstline" : "Eye has not seen, ear has not heard what God has r",
+		"publisherid" : 1,
+		"path" : "eye has not seen"
+	},
+	{
+		"id" : 154,
+		"title" : "Eat This Bread",
+		"firstline" : "Eat this bread, drink this cup, trust in",
+		"publisherid" : 2,
+		"path" : "eat this bread"
+	},
+	{
+		"id" : 155,
+		"title" : "Siyahamba",
+		"firstline" : "We are marching in the light of God",
+		"publisherid" : 1,
+		"path" : "siyahamba"
+	},
+	{
+		"id" : 156,
+		"title" : "Song of the Body of Christ",
+		"firstline" : "We come to share our story, we come to break the b",
+		"publisherid" : 1,
+		"path" : "song of the body of christ"
+	},
+	{
+		"id" : 157,
+		"title" : "Psalm 116: I Will Lift Up the Cup of Salvation",
+		"firstline" : "I will lift up the cup of salvation and call on th",
+		"publisherid" : null,
+		"path" : "ps 116 i will lift up the cup of salvation"
+	},
+	{
+		"id" : 158,
+		"title" : "Kinh Dâng Lễ",
+		"firstline" : "Này đây tấm bánh trắng ngần bởi ruộng đất",
+		"publisherid" : null,
+		"path" : "kinh dang le"
+	},
+	{
+		"id" : 159,
+		"title" : "The Sacred",
+		"firstline" : "This simple bread, a sacred meal, this common wine",
+		"publisherid" : null,
+		"path" : "the sacred"
+	},
+	{
+		"id" : 160,
+		"title" : "Psalm 30: I Will Praise You",
+		"firstline" : "I will praise you Lord, you have rescued me",
+		"publisherid" : 2,
+		"path" : "ps 30 i will praise you lord"
+	},
+	{
+		"id" : 161,
+		"title" : "Freedom Is Coming",
+		"firstline" : "O freedom, o freedom, o freedom",
+		"publisherid" : null,
+		"path" : "freedom is coming"
+	},
+	{
+		"id" : 162,
+		"title" : "De Noche",
+		"firstline" : "De nocheire mos, de noche, que parencontrar la fue",
+		"publisherid" : null,
+		"path" : "de noche"
+	},
+	{
+		"id" : 163,
+		"title" : "Psalm 85: Let Us See Your Kindness - Haugen",
+		"firstline" : "Let us see your kindness O Lord",
+		"publisherid" : 2,
+		"path" : "ps 85 let us see your kindness 2"
+	},
+	{
+		"id" : 164,
+		"title" : "Niềm Vui Tận Hiến",
+		"firstline" : "Rất xa khơi sao trời khi chưa sáng ngời",
+		"publisherid" : null,
+		"path" : "niem vui tan hien"
+	},
+	{
+		"id" : 165,
+		"title" : "God Has Chosen Me",
+		"firstline" : "God has chosen me to bring goodness to the poor",
+		"publisherid" : 1,
+		"path" : "god has chosen me"
+	},
+	{
+		"id" : 166,
+		"title" : "Psalm 23: Shepherd Me O God",
+		"firstline" : "Shepherd me O God beyond my wants beyond my fears",
+		"publisherid" : 1,
+		"path" : "ps 23 shepherd me o god"
+	},
+	{
+		"id" : 167,
+		"title" : "In Every Age",
+		"firstline" : "Long before the mountains came to be",
+		"publisherid" : 1,
+		"path" : "in every age"
+	},
+	{
+		"id" : 168,
+		"title" : "Gather Us In",
+		"firstline" : "Here in this place new light is streaming",
+		"publisherid" : null,
+		"path" : "gather us in"
+	},
+	{
+		"id" : 170,
+		"title" : "Hãy Đến Hỡi Bạn Tình Ta",
+		"firstline" : "Người yêu hỡi em ơi em có nghe",
+		"publisherid" : null,
+		"path" : "hay den hoi ban tinh ta"
+	},
+	{
+		"id" : 171,
+		"title" : "Psalm 128: O Blessed Are Those",
+		"firstline" : "O blessed are those who fear the Lord",
+		"publisherid" : 1,
+		"path" : "ps 128 o blessed are those"
+	},
+	{
+		"id" : 172,
+		"title" : "Ubi Caritas",
+		"firstline" : "Ubi caritas est vera est vera, deus ibi est",
+		"publisherid" : 1,
+		"path" : "ubi caritas"
+	},
+	{
+		"id" : 173,
+		"title" : "Love Never Fails",
+		"firstline" : "If I speak with the tongues of the earth",
+		"publisherid" : 2,
+		"path" : "love never fails"
+	},
+	{
+		"id" : 174,
+		"title" : "Đường Vào Tình Yêu",
+		"firstline" : "Đường vào tình yêu có nắng xôn xao",
+		"publisherid" : null,
+		"path" : "duong vao tinh yeu"
+	},
+	{
+		"id" : 175,
+		"title" : "Nada Te Turbe",
+		"firstline" : "Nada te turbe, nada te espante",
+		"publisherid" : null,
+		"path" : "nada te turbe"
+	},
+	{
+		"id" : 176,
+		"title" : "As Grains of Wheat",
+		"firstline" : "As grains of wheat are gathered in we've come toge",
+		"publisherid" : 1,
+		"path" : "as grains of wheat"
+	},
+	{
+		"id" : 177,
+		"title" : "Psalm 34: Taste and See",
+		"firstline" : "Taste and see o taste and see, taste and see the g",
+		"publisherid" : 1,
+		"path" : "ps 34 taste and see"
+	},
+	{
+		"id" : 178,
+		"title" : "Chỉ Một Chúa",
+		"firstline" : "Được Chúa kêu mời nắm giữ tinh thần duy nhất",
+		"publisherid" : null,
+		"path" : "chi mot chua"
+	},
+	{
+		"id" : 179,
+		"title" : "Psalm 97: The Lord Is King",
+		"firstline" : "The Lord is King! The Lord is King, the Most High",
+		"publisherid" : 1,
+		"path" : "ps 97 the lord is king"
+	},
+	{
+		"id" : 180,
+		"title" : "Thân Lúa Miến",
+		"firstline" : "Chúa ơi thân con là thân lúa miến gieo vào lòng đờ",
+		"publisherid" : null,
+		"path" : "than lua mien"
+	},
+	{
+		"id" : 181,
+		"title" : "This Alone",
+		"firstline" : "One thing I ask, this alone I seek, to dwell in th",
+		"publisherid" : 1,
+		"path" : "this alone"
+	},
+	{
+		"id" : 182,
+		"title" : "Ta Là Bánh Hằng Sống",
+		"firstline" : "Ta là bánh hằng sống, là bánh ban xuống bởi trời",
+		"publisherid" : null,
+		"path" : "ta la banh hang song"
+	},
+	{
+		"id" : 183,
+		"title" : "May the Road Rise To Meet You",
+		"firstline" : "May the road rise to meet you, may the wind behind",
+		"publisherid" : null,
+		"path" : "may the road rise"
+	},
+	{
+		"id" : 184,
+		"title" : "Here I Am, Lord",
+		"firstline" : "I the Lord of sea and sky",
+		"publisherid" : 1,
+		"path" : "here i am lord"
+	},
+	{
+		"id" : 186,
+		"title" : "Chung Kết Trầu Cau",
+		"firstline" : "Ngày xưa khi Chúa dựng nên đất trời, Ngài cũng dựn",
+		"publisherid" : null,
+		"path" : "chung ket trau cau"
+	},
+	{
+		"id" : 187,
+		"title" : "Nguyện Cầu Cho Nhau",
+		"firstline" : "Con qùi đây dâng Chúa tiếng ca cảm tạ. Chúa cho co",
+		"publisherid" : null,
+		"path" : "nguyen cau cho nhau"
+	},
+	{
+		"id" : 188,
+		"title" : "Diễm Tình Ca 3",
+		"firstline" : "Chiều hôm nay tiếng hát bay cao",
+		"publisherid" : null,
+		"path" : "diem tinh ca 3"
+	},
+	{
+		"id" : 189,
+		"title" : "Thắp Ngọn Nến Hồng",
+		"firstline" : "Xin thắp sáng lên một ngọn nến hồng",
+		"publisherid" : null,
+		"path" : "thap ngon nen hong"
+	},
+	{
+		"id" : 191,
+		"title" : "I Am the Bread of Life",
+		"firstline" : "I am the Bread of life, you who come to me shall n",
+		"publisherid" : 1,
+		"path" : "i am the bread of life"
+	},
+	{
+		"id" : 192,
+		"title" : "Psalm 45: The Queen Stands",
+		"firstline" : "The Queen stands at your right hand, arrayed in go",
+		"publisherid" : 1,
+		"path" : "ps 45 the queen stands"
+	},
+	{
+		"id" : 193,
+		"title" : "In The Land There Is A Hunger",
+		"firstline" : "In the land there is a hunger, in the land there i",
+		"publisherid" : 1,
+		"path" : "in the land there is a hunger"
+	},
+	{
+		"id" : 194,
+		"title" : "The Flame and the Fire",
+		"firstline" : "The spark and the amber the flame and the fire",
+		"publisherid" : null,
+		"path" : "flame and fire"
+	},
+	{
+		"id" : 195,
+		"title" : "Psalm 27: I Believe That I Shall See",
+		"firstline" : "I believe that I shall see the good things of the",
+		"publisherid" : null,
+		"path" : "ps 27 i believe that i shall see"
+	},
+	{
+		"id" : 196,
+		"title" : "Ephata",
+		"firstline" : "Lạy Chúa xin mở mắt con, biết nhìn kỳ công của Ngà",
+		"publisherid" : null,
+		"path" : "ephata"
+	},
+	{
+		"id" : 197,
+		"title" : "With Rejoicing Hearts",
+		"firstline" : "With rejoicing hearts we proclaim your glory we ha",
+		"publisherid" : null,
+		"path" : "with rejoicing hearts"
+	},
+	{
+		"id" : 198,
+		"title" : "In Manus Tuas, Pater",
+		"firstline" : "In manus tuas, Pater, commendo spiritum meum",
+		"publisherid" : null,
+		"path" : "in manus tuas pater"
+	},
+	{
+		"id" : 199,
+		"title" : "Psalm 54: The Lord Upholds My Life",
+		"firstline" : "The Lord upholds my life",
+		"publisherid" : 1,
+		"path" : "ps 54 the lord upholds my life"
+	},
+	{
+		"id" : 200,
+		"title" : "Prayers of St. Francis",
+		"firstline" : "Make me a channel of your peace, where there is",
+		"publisherid" : null,
+		"path" : "prayer of st francis"
+	},
+	{
+		"id" : 201,
+		"title" : "Vinh Phúc",
+		"firstline" : "Vinh phúc thay người kính sợ Chúa và hằng đi",
+		"publisherid" : null,
+		"path" : "vinh phuc"
+	},
+	{
+		"id" : 202,
+		"title" : "To Believe In Love",
+		"firstline" : "To believe in love is to belive in God",
+		"publisherid" : null,
+		"path" : "to belive in love"
+	},
+	{
+		"id" : 203,
+		"title" : "Mẹ Ơi Con Yêu Mẹ",
+		"firstline" : "Mẹ ơi con yêu mẹ, yêu từ thời thơ bé",
+		"publisherid" : null,
+		"path" : "me oi con yeu me"
+	},
+	{
+		"id" : 204,
+		"title" : "Sing to the Mountains",
+		"firstline" : "Sing to the mountains, sing to the sea",
+		"publisherid" : 1,
+		"path" : "sing to the mountains"
+	},
+	{
+		"id" : 205,
+		"title" : "Psalm 33: Lord, Let Your Mercy",
+		"firstline" : "Lord, let your mercy be on us",
+		"publisherid" : null,
+		"path" : "ps 33 lord let your mercy"
+	},
+	{
+		"id" : 206,
+		"title" : "Ngàn Đời Thương Mến",
+		"firstline" : "Từ ngàn đời Chúa đã thương con, thương con không b",
+		"publisherid" : null,
+		"path" : "ngan doi thuong men"
+	},
+	{
+		"id" : 207,
+		"title" : "Con Đường Chúa Đã Đi Qua",
+		"firstline" : "Lạy Chúa con đường nào Chúa đã đi qua, con đường n",
+		"publisherid" : null,
+		"path" : "con duong chua da di qua"
+	},
+	{
+		"id" : 208,
+		"title" : "Psalm 126: The Lord Has Done Great Things For Us",
+		"firstline" : "The Lord has done great things for us, we are fill",
+		"publisherid" : null,
+		"path" : "ps 126 the lord has done"
+	},
+	{
+		"id" : 209,
+		"title" : "Parable",
+		"firstline" : "To everything there is a season, a time to be born",
+		"publisherid" : null,
+		"path" : "parable"
+	},
+	{
+		"id" : 210,
+		"title" : "Psalm 18: I Love You, Lord, My Strength",
+		"firstline" : "I love you Lord my strength, I love you Lord my st",
+		"publisherid" : 1,
+		"path" : "ps 18 i love you lord my strength"
+	},
+	{
+		"id" : 211,
+		"title" : "Psalm 146: I Will Praise You the Lord",
+		"firstline" : "Alleluia, alleluia, I will praise the Lord all my",
+		"publisherid" : 1,
+		"path" : "ps 146 i will praise you the lord"
+	},
+	{
+		"id" : 212,
+		"title" : "Psalm 16: Keep Me Safe",
+		"firstline" : "Keep me safe o God, keep me safe you are my hope m",
+		"publisherid" : 1,
+		"path" : "ps 16 keep me safe o god"
+	},
+	{
+		"id" : 213,
+		"title" : "Here At This Table",
+		"firstline" : "Come and be filled, here at this table, food for a",
+		"publisherid" : 1,
+		"path" : "here at this table"
+	},
+	{
+		"id" : 214,
+		"title" : "Cám Ơn Người",
+		"firstline" : "Cám ơn Người vì ngày hôm nay đây chúng con quây qu",
+		"publisherid" : null,
+		"path" : "cam on nguoi"
+	},
+	{
+		"id" : 215,
+		"title" : "The Kingdom of God",
+		"firstline" : "The kingdom of God is justice and peace and joy",
+		"publisherid" : null,
+		"path" : "the kingdom of god"
+	},
+	{
+		"id" : 216,
+		"title" : "What Sweeter Music",
+		"firstline" : "What sweeter music can we bring than a carol for t",
+		"publisherid" : null,
+		"path" : "what sweeter music"
+	},
+	{
+		"id" : 217,
+		"title" : "O Come, Emmanuel",
+		"firstline" : "O come, Emmanuel and into our hearts be born",
+		"publisherid" : 1,
+		"path" : "o come emmanuel"
+	},
+	{
+		"id" : 218,
+		"title" : "Psalm 25: To You, O Lord",
+		"firstline" : "To You, o Lord I lift my soul, I lift my soul to y",
+		"publisherid" : 1,
+		"path" : "ps 25 to you o lord"
+	},
+	{
+		"id" : 219,
+		"title" : "Hear Our Prayer, O Lord",
+		"firstline" : "Óyenos, Señor; Ding-gin mo kami; Xin nhậm lời chún",
+		"publisherid" : 0,
+		"path" : "hear our prayer o lord"
+	},
+	{
+		"id" : 222,
+		"title" : "Night of Silence/Silent Night",
+		"firstline" : "Cold are the people, winter of life",
+		"publisherid" : null,
+		"path" : "night of silence.silent night"
+	},
+	{
+		"id" : 223,
+		"title" : "Child of the Poor",
+		"firstline" : "Helpless and hungry, lowly, afraid",
+		"publisherid" : null,
+		"path" : "child of the poor"
+	},
+	{
+		"id" : 221,
+		"title" : "Lễ Vật Dâng Chúa Hài Nhi",
+		"firstline" : "Đêm nay con chẳng có gì dâng Chúa Hài Nhi",
+		"publisherid" : null,
+		"path" : "le vat dang chua hai nhi"
+	},
+	{
+		"id" : 220,
+		"title" : "Psalm 96: Today Our Savior Is Born",
+		"firstline" : "Today our Savior is born! Today our Savior is born",
+		"publisherid" : null,
+		"path" : "ps 96 today our savior is born"
+	},
+	{
+		"id" : 224,
+		"title" : "Psalm 84: How Lovely Is Your Dwelling Place",
+		"firstline" : "How lovely is your dwelling place, O Lord, God of",
+		"publisherid" : 1,
+		"path" : "ps 84 how lovely"
+	},
+	{
+		"id" : 225,
+		"title" : "Cao Cung Lên",
+		"firstline" : "Cao cung lên khúc nhạc thiên thần Chúa",
+		"publisherid" : null,
+		"path" : "cao cung len"
+	},
+	{
+		"id" : 226,
+		"title" : "Joy To the World",
+		"firstline" : "Joy to the world, the Lord is come! Let earth rece",
+		"publisherid" : null,
+		"path" : "joy to the world"
+	},
+	{
+		"id" : 227,
+		"title" : "Precious Lord",
+		"firstline" : "Precious Lord, take me hand, lead me on",
+		"publisherid" : null,
+		"path" : "precious lord"
+	},
+	{
+		"id" : 228,
+		"title" : "Yêu Thương Cho Người",
+		"firstline" : "Con muốn đi tìm Ngài trong cuộc sống. Lối Ngài xưa",
+		"publisherid" : null,
+		"path" : "yeu thuong cho nguoi"
+	},
+	{
+		"id" : 229,
+		"title" : "We Are Prophets",
+		"firstline" : "We are prophets of a future not our own",
+		"publisherid" : null,
+		"path" : "we are prophets"
+	},
+	{
+		"id" : 230,
+		"title" : "Psalm 71: I Will Sing of Your Salvation",
+		"firstline" : "I will sing, I will sing of your salvation",
+		"publisherid" : 2,
+		"path" : "ps 71 i will sing"
+	},
+	{
+		"id" : 231,
+		"title" : "O God, You Search Me",
+		"firstline" : "O God, You search me and you know me",
+		"publisherid" : 1,
+		"path" : "o god you search me"
+	},
+	{
+		"id" : 232,
+		"title" : "Về Đây Nghe Em",
+		"firstline" : "Về đây nghe em, về đây mặc áo the đi guốc mộc",
+		"publisherid" : null,
+		"path" : "ve day nghe em"
+	},
+	{
+		"id" : 233,
+		"title" : "The Prayer",
+		"firstline" : "I pray you'll be our eyes, and watch us where we g",
+		"publisherid" : null,
+		"path" : "the prayer"
+	},
+	{
+		"id" : 234,
+		"title" : "Psalm 138: In the Sight of the Angels",
+		"firstline" : "In the sight of the angels I will sing your praise",
+		"publisherid" : null,
+		"path" : "ps 138 in the sight of the angels"
+	},
+	{
+		"id" : 235,
+		"title" : "Tâm Tình Hiến Dâng",
+		"firstline" : "Biết lấy gì cảm mến, biết lấy chi báo đền",
+		"publisherid" : null,
+		"path" : "tam tinh hien dang"
+	},
+	{
+		"id" : 236,
+		"title" : "Psalm 1",
+		"firstline" : null,
+		"publisherid" : null,
+		"path" : null
+	},
+	{
+		"id" : 237,
+		"title" : "Ca Khúc Hồng Ân 1",
+		"firstline" : "Hân hoan lời tụng ca dâng Chúa khúc nhạc huyền mơ",
+		"publisherid" : null,
+		"path" : "ca khuc hong an 1"
+	},
+	{
+		"id" : 238,
+		"title" : "Blest Are They",
+		"firstline" : "Blest are they the pure in spirit, theirs is the k",
+		"publisherid" : 1,
+		"path" : "blest are they"
+	},
+	{
+		"id" : 239,
+		"title" : "Led By the Spirit",
+		"firstline" : "Led by the Spirit of our God, we go to fast and pr",
+		"publisherid" : 1,
+		"path" : "led by the spirit"
+	},
+	{
+		"id" : 240,
+		"title" : "Mass of Light: Kyrie",
+		"firstline" : "You raised the dead to life in the Spirit",
+		"publisherid" : null,
+		"path" : "mass of light"
+	},
+	{
+		"id" : 241,
+		"title" : "Mass of Light: Gospel Acclamation",
+		"firstline" : "Alleluia! Alleluia! Alleluia! Glory to You, Lord J",
+		"publisherid" : null,
+		"path" : "mass of light"
+	},
+	{
+		"id" : 243,
+		"title" : "Lift High the Cross",
+		"firstline" : "Lift high the cross, the love of Christ proclaim",
+		"publisherid" : null,
+		"path" : "lift high the cross"
+	},
+	{
+		"id" : 244,
+		"title" : "There's a Wideness in God's Mercy",
+		"firstline" : "There's a wideness in God's mercy like the widenes",
+		"publisherid" : null,
+		"path" : "there's a wideness in god's mercy.ocp"
+	},
+	{
+		"id" : 245,
+		"title" : "Bài Ca Dâng Hiến",
+		"firstline" : "Con dâng Ngài lòng cảm mến vô biên, con dâng lên N",
+		"publisherid" : null,
+		"path" : "bai ca dang hien"
+	},
+	{
+		"id" : 246,
+		"title" : "Psalm 22: Mi Dios, Mi Dios",
+		"firstline" : "Mi Dios, Mi Dios porque me has de jado",
+		"publisherid" : null,
+		"path" : "ps 22 mi dios mi dios"
+	},
+	{
+		"id" : 247,
+		"title" : "Nếu Có Thể",
+		"firstline" : "Lạy Cha nếu có thể được thì xin cho con khỏi uống",
+		"publisherid" : null,
+		"path" : "neu co the"
+	},
+	{
+		"id" : 248,
+		"title" : "Were You There?",
+		"firstline" : "Were you there when they crucified my Lord?",
+		"publisherid" : null,
+		"path" : "were you there"
+	},
+	{
+		"id" : 249,
+		"title" : "Ours Were the Griefs He Bore",
+		"firstline" : "Ours were the griefs He bore. Ours were the pain H",
+		"publisherid" : 1,
+		"path" : "ours were the griefs he bore"
+	},
+	{
+		"id" : 250,
+		"title" : "Go Light Your World",
+		"firstline" : "There is a candle in ev'ry soul; some brightly bur",
+		"publisherid" : null,
+		"path" : "go light your world"
+	},
+	{
+		"id" : 251,
+		"title" : "Laudate Omnes Gentes",
+		"firstline" : "Laudate omnes gentes, laudate Dominum",
+		"publisherid" : null,
+		"path" : "laudate omnes gentes"
+	},
+	{
+		"id" : 252,
+		"title" : "Alleluia! Alleluia!",
+		"firstline" : "Alleluia! Alleluia! Hearts to heav'n and voices ra",
+		"publisherid" : null,
+		"path" : "alleluia! alleluia!"
+	},
+	{
+		"id" : 253,
+		"title" : "Psalm 30: I Will Praise You, Lord",
+		"firstline" : "I will praise You, Lord. I will praise You, Lord.",
+		"publisherid" : null,
+		"path" : "ps 30 i will praise you lord"
+	},
+	{
+		"id" : 254,
+		"title" : "In Perfect Charity",
+		"firstline" : "O Most High and glorious God cast your light into",
+		"publisherid" : null,
+		"path" : "in perfect charity"
+	},
+	{
+		"id" : 255,
+		"title" : "Mass of Glory: Gloria",
+		"firstline" : "Gloria to God, glory to God, glory to God in the h",
+		"publisherid" : null,
+		"path" : "mass of glory"
+	},
+	{
+		"id" : 256,
+		"title" : "I Know That My Redeemer Lives",
+		"firstline" : "I know that my Redeemer lives, the One Who calls m",
+		"publisherid" : null,
+		"path" : "i know that my redeemer lives"
+	},
+	{
+		"id" : 257,
+		"title" : "Chúa Là Mục Tử",
+		"firstline" : "Chúa là mục tử, Người dẫn lối chỉ đường cho con đi",
+		"publisherid" : null,
+		"path" : "chua la muc tu"
+	},
+	{
+		"id" : 258,
+		"title" : "Come, Now Is the Time To Worship",
+		"firstline" : "Come, now is the time to worship. Come, now is the",
+		"publisherid" : null,
+		"path" : "come now is the time to worship"
+	},
+	{
+		"id" : 259,
+		"title" : "Psalm 145: I Will Lift Up Your Name",
+		"firstline" : "I will lift up your name, praise to my King",
+		"publisherid" : null,
+		"path" : "ps 145 i will lift up your name"
+	},
+	{
+		"id" : 260,
+		"title" : "Dấu Ấn Tình Yêu",
+		"firstline" : "Chúa ghi vào hồn con dấu ấn của Ngài",
+		"publisherid" : null,
+		"path" : "dau an tinh yeu"
+	},
+	{
+		"id" : 261,
+		"title" : "Psalm 67: May God Bless Us With Mercy",
+		"firstline" : "May God bless us with mercy",
+		"publisherid" : null,
+		"path" : "ps 67 may god bless us with mercy"
+	},
+	{
+		"id" : 262,
+		"title" : "Psalm 47: Shouts of Joy",
+		"firstline" : "God mounts His throne to shouts of joy",
+		"publisherid" : null,
+		"path" : "ps 47 shouts of joy"
+	},
+	{
+		"id" : 263,
+		"title" : "Psalm 104: Send Forth Your Spirit, O Lord",
+		"firstline" : "Send forth your Spirit O Lord, and renew the face",
+		"publisherid" : 1,
+		"path" : "ps 104 send forth your spirit o lord"
+	},
+	{
+		"id" : 264,
+		"title" : "Anthem",
+		"firstline" : "We are called, we are chosen. We are Christ for on",
+		"publisherid" : null,
+		"path" : "anthem"
+	},
+	{
+		"id" : 265,
+		"title" : "Share the Light",
+		"firstline" : "Share the light of Jesus, share the light that sho",
+		"publisherid" : null,
+		"path" : "share the light"
+	},
+	{
+		"id" : 266,
+		"title" : "Của Lễ Con Dâng",
+		"firstline" : "Của lễ con dâng là vâng lời cha mẹ của con",
+		"publisherid" : null,
+		"path" : "cua le con dang"
+	},
+	{
+		"id" : 267,
+		"title" : "Bộ Lễ Ta Đi Vào Đời 3: Thánh",
+		"firstline" : "Thánh chí thánh, ngàn trùng chí thánh",
+		"publisherid" : null,
+		"path" : "bo le ta di vao doi 3"
+	},
+	{
+		"id" : 268,
+		"title" : "Bộ Lễ Ta Đi Vào Đời 3: Đây Là Mầu Nhiệm Đức Tin",
+		"firstline" : "Đây là mầu nhiệm đức tin, con tuyên xưng",
+		"publisherid" : null,
+		"path" : "bo le ta di vao doi 3"
+	},
+	{
+		"id" : 269,
+		"title" : "Bộ Lễ Ta Đi Vào Đời 3: Chiên",
+		"firstline" : "Đây là Chiên Thiên Chúa Đấng gánh tội trần gian",
+		"publisherid" : null,
+		"path" : "bo le ta di vao doi 3"
+	},
+	{
+		"id" : 270,
+		"title" : "Mình Máu Thánh",
+		"firstline" : "Ôi Cha yêu con, yêu con thật hết tình",
+		"publisherid" : null,
+		"path" : "minh mau thanh"
+	},
+	{
+		"id" : 271,
+		"title" : "Psalm 8: Your Wonderful Name",
+		"firstline" : "O God forever I'll sing, and call on your name, yo",
+		"publisherid" : 2,
+		"path" : "ps 8 your wonderful name"
+	},
+	{
+		"id" : 272,
+		"title" : "Tôn Vinh",
+		"firstline" : "Tôn vinh, xin tôn vinh Thiên Chúa Ba Ngôi. Hôm qua",
+		"publisherid" : null,
+		"path" : "ton vinh"
+	},
+	{
+		"id" : 273,
+		"title" : "Psalm 110: The Most Holy Body and Blood of Christ",
+		"firstline" : "You are priest forever in the line of Melchizedek.",
+		"publisherid" : null,
+		"path" : "ps 110 most holy body and blood of christ"
+	},
+	{
+		"id" : 274,
+		"title" : "Table of Plenty",
+		"firstline" : "Come to the feast of heaven and earth, come to the",
+		"publisherid" : null,
+		"path" : "table of plenty"
+	},
+	{
+		"id" : 275,
+		"title" : "Thầy Yêu Chúng Con",
+		"firstline" : "Thầy yêu chúng con lời ai nói cho cùng. Thầy yêu c",
+		"publisherid" : null,
+		"path" : "thay yeu chung con"
+	},
+	{
+		"id" : 276,
+		"title" : "A Voice Cries out",
+		"firstline" : "Console my people, the ones dear to me; speak to t",
+		"publisherid" : 1,
+		"path" : "a voice cries out"
+	},
+	{
+		"id" : 277,
+		"title" : "Hài Nhi Tên Gioan",
+		"firstline" : "Một hài nhi tên Gioan khi chưa vào đời, một người",
+		"publisherid" : null,
+		"path" : "hai nhi ten gioan"
+	},
+	{
+		"id" : 278,
+		"title" : "Psalm 16: You Will Show Me the Path of Life",
+		"firstline" : "You will show me the path of life, you, my hope, m",
+		"publisherid" : 2,
+		"path" : "ps 16 you will show me"
+	},
+	{
+		"id" : 279,
+		"title" : "This Is My Song",
+		"firstline" : "This is my song, O God of all the nations",
+		"publisherid" : 1,
+		"path" : "this is my song"
+	},
+	{
+		"id" : 280,
+		"title" : "Let There Be Peace On Earth",
+		"firstline" : "Let there be peace of earth, and let it begin with",
+		"publisherid" : 1,
+		"path" : "let there be peace on earth"
+	},
+	{
+		"id" : 281,
+		"title" : "Psalm 15: They Who Do Justice",
+		"firstline" : "They who do justice will live in the presence of G",
+		"publisherid" : null,
+		"path" : "ps 15 they who do justice"
+	},
+	{
+		"id" : 282,
+		"title" : "Psalm 138: On the Day I Called",
+		"firstline" : "On the day I called for help, You answered me",
+		"publisherid" : null,
+		"path" : "ps 138 on the day i called"
+	},
+	{
+		"id" : 283,
+		"title" : "Jesus, My Everything",
+		"firstline" : "I've been looking for a reason, I've been looking",
+		"publisherid" : null,
+		"path" : "jesus my everything"
+	},
+	{
+		"id" : 284,
+		"title" : "Bless the Lord - Canedo",
+		"firstline" : "Bless the Lord, all my soul, bless God's holy Name",
+		"publisherid" : null,
+		"path" : "bless the lord.canedo"
+	},
+	{
+		"id" : 285,
+		"title" : "Psalm 95: If You Hear the Voice of God",
+		"firstline" : "If you hear the voice of God this day, if you hear",
+		"publisherid" : null,
+		"path" : "ps 95 if you hear the voice of god"
+	},
+	{
+		"id" : 286,
+		"title" : "Let the River FLow",
+		"firstline" : "Let the poor man say \"I am rich in him.\" Let the l",
+		"publisherid" : 1,
+		"path" : "let the river flow"
+	},
+	{
+		"id" : 287,
+		"title" : "Your Grace Is Enough",
+		"firstline" : "Great is your faithfulness, O God of Jacob; you wr",
+		"publisherid" : null,
+		"path" : "your grace is enough"
+	},
+	{
+		"id" : 288,
+		"title" : "In This Place",
+		"firstline" : "We are all hungry people, we need shelter and stre",
+		"publisherid" : null,
+		"path" : "in this place"
+	},
+	{
+		"id" : 289,
+		"title" : "Psalm 117: Go Out All to the World",
+		"firstline" : "Go out to all the world and tell the good news",
+		"publisherid" : null,
+		"path" : "ps 117 go out to all the world"
+	},
+	{
+		"id" : 290,
+		"title" : "Psalm 51: Create In Me",
+		"firstline" : "Create in me a clean heart O God and renew a stead",
+		"publisherid" : null,
+		"path" : "ps 51 create in me"
+	},
+	{
+		"id" : 291,
+		"title" : "- meditative silence -",
+		"firstline" : null,
+		"publisherid" : null,
+		"path" : null
+	},
+	{
+		"id" : 292,
+		"title" : "Mass of God's Promise: Glory to God",
+		"firstline" : null,
+		"publisherid" : null,
+		"path" : "mass of god's promise"
+	},
+	{
+		"id" : 293,
+		"title" : "Mass of God's Promise: Gospel Acclamation",
+		"firstline" : null,
+		"publisherid" : null,
+		"path" : "mass of god's promise"
+	},
+	{
+		"id" : 294,
+		"title" : "Mass of God's Promise: Holy",
+		"firstline" : null,
+		"publisherid" : null,
+		"path" : "mass of god's promise"
+	},
+	{
+		"id" : 295,
+		"title" : "Mass of God's Promise: Memorial Acclamation",
+		"firstline" : null,
+		"publisherid" : null,
+		"path" : "mass of god's promise"
+	},
+	{
+		"id" : 296,
+		"title" : "Mass of God's Promise: Amen",
+		"firstline" : null,
+		"publisherid" : null,
+		"path" : "mass of god's promise"
+	},
+	{
+		"id" : 297,
+		"title" : "Mass of God's Promise: Lamb of God Litany",
+		"firstline" : null,
+		"publisherid" : null,
+		"path" : "mass of god's promise"
+	},
+	{
+		"id" : 95,
+		"title" : "Sống Cho Người Yêu",
+		"firstline" : "Từ ngàn xưa Chúa thương con người, Người cho sống",
+		"publisherid" : null,
+		"path" : "song cho nguoi yeu"
+	},
+	{
+		"id" : 242,
+		"title" : "Wedding March",
+		"firstline" : "(piano solo) - 3 different versions",
+		"publisherid" : null,
+		"path" : "wedding march"
+	},
+	{
+		"id" : 185,
+		"title" : "Psalm 113: Nations and Heavens",
+		"firstline" : "Praise the Lord who lifts up the poor. Alleluia. A",
+		"publisherid" : 2,
+		"path" : "ps 113 nations and heavens"
+	},
+	{
+		"id" : 190,
+		"title" : "Con Chỉ Là Tạo Vật",
+		"firstline" : "Lạy Chúa con chỉ là tạo vật, Chúa thật í a sang gi",
+		"publisherid" : null,
+		"path" : "con chi la tao vat"
+	},
+	{
+		"id" : 169,
+		"title" : "Come, Lord Jesus",
+		"firstline" : "Come, Lord Jesus come. Come and fill my heart with",
+		"publisherid" : null,
+		"path" : "come lord jesus"
+	},
+	{
+		"id" : 298,
+		"title" : "Psalm 121: God Is Ever Wakeful",
+		"firstline" : "If I look to the mountains, will they come to my a",
+		"publisherid" : null,
+		"path" : "ps 121 god is ever wakeful"
+	},
+	{
+		"id" : 299,
+		"title" : "Tin Hay Không Tin",
+		"firstline" : "Tin hay không tin là",
+		"publisherid" : null,
+		"path" : "tin hay khong tin"
+	},
+	{
+		"id" : 300,
+		"title" : "I Will Choose Christ",
+		"firstline" : "I will choose Christ, I will choose love; I choose",
+		"publisherid" : 1,
+		"path" : "i will choose christ"
+	},
+	{
+		"id" : 301,
+		"title" : "Psalm 24: Lord, This Is the People",
+		"firstline" : "Lord, this is the people who long to see your face",
+		"publisherid" : null,
+		"path" : "ps 24 lord this is the people"
+	},
+	{
+		"id" : 302,
+		"title" : "Litany of the Saints",
+		"firstline" : "Lord, have mercy. Christ, have mercy.",
+		"publisherid" : null,
+		"path" : "litany of the saints"
+	},
+	{
+		"id" : 303,
+		"title" : "Revive Me",
+		"firstline" : "Consider my affliction and please deliver me",
+		"publisherid" : null,
+		"path" : null
+	},
+	{
+		"id" : 304,
+		"title" : "Psalm 17: I Call To You, God",
+		"firstline" : "I call to you, God, for you answer me. Keep your l",
+		"publisherid" : null,
+		"path" : "ps 17 i call to you god"
+	},
+	{
+		"id" : 305,
+		"title" : "Psalm 122: I Rejoiced",
+		"firstline" : "I rejoiced when I heard them say let us go to the",
+		"publisherid" : 1,
+		"path" : "ps 122 i rejoiced"
+	},
+	{
+		"id" : 306,
+		"title" : "Rain Down",
+		"firstline" : "Rain down, rain down, rain down your love on your",
+		"publisherid" : 1,
+		"path" : "rain down"
+	},
+	{
+		"id" : 307,
+		"title" : "Immaculate Mary",
+		"firstline" : "Immaculate Mary, your praises we sing",
+		"publisherid" : null,
+		"path" : "immaculate mary"
+	},
+	{
+		"id" : 308,
+		"title" : "Here I Am To Worship",
+		"firstline" : "Light of the world, You stepped down into darkness",
+		"publisherid" : null,
+		"path" : "here i am to worship"
+	},
+	{
+		"id" : 309,
+		"title" : "Psalm 146/147: Bless the Lord, My Soul",
+		"firstline" : "O bless the Lord my soul who heals the broken hear",
+		"publisherid" : null,
+		"path" : "ps 146 bless the lord my soul"
+	},
+	{
+		"id" : 318,
+		"title" : "Huron Carol",
+		"firstline" : "'Twas in the moon of winter time when all the bird",
+		"publisherid" : null,
+		"path" : "huron carol"
+	},
+	{
+		"id" : 319,
+		"title" : "O Come, Little Children",
+		"firstline" : "O come, little children, o come, one and all. O co",
+		"publisherid" : null,
+		"path" : "o come little children"
+	},
+	{
+		"id" : 310,
+		"title" : "O Little Town of Bethlehem",
+		"firstline" : "O little town of Bethlehem how still we see thee l",
+		"publisherid" : 1,
+		"path" : "o little town of bethlehem"
+	},
+	{
+		"id" : 311,
+		"title" : "The First Noel",
+		"firstline" : "The first Nowell the angels did say was to certain",
+		"publisherid" : null,
+		"path" : "the first noel"
+	},
+	{
+		"id" : 312,
+		"title" : "Mass of Light: Holy, Holy, Holy",
+		"firstline" : "Holy, holy, holy Lord. God of power and might.",
+		"publisherid" : 2,
+		"path" : "mass of light"
+	},
+	{
+		"id" : 313,
+		"title" : "Mass of Light: Memorial Acclamation",
+		"firstline" : "Let us proclaim the mystery of faith: Dying you de",
+		"publisherid" : 2,
+		"path" : "mass of light"
+	},
+	{
+		"id" : 314,
+		"title" : "Mass of Light: Doxology and Amen",
+		"firstline" : "Through Him, with Him, in Him, in the unity of the",
+		"publisherid" : 2,
+		"path" : "mass of light"
+	},
+	{
+		"id" : 315,
+		"title" : "Mass of Light: Lamb of God",
+		"firstline" : "Lamb of God, you take away the sins of the world",
+		"publisherid" : 2,
+		"path" : "mass of light"
+	},
+	{
+		"id" : 320,
+		"title" : "In the Christmas Spirit",
+		"firstline" : "Hurry, hurry now to Bethelem, Bethelem, Bethelem",
+		"publisherid" : null,
+		"path" : "in the christmas spirit"
+	},
+	{
+		"id" : 316,
+		"title" : "Refiner's Fire",
+		"firstline" : "Purify my heart, Let me be as gold and precious si",
+		"publisherid" : null,
+		"path" : "refiner's fire"
+	},
+	{
+		"id" : 317,
+		"title" : "Birth Song",
+		"firstline" : "Her Baby, newly breathing, with wailing needful cr",
+		"publisherid" : 2,
+		"path" : "birth song"
+	},
+	{
+		"id" : 321,
+		"title" : "Our God Is Here",
+		"firstline" : "Here in this time, here in this place, here we are",
+		"publisherid" : 1,
+		"path" : "our god is here"
+	},
+	{
+		"id" : 322,
+		"title" : "Voice of Christ",
+		"firstline" : "O Lord, you bless us each day with gifts from your",
+		"publisherid" : null,
+		"path" : "voice of christ"
+	},
+	{
+		"id" : 323,
+		"title" : "It Came Upon the Midnight Clear",
+		"firstline" : "It came upon the midnight clear that glorious song",
+		"publisherid" : null,
+		"path" : "it came upon the midnight clear"
+	},
+	{
+		"id" : 324,
+		"title" : "Gather Your People",
+		"firstline" : "Gather your people, O Lord. Gather your people O L",
+		"publisherid" : null,
+		"path" : "gather your people"
+	},
+	{
+		"id" : 325,
+		"title" : "Wade In the Water",
+		"firstline" : "Wade in the water, wade in the water children wade",
+		"publisherid" : null,
+		"path" : "wade in the water"
+	},
+	{
+		"id" : 326,
+		"title" : "Down In the River to Pray",
+		"firstline" : "As I went down in the river to pray",
+		"publisherid" : null,
+		"path" : "down in the river to pray"
+	},
+	{
+		"id" : 327,
+		"title" : "Psalm 29: The Lord Will Bless Us With Peace",
+		"firstline" : "The Lord will bless us with peace",
+		"publisherid" : 1,
+		"path" : "ps 29 the lord will bless us with peace"
+	},
+	{
+		"id" : 328,
+		"title" : "Psalm 63: My Soul Is Thirsting",
+		"firstline" : "My soul is thirsting for you O Lord, thirsting for",
+		"publisherid" : 1,
+		"path" : "ps 63 my soul is thirsting"
+	},
+	{
+		"id" : 329,
+		"title" : "Behold the Lamb",
+		"firstline" : "Those who were in the dark are thankful the standi",
+		"publisherid" : 1,
+		"path" : "behold the lamb"
+	},
+	{
+		"id" : 330,
+		"title" : "Shout to the Lord",
+		"firstline" : "My Jesus, my Savior; Lord, there is none like you",
+		"publisherid" : 1,
+		"path" : "shout to the lord"
+	},
+	{
+		"id" : 331,
+		"title" : "Dâng Niềm Cảm Mến",
+		"firstline" : "Như dòng nến trôi trên bàn thờ, tâm hồn con lâng l",
+		"publisherid" : null,
+		"path" : "dang niem cam men"
+	},
+	{
+		"id" : 332,
+		"title" : "Companions for the Journey",
+		"firstline" : "We are companions on the journey, breaking bread a",
+		"publisherid" : 1,
+		"path" : "companions for the journey"
+	},
+	{
+		"id" : 333,
+		"title" : "Earthen Vessels",
+		"firstline" : "We hold a treasure, not made of gold",
+		"publisherid" : 1,
+		"path" : "earthen vessels"
+	},
+	{
+		"id" : 334,
+		"title" : "Con Hân Hoan",
+		"firstline" : "Con hân hoan bước lên bàn thờ Chúa, Chúa là",
+		"publisherid" : null,
+		"path" : "con han hoan"
+	},
+	{
+		"id" : 335,
+		"title" : "Con Nay Trở Về",
+		"firstline" : "Con nay trở về, trở về cùng Chúa Chúa ơi",
+		"publisherid" : null,
+		"path" : "con nay tro ve"
+	},
+	{
+		"id" : 336,
+		"title" : "Tân Ca Madelena",
+		"firstline" : "Giọt nước mắt nào, chảy trên gò má, giọt nước mắt",
+		"publisherid" : null,
+		"path" : "tan ca madelena"
+	},
+	{
+		"id" : 337,
+		"title" : "You Are Near",
+		"firstline" : "Yah-weh I know you are near, standing always by my",
+		"publisherid" : null,
+		"path" : "you are near"
+	},
+	{
+		"id" : 338,
+		"title" : "Hỡi Người Hãy Nhớ",
+		"firstline" : "Hỡi người hãy nhớ mình là bụi tro, một mai người s",
+		"publisherid" : null,
+		"path" : "hoi nguoi hay nho"
+	},
+	{
+		"id" : 339,
+		"title" : "Mass of Seraphim",
+		"firstline" : "Bộ lễ Seraphim",
+		"publisherid" : null,
+		"path" : "mass of seraphim"
+	},
+	{
+		"id" : 340,
+		"title" : "Mass of Glory: Praise and Glory",
+		"firstline" : "Praise and honor to you, O Lord. Jesus Christ",
+		"publisherid" : null,
+		"path" : "mass of glory"
+	},
+	{
+		"id" : 341,
+		"title" : "Lắng Nghe Lời Chúa",
+		"firstline" : "Xin cho con biết lắng nghe lời Ngài dạy con trong",
+		"publisherid" : null,
+		"path" : "lang nghe loi chua"
+	},
+	{
+		"id" : 342,
+		"title" : "Psalm 23: You Are My Shepherd",
+		"firstline" : "You are my shepherd, my rock, my refuge",
+		"publisherid" : 2,
+		"path" : "ps 23 you are my shepherd"
+	},
+	{
+		"id" : 343,
+		"title" : "Somebody's Knockin' At Your Door",
+		"firstline" : "Somebody's knockin' at your door",
+		"publisherid" : 1,
+		"path" : "somebody knockin at your door"
+	},
+	{
+		"id" : 344,
+		"title" : "Psalm 130: With the Lord There Is Mercy",
+		"firstline" : "With the Lord there is mercy, and fullness of rede",
+		"publisherid" : 1,
+		"path" : "ps 130 with the lord there is mercy"
+	},
+	{
+		"id" : 346,
+		"title" : "Hoan Ca Phục Sinh",
+		"firstline" : "Bà Maria ơi trên đường bà thấy những gì",
+		"publisherid" : null,
+		"path" : "hoan ca phuc sinh"
+	},
+	{
+		"id" : 347,
+		"title" : "Song of the Cross",
+		"firstline" : "Love, lifted up on the cross for me: my Lord",
+		"publisherid" : null,
+		"path" : "song of the cross"
+	},
+	{
+		"id" : 348,
+		"title" : "Join In the Dance",
+		"firstline" : "Join in the dance of the earth's jublilation",
+		"publisherid" : null,
+		"path" : "join in the dance"
+	},
+	{
+		"id" : 349,
+		"title" : "We Are Many Parts",
+		"firstline" : "We are many parts, we are all one body",
+		"publisherid" : 1,
+		"path" : "we are many parts"
+	},
+	{
+		"id" : 350,
+		"title" : "Alleluia Festivalé",
+		"firstline" : "Jesus Christ is risen today, alleluia alle alleuia",
+		"publisherid" : 1,
+		"path" : "alleluia festivale"
+	},
+	{
+		"id" : 351,
+		"title" : "Trên Đường Emmau",
+		"firstline" : "Trên đường Emmau, hai người lữ khách bước đi bên n",
+		"publisherid" : null,
+		"path" : "tren duong emmau"
+	},
+	{
+		"id" : 352,
+		"title" : "As One Unknown",
+		"firstline" : "He comes to us as one unknown, a breath unseen unh",
+		"publisherid" : 1,
+		"path" : "as one unknown"
+	},
+	{
+		"id" : 353,
+		"title" : "Đồng Cỏ Tươi",
+		"firstline" : "Đồng là đồng cỏ tươi, Chúa chăn cho tôi nghỉ ngơi",
+		"publisherid" : null,
+		"path" : "dong co tuoi"
+	},
+	{
+		"id" : 354,
+		"title" : "Thần Khí Chúa",
+		"firstline" : "Thần Khí Chúa đã sai tôi đi, sai tôi đi loan báo t",
+		"publisherid" : null,
+		"path" : "than khi chua"
+	},
+	{
+		"id" : 355,
+		"title" : "Sing A New Song",
+		"firstline" : "Sing a new song unto the Lord, let your song be su",
+		"publisherid" : 1,
+		"path" : "sing a new song"
+	},
+	{
+		"id" : 356,
+		"title" : "Tìm Về Chân Thiện Mỹ",
+		"firstline" : "Chúa là Chân Thiện Mỹ, là chân là tình yêu là ánh",
+		"publisherid" : null,
+		"path" : "tim ve chan thien my"
+	},
+	{
+		"id" : 357,
+		"title" : "These Are Alone Are Enough",
+		"firstline" : "Take my heart, O Lord, take my hopes and dreams. T",
+		"publisherid" : 1,
+		"path" : "these alone are enough"
+	},
+	{
+		"id" : 358,
+		"title" : "City of God",
+		"firstline" : "Awake from your slumber, arise from your sleep! A",
+		"publisherid" : 1,
+		"path" : "city of god"
+	},
+	{
+		"id" : 359,
+		"title" : "Nếu Các Con",
+		"firstline" : "Nếu các con yêu mến Thầy, thì hãy giữ lời Thầy. Th",
+		"publisherid" : null,
+		"path" : "neu cac con"
+	},
+	{
+		"id" : 360,
+		"title" : "Tình Cha Nghĩa Mẹ",
+		"firstline" : "Cho con làm người",
+		"publisherid" : null,
+		"path" : "tinh cha nghia me"
+	},
+	{
+		"id" : 361,
+		"title" : "All the Ends of the Earth",
+		"firstline" : "All the ends of the earth, all creatures of the se",
+		"publisherid" : null,
+		"path" : "all the ends of the earth"
+	},
+	{
+		"id" : 362,
+		"title" : "Behold the Glory of God",
+		"firstline" : "Behold the glory of God, the Daystar arising",
+		"publisherid" : 1,
+		"path" : "behold the glory of god"
+	},
+	{
+		"id" : 363,
+		"title" : "We Are Called",
+		"firstline" : "Come! Live in the light! Shien with the joy and th",
+		"publisherid" : 2,
+		"path" : "we are called"
+	},
+	{
+		"id" : 364,
+		"title" : "Psalm 47: God Mounts His Throne",
+		"firstline" : "God mounts His throne to shouts of joy, a blare of",
+		"publisherid" : 1,
+		"path" : "ps 47 god mounts his throne"
+	},
+	{
+		"id" : 365,
+		"title" : "Thượng Tiến Chúa Ba Ngôi",
+		"firstline" : "Thượng lên Ba Ngôi bánh rượu này tinh tuyền",
+		"publisherid" : null,
+		"path" : "thuong tien chua ba ngoi"
+	},
+	{
+		"id" : 366,
+		"title" : "Glory and Praise to Our God",
+		"firstline" : "Glory and praise to our God who alone gives light",
+		"publisherid" : 1,
+		"path" : "glory and praise to our god"
+	},
+	{
+		"id" : 367,
+		"title" : "Ang Katawan Ni Kristo",
+		"firstline" : "In the presence of our God, as we gather in Christ",
+		"publisherid" : null,
+		"path" : "ang katawan ni kristo"
+	},
+	{
+		"id" : 368,
+		"title" : "Mass of Joyful Heart: Glory",
+		"firstline" : "Glory to God in the highest and peace to all peopl",
+		"publisherid" : 1,
+		"path" : "mass of joyful heart"
+	},
+	{
+		"id" : 369,
+		"title" : "Mass of Joyful Heart: Gospel Acclamation",
+		"firstline" : "Alleluia allelluia alleluia",
+		"publisherid" : null,
+		"path" : "mass of joyful heart"
+	},
+	{
+		"id" : 370,
+		"title" : "Mass of Joyful Heart: Holy",
+		"firstline" : "Holy holy Lord God of power and might",
+		"publisherid" : null,
+		"path" : "mass of joyful heart"
+	},
+	{
+		"id" : 371,
+		"title" : "Mass of Joyful Heart: Memorial Acclamation",
+		"firstline" : "Christ has died, Christ has risen, Christ will com",
+		"publisherid" : null,
+		"path" : "mass of joyful heart"
+	},
+	{
+		"id" : 372,
+		"title" : "Mass of Joyful Heart: Great Amen",
+		"firstline" : "Amen, amen, amen",
+		"publisherid" : null,
+		"path" : "mass of joyful heart"
+	},
+	{
+		"id" : 373,
+		"title" : "Mass of Joyful Heart: Lamb of God",
+		"firstline" : "Lamb of God you take away the sins of the world",
+		"publisherid" : null,
+		"path" : "mass of joyful heart"
+	},
+	{
+		"id" : 374,
+		"title" : "Psalm 34: Taste and See",
+		"firstline" : "Taste and see, taste and see the goodness of the L",
+		"publisherid" : null,
+		"path" : "ps 34 taste and see.moore"
+	},
+	{
+		"id" : 375,
+		"title" : "Psalm 19: Your Words Are Spirit and Life",
+		"firstline" : "Your words are spirit and life, O Lord, richer tha",
+		"publisherid" : 1,
+		"path" : "ps 19 your words are spirit and life"
+	},
+	{
+		"id" : 376,
+		"title" : "Jesus, Be With Us Now",
+		"firstline" : "We come before you with all we have, the works of",
+		"publisherid" : 2,
+		"path" : "jesus be with us now"
+	},
+	{
+		"id" : 345,
+		"title" : "Lord, I Lift Your Name On High",
+		"firstline" : "Lord, I lift your name on high.  Lord I love to si",
+		"publisherid" : null,
+		"path" : "lord i lift your name on high"
+	},
+	{
+		"id" : 418,
+		"title" : "Xin Ngợi Khen Cha",
+		"firstline" : "Chúng con xin ngợi khen Cha.  Chúng con xin tạ ơn",
+		"publisherid" : null,
+		"path" : "xin ngoi khen cha"
+	},
+	{
+		"id" : 419,
+		"title" : "Kìa Ai",
+		"firstline" : "Kìa ai dong duổi đường gió bụi.  Gánh sầu thương",
+		"publisherid" : null,
+		"path" : "kia ai"
+	},
+	{
+		"id" : 420,
+		"title" : "Seed Scattered And Sown",
+		"firstline" : "Seed, scattered and sown, wheat, gathered and grow",
+		"publisherid" : null,
+		"path" : "seed scattered and sown"
+	},
+	{
+		"id" : 377,
+		"title" : "Shine, Jesus, Shine",
+		"firstline" : "Shine, Jesus, shine; fill this land with the Fathe",
+		"publisherid" : 1,
+		"path" : "shine jesus shine"
+	},
+	{
+		"id" : 378,
+		"title" : "Psalm 95: If Today You Hear His Voice",
+		"firstline" : "If today you hear God's voice, harden not your hea",
+		"publisherid" : 1,
+		"path" : "ps 95 if today"
+	},
+	{
+		"id" : 379,
+		"title" : "Lời Vọng Tình Yêu",
+		"firstline" : "Trên đồi cao vang thiết tha tiếng vọng mời tình yê",
+		"publisherid" : null,
+		"path" : "loi vong tinh yeu"
+	},
+	{
+		"id" : 380,
+		"title" : "Psalm 95: If Today",
+		"firstline" : "If today you hear God's voice, harden not your hea",
+		"publisherid" : 1,
+		"path" : "ps 95 if today.thomson"
+	},
+	{
+		"id" : 381,
+		"title" : "Seek Ye First",
+		"firstline" : "Seek ye first the kingdom of God",
+		"publisherid" : 1,
+		"path" : "seek ye first"
+	},
+	{
+		"id" : 382,
+		"title" : "Jesus the Lord",
+		"firstline" : "Jesus, Jesus, let all creation bend the knee to th",
+		"publisherid" : 1,
+		"path" : "jesus the lord"
+	},
+	{
+		"id" : 383,
+		"title" : "Save Us, O Lord",
+		"firstline" : "Save us, O Lord; carry us back. Rouse your power",
+		"publisherid" : 1,
+		"path" : "save us o lord"
+	},
+	{
+		"id" : 384,
+		"title" : "It's More Than Wine and Bread",
+		"firstline" : "When we eat this bread, our eyes are opened.",
+		"publisherid" : 1,
+		"path" : "it's more than wine and bread"
+	},
+	{
+		"id" : 385,
+		"title" : "Khúc Ca Dâng",
+		"firstline" : "Tình Ngài tựa như giòng suối mát. Tràn đầy vào hồn",
+		"publisherid" : null,
+		"path" : "khuc dang ca"
+	},
+	{
+		"id" : 386,
+		"title" : "Blessed Be Your Name",
+		"firstline" : "Blessed be Your name in the land that is plentiful",
+		"publisherid" : null,
+		"path" : "blessed be your name"
+	},
+	{
+		"id" : 387,
+		"title" : "Psalm 96: Sing a New Song",
+		"firstline" : "Sing a new song to the Lord. Sing a new to the Lor",
+		"publisherid" : null,
+		"path" : "ps 96 sing a new song"
+	},
+	{
+		"id" : 388,
+		"title" : "Sing Praise to God, the Gardener",
+		"firstline" : "Tall stand the Tree besides the stream where livin",
+		"publisherid" : null,
+		"path" : "sing praise to god the gardener"
+	},
+	{
+		"id" : 389,
+		"title" : "Open the Eyes of My Heart",
+		"firstline" : "Open the eyes my heart, Lord. Open the eyes of my",
+		"publisherid" : null,
+		"path" : "open the eyes of my heart"
+	},
+	{
+		"id" : 390,
+		"title" : "Celebramos Y Recordamos",
+		"firstline" : "Celebramos y recordamos, familia y amigos",
+		"publisherid" : null,
+		"path" : "celebramos y recordamos"
+	},
+	{
+		"id" : 391,
+		"title" : "Chúa Chiên Lành",
+		"firstline" : "Chúa chiên lành Người thương dẫn tôi đi, tôi không",
+		"publisherid" : null,
+		"path" : "chua chien lanh"
+	},
+	{
+		"id" : 392,
+		"title" : "Lên Đền Thánh",
+		"firstline" : "Từ muôn phương ta về đây sánh vai lên đường",
+		"publisherid" : null,
+		"path" : "len den thanh"
+	},
+	{
+		"id" : 393,
+		"title" : "Take and Receive",
+		"firstline" : "Take and receive O Lord, my liberty. Take all my w",
+		"publisherid" : null,
+		"path" : "take and receive"
+	},
+	{
+		"id" : 394,
+		"title" : "The Heart of Worship",
+		"firstline" : "When the music fades, all is stripped away, and I",
+		"publisherid" : 1,
+		"path" : "the heart of worship"
+	},
+	{
+		"id" : 396,
+		"title" : "Soon and Very Soon",
+		"firstline" : "Soon and very soon, we are going to see the King",
+		"publisherid" : 1,
+		"path" : "soon and very soon"
+	},
+	{
+		"id" : 395,
+		"title" : "Ôi Giêsu",
+		"firstline" : "Ôi Giêsu! Chúa Giêsu là vua, Chúa muôn thuở",
+		"publisherid" : null,
+		"path" : "oi giesu"
+	},
+	{
+		"id" : 397,
+		"title" : "Ready the Way",
+		"firstline" : "Ready the way of the Lord!",
+		"publisherid" : 1,
+		"path" : "ready the way"
+	},
+	{
+		"id" : 398,
+		"title" : "St. Louis Jesuits Mass: Lord Have Mercy",
+		"firstline" : "Lord, have mercy!",
+		"publisherid" : 1,
+		"path" : "st. louis jesuits mass"
+	},
+	{
+		"id" : 399,
+		"title" : "St. Louis Jesuits Mass: Glory to God",
+		"firstline" : "Give glory to God in the highest, and peace",
+		"publisherid" : 1,
+		"path" : null
+	},
+	{
+		"id" : 400,
+		"title" : "St. Louis Jesuits Mass: Alleluia",
+		"firstline" : "Alleluia, Alleluia, Alleluia",
+		"publisherid" : 1,
+		"path" : null
+	},
+	{
+		"id" : 401,
+		"title" : "St. Louis Jesuits Mass: Praise To You Lord Jesus C",
+		"firstline" : "Praise to You Lord Jesus Christ",
+		"publisherid" : null,
+		"path" : null
+	},
+	{
+		"id" : 402,
+		"title" : "St. Louis Jesuits Mass: Holy",
+		"firstline" : "Holy, holy, holy Lord. God of pow'r and might",
+		"publisherid" : null,
+		"path" : "st. louis jesuits mass"
+	},
+	{
+		"id" : 403,
+		"title" : "St. Louis Jesuits Mass: Memorial Acclamation A",
+		"firstline" : "Christ has died, Christ has risen",
+		"publisherid" : null,
+		"path" : null
+	},
+	{
+		"id" : 404,
+		"title" : "St. Louis Jesuits Mass: Memorial Acclamation C",
+		"firstline" : "When we eat this bread of life, when we drink",
+		"publisherid" : 1,
+		"path" : "st. louis jesuits mass"
+	},
+	{
+		"id" : 405,
+		"title" : "St. Louis Jesuits Mass: Amen",
+		"firstline" : "Amen, alleluia, forever and ever, forever",
+		"publisherid" : null,
+		"path" : "st. louis jesuits mass"
+	},
+	{
+		"id" : 406,
+		"title" : "St. Louis Jesuits Mass: Lamb of God Litany",
+		"firstline" : "Lamb of God you take away the sins of the world",
+		"publisherid" : 1,
+		"path" : "st. louis jesuits mass"
+	},
+	{
+		"id" : 407,
+		"title" : "Luke 1: My Soul Proclaims Your Greatness",
+		"firstline" : "My soul proclaims your greatness, O God, and",
+		"publisherid" : null,
+		"path" : "luke 1 my soul proclaims your greatness"
+	},
+	{
+		"id" : 408,
+		"title" : "Mừng Khen Giavê",
+		"firstline" : null,
+		"publisherid" : null,
+		"path" : "mung khen giave"
+	},
+	{
+		"id" : 409,
+		"title" : "Ready the Way",
+		"firstline" : "Ready the way, ready the way",
+		"publisherid" : null,
+		"path" : "ready the way.stephan"
+	},
+	{
+		"id" : 410,
+		"title" : "Ba Vua Hành Khúc",
+		"firstline" : "Trên trời cao nay thấy tinh tú nào đó",
+		"publisherid" : null,
+		"path" : "ba vua hanh khuc"
+	},
+	{
+		"id" : 411,
+		"title" : "Psalm 72: Lord, Every Nation",
+		"firstline" : "Lord ev'ry nation on earth will adore you",
+		"publisherid" : null,
+		"path" : "ps 72 lord every nation.haas"
+	},
+	{
+		"id" : 412,
+		"title" : "Psalm 29: The Lord Will Bless All People",
+		"firstline" : "The Lord will bless all people, all people with pe",
+		"publisherid" : null,
+		"path" : "ps 29 the lord will bless all people"
+	},
+	{
+		"id" : 413,
+		"title" : "America",
+		"firstline" : "My country, 'tis of thee, sweetland of Liberty",
+		"publisherid" : null,
+		"path" : "america"
+	},
+	{
+		"id" : 414,
+		"title" : "America the Beautiful",
+		"firstline" : "O beautiful for spacious skies, for amber waves of",
+		"publisherid" : null,
+		"path" : "america the beautiful"
+	},
+	{
+		"id" : 415,
+		"title" : "Psalm 95: If Today You Hear His Voice",
+		"firstline" : "If today you hear his voice, harden not your heart",
+		"publisherid" : 1,
+		"path" : "ps 95 if today.manibusan"
+	},
+	{
+		"id" : 416,
+		"title" : "Tình Yêu Thắm Nồng",
+		"firstline" : "Trong yêu thương dâng đầy, bên ngai ân tình",
+		"publisherid" : null,
+		"path" : "tinh yeu tham nong"
+	},
+	{
+		"id" : 417,
+		"title" : "Psalm 147: Praise the Lord",
+		"firstline" : "Praise the Lord who heals the broken hearted",
+		"publisherid" : 1,
+		"path" : "ps 147 praise the lord"
+	},
+	{
+		"id" : 421,
+		"title" : "Prince of Peace",
+		"firstline" : "You are Holy. You are mighty. You are worthy",
+		"publisherid" : null,
+		"path" : "prince of peace"
+	},
+	{
+		"id" : 422,
+		"title" : "Psalm 32: I Turn to You, Lord",
+		"firstline" : "I turn to you, Lord, in time of trouble, and you f",
+		"publisherid" : 1,
+		"path" : "ps 32 i turn to you lord"
+	},
+	{
+		"id" : 423,
+		"title" : "Love Never Fails",
+		"firstline" : "Love is patient, love is kind, love is not jealous",
+		"publisherid" : 1,
+		"path" : "love never fails.manibusan"
+	},
+	{
+		"id" : 424,
+		"title" : "Psalm 41: O God, Heal My Soul",
+		"firstline" : "O God heal me soul for I have sinned against You.",
+		"publisherid" : 2,
+		"path" : "ps 41 o god heal my soul"
+	},
+	{
+		"id" : 425,
+		"title" : "Song of the Temptation",
+		"firstline" : "From the river to the desert, forty days that give",
+		"publisherid" : 2,
+		"path" : "song of the temptation"
+	},
+	{
+		"id" : 426,
+		"title" : "40 Days",
+		"firstline" : "Forty days to wander, forty days to die to self. F",
+		"publisherid" : 1,
+		"path" : "40 days"
+	},
+	{
+		"id" : 427,
+		"title" : "Beyond the Days",
+		"firstline" : "Beyond the days of hope and myst'ry",
+		"publisherid" : null,
+		"path" : "beyond the days"
+	},
+	{
+		"id" : 428,
+		"title" : "Sometimes By Step",
+		"firstline" : "Sometimes the night is beautiful, sometimes the sk",
+		"publisherid" : null,
+		"path" : "sometimes by step"
+	},
+	{
+		"id" : 429,
+		"title" : "Heritage Mass: Lord, Have Mercy",
+		"firstline" : "Lord, have mercy. Lord have mercy",
+		"publisherid" : 1,
+		"path" : "heritage mass"
+	},
+	{
+		"id" : 430,
+		"title" : "Heritage Mass: Gospel Acclamation",
+		"firstline" : "Praise to you Lord Jesus Christ",
+		"publisherid" : 1,
+		"path" : "heritage mass"
+	},
+	{
+		"id" : 431,
+		"title" : "Heritage Mass: Memorial Acclamation A",
+		"firstline" : "Christ has died. Christ has risen. Christ will com",
+		"publisherid" : 1,
+		"path" : "heritage mass"
+	},
+	{
+		"id" : 432,
+		"title" : "Heritage Mass: Great Amen",
+		"firstline" : "Amen",
+		"publisherid" : 1,
+		"path" : "heritage mass"
+	},
+	{
+		"id" : 433,
+		"title" : "Heritage Mass: Lamb of God",
+		"firstline" : "Lamb of God You take away the sins of the world",
+		"publisherid" : null,
+		"path" : "heritage mass"
+	},
+	{
+		"id" : 434,
+		"title" : "Heritage Mass: Memorial Acclamation C",
+		"firstline" : "When we eat this bread and drink this cup we procl",
+		"publisherid" : null,
+		"path" : "heritage mass"
+	},
+	{
+		"id" : 435,
+		"title" : "Heritage Mass: Gospel Acclamation 5th Len",
+		"firstline" : "Praise to you Lord Jesus Christ",
+		"publisherid" : null,
+		"path" : "heritage mass"
+	},
+	{
+		"id" : 436,
+		"title" : "Unless A Grain of Wheat",
+		"firstline" : "Unless a grain of wheat shall upon the ground and ",
+		"publisherid" : null,
+		"path" : "unless a grain of wheat"
+	},
+	{
+		"id" : 437,
+		"title" : "Behold the Wood",
+		"firstline" : "Behold behold the wood of the cross",
+		"publisherid" : 1,
+		"path" : "behold the wood"
+	},
+	{
+		"id" : 438,
+		"title" : "Hosanna",
+		"firstline" : "I see the King of glory coming on the clouds",
+		"publisherid" : null,
+		"path" : "hosanna"
+	},
+	{
+		"id" : 439,
+		"title" : "Jesus Remember Me",
+		"firstline" : "Jesus remember me when you come into your kingdom",
+		"publisherid" : 1,
+		"path" : "jesus remember me"
+	},
+	{
+		"id" : 440,
+		"title" : "There's a Wideness in God's Mercy",
+		"firstline" : "There's a wideness in God's mercy like the widenes",
+		"publisherid" : 2,
+		"path" : "there's a wideness in god's mercy.gia"
+	},
+	{
+		"id" : 441,
+		"title" : "Psalm 118: This Is the Day",
+		"firstline" : "This is the day the Lord has made. I will rejoice ",
+		"publisherid" : 1,
+		"path" : "ps 118 this is the day"
+	},
+	{
+		"id" : 442,
+		"title" : "Chúa Phục Sinh",
+		"firstline" : "Chúa nay thực đã phục sinh, al-lê-lu-ia",
+		"publisherid" : null,
+		"path" : "chua phuc sinh"
+	},
+	{
+		"id" : 443,
+		"title" : "Toma, Hãy Tin",
+		"firstline" : "Nếu tôi không được nhìn thấy dấu đinh noi bàn tay",
+		"publisherid" : null,
+		"path" : "toma hay tin"
+	},
+	{
+		"id" : 444,
+		"title" : "We Walk By Faith",
+		"firstline" : "We walk by faith, and not by sight: no gracious wo",
+		"publisherid" : 1,
+		"path" : "we walk by faith"
+	},
+	{
+		"id" : 445,
+		"title" : "Psalm 4: Lord, Let Shine Your Face Upon Us",
+		"firstline" : "Lord, let your face shine upon us. Lord, let it sh",
+		"publisherid" : 1,
+		"path" : "ps 4 lord let your face shine upon us"
+	},
+	{
+		"id" : 446,
+		"title" : "River of Glory",
+		"firstline" : "River of glory, springs of our birth",
+		"publisherid" : 1,
+		"path" : "river of glory"
+	},
+	{
+		"id" : 447,
+		"title" : "Chúa Là Cây Nho",
+		"firstline" : "Chúa là cây nho, con là cành nho, cũng như",
+		"publisherid" : null,
+		"path" : "chua la cay nho"
+	},
+	{
+		"id" : 448,
+		"title" : "Nếu Chúa Là",
+		"firstline" : "Nếu Chúa là mặt trời, con mong làm trái đất",
+		"publisherid" : null,
+		"path" : "neu chua la"
+	},
+	{
+		"id" : 449,
+		"title" : "Set Me as a Seal",
+		"firstline" : "Set me as a seal on your heart.",
+		"publisherid" : 1,
+		"path" : "set me as a seal"
+	},
+	{
+		"id" : 450,
+		"title" : "The Power of Your Love",
+		"firstline" : "Lord, I come to You. Let my heart be changed renew",
+		"publisherid" : 1,
+		"path" : "the power of your love"
+	},
+	{
+		"id" : 451,
+		"title" : "Testify to Love",
+		"firstline" : "All the colors of the rainbow, all the voices of t",
+		"publisherid" : 1,
+		"path" : "testify to love"
+	},
+	{
+		"id" : 452,
+		"title" : "Tình Yêu Thiên Chúa",
+		"firstline" : "Tình yêu Thiên Chúa như trăng như sao đưa con lên ",
+		"publisherid" : null,
+		"path" : "tinh yeu thien chua"
+	},
+	{
+		"id" : 453,
+		"title" : "Psalm 145: The Lord Is Near",
+		"firstline" : "The Lord is near to all who call him",
+		"publisherid" : 1,
+		"path" : "ps 145 the lord is near"
+	},
+	{
+		"id" : 454,
+		"title" : "Sing a Joyful Song",
+		"firstline" : "Sing a joyful song to the Lord. Alleluia.",
+		"publisherid" : null,
+		"path" : "sing a joyful song"
+	},
+	{
+		"id" : 455,
+		"title" : "Từ Rất Xa Khơi",
+		"firstline" : "Từ rất xa khơi, Người đã chọn tôi",
+		"publisherid" : null,
+		"path" : "tu rat xa khoi"
+	},
+	{
+		"id" : 456,
+		"title" : "Let the Fire Fall",
+		"firstline" : "Holy Spirit, come your fire!",
+		"publisherid" : null,
+		"path" : "let the fire fall"
+	},
+	{
+		"id" : 457,
+		"title" : "I Say Yes Lord",
+		"firstline" : "To the God who can not die, I say \"Yes\" my Lord",
+		"publisherid" : null,
+		"path" : "i say yes lord"
+	},
+	{
+		"id" : 458,
+		"title" : "Gieo Bước Tình Hồng ",
+		"firstline" : "Tình yêu đầu đẹp như mùa trăng sao",
+		"publisherid" : null,
+		"path" : "gieo buoc tinh hong"
+	},
+	{
+		"id" : 459,
+		"title" : "Tình Hồng Dâng Mẹ",
+		"firstline" : "Đời con dâng Mẹ đẹp chiều nay hai hàng nến hồng",
+		"publisherid" : null,
+		"path" : "tinh hong dang me"
+	},
+	{
+		"id" : 460,
+		"title" : "One Bread, One Cup",
+		"firstline" : "We all come before You now, hungry for your healin",
+		"publisherid" : null,
+		"path" : "one bread one cup"
+	},
+	{
+		"id" : 461,
+		"title" : "There Will Be Bread",
+		"firstline" : "There was a gathering of thousands but no food",
+		"publisherid" : null,
+		"path" : "there will be bread"
+	},
+	{
+		"id" : 462,
+		"title" : "Psalm 107: God Shepherds the Poor",
+		"firstline" : "Give thanks to the Lord, the Lord of all goodness",
+		"publisherid" : 1,
+		"path" : "ps 107 god shepherds the poor"
+	},
+	{
+		"id" : 463,
+		"title" : "Sống Trong Niềm Vui",
+		"firstline" : "Một đời lần trong đêm tối, tình yêu con nay như ha",
+		"publisherid" : null,
+		"path" : "song trong niem vui"
+	},
+	{
+		"id" : 464,
+		"title" : "Stand By Me",
+		"firstline" : "When the storms of life are raging Lord stand by m",
+		"publisherid" : 1,
+		"path" : "stand by me"
+	},
+	{
+		"id" : 465,
+		"title" : "Psalm 123: Our Eyes Rest On You",
+		"firstline" : "Our eyes rest on you Lord awaiting kindness",
+		"publisherid" : 2,
+		"path" : "ps 123 our eyes rest on you"
+	},
+	{
+		"id" : 466,
+		"title" : "Shout to the North",
+		"firstline" : "Men of faith raise up and sing, of the great and g",
+		"publisherid" : 3,
+		"path" : "shout to the north"
+	},
+	{
+		"id" : 467,
+		"title" : "We Are A Chosen People",
+		"firstline" : "We are a chosen people begotten by the Father",
+		"publisherid" : null,
+		"path" : "we are a chosen people"
+	},
+	{
+		"id" : 468,
+		"title" : "Psalm 85: Lord, Show Us Your Mercy and Love",
+		"firstline" : "Lord show us your mercy and love",
+		"publisherid" : null,
+		"path" : "ps 85 lord show us your mercy"
+	},
+	{
+		"id" : 469,
+		"title" : "Đồng Xanh Thơ",
+		"firstline" : "Đồng cỏ xanh êm vui bên suối thơ Người đưa bước tô",
+		"publisherid" : null,
+		"path" : "dong xanh tho"
+	},
+	{
+		"id" : 470,
+		"title" : "With One Voice",
+		"firstline" : "Take the Word  and go out to ev'ry land: shine the",
+		"publisherid" : null,
+		"path" : "with one voice"
+	},
+	{
+		"id" : 471,
+		"title" : "Như Con Dã Tràng",
+		"firstline" : "Như con dã tràng xe cát biển Đông sóng nước",
+		"publisherid" : null,
+		"path" : "nhu con da trang"
+	},
+	{
+		"id" : 472,
+		"title" : "Bread for the World",
+		"firstline" : "Bread for the world, a world of hunger",
+		"publisherid" : null,
+		"path" : "bread for the world"
+	},
+	{
+		"id" : 473,
+		"title" : "Psalm 78: Raining Down Manna",
+		"firstline" : "Raining down manna, God's bread from the heavens",
+		"publisherid" : null,
+		"path" : "ps 78 raining down manna"
+	},
+	{
+		"id" : 474,
+		"title" : "Lead Us to the Water: Dismissal",
+		"firstline" : "Go now; love each other. Thanks be to God",
+		"publisherid" : null,
+		"path" : "lead us to the water"
+	},
+	{
+		"id" : 475,
+		"title" : "Pescador De Hombre",
+		"firstline" : "Lord, You have come to the seashore.",
+		"publisherid" : 1,
+		"path" : "pescador de hombres"
+	},
+	{
+		"id" : 476,
+		"title" : "Transfigure Us, O Lord",
+		"firstline" : "Transfigure us, O Lord. Transfigure us, O Lord.",
+		"publisherid" : 1,
+		"path" : "transfigure us o lord"
+	},
+	{
+		"id" : 477,
+		"title" : "Hungry",
+		"firstline" : "Hungry I come to you for I know you satisfy",
+		"publisherid" : 1,
+		"path" : "hungry"
+	},
+	{
+		"id" : 478,
+		"title" : "Psalm 54: The Lord Upholds My Life",
+		"firstline" : "The Lord upholds my life",
+		"publisherid" : 1,
+		"path" : "ps 54 the lord upholds my life.maher.booth"
+	},
+	{
+		"id" : 479,
+		"title" : "Psalm 93: From the Clay / Lord You Reign In Glory",
+		"firstline" : "From the clay you shape me, from the flesh ",
+		"publisherid" : 2,
+		"path" : "ps 93 from the clay"
+	},
+	{
+		"id" : 480,
+		"title" : "Give Thanks",
+		"firstline" : "Give thanks with a grateful hearts",
+		"publisherid" : null,
+		"path" : "give thanks"
+	},
+	{
+		"id" : 481,
+		"title" : "Psalm 27: The Lord Is My Light",
+		"firstline" : "The Lord is my light and my salvation",
+		"publisherid" : 2,
+		"path" : "ps 27 the lord is my light"
+	},
+	{
+		"id" : 482,
+		"title" : "Heritage Mass: Holy",
+		"firstline" : "Holy holy holy Lord, God of power and might",
+		"publisherid" : null,
+		"path" : "heritage mass"
+	},
+	{
+		"id" : 483,
+		"title" : "Halle, Halle",
+		"firstline" : "Halle, halle, halle",
+		"publisherid" : 1,
+		"path" : "lead us to the water"
+	},
+	{
+		"id" : 484,
+		"title" : "Pentecost Sequence",
+		"firstline" : "Come, Holy Spirit, come! And from your celestial h",
+		"publisherid" : null,
+		"path" : "lead us to the water"
+	},
+	{
+		"id" : 485,
+		"title" : "We Are One Body",
+		"firstline" : "We are one body, one body in Christ",
+		"publisherid" : null,
+		"path" : "we are one body"
+	},
+	{
+		"id" : 486,
+		"title" : "Không Thấy Mà Tin",
+		"firstline" : "Tôi không tin nếu tôi không thấy Thầy",
+		"publisherid" : null,
+		"path" : "khong thay ma tin"
+	},
+	{
+		"id" : 487,
+		"title" : "Love Has Come",
+		"firstline" : "With one voice the angels sing songs that make cre",
+		"publisherid" : 1,
+		"path" : "love has come"
+	},
+	{
+		"id" : 488,
+		"title" : "Hỡi Người Galilê",
+		"firstline" : "Sao còn đứng bỡ ngỡ nhin lên trời",
+		"publisherid" : null,
+		"path" : "hoi nguoi galile"
+	},
+	{
+		"id" : 489,
+		"title" : "Be With Us, Mary",
+		"firstline" : "Be with us, Mary, along the way. Guide us every st",
+		"publisherid" : 1,
+		"path" : "be with us mary"
+	},
+	{
+		"id" : 490,
+		"title" : "Psalm 95: If Today",
+		"firstline" : "If today you hear the voice of God",
+		"publisherid" : null,
+		"path" : "ps 95 if today.hurd"
+	},
+	{
+		"id" : 491,
+		"title" : "When I Am Weak, Then I Am Strong",
+		"firstline" : "When I am weak, then I am strong to Jesus Christ",
+		"publisherid" : 1,
+		"path" : "when i am weak then i am strong"
+	},
+	{
+		"id" : 492,
+		"title" : "Canticle of the Turning",
+		"firstline" : "My soul cries out with joyful shout that the God",
+		"publisherid" : 2,
+		"path" : "canticle of the turning"
+	},
+	{
+		"id" : 493,
+		"title" : "Psalm 68: You Have Made a Home for the Poor",
+		"firstline" : "God in your goodness you have made a home",
+		"publisherid" : 2,
+		"path" : "ps 68 you have made a home for the poor"
+	},
+	{
+		"id" : 494,
+		"title" : "Trong Trái Tim Chúa Yêu",
+		"firstline" : "Trong trái tim Chúa yêu muôn đời con xin được",
+		"publisherid" : null,
+		"path" : "trong trai tim chua yeu"
+	},
+	{
+		"id" : 495,
+		"title" : "Just Like You",
+		"firstline" : "Revive my heart, renew my soul. In you, O Lord",
+		"publisherid" : 1,
+		"path" : "just like you"
+	},
+	{
+		"id" : 496,
+		"title" : "Kinh Hòa Bình",
+		"firstline" : "Lạy Chúa từ nhân xin cho con biết",
+		"publisherid" : null,
+		"path" : "kinh hoa binh"
+	},
+	{
+		"id" : 497,
+		"title" : "Creation Litany",
+		"firstline" : "Praise and exult the Lord. Sing praise and exalt",
+		"publisherid" : null,
+		"path" : "creation litany"
+	},
+	{
+		"id" : 498,
+		"title" : "Mass of Creation: Gloria",
+		"firstline" : "Gloria to God in the highest and peace",
+		"publisherid" : null,
+		"path" : "mass of creation"
+	},
+	{
+		"id" : 499,
+		"title" : "Linh Hồn Tôi 2",
+		"firstline" : "Linh hồn tôi tung hô Chúa tung hô Chúa",
+		"publisherid" : null,
+		"path" : "linh hon toi 2"
+	},
+	{
+		"id" : 500,
+		"title" : "Chúa Đã Chiếm Đoạt Con",
+		"firstline" : "Ôi Đức Kitô, Chúa đã chiếm đoạt con rồi ",
+		"publisherid" : null,
+		"path" : "chua da chiem doat con"
+	},
+	{
+		"id" : 501,
+		"title" : "Tình Yêu Của Chúa",
+		"firstline" : "Tình Yêu của Chúa như tiếng mẹ ru",
+		"publisherid" : null,
+		"path" : "tinh yeu cua chua"
+	},
+	{
+		"id" : 502,
+		"title" : "Mass of St. Timothy: Lamb of God",
+		"firstline" : "Lamb of God you take away the sins of the world",
+		"publisherid" : null,
+		"path" : "mass of st. timothy"
+	},
+	{
+		"id" : 503,
+		"title" : "Xin Vâng",
+		"firstline" : "Mẹ ơi đời con dõi bước theo Mẹ",
+		"publisherid" : null,
+		"path" : "xin vang"
+	},
+	{
+		"id" : 504,
+		"title" : "Glory and Praise Forever",
+		"firstline" : "Glory and praise, Glory and praise,",
+		"publisherid" : 1,
+		"path" : "daniel 3 glory and praise forever"
+	},
+	{
+		"id" : 505,
+		"title" : "Holy, Holy, Holy",
+		"firstline" : "Holy, Holy, Holy! Lord God Almighty",
+		"publisherid" : 1,
+		"path" : "holy holy holy"
+	},
+	{
+		"id" : 506,
+		"title" : "Psalm 65: The Seed That Falls",
+		"firstline" : "The seed that falls on the good ground will bring ",
+		"publisherid" : 2,
+		"path" : "ps 65 the seed that falls"
+	},
+	{
+		"id" : 507,
+		"title" : "L'ajuda em vindra",
+		"firstline" : "l'ajuda em vindra del seynor",
+		"publisherid" : null,
+		"path" : "l'ajuda em vindra"
+	},
+	{
+		"id" : 508,
+		"title" : "Holy Is His Name",
+		"firstline" : "My soul proclaims the greatness of the Lord",
+		"publisherid" : 1,
+		"path" : "holy is his name"
+	},
+	{
+		"id" : 509,
+		"title" : "Psalm 80: The Vineyard of the Lord",
+		"firstline" : "The Vineyard of the Lord is the house of Israel",
+		"publisherid" : 1,
+		"path" : "ps 80 the vineyard of the lord"
+	},
+	{
+		"id" : 510,
+		"title" : "Forever",
+		"firstline" : "Give thanks to the Lord our God and King",
+		"publisherid" : 1,
+		"path" : "forever"
+	},
+	{
+		"id" : 511,
+		"title" : "Psalm 116: The Name of God",
+		"firstline" : "I will take the cup of life, I will call God's nam",
+		"publisherid" : 2,
+		"path" : "ps 116 the name of god"
+	},
+	{
+		"id" : 512,
+		"title" : "Psalm 137: Let My Tongue Be Silenced",
+		"firstline" : "Let my tongue be silenced if ever I forget You.",
+		"publisherid" : 2,
+		"path" : "ps 137 let my tongue be silenced"
+	},
+	{
+		"id" : 513,
+		"title" : "Take Up Our Cross",
+		"firstline" : "Behold the wood that bears our name.",
+		"publisherid" : null,
+		"path" : "take up our cross"
+	},
+	{
+		"id" : 514,
+		"title" : "Resurrection Day",
+		"firstline" : "It's the weight of your glory brings the proud to ",
+		"publisherid" : 1,
+		"path" : "resurrection day"
+	},
+	{
+		"id" : 515,
+		"title" : "Psalm 118: This Is The Day",
+		"firstline" : "This is the day! This is the day! This is the day!",
+		"publisherid" : 1,
+		"path" : "ps 118 this is the day.fisher"
+	},
+	{
+		"id" : 516,
+		"title" : "Psalm 92 It Is Good to Give Thanks to You",
+		"firstline" : "It is good to give thanks to You, to give thanks",
+		"publisherid" : 1,
+		"path" : "ps 92 it is good to give thanks to you"
+	},
+	{
+		"id" : 517,
+		"title" : "Psalm 139 Before I Was Born",
+		"firstline" : "You made me, you formed me. You kept me alive long",
+		"publisherid" : 1,
+		"path" : "ps 139 before i was born"
+	},
+	{
+		"id" : 518,
+		"title" : "Gathered In the Love of Christ",
+		"firstline" : "Gathered in the love of Christ, we are one",
+		"publisherid" : 2,
+		"path" : "gathered in the love of christ"
+	},
+	{
+		"id" : 519,
+		"title" : "In Remembrance",
+		"firstline" : "In remembrance of me eat this bread",
+		"publisherid" : 3,
+		"path" : "in remembrance"
+	},
+	{
+		"id" : 520,
+		"title" : "Hosanna to the Son of David",
+		"firstline" : "Hosanna to the Son of David",
+		"publisherid" : 1,
+		"path" : "hosanna to the son of david"
+	},
+	{
+		"id" : 521,
+		"title" : "Worthy Is the Lamb",
+		"firstline" : "Worthy is the Lamb that was slain",
+		"publisherid" : 1,
+		"path" : "worthy is the lamb"
+	},
+	{
+		"id" : 522,
+		"title" : "Mighty King",
+		"firstline" : "You are the spirit bringing us light",
+		"publisherid" : 1,
+		"path" : "mighty king"
+	},
+	{
+		"id" : 523,
+		"title" : "Rise Up With Him",
+		"firstline" : "People wait no more God has shown you",
+		"publisherid" : 1,
+		"path" : "rise up with him"
+	},
+	{
+		"id" : 524,
+		"title" : "Chúa Đã Lên Trời",
+		"firstline" : "Chúa đã lên trời núi đồi đưa mắt nhìn theo",
+		"publisherid" : null,
+		"path" : "chua da len troi"
+	},
+	{
+		"id" : 525,
+		"title" : "Go Make A Difference",
+		"firstline" : "Go make a diff'rence. We can make a diff'rence",
+		"publisherid" : 1,
+		"path" : "go make a difference"
+	},
+	{
+		"id" : 526,
+		"title" : "They'll Know We Are Christians",
+		"firstline" : "We are one in the Spirit, we are one in the Lord",
+		"publisherid" : 1,
+		"path" : "they'll know we are christians"
+	},
+	{
+		"id" : 527,
+		"title" : "Church On Fire",
+		"firstline" : "The Holy Spirit is here and His power is real",
+		"publisherid" : null,
+		"path" : "church on fire"
+	},
+	{
+		"id" : 528,
+		"title" : "Psalm 104: Lord, Send Out Your Spirit",
+		"firstline" : "O Lord send out your Spirit and renew the face of ",
+		"publisherid" : 1,
+		"path" : "ps 104 lord send out your spirit"
+	},
+	{
+		"id" : 529,
+		"title" : "We Bring Our Gifts to Your Altar",
+		"firstline" : "We Bring Our Gifts to Your Altar O Lord ",
+		"publisherid" : 2,
+		"path" : "we bring our gifts to your altar"
+	},
+	{
+		"id" : 530,
+		"title" : "Exodus 15: Song at the Sea",
+		"firstline" : "Let us sing to the Lord who is covered in wondrous",
+		"publisherid" : null,
+		"path" : "ex 15 song at the sea"
+	},
+	{
+		"id" : 531,
+		"title" : "Psalm 90 : In Every Age",
+		"firstline" : "In every age, o Lord, you have been our refuge",
+		"publisherid" : 1,
+		"path" : "ps 90 in every age"
+	},
+	{
+		"id" : 532,
+		"title" : "Psalm 146: Praise the Lord, O My Soul",
+		"firstline" : "Praise the Lord, O my soul.",
+		"publisherid" : 1,
+		"path" : "ps 146 praise the lord o my soul"
+	},
+	{
+		"id" : 533,
+		"title" : "Follow Me",
+		"firstline" : "If you loose your life for the sake of my name",
+		"publisherid" : 3,
+		"path" : "follow me"
+	},
+	{
+		"id" : 534,
+		"title" : "Mass of Renewal",
+		"firstline" : "Kyrie",
+		"publisherid" : 1,
+		"path" : "mass of renewal.stephan"
+	},
+	{
+		"id" : 535,
+		"title" : "Mass of St. Timothy: Kyrie",
+		"firstline" : "Kyrie eleison",
+		"publisherid" : 1,
+		"path" : "mass of st. timothy"
+	},
+	{
+		"id" : 536,
+		"title" : "I Want To Praise Your Name",
+		"firstline" : "Praise with the trumpet, praise with the harp",
+		"publisherid" : 2,
+		"path" : "i want to praise your name"
+	},
+	{
+		"id" : 537,
+		"title" : "Adoramus Te Domine",
+		"firstline" : "Hm... Adoramus Te Domine",
+		"publisherid" : 0,
+		"path" : "adoramus te domine"
+	},
+	{
+		"id" : 538,
+		"title" : "Pange Lingua Gloriosi",
+		"firstline" : "Pange lingua gloriosi",
+		"publisherid" : 1,
+		"path" : "benediction"
+	},
+	{
+		"id" : 539,
+		"title" : "Bridal March",
+		"firstline" : "(instrumental)",
+		"publisherid" : 0,
+		"path" : "bridal march"
+	},
+	{
+		"id" : 540,
+		"title" : "Cantarei Ao Senhor",
+		"firstline" : "Cantarei ao Senhor enquanto viver",
+		"publisherid" : null,
+		"path" : "cantarei ao senhor"
+	},
+	{
+		"id" : 541,
+		"title" : "Canticle of the Sun",
+		"firstline" : "The heavens are telling the glory of God",
+		"publisherid" : 1,
+		"path" : "canticle of the sun"
+	},
+	{
+		"id" : 542,
+		"title" : "Christ Is Arisen",
+		"firstline" : "To the Paschal Victim give thankful praise",
+		"publisherid" : 1,
+		"path" : "christ is arisen"
+	},
+	{
+		"id" : 543,
+		"title" : "Come, Holy Ghost",
+		"firstline" : "Come, Holy Ghost, Creator blest, And in our hearts",
+		"publisherid" : 1,
+		"path" : "come holy ghost"
+	},
+	{
+		"id" : 544,
+		"title" : "Come, Holy Spirit",
+		"firstline" : "Come, Holy Spirit come with your pow'r",
+		"publisherid" : 1,
+		"path" : "come holy spirit"
+	},
+	{
+		"id" : 545,
+		"title" : "Con Có Một Tổ Quốc",
+		"firstline" : "Tiếng chuông ngân trầm, Việt Nam nguyện cầu",
+		"publisherid" : null,
+		"path" : "con co mot to quoc"
+	},
+	{
+		"id" : 546,
+		"title" : "Confitemini Domino",
+		"firstline" : "Confitemini Domino quoniam bonus",
+		"publisherid" : null,
+		"path" : "confitemini domino"
+	},
+	{
+		"id" : 547,
+		"title" : "Cross of Love",
+		"firstline" : "Cầu Chúa thương Người ban phúc lành",
+		"publisherid" : 1,
+		"path" : "cross of love"
+	},
+	{
+		"id" : 548,
+		"title" : "Đầu Xuân Cầu Cho Gia Đình",
+		"firstline" : "Ngày đầu xuân bao người đi xa cũng vê",
+		"publisherid" : null,
+		"path" : "dau xuan cua cho gia dinh"
+	},
+	{
+		"id" : 549,
+		"title" : "Để Chúa Đến",
+		"firstline" : "Xin cho lòng chúng con luôn mở",
+		"publisherid" : null,
+		"path" : "de chua den"
+	},
+	{
+		"id" : 550,
+		"title" : "Healing Waters",
+		"firstline" : "Healing waters flow over me. Mercy's water",
+		"publisherid" : 1,
+		"path" : "healing waters"
+	},
+	{
+		"id" : 551,
+		"title" : "Holy Spirit, Come To Me",
+		"firstline" : "Holy Spirit, come to me open my eyes",
+		"publisherid" : 1,
+		"path" : "holy spirit come to me"
+	},
+	{
+		"id" : 552,
+		"title" : "Họp Nhau Trong Khúc Hát",
+		"firstline" : "Họp nhau trong khúc hát và trong tiếng tơ reo",
+		"publisherid" : null,
+		"path" : "hop nhau trong khuc hat"
+	},
+	{
+		"id" : 553,
+		"title" : "Jesus Christ, You Are My Life",
+		"firstline" : "Jesus Christ, You are my life alleluia",
+		"publisherid" : 1,
+		"path" : "jesus christ you are my life"
+	},
+	{
+		"id" : 554,
+		"title" : "Jésus Le Christ",
+		"firstline" : "Jésus le Christ lumière intérieure ne laisse",
+		"publisherid" : null,
+		"path" : "jesus le christ"
+	},
+	{
+		"id" : 555,
+		"title" : "Jubilate Deo",
+		"firstline" : "Jubilate Deo jubilate Deo alleluia",
+		"publisherid" : null,
+		"path" : "jubilate deo"
+	},
+	{
+		"id" : 556,
+		"title" : "Kìa Bà Nào",
+		"firstline" : "Kìa bà nào đang tiến lên như rạng đông",
+		"publisherid" : null,
+		"path" : "kia ba nao"
+	},
+	{
+		"id" : 557,
+		"title" : "Laudate Dominum",
+		"firstline" : "Laudate Dominum laudate Dominum omnes gentes",
+		"publisherid" : null,
+		"path" : "laudate dominum"
+	},
+	{
+		"id" : 558,
+		"title" : "Lean On Me",
+		"firstline" : "Sometimes in our lives we all have pain",
+		"publisherid" : 1,
+		"path" : "lean on me"
+	},
+	{
+		"id" : 559,
+		"title" : "Magnificat",
+		"firstline" : "Magnificat magnificat magnificat anima me Dominum",
+		"publisherid" : null,
+		"path" : "magnificat"
+	},
+	{
+		"id" : 560,
+		"title" : "Malo! Malo! Thanks Be To God",
+		"firstline" : "Malo! Malo! Thanks be to God!",
+		"publisherid" : 1,
+		"path" : "malo malo"
+	},
+	{
+		"id" : 561,
+		"title" : "Mass of Christ the Savior",
+		"firstline" : "",
+		"publisherid" : 1,
+		"path" : "mass of christ the savior"
+	},
+	{
+		"id" : 562,
+		"title" : "Misa Del Mundo",
+		"firstline" : "",
+		"publisherid" : 1,
+		"path" : "misa del mundo"
+	},
+	{
+		"id" : 563,
+		"title" : "On The Third Day",
+		"firstline" : "On the third day He rose He rose He rose",
+		"publisherid" : null,
+		"path" : "on the third day"
+	},
+	{
+		"id" : 564,
+		"title" : "Our Father",
+		"firstline" : "Our Father in heaven hallowed be thy name",
+		"publisherid" : null,
+		"path" : "our father"
+	},
+	{
+		"id" : 565,
+		"title" : "Praise to the Lord",
+		"firstline" : "Praise to the Lord the Almighty the king of",
+		"publisherid" : 1,
+		"path" : "praise to the lord"
+	},
+	{
+		"id" : 566,
+		"title" : "Psalm 119: How I Love Your Commands",
+		"firstline" : "God how I cherish Your law how I love your command",
+		"publisherid" : 2,
+		"path" : "ps 119 how i love your commands"
+	},
+	{
+		"id" : 567,
+		"title" : "TV 126: Chúa Đã Đối Xử Đại Lượng",
+		"firstline" : "Chúa đã đối xử đại lượng với chúng tôi",
+		"publisherid" : null,
+		"path" : "ps 126 chua da doi xu dai luong"
+	},
+	{
+		"id" : 568,
+		"title" : "Psalm 45: Arrayed In Gold",
+		"firstline" : "The queen stands at your right hand",
+		"publisherid" : 1,
+		"path" : "ps 45 arrayed in gold"
+	},
+	{
+		"id" : 569,
+		"title" : "Psalm 72: Justice Shall Flourish",
+		"firstline" : "Justice shall flourish in His time and fullness of",
+		"publisherid" : 1,
+		"path" : "ps 72 justice shall flourish"
+	},
+	{
+		"id" : 570,
+		"title" : "Psalm 96: Proclaim To All The Nations",
+		"firstline" : "Proclaim to all the nations the marvelous deeds",
+		"publisherid" : 2,
+		"path" : "ps 96 proclaim to all the nations"
+	},
+	{
+		"id" : 571,
+		"title" : "Psalm 98: All the Ends of the Earth",
+		"firstline" : "All the ends of the earth have seen salvation",
+		"publisherid" : 1,
+		"path" : "ps 98 all the ends of the earth.hurd"
+	},
+	{
+		"id" : 572,
+		"title" : "Sing Alleluia",
+		"firstline" : "Sing alleluia to the Lord",
+		"publisherid" : null,
+		"path" : "sing alleluia"
+	},
+	{
+		"id" : 573,
+		"title" : "Spirit, Come Down",
+		"firstline" : "Spirit Spirit Spirit come down from heaven",
+		"publisherid" : 1,
+		"path" : "spirit come down"
+	},
+	{
+		"id" : 574,
+		"title" : "Tôi Thầm Tín Rằng",
+		"firstline" : "Tôi thầm tín rằng sự sống hay sự chết",
+		"publisherid" : null,
+		"path" : "toi tham tin"
+	},
+	{
+		"id" : 575,
+		"title" : "Từ Nguyên Thuỷ",
+		"firstline" : "Từ trước đã có Ngôi Lời là Con phát sinh nơi Cha",
+		"publisherid" : null,
+		"path" : "tu nguyen thuy"
+	},
+	{
+		"id" : 576,
+		"title" : "Ubi Caritas",
+		"firstline" : "Ubi caritas et amor ubi caritas Deus ibi est",
+		"publisherid" : null,
+		"path" : "ubi caritas.berthier"
+	},
+	{
+		"id" : 577,
+		"title" : "What Is the Cost",
+		"firstline" : "What is the call what is the cost",
+		"publisherid" : null,
+		"path" : "what is the cost"
+	},
+	{
+		"id" : 578,
+		"title" : "Xin Ban Cho Con",
+		"firstline" : "Xin cho con trái tim nồng nàn",
+		"publisherid" : null,
+		"path" : "xin ban cho con"
+	},
+	{
+		"id" : 579,
+		"title" : "You Are Holy",
+		"firstline" : "You are holy you are mighty",
+		"publisherid" : null,
+		"path" : "you are holy"
+	},
+	{
+		"id" : 580,
+		"title" : "My Soul Rejoices",
+		"firstline" : "My soul rejoices, my soul rejoices in my God",
+		"publisherid" : 1,
+		"path" : "my soul rejoices"
+	},
+	{
+		"id" : 581,
+		"title" : "Tán Tụng Hồng Ân",
+		"firstline" : "Xin dâng lời cảm tạ hồng ân Thiên Chúa bao la",
+		"publisherid" : 1,
+		"path" : "tan tung hong an"
+	},
+	{
+		"id" : 582,
+		"title" : "Come To the Water / I Will Run To You",
+		"firstline" : "O let all who thirst let them come to the water",
+		"publisherid" : null,
+		"path" : "come to the water - i will run to you"
+	},
+	{
+		"id" : 583,
+		"title" : "I Am the Light of the World",
+		"firstline" : "I am the light of the world says the Lord",
+		"publisherid" : null,
+		"path" : "i am the light of the world"
+	},
+	{
+		"id" : 584,
+		"title" : "Psalm 62: Only In God",
+		"firstline" : "Only in God is my soul at rest in Him comes my",
+		"publisherid" : 1,
+		"path" : "only in god"
+	},
+	{
+		"id" : 585,
+		"title" : "Kordero Ng Diyos",
+		"firstline" : "Kordero ng Diyos na nag-aalis ng mga kasalanan",
+		"publisherid" : null,
+		"path" : "kordero"
+	},
+	{
+		"id" : 586,
+		"title" : "Hallelujah To The Lamb",
+		"firstline" : "Lord we stand in the midst of multitude of those",
+		"publisherid" : null,
+		"path" : "hallelujah to the lamb"
+	},
+	{
+		"id" : 587,
+		"title" : "Mass of St. Ann",
+		"firstline" : "Kyrie eleison",
+		"publisherid" : null,
+		"path" : "mass of st ann"
+	},
+	{
+		"id" : 588,
+		"title" : "Happy Day",
+		"firstline" : "The greatest day is history. Death has beaten. You",
+		"publisherid" : null,
+		"path" : "happy day"
+	},
+	{
+		"id" : 589,
+		"title" : "Psalm 86: Goodnes and Forgiveness",
+		"firstline" : "Goodness and forgiveness comes from you",
+		"publisherid" : null,
+		"path" : "ps 86 goodness and forgiveness"
+	},
+	{
+		"id" : 590,
+		"title" : "Psalm 78: Do Not Forget the Works of the Lord",
+		"firstline" : "Do not forget, do not forget",
+		"publisherid" : null,
+		"path" : "ps 78 do not forget the works of the lord"
+	},
+	{
+		"id" : 591,
+		"title" : "I Am Yours",
+		"firstline" : "Bread of life Wine of peace Body and Blood",
+		"publisherid" : null,
+		"path" : "i am yours"
+	},
+	{
+		"id" : 592,
+		"title" : "I Have Loved You",
+		"firstline" : "I have loved with an everlasting love",
+		"publisherid" : null,
+		"path" : "i have loved you"
+	},
+	{
+		"id" : 593,
+		"title" : "Let Us Rejoice In The Lord",
+		"firstline" : "Let us rejoice in the Lord with all the saints",
+		"publisherid" : null,
+		"path" : "let us rejoice in the lord"
+	},
+	{
+		"id" : 594,
+		"title" : "All of me",
+		"firstline" : "What would I do without your smart mouth?",
+		"publisherid" : null,
+		"path" : "all of me"
+	},
+	{
+		"id" : 595,
+		"title" : "Jesus, Joy of Man's Desiring",
+		"firstline" : "Jesu, joy of man's desiring",
+		"publisherid" : null,
+		"path" : "jesus joy of man's desiring"
+	},
+	{
+		"id" : 596,
+		"title" : "Set Your Hearts on the Higher Gifts",
+		"firstline" : "Set your hearts on the higher gifts on the things",
+		"publisherid" : null,
+		"path" : "set your hearts on the higher gifts"
+	},
+	{
+		"id" : 597,
+		"title" : "Canon in D",
+		"firstline" : "",
+		"publisherid" : null,
+		"path" : "canon in d"
+	},
+	{
+		"id" : 598,
+		"title" : "Ave Maria",
+		"firstline" : "Ave Maria gratia plena",
+		"publisherid" : null,
+		"path" : "ave maria.kantor"
+	},
+	{
+		"id" : 599,
+		"title" : "Chúa Hoà Bình",
+		"firstline" : "Nếu có ai giận dữ. Nếu có ai bất hoà",
+		"publisherid" : null,
+		"path" : "chua hoa binh"
+	},
+	{
+		"id" : 600,
+		"title" : "Có Bao Giờ",
+		"firstline" : "Có bao giờ con thấy Chúa",
+		"publisherid" : null,
+		"path" : "co bao gio"
+	},
+	{
+		"id" : 601,
+		"title" : "Ngài Cho Anh, Ngài Cho Tôi",
+		"firstline" : "Ngài cho tôi có tiếng hát hát ca khen Ngài",
+		"publisherid" : null,
+		"path" : "ngai cho anh ngai cho toi"
+	},
+	{
+		"id" : 602,
+		"title" : "Holy Is Your Name",
+		"firstline" : "My soul is filled with joy as I sing",
+		"publisherid" : null,
+		"path" : "holy is your name"
+	},
+	{
+		"id" : 603,
+		"title" : "Psalm 89: Forever Will I Sing",
+		"firstline" : "Forever will i sing the goodness of the Lord",
+		"publisherid" : null,
+		"path" : "ps 89 forever will i sing"
+	},
+	{
+		"id" : 604,
+		"title" : "Sau Phép Rửa",
+		"firstline" : "Sau phép rửa ở sông Gio-đan",
+		"publisherid" : null,
+		"path" : "sau phep rua"
+	},
+	{
+		"id" : 605,
+		"title" : "Vang Lời Tụng Ca",
+		"firstline" : "Các trẻ Do Thái trên tay hoa lá reo mừng",
+		"publisherid" : null,
+		"path" : "vang loi tung ca"
+	},
+	{
+		"id" : 606,
+		"title" : "Chúa Biến Hình 2",
+		"firstline" : "Dồn chân bước ta tiến ta tiến về núi cao",
+		"publisherid" : null,
+		"path" : "chua bien hinh"
+	},
+	{
+		"id" : 607,
+		"title" : "We Are The Light of the World",
+		"firstline" : "Blessed are they who are poor in spirit",
+		"publisherid" : null,
+		"path" : "we are the light of the world"
+	},
+	{
+		"id" : 608,
+		"title" : "Into the Desert",
+		"firstline" : "Come beloved and rest your mind",
+		"publisherid" : null,
+		"path" : "into the desert"
+	},
+	{
+		"id" : 609,
+		"title" : "Mass of the Incarnate Word",
+		"firstline" : "Holy, holy, holy Lord God of hosts",
+		"publisherid" : null,
+		"path" : "mass of the incarnate word"
+	},
+	{
+		"id" : 610,
+		"title" : "Xuân Hy Vọng",
+		"firstline" : "Ngày đầu xuân con dâng lên Thiên Chúa chí tôn",
+		"publisherid" : null,
+		"path" : "xuan hy vong"
+	},
+	{
+		"id" : 611,
+		"title" : "Christians, to the Paschal Victim",
+		"firstline" : "Christians, to the Paschal Victim offer your thank",
+		"publisherid" : null,
+		"path" : "christians to the paschal victim"
+	},
+	{
+		"id" : 612,
+		"title" : "Christ Is Risen",
+		"firstline" : "Let no one caught in sin remain inside the lie of ",
+		"publisherid" : null,
+		"path" : "christ is risen"
+	},
+	{
+		"id" : 613,
+		"title" : "Mighty to Save",
+		"firstline" : "Everyone needs compassion, Love that's never faili",
+		"publisherid" : null,
+		"path" : "mighty to save"
+	},
+	{
+		"id" : 614,
+		"title" : "Hôm Nay Mừng Chúa Lên Trời",
+		"firstline" : "Hôm nay mừng Chúa lên trời trần hoàn",
+		"publisherid" : null,
+		"path" : "hom nay mung chua len troi"
+	},
+	{
+		"id" : 615,
+		"title" : "Phút Linh Thiêng",
+		"firstline" : "Người ơi nào mau tới thờ lạy Chúa",
+		"publisherid" : null,
+		"path" : "phut linh thieng"
+	},
+	{
+		"id" : 616,
+		"title" : "Dâng Ngài",
+		"firstline" : "Dâng Ngài lòng mến vô biên niềm tin vẹn tuyền",
+		"publisherid" : null,
+		"path" : "dang ngai"
+	},
+	{
+		"id" : 617,
+		"title" : "Lễ Đầu Mùa",
+		"firstline" : "Con tiến lên tiến lên lạy Chúa dâng hiến lễ đầu mù",
+		"publisherid" : null,
+		"path" : "le dau mua"
+	},
+	{
+		"id" : 618,
+		"title" : "Dâng Bánh",
+		"firstline" : "Cùng dâng lên bàn thờ Chúa bánh miến với rượu nho",
+		"publisherid" : null,
+		"path" : "dang banh"
+	},
+	{
+		"id" : 619,
+		"title" : "Come to the Water",
+		"firstline" : "O let all who thirst, let them come to the water",
+		"publisherid" : null,
+		"path" : "come to the water"
+	},
+	{
+		"id" : 620,
+		"title" : "The Cloud's Veil",
+		"firstline" : "Even though the rain hides the star, even though t",
+		"publisherid" : null,
+		"path" : "cloud's veil"
+	},
+	{
+		"id" : 621,
+		"title" : "Tieng Goi Trong Sa Mac",
+		"firstline" : "Trong sa mac hoang vu",
+		"publisherid" : null,
+		"path" : "tieng goi trong sa mac"
+	},
+	{
+		"id" : 622,
+		"title" : "Find Us Ready",
+		"firstline" : "Find us ready, Lord, not standing still.",
+		"publisherid" : null,
+		"path" : "find us ready"
+	},
+	{
+		"id" : 624,
+		"title" : "Vui lên Sion",
+		"firstline" : "Mừng vui lên Sion này đây Chúa ngươi đến rồi",
+		"publisherid" : null,
+		"path" : "vui len sion"
+	},
+	{
+		"id" : 625,
+		"title" : "Khi Hoa Nở Miền Cana",
+		"firstline" : "Ngày xưa khi hoa nở miền Cana khi đôi lứa",
+		"publisherid" : null,
+		"path" : "khi hoa no mien cana"
+	},
+	{
+		"id" : 626,
+		"title" : "Hãy Đến",
+		"firstline" : "Hãy đến hãy đến reo mừng hoan hô Đấng cứu độ",
+		"publisherid" : null,
+		"path" : "hay den"
+	},
+	{
+		"id" : 627,
+		"title" : "Beyond the Moon and Stars",
+		"firstline" : "Beyond the moon and stars as deep as night",
+		"publisherid" : null,
+		"path" : "beyond the moon and stars"
+	},
+	{
+		"id" : 628,
+		"title" : "Waiting in Silence",
+		"firstline" : "Waiting in silence waiting in hope",
+		"publisherid" : null,
+		"path" : "waiting in silence"
+	},
+	{
+		"id" : 629,
+		"title" : "Isaiah 12: Cry Out With Joy / Come To the Water",
+		"firstline" : "Cry out with joy for the holy is among you.",
+		"publisherid" : null,
+		"path" : "isaiah 12 cry out with joy"
+	},
+	{
+		"id" : 630,
+		"title" : "Emmanuel",
+		"firstline" : "Come come Emmanuel Son of God appear",
+		"publisherid" : null,
+		"path" : "emmanuel"
+	},
+	{
+		"id" : 631,
+		"title" : "Psalm 80: Lord, Make Us Turn To You",
+		"firstline" : "Lord make us turn to you show us your face",
+		"publisherid" : null,
+		"path" : "ps 80 lord make us turn to you"
+	},
+	{
+		"id" : 632,
+		"title" : "Psalm 96: Today Is Born Our Savior",
+		"firstline" : "Today our Savior is born",
+		"publisherid" : null,
+		"path" : "ps 96 today our savior is born.alonso"
+	},
+	{
+		"id" : 633,
+		"title" : "Lead Us to the Water: Gathering",
+		"firstline" : "Lead us to the water, call us to the feast.",
+		"publisherid" : null,
+		"path" : "lead us to the water.gathering"
+	},
+	{
+		"id" : 634,
+		"title" : "Psalm 71: I Will Sing",
+		"firstline" : "I will sing of your salvation",
+		"publisherid" : null,
+		"path" : "ps 71 i will sing.colson"
+	},
+	{
+		"id" : 635,
+		"title" : "Hosanna (Praise Is Rising)",
+		"firstline" : "Praise is rising, eyes are turning to You, we turn",
+		"publisherid" : null,
+		"path" : "hosanna.baloche"
+	},
+	{
+		"id" : 636,
+		"title" : "Psalm 22: Sao Chúa Bỏ Con",
+		"firstline" : "Chúa hỡi, Chúa ơi! Nhân sao Chúa bỏ tôi",
+		"publisherid" : null,
+		"path" : "sao chua bo con"
+	},
+	{
+		"id" : 637,
+		"title" : "All Creatures of Our God and King",
+		"firstline" : "All creatures of our God and King",
+		"publisherid" : null,
+		"path" : "all creatures of our god and king.modlin"
+	},
+	{
+		"id" : 638,
+		"title" : "Psalm 69: Turn to God in Your Need",
+		"firstline" : "Turn to God in your need",
+		"publisherid" : null,
+		"path" : "ps 69 turn to god in your need"
+	},
+	{
+		"id" : 639,
+		"title" : "Nothing I Hold Onto",
+		"firstline" : "I lean not on my understanding",
+		"publisherid" : 1,
+		"path" : "nothing i hold onto"
+	},
+	{
+		"id" : 623,
+		"title" : "Mass for the Healing of the World",
+		"firstline" : "Kyrie eleison",
+		"publisherid" : null,
+		"path" : "mass for the healing of the world"
+	},
+	{
+		"id" : 640,
+		"title" : "Sanctuary",
+		"firstline" : "Lord prepare me to a sanctuary",
+		"publisherid" : null,
+		"path" : "sanctuary"
+	},
+	{
+		"id" : 641,
+		"title" : "Good to Me",
+		"firstline" : "I put all my hope on the truth of Your promise",
+		"publisherid" : null,
+		"path" : "good to me"
+	},
+	{
+		"id" : 642,
+		"title" : "Set A Fire",
+		"firstline" : "No place I would rather be",
+		"publisherid" : null,
+		"path" : "set a fire"
+	},
+	{
+		"id" : 643,
+		"title" : "Psalm 146: Lord, Come and Save Us",
+		"firstline" : "Lord, come and save us",
+		"publisherid" : null,
+		"path" : "ps 146 lord come and save us"
+	},
+	{
+		"id" : 644,
+		"title" : "Your Love Is Extravagant",
+		"firstline" : "Your love is extravagant; your friendship intimate",
+		"publisherid" : null,
+		"path" : "your love is extravagant"
+	},
+	{
+		"id" : 645,
+		"title" : "10,000 Reasons",
+		"firstline" : "Bless the Lord O my soul O my soul",
+		"publisherid" : null,
+		"path" : "10000 reasons"
+	},
+	{
+		"id" : 646,
+		"title" : "Lay It Down",
+		"firstline" : "Ev'rything I am, ev'rything I long to be",
+		"publisherid" : null,
+		"path" : "lay it down"
+	},
+	{
+		"id" : 647,
+		"title" : "Gabriel's Message",
+		"firstline" : "The angel Gabriel from heaven came",
+		"publisherid" : null,
+		"path" : "gabriel's message"
+	},
+	{
+		"id" : 648,
+		"title" : "Beatitudes",
+		"firstline" : "Bless are you, the poor who trust the Father with ",
+		"publisherid" : null,
+		"path" : "beatitudes"
+	},
+	{
+		"id" : 649,
+		"title" : "A Rightful Place",
+		"firstline" : "Let us live our lives so that all might see that o",
+		"publisherid" : null,
+		"path" : "a rightful place"
+	},
+	{
+		"id" : 650,
+		"title" : "Psalm 112: Just Man is a Light In Darkness",
+		"firstline" : "The just man is a light in darkness",
+		"publisherid" : null,
+		"path" : "ps 112 just man is a light in darkness"
+	},
+	{
+		"id" : 651,
+		"title" : "Lenten Call To Worship",
+		"firstline" : "Return to me",
+		"publisherid" : null,
+		"path" : "lenten call to worship"
+	},
+	{
+		"id" : 652,
+		"title" : "Psalm 51: Be Merciful, O God",
+		"firstline" : "Be merciful O God",
+		"publisherid" : null,
+		"path" : "ps 51 be meriful o god"
+	},
+	{
+		"id" : 653,
+		"title" : "Trở Về Bên Chúa",
+		"firstline" : "Lạy Chúa hỡi Chúa ơi bao tháng năm",
+		"publisherid" : null,
+		"path" : "tro ve ben chua"
+	},
+	{
+		"id" : 654,
+		"title" : "This Little Light of Mine",
+		"firstline" : "This little light of mine, I'm gonna let it shine",
+		"publisherid" : null,
+		"path" : "this little light of mine"
+	},
+	{
+		"id" : 655,
+		"title" : "Psalm 66: Let All The Earth",
+		"firstline" : "Let all the earth cry out to joy to the Lord ",
+		"publisherid" : null,
+		"path" : "ps 66 let all the earth.haugen"
+	},
+	{
+		"id" : 656,
+		"title" : "Psalm 147: O Praise the Lord, Jerusalem",
+		"firstline" : "O praise the Lord, Jerusalem, Zion, praise your Go",
+		"publisherid" : null,
+		"path" : "ps 147 o praise the lord jerusalem"
+	},
+	{
+		"id" : 657,
+		"title" : "Psalm 69: Lord, In Your Great Love",
+		"firstline" : "Lord, in your great love, answer me",
+		"publisherid" : null,
+		"path" : "ps 69 lord in your great love"
+	},
+	{
+		"id" : 658,
+		"title" : "Psalm 69: Lord, In Your Great Love, Answer Me",
+		"firstline" : "Lord, in your great love, answer me",
+		"publisherid" : null,
+		"path" : "ps 69 lord in your great love answer me"
+	},
+	{
+		"id" : 659,
+		"title" : "Psalm 89: For Ever I Will Sing",
+		"firstline" : "Forever I will sing. Forever I will sing",
+		"publisherid" : null,
+		"path" : "ps 89 forever i will sing.alonso"
+	},
+	{
+		"id" : 660,
+		"title" : "Psalm 65: The Seed That Falls On Good Ground",
+		"firstline" : "The seed that falls on good ground will yield frui",
+		"publisherid" : null,
+		"path" : "ps 65 the that falls on good ground"
+	},
+	{
+		"id" : 661,
+		"title" : "Psalm 65: The Seed That Falls",
+		"firstline" : "The seed that falls upon good ground will yield a ",
+		"publisherid" : null,
+		"path" : "ps 65 the seed that falls.valdellon"
+	},
+	{
+		"id" : 662,
+		"title" : "Psalm 65: Good Ground",
+		"firstline" : "Good ground good ground the seed that falls on goo",
+		"publisherid" : null,
+		"path" : "ps 65 good ground"
+	},
+	{
+		"id" : 663,
+		"title" : "Where Your Treasure Is",
+		"firstline" : "Where your treasure is there your heart shall be",
+		"publisherid" : null,
+		"path" : "where your treasure is"
+	},
+	{
+		"id" : 664,
+		"title" : "We Remember, We Believe",
+		"firstline" : "We remember we believe in this bread of life",
+		"publisherid" : null,
+		"path" : "we remember we believe"
+	},
+	{
+		"id" : 665,
+		"title" : "I Send You Out",
+		"firstline" : "I baptize you in the name of the Father",
+		"publisherid" : null,
+		"path" : "i send you out"
+	},
+	{
+		"id" : 666,
+		"title" : "Psalm 67: O God, Let All the Nations",
+		"firstline" : "O God let all the nations praise your name",
+		"publisherid" : null,
+		"path" : "ps 67 o god let all the nations"
+	},
+	{
+		"id" : 667,
+		"title" : "Psalm 138: Lord, Your Love Is Eternal",
+		"firstline" : "Lord your love is eternal. Don't forsake the work ",
+		"publisherid" : null,
+		"path" : "ps 138 lord your love is eternal"
+	},
+	{
+		"id" : 668,
+		"title" : "Go Out, Go Out",
+		"firstline" : "Go out go out to all the world and tell the Good N",
+		"publisherid" : null,
+		"path" : "go out go out"
+	},
+	{
+		"id" : 669,
+		"title" : "Chúa Chăn Nuôi Tôi",
+		"firstline" : "Chúa chăn nuôi tôi tôi còn mà thiếu gì",
+		"publisherid" : null,
+		"path" : "chua chan nuoi toi"
+	},
+	{
+		"id" : 670,
+		"title" : "Tuổi Thơ Dâng Chúa",
+		"firstline" : "Lạy Chúa con lấy gì đền đáp ơn Ngài",
+		"publisherid" : null,
+		"path" : "tuoi tho dang chua"
+	},
+	{
+		"id" : 671,
+		"title" : "A Place at the Table",
+		"firstline" : "For ev'ryone born a place at the table",
+		"publisherid" : null,
+		"path" : "a place at the table"
+	},
+	{
+		"id" : 672,
+		"title" : "You Alone",
+		"firstline" : "You alone are holy you alone are Lord",
+		"publisherid" : null,
+		"path" : "you alone"
+	},
+	{
+		"id" : 673,
+		"title" : "Make Your Home In Me",
+		"firstline" : "Every fox a den every bird a nest",
+		"publisherid" : null,
+		"path" : "make your home in me"
+	},
+	{
+		"id" : 674,
+		"title" : "Psalm 25: Remember Your Mercies, O Lord",
+		"firstline" : "Remember your mercies, O Lord",
+		"publisherid" : null,
+		"path" : "ps 25 remember your mercies o lord"
+	},
+	{
+		"id" : 675,
+		"title" : "Luật Yêu Thương",
+		"firstline" : "Cho con một điều răn mới yêu thương luật Chúa muôn",
+		"publisherid" : null,
+		"path" : "luat yeu thuong"
+	},
+	{
+		"id" : 676,
+		"title" : "King of My Heart",
+		"firstline" : "Fill me I'm an empty vessel. Make me whole",
+		"publisherid" : null,
+		"path" : "king of my heart"
+	},
+	{
+		"id" : 677,
+		"title" : "Psalm 131: In You O Lord, I've Found My Peace",
+		"firstline" : "In you O Lord I've found my peace",
+		"publisherid" : null,
+		"path" : "ps 131 in you o lord i've found my peace"
+	},
+	{
+		"id" : 678,
+		"title" : "Hãy Tỉnh Thức",
+		"firstline" : "Hãy tỉnh thức đi! Hãy luôn sẵn sàng",
+		"publisherid" : null,
+		"path" : "hay tinh thuc"
+	},
+	{
+		"id" : 679,
+		"title" : "Psalm 128: Bless Are Those Who Love You",
+		"firstline" : "Bless are those who love you. Happy those who foll",
+		"publisherid" : null,
+		"path" : "ps 128 bless are those who love you"
+	},
+	{
+		"id" : 680,
+		"title" : "Psalm 96: Give the Lord All Glory",
+		"firstline" : "Give the Lord all glory glory and honor",
+		"publisherid" : null,
+		"path" : "ps 96 give the lord all glory"
+	},
+	{
+		"id" : 681,
+		"title" : "Where Love Is Found",
+		"firstline" : "Where charity and love are found there will be the",
+		"publisherid" : null,
+		"path" : "where love is found"
+	},
+	{
+		"id" : 682,
+		"title" : "Misa Santa Fe",
+		"firstline" : "You were sent to heal the contrite of hearts",
+		"publisherid" : null,
+		"path" : "misa santa fe"
+	},
+	{
+		"id" : 683,
+		"title" : "Who But the Lord?",
+		"firstline" : "O come Thou bright and morning star",
+		"publisherid" : null,
+		"path" : "who but the lord"
+	},
+	{
+		"id" : 684,
+		"title" : "How Can I Keep From Singing",
+		"firstline" : "My life flows on in endless song",
+		"publisherid" : null,
+		"path" : "how can i keep from singing"
+	},
+	{
+		"id" : 685,
+		"title" : "Ang Pasko Ay Sumapit",
+		"firstline" : "Ang Pasko ay sumapit Tayo ay mangagsiawit",
+		"publisherid" : null,
+		"path" : "ang pasko ay sumapit"
+	},
+	{
+		"id" : 686,
+		"title" : "Lạy Chúa Con Đây",
+		"firstline" : "Con thưa cùng Chúa này con xin đến để thi hành",
+		"publisherid" : null,
+		"path" : "lay chua con day"
+	},
+	{
+		"id" : 687,
+		"title" : "Rượu Bành Thơm Nồng",
+		"firstline" : "Của lễ con dâng hôm nay là rượu nho bánh miến",
+		"publisherid" : null,
+		"path" : "ruou banh thom nong"
+	},
+	{
+		"id" : 688,
+		"title" : "Psalm 25: To You, O Lord",
+		"firstline" : "To you O Lord I lift up my soul to you I lift my s",
+		"publisherid" : null,
+		"path" : "ps 25 to you o lord.stephan"
+	},
+	{
+		"id" : 689,
+		"title" : "God of Mercy",
+		"firstline" : "God of mercy holy myst'ry ever faithful one",
+		"publisherid" : null,
+		"path" : "god of mercy"
+	},
+	{
+		"id" : 690,
+		"title" : "Change Our Hearts",
+		"firstline" : "Change our hearts this time your word says it can ",
+		"publisherid" : null,
+		"path" : "change our hearts"
+	},
+	{
+		"id" : 691,
+		"title" : "Psalm 118: Give Thanks to the Lord",
+		"firstline" : "Give thanks to the Lord for He is good his love is",
+		"publisherid" : null,
+		"path" : "ps 118 give thanks to the lord.terwilliger"
+	},
+	{
+		"id" : 692,
+		"title" : "Psalm 118: Give Thanks to the Lord",
+		"firstline" : "Give thanks to the Lord for He is good his love is",
+		"publisherid" : null,
+		"path" : "ps 118 give thanks to the lord.smith"
+	},
+	{
+		"id" : 693,
+		"title" : "¡El Cielo Canta Alegría!",
+		"firstline" : "Heaven is singing for joy Halelujah",
+		"publisherid" : null,
+		"path" : "el cielo canta alegria"
+	},
+	{
+		"id" : 694,
+		"title" : "Psalm 22: I will Praise You in the Assembly",
+		"firstline" : "And I will praise you Lord praise you Lord in the ",
+		"publisherid" : null,
+		"path" : "ps 22 i will praise you in the assembly"
+	},
+	{
+		"id" : 695,
+		"title" : "Psalm 22: I Will Praise You, Lord",
+		"firstline" : "I will praise you Lord",
+		"publisherid" : null,
+		"path" : "ps 22 i will praise you lord"
+	},
+	{
+		"id" : 696,
+		"title" : "Psalm 33: Blessed the People",
+		"firstline" : "Blessed the people that the Lord has chosen to be ",
+		"publisherid" : null,
+		"path" : "ps 33 blessed the people"
+	},
+	{
+		"id" : 697,
+		"title" : "Oui Devant Dieu",
+		"firstline" : "Oui devant Dieu devant les hommes",
+		"publisherid" : null,
+		"path" : "oui devant dieu"
+	},
+	{
+		"id" : 698,
+		"title" : "Viva La Vida",
+		"firstline" : "I used to rule the world. Seas would rise when I g",
+		"publisherid" : null,
+		"path" : "viva la vida"
+	},
+	{
+		"id" : 699,
+		"title" : "Khúc Hát Tạ Ơn",
+		"firstline" : "Xin dâng kính câu ca tạ ơn ca khen Chúa mến yêu nh",
+		"publisherid" : null,
+		"path" : "khuc hat ta on"
+	},
+	{
+		"id" : 700,
+		"title" : "Do This In Memory of Me",
+		"firstline" : "I am the bread of life all you believe in me will ",
+		"publisherid" : null,
+		"path" : "do this in memory of me"
+	},
+	{
+		"id" : 701,
+		"title" : "Ode to Joy",
+		"firstline" : "Sing to joy and gladness now",
+		"publisherid" : null,
+		"path" : "ode to joy"
+	},
+	{
+		"id" : 702,
+		"title" : "Psalm 145: The Hand of the Lord",
+		"firstline" : "The hand of the Lord feeds us",
+		"publisherid" : null,
+		"path" : "ps 145 the hand of the lord"
+	}
+]
