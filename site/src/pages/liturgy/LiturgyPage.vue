@@ -1,27 +1,25 @@
 <template>
-  <section class="hero is-fullheight">
-    <div class="hero-body">
-
-      <div class="container has-text-centered liturgy-list">
-        <h1 v-if="liturgyProfile">{{liturgyProfile.title}}</h1>
-        <h3 v-if="liturgyProfile">{{liturgyProfile.date}}</h3>
+  <section class="section">
+      <div class="container has-text-left liturgy">
+        <h1 v-if="liturgyProfile" class="title">{{liturgyProfile.title}}</h1>
+        <h3 v-if="liturgyProfile" class="sub-title">{{liturgyProfile.date}}</h3>
       </div>
-
-      <table v-if="parts.length" class="table is-responsive">
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Song</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(part, index) in parts" :key="index">
-                <td>{{part.title}}</td>
-                <td>{{part.song.name}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div v-if="parts.length" class="columns is-centered">
+        <table class="table is-responsive">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Song</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(part, index) in parts" :key="index">
+                  <td>{{part.title}}</td>
+                  <td>{{part.song.name}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
   </section>
 </template>
 
