@@ -40,9 +40,16 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
  uuid           : choir_id
  string         : title
  timestamp      : date
- [Song_Assignment] : [Song Assignment (collection)]
- 
  ```
+
+# Liturgy Parts (collection)
+```
+ uuid : liturgy id
+ string : part section
+ string : part name
+ uuid : song id
+```
+
 # Song Assignment (collection)
  
  ```
