@@ -35,7 +35,10 @@
   </section>
 </template>
 <script>
-import { choirsCollection, liturgiesCollection } from '../../firebase/FirebaseInit'
+import {
+  choirsCollection,
+  liturgiesCollection
+} from '../../firebase/FirebaseInit'
 
 export default {
   name: 'LiturgyListPage',
@@ -49,16 +52,19 @@ export default {
   },
   methods: {
     acquireLiturgyList (choirID) {
-      liturgiesCollection.where('choirID', '==', choirID).get().then(docs => {
-        let liturgyArray = []
-        docs.forEach(doc => {
-          let liturgy = doc.data()
-          console.log(liturgy)
-          liturgy.id = doc.id
-          liturgyArray.push(liturgy)
+      liturgiesCollection
+        .where('choirID', '==', choirID)
+        .get()
+        .then(docs => {
+          let liturgyArray = []
+          docs.forEach(doc => {
+            let liturgy = doc.data()
+            console.log(liturgy)
+            liturgy.id = doc.id
+            liturgyArray.push(liturgy)
+          })
+          this.liturgies = this.litSort(liturgyArray)
         })
-        this.liturgies = this.litSort(liturgyArray)
-      })
     },
     litSort (litArray) {
       let finalSet = []
@@ -81,22 +87,27 @@ export default {
       this.acquireLiturgyList(choirID)
     } else {
       console.log('can not find choirID. looking for it...')
-      choirsCollection.where('name', '==', 'FLOCK').limit(1).get().then(docs => {
-        this.isLoading = false
-        if (docs.size === 0) {
-          console.log('server came back empty.')
-        } else {
-          docs.forEach(doc => {
-            let choirID = doc.id
-            console.log('got choirID: ' + choirID)
-            this.$store.commit('setChoirID', choirID)
-            this.acquireLiturgyList(choirID)
-          })
-        }
-      }).catch(function (error) {
-        console.error(error)
-        console.log('Can NOT acquire choirID')
-      })
+      choirsCollection
+        .where('name', '==', 'FLOCK')
+        .limit(1)
+        .get()
+        .then(docs => {
+          this.isLoading = false
+          if (docs.size === 0) {
+            console.log('server came back empty.')
+          } else {
+            docs.forEach(doc => {
+              let choirID = doc.id
+              console.log('got choirID: ' + choirID)
+              this.$store.commit('setChoirID', choirID)
+              this.acquireLiturgyList(choirID)
+            })
+          }
+        })
+        .catch(function (error) {
+          console.error(error)
+          console.log('Can NOT acquire choirID')
+        })
     }
   }
 }
@@ -108,7 +119,7 @@ export default {
   padding-top: 25px;
 }
 
-tr:hover{
-    background-color:rgb(255, 255, 239);
+tr:hover {
+  background-color: rgb(255, 255, 239);
 }
 </style>
