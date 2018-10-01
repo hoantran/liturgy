@@ -5,6 +5,7 @@
   <div class="container has-text-centered liturgy-list">
     <div class="has-text-centered">
       <div v-if="isLoading">
+          <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
           <p >Waiting to acquire choir ID from the server ...</p>
           <a class="button is-info is-loading">Loading</a>
       </div>
