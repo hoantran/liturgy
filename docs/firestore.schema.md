@@ -48,12 +48,8 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
  string : part section
  string : part name
  uuid : song id
+ int : order
 ```
 
-# Song Assignment (collection)
- 
- ```
- string : part_name
- uuid : song_id
- int : order
+
  
