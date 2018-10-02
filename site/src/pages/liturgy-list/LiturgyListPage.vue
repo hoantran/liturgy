@@ -1,19 +1,18 @@
 <template>
-  <section class="hero is-fullheight">
-  <div class="hero-body">
-
-  <div class="container has-text-centered liturgy-list">
-    <div class="has-text-centered">
-      <div v-if="isLoading">
-          <p >Waiting to acquire choir ID from the server ...</p>
-          <a class="button is-info is-loading">Loading</a>
+  <section class="section">
+    <div class="container liturgy-list">
+      <div v-if="isLoading" class="has-text-centered">
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+        <p >Waiting to acquire choir ID from the server ...</p>
+        <a class="button is-info is-loading">Loading</a>
       </div>
-      <div v-if="!isLoading && liturgies.length == 0">
+      <div v-if="!isLoading && liturgies.length == 0" class="has-text-centered">
         <a class="has-text-primary" href="#">
-          <router-link :to="{name: 'populate'}">FLOCK choir not found. Wanna go the restroom?</router-link>
+        <router-link :to="{name: 'populate'}">FLOCK choir not found. Wanna go the restroom?</router-link>
         </a>
       </div>
-      <table v-if="liturgies.length" class="table is-responsive">
+      <div v-if="liturgies.length" class="columns is-centered">
+      <table class="table is-responsive">
         <thead>
           <tr>
             <th>Date</th>
@@ -31,14 +30,15 @@
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
-  </div>
-
-  </div>
   </section>
 </template>
 <script>
-import { choirsCollection, liturgiesCollection } from '../../firebase/FirebaseInit'
+import {
+  choirsCollection,
+  liturgiesCollection
+} from '../../firebase/FirebaseInit'
 
 export default {
   name: 'LiturgyListPage',
@@ -52,16 +52,19 @@ export default {
   },
   methods: {
     acquireLiturgyList (choirID) {
-      liturgiesCollection.where('choirID', '==', choirID).get().then(docs => {
-        let liturgyArray = []
-        docs.forEach(doc => {
-          let liturgy = doc.data()
-          console.log(liturgy)
-          liturgy.id = doc.id
-          liturgyArray.push(liturgy)
+      liturgiesCollection
+        .where('choirID', '==', choirID)
+        .get()
+        .then(docs => {
+          let liturgyArray = []
+          docs.forEach(doc => {
+            let liturgy = doc.data()
+            console.log(liturgy)
+            liturgy.id = doc.id
+            liturgyArray.push(liturgy)
+          })
+          this.liturgies = this.litSort(liturgyArray)
         })
-        this.liturgies = this.litSort(liturgyArray)
-      })
     },
     litSort (litArray) {
       let finalSet = []
@@ -84,22 +87,27 @@ export default {
       this.acquireLiturgyList(choirID)
     } else {
       console.log('can not find choirID. looking for it...')
-      choirsCollection.where('name', '==', 'FLOCK').limit(1).get().then(docs => {
-        this.isLoading = false
-        if (docs.size === 0) {
-          console.log('server came back empty.')
-        } else {
-          docs.forEach(doc => {
-            let choirID = doc.id
-            console.log('got choirID: ' + choirID)
-            this.$store.commit('setChoirID', choirID)
-            this.acquireLiturgyList(choirID)
-          })
-        }
-      }).catch(function (error) {
-        console.error(error)
-        console.log('Can NOT acquire choirID')
-      })
+      choirsCollection
+        .where('name', '==', 'FLOCK')
+        .limit(1)
+        .get()
+        .then(docs => {
+          this.isLoading = false
+          if (docs.size === 0) {
+            console.log('server came back empty.')
+          } else {
+            docs.forEach(doc => {
+              let choirID = doc.id
+              console.log('got choirID: ' + choirID)
+              this.$store.commit('setChoirID', choirID)
+              this.acquireLiturgyList(choirID)
+            })
+          }
+        })
+        .catch(function (error) {
+          console.error(error)
+          console.log('Can NOT acquire choirID')
+        })
     }
   }
 }
@@ -108,10 +116,10 @@ export default {
 <style scoped>
 /* Do it here instead of styling index.html with <html class="has-navbar-fixed-top"> */
 .liturgy-list {
-  padding-top: 5px;
+  padding-top: 25px;
 }
 
-tr:hover{
-    background-color:rgb(255, 255, 239);
+tr:hover {
+  background-color: rgb(255, 255, 239);
 }
 </style>

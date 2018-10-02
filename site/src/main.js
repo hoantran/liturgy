@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import { store } from './store/store'
-import '../node_modules/bulma/css/bulma.css'
+import 'bulma'
 import {auth} from './firebase/FirebaseInit'
 
 Vue.config.productionTip = false

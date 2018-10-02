@@ -2,9 +2,7 @@
   <section class="hero is-fullheight">
           <div class="hero-body">
               <transition name="fade">
-                <div v-if="performingRequest" class="fas fa-spinner fa-pulse">
-                    <p>Loading...</p>
-                </div>
+                <i v-if="performingRequest" class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
               </transition>
 
               <div class="container has-text-centered">

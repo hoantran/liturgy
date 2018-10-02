@@ -1,5 +1,5 @@
 <template>
-  <div class="content has-navbar-fixed-top has-text-centered">
+  <div class="has-navbar-fixed-top">
       <MagicLayoutHeader/>
       <slot></slot>
       <MagicLayoutFooter/>

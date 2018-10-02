@@ -1,7 +1,7 @@
 <template>
   <footer class="footer has-background-white-ter">
     <div class="container">
-        <div class="content has-text-centered">
+        <div class="has-text-centered">
             <p>
                 <a href="https://www.facebook.com/groups/171978979537213">
                     <i class="fab fa-facebook-square fa-2x"></i>
