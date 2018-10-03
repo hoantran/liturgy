@@ -8,7 +8,9 @@ const serviceAccount = require("./service-key.json");
 const songs= require("./sql_json_dump/worship.songs.json");
 const composer_song = require("./sql_json_dump/worship.composer_song.json");
 const media_list = require("./sql_json_dump/worship.media.json");
-const composers = require("./sql_json_dump/worship.composer.json");     //huy
+const composers = require("./sql_json_dump/worship.composer.json");   
+const liturgy_parts = require("./sql_json_dump/flock.liturgy_parts.json");  
+const parts = require("./sql_json_dump/worship.parts.json");
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -22,6 +24,8 @@ songs.forEach(function(element){
     element.composers = [];
     element.medias = [];
     element.tags = [];
+    element.liturgy_parts = [];
+    element.parts = [];
 });
 
 //add composers to each song
@@ -48,6 +52,28 @@ songs.forEach(function(element){
 //write composers collection to Firestore
 composers.forEach(function(element){
     admin.firestore().collection("composers").add(element)
+        .then((res) => {
+                    console.log("Document successfully written!");
+                })
+                .catch((error) => {
+                    console.error("Error writing document: ", error);
+                });
+});
+
+//write flock.liturgy_parts collection to firestore
+liturgy_parts.forEach(function(element){
+    admin.firestore().collection("liturgy_parts").add(element)
+        .then((res) => {
+                    console.log("Document successfully written!");
+                })
+                .catch((error) => {
+                    console.error("Error writing document: ", error);
+                });
+});
+
+//write worship.parts collection to firestore
+parts.forEach(function(element){
+    admin.firestore().collection("parts").add(element)
         .then((res) => {
                     console.log("Document successfully written!");
                 })
