@@ -14,6 +14,12 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const env = require('../config/prod.env')
 
 const webpackConfig = merge(baseWebpackConfig, {
+  resolve: {
+    extensions: ['.css'],
+    alias: {
+      'bulma': '../node_modules/bulma/css/bulma.css'
+    }
+  },
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
