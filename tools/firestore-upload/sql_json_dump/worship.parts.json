@@ -1,0 +1,158 @@
+[
+	{
+		"id" : 1,
+		"section" : "A",
+		"part" : "Prelude",
+		"part_order" : 10
+	},
+	{
+		"id" : 2,
+		"section" : "A",
+		"part" : "Processional",
+		"part_order" : 20
+	},
+	{
+		"id" : 3,
+		"section" : "A",
+		"part" : "Kyrie",
+		"part_order" : 30
+	},
+	{
+		"id" : 4,
+		"section" : "A",
+		"part" : "Gloria",
+		"part_order" : 40
+	},
+	{
+		"id" : 5,
+		"section" : "A",
+		"part" : "Responsorial",
+		"part_order" : 50
+	},
+	{
+		"id" : 6,
+		"section" : "A",
+		"part" : "Gospel Acclamation",
+		"part_order" : 60
+	},
+	{
+		"id" : 7,
+		"section" : "A",
+		"part" : "Prayer of the Faithful",
+		"part_order" : 70
+	},
+	{
+		"id" : 8,
+		"section" : "B",
+		"part" : "Prep. of the Lord's Table",
+		"part_order" : 10
+	},
+	{
+		"id" : 9,
+		"section" : "B",
+		"part" : "Holy",
+		"part_order" : 20
+	},
+	{
+		"id" : 10,
+		"section" : "B",
+		"part" : "Memorial Acclamation",
+		"part_order" : 30
+	},
+	{
+		"id" : 11,
+		"section" : "B",
+		"part" : "Great Amen",
+		"part_order" : 40
+	},
+	{
+		"id" : 12,
+		"section" : "B",
+		"part" : "Lamb of God",
+		"part_order" : 50
+	},
+	{
+		"id" : 13,
+		"section" : "C",
+		"part" : "Communion",
+		"part_order" : 10
+	},
+	{
+		"id" : 14,
+		"section" : "C",
+		"part" : "Song of Praise",
+		"part_order" : 20
+	},
+	{
+		"id" : 15,
+		"section" : "D",
+		"part" : "Recessional",
+		"part_order" : 10
+	},
+	{
+		"id" : 16,
+		"section" : "A",
+		"part" : "Easter Sequence",
+		"part_order" : 54
+	},
+	{
+		"id" : 17,
+		"section" : "A",
+		"part" : "Pentecost Sequence",
+		"part_order" : 56
+	},
+	{
+		"id" : 18,
+		"section" : "C",
+		"part" : "Communion 2",
+		"part_order" : 15
+	},
+	{
+		"id" : 19,
+		"section" : "A",
+		"part" : "Sprinkling Rite",
+		"part_order" : 35
+	},
+	{
+		"id" : 20,
+		"section" : "A",
+		"part" : "Entourage Procession",
+		"part_order" : 14
+	},
+	{
+		"id" : 21,
+		"section" : "A",
+		"part" : "Bridal Processional",
+		"part_order" : 16
+	},
+	{
+		"id" : 22,
+		"section" : "A",
+		"part" : "Mothers’ Candle Lighting",
+		"part_order" : 25
+	},
+	{
+		"id" : 23,
+		"section" : "A",
+		"part" : "Lighting Unity Candles",
+		"part_order" : 64
+	},
+	{
+		"id" : 24,
+		"section" : "A",
+		"part" : "Announcement of Husband and Wife",
+		"part_order" : 66
+	},
+	{
+		"id" : 25,
+		"section" : "C",
+		"part" : "Mariam Devotion",
+		"part_order" : 30
+	},
+	{
+		"id" : 26,
+		"section" : "C",
+		"part" : "Thanksgiving to Parents",
+		"part_order" : 40
+	}
+]
