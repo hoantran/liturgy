@@ -1,11 +1,11 @@
 <template>
   <section class="section">
       <div class="container has-text-left liturgy">
-        <h1 v-if="liturgyProfile" class="title">{{liturgyProfile.title}}</h1>
-        <h3 v-if="liturgyProfile" class="sub-title">{{liturgyProfile.date}}</h3>
+        <div v-if="liturgyProfile" class="has-text-white-ter is-size-2">{{liturgyProfile.title}}</div>
+        <div v-if="liturgyProfile" class="has-text-white-ter is-size-5">{{liturgyProfile.date}}</div>
       </div>
-      <div v-if="parts.length" class="columns is-centered">
-        <table class="table is-responsive">
+      <div v-if="parts.length" class="container">
+        <table class="table is-responsive table-full">
           <thead>
             <tr>
               <th>Title</th>
@@ -25,7 +25,6 @@
 
 <script>
 import { liturgiesCollection } from '../../firebase/FirebaseInit'
-
 export default {
   name: 'LiturgyPage',
   data () {
@@ -107,5 +106,11 @@ export default {
 /* Do it here INSTEAD of styling index.html with <html class="has-navbar-fixed-top"> */
 .liturgy {
   padding-top: 5px;
+  background-color: rgb(168, 168, 168);
+}
+.table-full {
+    flex: none;
+    width: 100%;
+    text-align: center;
 }
 </style>
