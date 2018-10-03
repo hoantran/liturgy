@@ -1,24 +1,22 @@
 <template>
   <section class="section">
-      <div class="container has-text-left liturgy">
-        <div v-if="liturgyProfile" class="has-text-white-ter is-size-2">{{liturgyProfile.title}}</div>
-        <div v-if="liturgyProfile" class="has-text-white-ter is-size-5">{{liturgyProfile.date}}</div>
+      <div class="container has-text-left">
+        <div v-if="liturgyProfile" class="lineup-liturgy-title">{{liturgyProfile.title}}</div>
+        <div v-if="liturgyProfile" class="lineup-liturgy-date">{{liturgyProfile.date}}</div>
       </div>
       <div v-if="parts.length" class="container">
-        <table class="table is-responsive table-full">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Song</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(part, index) in parts" :key="index">
-                  <td>{{part.title}}</td>
-                  <td>{{part.song.name}}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="lineup-panel">Order of Music</div>
+        <div class="la-full-width section-border">
+          <br>
+          <div v-for="(part, index) in parts" :key="index" class="highlight-hover columns is-0 lineup-part-row">
+            <div class="column is-two-fifths lineup-column">{{part.title}}</div>
+            <div class="column lineup-column">
+              <span class="lineup-song-title">{{part.song.name}}</span>
+              <span class="lineup-song-composer">composer</span>
+            </div>
+          </div>
+          <br>
+        </div>
       </div>
   </section>
 </template>
@@ -108,9 +106,61 @@ export default {
   padding-top: 5px;
   background-color: rgb(168, 168, 168);
 }
-.table-full {
+.la-fullwidth {
     flex: none;
     width: 100%;
-    text-align: center;
 }
+
+.table-borderless tbody tr td,
+.table-borderless tbody tr th {
+    border: 0;
+}
+
+.calendar-lineup {
+    font-size: medium;
+}
+
+div.lineup-liturgy-title {
+    font-size: xx-large;
+    padding: 20px 0;
+    background: #b7b7b7;
+    color: white;
+}
+
+div.lineup-liturgy-date {
+    font-size: small;
+    font-weight: bold;
+    padding: 7px 0;
+}
+
+.lineup-panel {
+    padding: 5px 0;
+    border-bottom: thin solid black;
+}
+.lineup-song-title {
+    font-size: large;
+}
+
+.lineup-song-composer {
+    font-size: small;
+    color: #9e9e9e;
+    padding: 0 10px;
+}
+.lineup-part-row {
+  margin-bottom: 0rem;
+}
+.lineup-column {
+  padding: 8px;
+}
+
+.section-border {
+    border-bottom: thin solid #d6d6d6;
+    margin-bottom: 5px;
+}
+
+.highlight-hover:hover {
+    background-color: #efefef;
+    cursor: pointer;
+}
+
 </style>
