@@ -4,7 +4,7 @@
             <a class="navbar-item" href="#">
                 <img src="../../assets/flock-logo.png" alt="flock logo" width="112" height="28">
             </a>
-            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample" @click="burger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -13,28 +13,17 @@
 
         <div id="navbarExampleTransparentExample" class="navbar-menu">
             <div class="navbar-start">
-                <router-link class="navbar-item" :to="{name: 'index'}">Home</router-link>
-                <!-- <router-link class="navbar-item" :to="{name: 'profile'}">Add</router-link> -->
-                <!-- <router-link class="navbar-item" :to="{name: 'account-index'}">Admin</router-link> -->
-              <!--<router-link class="navbar-item" :to="{name: 'huy'}">Huy</router-link>-->
+              <a class="navbar-item" @click="handleClick('')">Home</a>
               <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link" href="#">
                   Admin
                 </a>
                 <div class="navbar-dropdown is-boxed">
-                  <a class="navbar-item">
-                    <router-link :to="{name: 'populate'}">Peeing in the Genepool</router-link>
-                  </a>
-                  <a class="navbar-item" href="#">
-                    <router-link :to="{name: 'huy'}">Basketball Update</router-link>
-                  </a>
-                  <a class="navbar-item" href="#">
-                    <router-link :to="{name: 'sleeping'}">Sleeping</router-link>
-                  </a>
+                  <a class="navbar-item" @click="handleClick('populate')" href="#">Peeing in the Genepool</a>
+                  <a class="navbar-item" @click="handleClick('huy')" href="#">Basketball Update</a>
+                  <a class="navbar-item" @click="handleClick('sleeping')" href="#">Sleeping</a>
                 </div>
               </div>
-                <!-- <router-link class="navbar-item" :to="{name: 'login'}">Login</router-link> -->
-                <!--<a class="navbar-item" @click="logout">Logout</a>-->
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="#">
                         Merchandise
@@ -76,6 +65,14 @@ export default {
     }
   },
   methods: {
+    handleClick (item) {
+      this.burger()
+      this.$router.push('/' + item)
+    },
+    burger () {
+      document.querySelector('.navbar-menu').classList.toggle('is-active')
+      document.querySelector('.navbar-burger').classList.toggle('is-active')
+    },
     logout () {
       auth.signOut().then(() => {
         this.$store.dispatch('clearData')
