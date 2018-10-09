@@ -1,5 +1,7 @@
 <template>
   <section class="section">
+      <div class="container top-spacer">
+      </div>
       <div class="container has-text-left">
         <div v-if="liturgyProfile" class="lineup-liturgy-title">{{liturgyProfile.title}}</div>
         <div v-if="liturgyProfile" class="lineup-liturgy-date">{{liturgyProfile.date}}</div>
@@ -8,12 +10,15 @@
         <div class="lineup-panel">Order of Music</div>
         <div class="la-full-width section-border">
           <br>
-          <div v-for="(part, index) in parts" :key="index" class="highlight-hover columns is-0 lineup-part-row">
-            <div class="column is-two-fifths lineup-column">{{part.title}}</div>
-            <div class="column lineup-column">
-              <span class="lineup-song-title">{{part.song.name}}</span>
-              <span class="lineup-song-composer">composer</span>
+          <div v-for="(part, index) in parts" :key="index" class="rumble-parent">
+            <div class="highlight-hover columns is-0 lineup-part-row" @click.stop.prevent="songClicked">
+              <div class="column is-two-fifths lineup-column">{{part.title}}</div>
+              <div class="column lineup-column">
+                <span class="lineup-song-title">{{part.song.name}}</span>
+                <span class="lineup-song-composer">composer</span>
+              </div>
             </div>
+            <div id="media" class="media-shown">MEDIA</div>
           </div>
           <br>
         </div>
@@ -33,6 +38,19 @@ export default {
     }
   },
   methods: {
+    songClicked (event) {
+      if (event) {
+        console.log(event.target.parentElement.nextElementSibling)
+        let mediaEl = event.target.parentElement.nextElementSibling
+        if (mediaEl.classList.contains('media-shown')) {
+          mediaEl.classList.remove('media-shown')
+          mediaEl.classList.add('media-hiden')
+        } else {
+          mediaEl.classList.remove('media-hiden')
+          mediaEl.classList.add('media-shown')
+        }
+      }
+    },
     getLiturgyProfile (liturgyID) {
       liturgiesCollection.doc(liturgyID).get().then(doc => {
         console.log(doc)
@@ -161,6 +179,19 @@ div.lineup-liturgy-date {
 .highlight-hover:hover {
     background-color: #efefef;
     cursor: pointer;
+}
+
+.top-spacer {
+    height: 10px;
+}
+
+.media-hiden {
+  display: none;
+}
+
+.media-shown {
+  display: block;
+  height: 30px;
 }
 
 </style>
