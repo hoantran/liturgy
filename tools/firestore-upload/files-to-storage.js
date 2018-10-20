@@ -9,7 +9,8 @@ const admin = require('./node_modules/firebase-admin');
 const serviceAccount = require("./service-key.json");
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    storageBucket: "liturgy-website.appspot.com"
+    storageBucket: "test-34o98"
+    //storageBucket: "liturgy-website.appspot.com"
     // databaseURL: "https://project-liturgy.firebaseio.com"
 });
 
@@ -23,6 +24,7 @@ require('node-dir').files('songs', function(err, files) { fileArray = files; });
 console.log("Starting upload...");
 
 fileArray.forEach(function(filepath){
-    bucket.upload(filepath, {destination: filepath})
+    if(!filepath.includes("DS_Store"))
+      bucket.upload(filepath, {destination: filepath})
     console.log(filepath)
 });
