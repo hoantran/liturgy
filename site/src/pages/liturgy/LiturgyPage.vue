@@ -18,27 +18,17 @@
                 <span class="lineup-song-composer">composer</span>
               </div>
             </div>
-            <!-- <mediapane id="media" v-bind:title="part.title" class="media-shown"/> -->
             <div class="columns media-hidden media">
-              <!-- <div class="column is-two-fifths"></div> -->
               <div class="column is-three-fifths is-offset-two-fifths">
-                <!-- <div v-if="part.media" class="media-shown rumming"> -->
                 <div v-if="part.media">
                   <mediapane
                     v-for="(medium, index) in part.media"
                     v-bind:key="index"
-                    v-bind:type="medium.type"
+                    v-bind:medium="medium"
                   ></mediapane>
                 </div>
               </div>
             </div>
-            <!-- <div id="media" class="media-shown">MEDIA</div> -->
-            <!-- <div id="media" class="columns media-shown">
-              <div class="column is-two-fifths">&nbsp;</div>
-              <div class="column">
-                <mediapane/>
-              </div>
-            </div> -->
           </div>
           <br>
         </div>
@@ -122,11 +112,11 @@ export default {
             composer: 'Phanxicô'
           },
           media: [
-            { id: 1, type: 'guitar', url: 'something' },
-            { id: 2, type: 'piano', url: 'something' },
-            { id: 3, type: 'sound', url: 'something' },
-            { id: 4, type: 'vocal', url: 'something' },
-            { id: 5, type: 'link', url: 'something' }
+            { id: 1, type: 'guitar', url: 'http://google.com' },
+            { id: 2, type: 'piano', url: 'http://google.com' },
+            { id: 3, type: 'sound', url: 'http://google.com' },
+            { id: 4, type: 'vocal', url: 'http://google.com' },
+            { id: 5, type: 'link', url: 'http://google.com' }
           ]
         },
         {
@@ -231,11 +221,5 @@ export default {
   vertical-align: top;
   margin-right: 0px;
   margin-left: -15px;
-}
-
-.rumming {
-  vertical-align: top;
-  margin-top: 0rem;
-  margin-bottom: 0.5rem;
 }
 </style>

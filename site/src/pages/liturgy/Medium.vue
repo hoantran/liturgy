@@ -1,10 +1,8 @@
 <template>
   <span>
     <a href="#">
-      <!-- <img src="../../assets/instruments/unknown.png" alt="flock logo" width="50px" class="rum"> -->
-      <img :src="getImageLink" alt="flock logo" width="40px" height="40px" class="instrument">
+      <a @click.stop.prevent="handleClick(medium.url)"><img :src="getImageLink" alt="instrument" width="40px" height="40px" class="instrument"></a>
     </a>
-    <!-- {{  title }} -->
     </span>
 </template>
 <script>
@@ -15,29 +13,24 @@ export default {
       imageLink: ''
     }
   },
-  props: [
-    'type'
-  ],
-  created () {
-    console.log('Medium Created')
-  },
-  computed: {
-    getImageLink () {
-      switch (this.type) {
-        case 'guitar':
-          return require('../../assets/instruments/guitar.png')
-        case 'piano':
-          return require('../../assets/instruments/piano.png')
-        case 'vocal':
-          return require('../../assets/instruments/vocal.png')
-        case 'link':
-          return require('../../assets/instruments/link.png')
-        default:
-          return require('../../assets/instruments/unknown.png')
-      }
+  methods: {
+    handleClick (link) {
+      console.log(link)
+      window.open(link, '_blank')
     }
   },
-  methods: {
+  props: [
+    'medium'
+  ],
+  computed: {
+    getImageLink () {
+      var instruments = ['guitar', 'piano', 'vocal', 'link', 'unknown']
+      var type = this.medium.type
+      if (!instruments.includes(type)) {
+        type = 'unknown'
+      }
+      return require('../../assets/instruments/' + type + '.png')
+    }
   }
 }
 </script>
