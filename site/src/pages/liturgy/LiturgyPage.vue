@@ -11,14 +11,29 @@
         <div class="la-full-width section-border">
           <br>
           <div v-for="(part, index) in parts" :key="index" class="rumble-parent">
-            <div class="highlight-hover columns is-0 lineup-part-row" @click.stop.prevent="songClicked">
+            <div id="parentRow" class="highlight-hover columns is-0 lineup-part-row" @click.stop.prevent="songClicked">
               <div class="column is-two-fifths lineup-column">{{part.title}}</div>
-              <div class="column lineup-column">
+              <div class="column is-three-fifths lineup-column">
                 <span class="lineup-song-title">{{part.song.name}}</span>
                 <span class="lineup-song-composer">composer</span>
               </div>
             </div>
-            <div id="media" class="media-shown">MEDIA</div>
+            <!-- <mediapane id="media" v-bind:title="part.title" class="media-shown"/> -->
+            <div v-if="part.media" class="media-shown rumming">
+              <mediapane
+                v-for="(medium, index) in part.media"
+                v-bind:key="index"
+                v-bind:type="medium.type"
+              ></mediapane>
+            </div>
+
+            <!-- <div id="media" class="media-shown">MEDIA</div> -->
+            <!-- <div id="media" class="columns media-shown">
+              <div class="column is-two-fifths">&nbsp;</div>
+              <div class="column">
+                <mediapane/>
+              </div>
+            </div> -->
           </div>
           <br>
         </div>
@@ -28,8 +43,13 @@
 
 <script>
 import { liturgiesCollection } from '../../firebase/FirebaseInit'
+import Medium from '@/pages/liturgy/Medium'
+
 export default {
   name: 'LiturgyPage',
+  components: {
+    mediapane: Medium
+  },
   data () {
     return {
       id: 0,
@@ -40,8 +60,16 @@ export default {
   methods: {
     songClicked (event) {
       if (event) {
-        console.log(event.target.parentElement.nextElementSibling)
-        let mediaEl = event.target.parentElement.nextElementSibling
+        // console.log('Atarget: ', event.target)
+        // console.log('Ctarget: ', event.currentTarget)
+        // console.log(event.target.parentElement.nextElementSibling)
+        // let mediaEl = event.target.parentElement.nextElementSibling
+        // let mediaEl = event.target.parentElement.nextElementSibling
+        let mediaEl = event.currentTarget.nextElementSibling
+        // if (mediaEl == null || mediaEl.id !== 'parentRow') {
+        //   mediaEl = event.target.parentElement.parentElement.nextElementSibling
+        // }
+        console.log(mediaEl)
         if (mediaEl.classList.contains('media-shown')) {
           mediaEl.classList.remove('media-shown')
           mediaEl.classList.add('media-hiden')
@@ -95,7 +123,14 @@ export default {
           song: {
             name: 'Dâng Chúa Trời',
             composer: 'Phanxicô'
-          }
+          },
+          media: [
+            { id: 1, type: 'guitar', url: 'something' },
+            { id: 2, type: 'piano', url: 'something' },
+            { id: 3, type: 'sound', url: 'something' },
+            { id: 4, type: 'vocal', url: 'something' },
+            { id: 5, type: 'link', url: 'something' }
+          ]
         },
         {
           liturgy_id: this.id,
@@ -165,6 +200,7 @@ div.lineup-liturgy-date {
     padding: 0 10px;
 }
 .lineup-part-row {
+  /* margin-top: 0rem; */
   margin-bottom: 0rem;
 }
 .lineup-column {
@@ -190,8 +226,14 @@ div.lineup-liturgy-date {
 }
 
 .media-shown {
-  display: block;
-  height: 30px;
+  display: '';
+  height: 40px;
+  vertical-align: top;
 }
 
+.rumming {
+  vertical-align: bottom;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+}
 </style>
