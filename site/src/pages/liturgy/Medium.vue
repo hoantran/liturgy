@@ -44,6 +44,7 @@ export default {
 <style scoped>
 .instrument {
   vertical-align: top;
-  margin-right: 1rem
+  margin-right: 1rem;
+  margin-left: 0rem;
 }
 </style>

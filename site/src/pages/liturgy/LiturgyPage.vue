@@ -10,8 +10,8 @@
         <div class="lineup-panel">Order of Music</div>
         <div class="la-full-width section-border">
           <br>
-          <div v-for="(part, index) in parts" :key="index" class="rumble-parent">
-            <div id="parentRow" class="highlight-hover columns is-0 lineup-part-row" @click.stop.prevent="songClicked">
+          <div v-for="(part, index) in parts" :key="index">
+            <div id="parentRow" class="highlight-hover columns lineup-part-row" @click.stop.prevent="songClicked">
               <div class="column is-two-fifths lineup-column">{{part.title}}</div>
               <div class="column is-three-fifths lineup-column">
                 <span class="lineup-song-title">{{part.song.name}}</span>
@@ -19,14 +19,19 @@
               </div>
             </div>
             <!-- <mediapane id="media" v-bind:title="part.title" class="media-shown"/> -->
-            <div v-if="part.media" class="media-shown rumming">
-              <mediapane
-                v-for="(medium, index) in part.media"
-                v-bind:key="index"
-                v-bind:type="medium.type"
-              ></mediapane>
+            <div class="columns media-hidden media">
+              <!-- <div class="column is-two-fifths"></div> -->
+              <div class="column is-three-fifths is-offset-two-fifths">
+                <!-- <div v-if="part.media" class="media-shown rumming"> -->
+                <div v-if="part.media">
+                  <mediapane
+                    v-for="(medium, index) in part.media"
+                    v-bind:key="index"
+                    v-bind:type="medium.type"
+                  ></mediapane>
+                </div>
+              </div>
             </div>
-
             <!-- <div id="media" class="media-shown">MEDIA</div> -->
             <!-- <div id="media" class="columns media-shown">
               <div class="column is-two-fifths">&nbsp;</div>
@@ -60,21 +65,13 @@ export default {
   methods: {
     songClicked (event) {
       if (event) {
-        // console.log('Atarget: ', event.target)
-        // console.log('Ctarget: ', event.currentTarget)
-        // console.log(event.target.parentElement.nextElementSibling)
-        // let mediaEl = event.target.parentElement.nextElementSibling
-        // let mediaEl = event.target.parentElement.nextElementSibling
         let mediaEl = event.currentTarget.nextElementSibling
-        // if (mediaEl == null || mediaEl.id !== 'parentRow') {
-        //   mediaEl = event.target.parentElement.parentElement.nextElementSibling
-        // }
         console.log(mediaEl)
         if (mediaEl.classList.contains('media-shown')) {
           mediaEl.classList.remove('media-shown')
-          mediaEl.classList.add('media-hiden')
+          mediaEl.classList.add('media-hidden')
         } else {
-          mediaEl.classList.remove('media-hiden')
+          mediaEl.classList.remove('media-hidden')
           mediaEl.classList.add('media-shown')
         }
       }
@@ -173,14 +170,14 @@ export default {
     font-size: medium;
 }
 
-div.lineup-liturgy-title {
+.lineup-liturgy-title {
     font-size: xx-large;
     padding: 20px 0;
     background: #b7b7b7;
     color: white;
 }
 
-div.lineup-liturgy-date {
+.lineup-liturgy-date {
     font-size: small;
     font-weight: bold;
     padding: 7px 0;
@@ -221,18 +218,23 @@ div.lineup-liturgy-date {
     height: 10px;
 }
 
-.media-hiden {
+.media-hidden {
   display: none;
 }
 
 .media-shown {
   display: '';
-  height: 40px;
+}
+
+.media {
+  height: 60px;
   vertical-align: top;
+  margin-right: 0px;
+  margin-left: -15px;
 }
 
 .rumming {
-  vertical-align: bottom;
+  vertical-align: top;
   margin-top: 0rem;
   margin-bottom: 0.5rem;
 }
