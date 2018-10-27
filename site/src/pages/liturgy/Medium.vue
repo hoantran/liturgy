@@ -16,6 +16,9 @@ export default {
   methods: {
     handleClick (link) {
       console.log(link)
+      // window.open(link, '_blank', 'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes')
+      // window.open(link, '_blank', 'toolbar=no, menubar=no, resizable=yes')
+
       window.open(link, '_blank')
     }
   },
@@ -24,8 +27,8 @@ export default {
   ],
   computed: {
     getImageLink () {
-      var instruments = ['guitar', 'piano', 'vocal', 'link', 'unknown']
-      var type = this.medium.type
+      let instruments = ['guitar', 'piano', 'vocal', 'link', 'unknown']
+      let type = this.medium.type
       if (!instruments.includes(type)) {
         type = 'unknown'
       }

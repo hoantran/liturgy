@@ -1,4 +1,4 @@
-import firebase from 'firebase/app'
+import firebase from 'firebase'
 import 'firebase/firestore'
 import 'firebase/auth'
 import config from './FirebaseConfig'
@@ -15,6 +15,7 @@ const songsCollection = firestore.collection('songs')
 
 const auth = firebase.auth()
 const currentUser = auth.currentUser
+const storage = firebase.storage()
 
 export {
   firestore,
@@ -24,5 +25,6 @@ export {
   publishersCollection,
   choirsCollection,
   liturgiesCollection,
-  songsCollection
+  songsCollection,
+  storage
 }
