@@ -16,7 +16,7 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
  string           : first lines   
 [uuid]            : [composer id]
  string           : directory where song files are
-[string]          : [url] 
+[string]          : [ref_path]
 [string]          : [tag]
 [uuid]            : [publisher]
 ```
