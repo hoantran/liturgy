@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /*
 Script to upload song media files to Firebase. Must have songs folder in the same directory
 and generate service-key file via these instructions: https://hackernoon.com/filling-cloud-firestore-with-data-3f67d26bd66e
@@ -11,17 +13,39 @@ https://stackoverflow.com/questions/51207162/how-can-i-upload-files-to-firebases
 const admin = require('firebase-admin')
 const fs = require('fs').promises
 const path = require('path')
-const dir = './songs-exp'
 
-// walk main directory, and get only files that are exactly one directory deep
-// i.e., valid media file(s) of a song must be under this song's folder, no deeper
+// const dir = './sub/songs-exp'
+
+function usage(){
+  const exploded = process.argv[1].split('/')
+  const executable = exploded[exploded.length - 1]
+
+  console.log(process.argv.length)
+  console.log(`\nUSAGE: \n      ./${executable} <root directory of songs folder> <path_for_json_file_output> \n`)
+}
+
+
+if (process.argv.length != 4) {
+  usage()
+  process.exit(1)
+}
+
+const songsRootFolder = process.argv[2].replace(/\/+$/, "")
+const outputPath = process.argv[3]
+
+
+// collect the file paths to be uploadd, which are the files that are exactly one directory deep
+// i.e., valid media file(s) of a song must be under this song's folder, no deeper.
+// e.g.:
 // songs/ not_valid_media_file_here
 // songs/ song folder/ valid_media_file1
 // songs/ song folder/ valid_media_file2
 // songs/ song folder/ another folder/ not_valid_media_file_here
 async function walk(dir, fileLists = { goodList: [], badList: [] }, depth = 0 ) {
   depth += 1
+
   const files = await fs.readdir(dir)
+
 
   for (file of files) {
     if (file.includes("DS_Store")) {
@@ -47,7 +71,19 @@ async function walk(dir, fileLists = { goodList: [], badList: [] }, depth = 0 ) 
   return fileLists;
 }
 
-// be sure to specify directory to upload. it should start at songs/
+function getLastTwoSegments(filepath) {
+  let result = ''
+  if (filepath) {
+    let exploded = filepath.split('/')
+    const length = exploded.length
+    if (length > 2) {
+      result = exploded[length - 2] + '/' + exploded[length - 1]
+    }
+  }
+  return result
+}
+
+// media file paths will be rewritten in the format songs/file_folder/medium_file_name
 async function upload(dir){
   const lists = await walk(dir)
 
@@ -59,23 +95,35 @@ async function upload(dir){
 
   let successfulUploads = []
   let failedUploads = lists.badList
+  const ops = {
+    action: 'read',
+    expires: '03-17-3025'
+  }
+  let options = {
+    destination: 'filePath',
+    resumable: true,
+    validation: 'crc32c'
+  }
 
   for (let filePath of lists.goodList) {
-    console.log(filePath)
-    const options = {
-      destination: filePath,
-      resumable: true,
-      validation: 'crc32c'
+    process.stderr.write('.')
+
+    let usefulPath = getLastTwoSegments(filePath)
+    if (usefulPath) {
+      try {
+        options.destination = finalPath = "songs/" + usefulPath
+        let file = await bucket.upload('./' + filePath, options)
+        let signedURL = await file[0].getSignedUrl(ops)
+        successfulUploads.push({
+          path: options.destination,
+          url: signedURL[0]
+        })
+      } catch (err) {
+        console.error('Upload Error: ', err)
+        failedUploads.push(filePath + `   ( *** network error : ${err.toString()} *** )`)
+      }
     }
-    
-    try {
-      await bucket.upload('./' + filePath, options)
-      successfulUploads.push(filePath)
-    } catch (err) {
-      console.error('Upload Error: ', err)
-      failedUploads.push(filePath + `   ( *** network error : ${err.toString()} *** )`)
-    }
-   }
+}
    
   return {  success: successfulUploads, 
             failed: failedUploads
@@ -86,11 +134,22 @@ async function upload(dir){
 // Kick it off
 //
 ( async () => {
-  let uploads = await upload(dir)
-  console.log('..........................')
-  console.log("SUCCESSFUL UPLOADS")
-  console.log(uploads.success)
-  console.log('..........................')
-  console.log("FAILED UPLOADS")
-  console.log(uploads.failed)
+  try {
+    let uploads = await upload(songsRootFolder)
+    process.stderr.write('\n')
+    const combo = {
+      success: uploads.success,
+      failed: uploads.failed
+    }
+    const data = JSON.stringify(combo, null, 2)
+    await fs.writeFile(outputPath, data)
+
+    console.log('..........................')
+    console.log(`SUCCESSFUL UPLOADS: ${uploads.success.length}`)
+    console.log('..........................')
+    console.log(`FAILED UPLOADS: ${uploads.failed.length}`)
+    console.log('..........................')
+  } catch (err) {
+    console.error('Upload attempt failed: ', err)
+  }
 })()
