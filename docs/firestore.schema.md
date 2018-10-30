@@ -10,12 +10,13 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
 
 # Song
 ```
- uuid            : song_id
+ uuid            : song_id (directory_name)
+ int             : legacy_id
  string           : title
  string           : first lines   
 [uuid]            : [composer id]
  string           : directory where song files are
-[string : uuid]   : [{media name: string, media type:string},...] 
+[string]          : [url] 
 [string]          : [tag]
 [uuid]            : [publisher]
 ```
