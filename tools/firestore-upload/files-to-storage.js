@@ -10,11 +10,19 @@ Written by Baotuan Nguyen referencing the following
 https://stackoverflow.com/questions/51207162/how-can-i-upload-files-to-firebases-cloud-storage-with-a-path-using-the-admin-s
 */
 
+
+//
+// 
+// Uploads media data to storage
+// 
+// Requires two arguments: root directory of all of the songs(media) and name of json to output the result
+//
+
 const admin = require('firebase-admin')
 const fs = require('fs').promises
 const path = require('path')
-
-// const dir = './sub/songs-exp'
+const project = require ('./serviceAccountKey-storage') // look in ./serviceAccountKe.sample.js for an example
+// const project = require('./serviceAccountKey-hoandev')
 
 function usage(){
   const exploded = process.argv[1].split('/')
@@ -87,9 +95,7 @@ function getLastTwoSegments(filepath) {
 async function upload(dir){
   const lists = await walk(dir)
 
-  const configObj = require ('./serviceAccountKey-storage')
-  // const configObj = require('./serviceAccountKey-hoandev')
-  admin.initializeApp(configObj.config)
+  admin.initializeApp(project.config)
 
   let bucket = admin.storage().bucket()
 
@@ -111,7 +117,7 @@ async function upload(dir){
     let usefulPath = getLastTwoSegments(filePath)
     if (usefulPath) {
       try {
-        options.destination = finalPath = "songs/" + usefulPath
+        options.destination = "songs/" + usefulPath
         let file = await bucket.upload('./' + filePath, options)
         let signedURL = await file[0].getSignedUrl(ops)
         successfulUploads.push({
