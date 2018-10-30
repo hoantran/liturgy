@@ -10,22 +10,21 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
 
 # Song
 ```
- uuid            : song_id (directory_name)
- int             : legacy_id
- string           : title
- string           : first lines   
-[uuid]            : [composer id]
- string           : directory where song files are
-[string]          : [ref_path]
-[string]          : [tag]
-[uuid]            : [publisher]
+ uuid    : song_id (directory_name where song files are)
+ int     : legacy_id (for relating to the legacy MySQL tables)
+ string  : title
+ string  : first lines   
+[uuid]   : [composer id]
+[string] : [ref_path of file to be updated with download URL by an admin client]
+[string] : [tag]
+[uuid]   : [publisher]
 ```
 # Composer
 ```
- string           : first name
- string           : last name
-[string]          : publisher
-[string]          : url to portrait
+ string  : first name
+ string  : last name
+[string] : publisher
+[string] : url to portrait
 ```
 
 # Choir (collection)
