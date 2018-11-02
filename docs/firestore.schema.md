@@ -13,9 +13,9 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
  uuid    : song_id (directory_name where song files are)
  int     : legacy_id (for relating to the legacy MySQL tables)
  string  : title
- string  : first lines   
-[uuid]   : [composer id]
-[string] : [ref_path of file to be updated with download URL by an admin client]
+ string  : first line   
+[uuid]   : [composer_id]
+[string] : [url which initially is a file_storage_path of a media file to be updated with download URL by an admin client]
 [string] : [tag]
 [uuid]   : [publisher]
 ```
