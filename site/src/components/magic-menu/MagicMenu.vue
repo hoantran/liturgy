@@ -19,9 +19,10 @@
                   Admin
                 </a>
                 <div class="navbar-dropdown is-boxed">
-                  <a class="navbar-item" @click="handleClick('populate')" href="#">Peeing in the Genepool</a>
-                  <a class="navbar-item" @click="handleClick('huy')" href="#">Basketball Update</a>
-                  <a class="navbar-item" @click="handleClick('sleeping')" href="#">Sleeping</a>
+                  <a class="navbar-item" @click="handleClick('updatesongurls')">Update Song URLs</a>
+                  <a class="navbar-item" @click="handleClick('populate')">Peeing in the Genepool</a>
+                  <a class="navbar-item" @click="handleClick('huy')">Basketball Update</a>
+                  <a class="navbar-item" @click="handleClick('sleeping')">Sleeping</a>
                 </div>
               </div>
                 <div class="navbar-item has-dropdown is-hoverable">

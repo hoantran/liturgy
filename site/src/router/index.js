@@ -8,6 +8,7 @@ Vue.use(Router)
 const router = new Router({
   routes,
   mode: 'history',
+  hashbang: false,
   scrollBehavior (to, from, savedPosition) {
     const fromKeepScrollRoute = from.meta && from.meta.keepScroll
     const toKeepScrollRoute = to.meta && to.meta.keepScroll

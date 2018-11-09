@@ -8,6 +8,7 @@ import LiturgyPage from '@/pages/liturgy/LiturgyPage.vue'
 import HuyPage from '@/pages/huy/HuyPage.vue'
 import SleepingPage from '@/pages/sleeping/SleepingPage.vue'
 import PopulatePage from '@/pages/populate/PopulatePage.vue'
+import UpdateSongURLsPage from '@/pages/updatesongurls/UpdateSongURLsPage.vue'
 
 const meta = {
   public: {
@@ -63,6 +64,15 @@ const routes = [
     component: LoginPage,
     meta: {
       ...meta.login
+    }
+  },
+  {
+    name: 'updatesongurls',
+    path: '/updatesongurls',
+    component: UpdateSongURLsPage,
+    meta: {
+      ...meta.magic,
+      requiresAuth: true
     }
   },
   {
