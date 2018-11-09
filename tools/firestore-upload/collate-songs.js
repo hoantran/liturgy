@@ -183,7 +183,7 @@ async function addSongsToFirestore(songArray){
   let firestore = admin.firestore()
   const settings = {timestampsInSnapshots: true}
   firestore.settings(settings)
-  
+
   for (let song of songArray) {
     await firestore.collection('songs').add(song)
   }
@@ -211,20 +211,24 @@ async function addSongsToFirestore(songArray){
 
     let mediaIndexedByDirectoryAndMedium = mediaIndexedObj.indexed
     let uploads = await readJsonFile(uploadFile)
-    let songArray = []
+    let songMap = new Map
     uploads.success.forEach(element => {
       const hash = getDirectoryAndFileName(element.path)
       const song_id = mediaIndexedByDirectoryAndMedium.get(hash).song_id
-      const oldSong = songIndexedByID.get(song_id)
-      songArray.push( {
-        legacyid: oldSong.id,
-        title: oldSong.title,
-        firstline: oldSong.firstline,
-        publisherid: oldSong.publisherid,
-        url: element.path
-      })
-    })
-    await addSongsToFirestore(songArray)
+      if (songMap.has(song_id)){
+        songMap.get(song_id).urls.push(element.path)
+      } else {
+        const oldSong = songIndexedByID.get(song_id)
+        songMap.set(song_id, {
+          legacyid: oldSong.id,
+          title: oldSong.title,
+          firstline: oldSong.firstline,
+          publisherid: oldSong.publisherid,
+          urls: [element.path]
+        })
+      }
+    }) 
+    await addSongsToFirestore([...songMap.values()])
     console.log('..................')
     console.log('DONE')
   } catch (err) {
