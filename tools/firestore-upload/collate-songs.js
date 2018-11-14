@@ -212,24 +212,35 @@ async function addSongsToFirestore(songArray){
     let mediaIndexedByDirectoryAndMedium = mediaIndexedObj.indexed
     let uploads = await readJsonFile(uploadFile)
     let songMap = new Map
+    let uploadsWithNoSongs = []
     uploads.success.forEach(element => {
       const hash = getDirectoryAndFileName(element.path)
-      const song_id = mediaIndexedByDirectoryAndMedium.get(hash).song_id
-      if (songMap.has(song_id)){
-        songMap.get(song_id).urls.push(element.path)
+      const medium = mediaIndexedByDirectoryAndMedium.get(hash) 
+      if (medium) {
+        const song_id = medium.song_id
+        if (songMap.has(song_id)){
+          songMap.get(song_id).urls.push(element.path)
+        } else {
+          const oldSong = songIndexedByID.get(song_id)
+          songMap.set(song_id, {
+            legacyid: oldSong.id,
+            title: oldSong.title,
+            firstline: oldSong.firstline,
+            publisherid: oldSong.publisherid,
+            urls: [element.path]
+          })
+        }
       } else {
-        const oldSong = songIndexedByID.get(song_id)
-        songMap.set(song_id, {
-          legacyid: oldSong.id,
-          title: oldSong.title,
-          firstline: oldSong.firstline,
-          publisherid: oldSong.publisherid,
-          urls: [element.path]
-        })
+        uploadsWithNoSongs.push(element)
       }
     }) 
     await addSongsToFirestore([...songMap.values()])
     console.log('..................')
+    if (uploadsWithNoSongs.length != 0) {
+      console.log('..................')
+      console.log('The following uploads do not attach to any song:')
+      console.log(uploadsWithNoSongs)
+    }
     console.log('DONE')
   } catch (err) {
     console.error('Failed to collate songs collection', err)
