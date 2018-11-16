@@ -68,7 +68,7 @@ async function walk(dir, fileLists = { goodList: [], badList: [] }, depth = 0 ) 
       if (depth == 2) {
         fileLists.goodList.push(filePath)
       } else {
-        fileLists.badList.push(filePath + `   ( *** wrong directory depth @ ${depth}. It should be 2 *** )`)
+        fileLists.badList.push(filePath + `   ( --- wrong directory depth @ ${depth}. It should be 2 --- )`)
       }
     }
   }
@@ -125,7 +125,8 @@ async function upload(dir){
         })
       } catch (err) {
         console.error('Upload Error: ', err)
-        failedUploads.push(filePath + `   ( *** network error : ${err.toString()} *** )`)
+        failedUploads.push(filePath + `   ( *** other error below: ${err.toString()} *** )`)
+        failedUploads.push(err)
       }
     }
 }
