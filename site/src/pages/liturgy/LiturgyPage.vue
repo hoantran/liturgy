@@ -44,33 +44,33 @@ console.log('STORAGE', storage)
 // const pathReference = storage.ref('x.pdf')
 const pathReference = storage.ref('ps 126 the lord has done/ps 126 the lord has done great things for us.vocal.1.pdf')
 console.log('PDF', pathReference)
-pathReference.getDownloadURL().then((url) => {
-  console.log('URL', url)
-}).catch((error) => {
-  // A full list of error codes is available at
-  // https://firebase.google.com/docs/storage/web/handle-errors
-  switch (error.code) {
-    case 'storage/object-not-found':
-      // File doesn't exist
-      console.log('storage/object-not-found')
-      break
+// pathReference.getDownloadURL().then((url) => {
+//   console.log('URL', url)
+// }).catch((error) => {
+//   // A full list of error codes is available at
+//   // https://firebase.google.com/docs/storage/web/handle-errors
+//   switch (error.code) {
+//     case 'storage/object-not-found':
+//       // File doesn't exist
+//       console.log('storage/object-not-found')
+//       break
 
-    case 'storage/unauthorized':
-      // User doesn't have permission to access the object
-      console.log('storage/unauthorized')
-      break
+//     case 'storage/unauthorized':
+//       // User doesn't have permission to access the object
+//       console.log('storage/unauthorized')
+//       break
 
-    case 'storage/canceled':
-      // User canceled the upload
-      console.log('storage/canceled')
-      break
+//     case 'storage/canceled':
+//       // User canceled the upload
+//       console.log('storage/canceled')
+//       break
 
-    case 'storage/unknown':
-      // Unknown error occurred, inspect the server response
-      console.log('storage/unknown')
-      break
-  }
-})
+//     case 'storage/unknown':
+//       // Unknown error occurred, inspect the server response
+//       console.log('storage/unknown')
+//       break
+//   }
+// })
 
 export default {
   name: 'LiturgyPage',
@@ -146,7 +146,7 @@ export default {
           media: [
             { id: 1, type: 'guitar', url: 'https://firebasestorage.googleapis.com/v0/b/liturgy-56f31.appspot.com/o/x.pdf?alt=media&token=b6e53a58-ce6e-4fe2-965f-8e21251e8c24' },
             { id: 2, type: 'piano', url: 'https://firebasestorage.googleapis.com/v0/b/liturgy-56f31.appspot.com/o/ps%20126%20the%20lord%20has%20done%2Fps%20126%20the%20lord%20has%20done%20great%20things%20for%20us.vocal.1.pdf?alt=media&token=163d543c-2d91-4418-8277-84a9b9202a2d' },
-            { id: 3, type: 'sound', url: 'http://google.com' },
+            { id: 3, type: 'sound', url: 'https://www.youtube.com/watch?v=GX2pkKNpbWE' },
             { id: 4, type: 'vocal', url: 'http://google.com' },
             { id: 5, type: 'link', url: 'http://google.com' }
           ]

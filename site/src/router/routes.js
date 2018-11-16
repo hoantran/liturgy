@@ -1,4 +1,3 @@
-
 // import IndexPage from '@/pages/public/IndexPage.vue'
 import AccountDashboardPage from '@/pages/account/AccountDashboardPage.vue'
 import ProfileSettingsPage from '@/pages/account/ProfileSettingsPage.vue'
@@ -9,6 +8,7 @@ import HuyPage from '@/pages/huy/HuyPage.vue'
 import SleepingPage from '@/pages/sleeping/SleepingPage.vue'
 import PopulatePage from '@/pages/populate/PopulatePage.vue'
 import Error404Page from '@/pages/404/Error404Page.vue'
+import UpdateSongURLsPage from '@/pages/updatesongurls/UpdateSongURLsPage.vue'
 
 const meta = {
   public: {
@@ -67,6 +67,15 @@ const routes = [
     component: LoginPage,
     meta: {
       ...meta.login
+    }
+  },
+  {
+    name: 'updatesongurls',
+    path: '/updatesongurls',
+    component: UpdateSongURLsPage,
+    meta: {
+      ...meta.magic,
+      requiresAuth: true
     }
   },
   {

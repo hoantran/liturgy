@@ -21,15 +21,14 @@ https://stackoverflow.com/questions/51207162/how-can-i-upload-files-to-firebases
 const admin = require('firebase-admin')
 const fs = require('fs').promises
 const path = require('path')
-const project = require ('./serviceAccountKey-storage') // look in ./serviceAccountKe.sample.js for an example
-// const project = require('./serviceAccountKey-hoandev')
+// const project = require ('./serviceAccountKey-storage') // look in ./serviceAccountKe.sample.js for an example
+const project = require('./serviceAccountKey-hoandev')
 
 function usage(){
-  const exploded = process.argv[1].split('/')
+  const exploded = process.argv[1].split(path.sep)
   const executable = exploded[exploded.length - 1]
 
-  console.log(process.argv.length)
-  console.log(`\nUSAGE: \n      ./${executable} <root directory of songs folder> <path_for_json_file_output> \n`)
+  console.log(`\nUSAGE: \n      .${path.sep}${executable} <root directory of songs folder> <path_for_json_file_output> \n`)
 }
 
 
@@ -38,7 +37,7 @@ if (process.argv.length != 4) {
   process.exit(1)
 }
 
-const songsRootFolder = process.argv[2].replace(/\/+$/, "")
+const songsRootFolder = process.argv[2].replace(/(\/|\\)+$/, "")
 const outputPath = process.argv[3]
 
 
@@ -83,7 +82,11 @@ async function walk(dir, fileLists = { goodList: [], badList: [] }, depth = 0 ) 
 function getLastTwoSegments(filepath) {
   let result = ''
   if (filepath) {
+<<<<<<< HEAD
     let exploded = filepath.split('\\')
+=======
+    let exploded = filepath.split(path.sep)
+>>>>>>> d9fbcf77f1809ae38dd028f4fdd52cd51bcd9274
     const length = exploded.length
     if (length > 2) {
       result = exploded[length - 2] + '/' + exploded[length - 1]

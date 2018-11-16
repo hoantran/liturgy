@@ -15,7 +15,11 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
  string  : title
  string  : first line   
 [uuid]   : [composer_id]
-[string] : [url which initially is a file_storage_path of a media file to be updated with download URL by an admin client]
+[ {
+  string : media_type [piano | guitar | vocal]
+  url    : url which initially is a file_storage_path of a media file to be updated with 
+           download URL by an admin client
+}]
 [string] : [tag]
 [uuid]   : [publisher]
 ```

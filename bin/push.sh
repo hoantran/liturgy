@@ -6,11 +6,11 @@
 #  For liturgy project
 
 usage() {
-    printf "\n Usage: $0 SSH_USER HOST_URL
+    printf "\n Usage: $0 SSH_USER HOST_URL DST_PATH
     \n"
 }
 
-if [ $# -ne 2 ]; then
+if [ $# -ne 3 ]; then
     usage
     exit 1
 fi
@@ -26,6 +26,7 @@ fi
 #
 SSH_USER="$1"
 HOST_URL="$2"
+DST_PATH="$3"
 
 #
 # SCP/SSH
@@ -42,7 +43,7 @@ LITURGY_DIR="$BIN_DIR/.."
 SITE_DIR="$LITURGY_DIR/site"
 DIST_DIR="$SITE_DIR/dist/"
 
-REMOTE_DIR="./html/liturgy"
+REMOTE_DIR="./public_html/$DST_PATH"
 ARCHIVE_DIR="archive"
 CONTENTS="index.html static"
 HTACCESS="$SITE_DIR/htaccess"
