@@ -12,9 +12,9 @@ https://stackoverflow.com/questions/51207162/how-can-i-upload-files-to-firebases
 
 
 //
-// 
+//
 // Uploads media data to storage
-// 
+//
 // Requires two arguments: root directory of all of the songs(media) and name of json to output the result
 //
 
@@ -66,6 +66,7 @@ async function walk(dir, fileLists = { goodList: [], badList: [] }, depth = 0 ) 
     if (stat.isDirectory()) {
       filelist = await walk(filePath, fileLists, depth)
     } else {
+      //console.log(filePath)
       if (depth == 2) {
         fileLists.goodList.push(filePath)
       } else {
@@ -82,7 +83,7 @@ async function walk(dir, fileLists = { goodList: [], badList: [] }, depth = 0 ) 
 function getLastTwoSegments(filepath) {
   let result = ''
   if (filepath) {
-    let exploded = filepath.split('/')
+    let exploded = filepath.split('\\')
     const length = exploded.length
     if (length > 2) {
       result = exploded[length - 2] + '/' + exploded[length - 1]
@@ -130,8 +131,8 @@ async function upload(dir){
       }
     }
 }
-   
-  return {  success: successfulUploads, 
+
+  return {  success: successfulUploads,
             failed: failedUploads
   }
 }

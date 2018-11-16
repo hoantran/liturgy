@@ -10,12 +10,14 @@ import PublicLayout from '@/layouts/public-layout/PublicLayout.vue'
 import AccountLayout from '@/layouts/account-layout/AccountLayout.vue'
 import MagicLayout from '@/layouts/magic-layout/MagicLayout.vue'
 import LoginLayout from '@/layouts/login-layout/LoginLayout.vue'
+import ErrorLayout from '@/layouts/error-layout/ErrorLayout.vue'
 
 const LAYOUTS = {
   PublicLayout,
   AccountLayout,
   MagicLayout,
-  LoginLayout
+  LoginLayout,
+  ErrorLayout
 }
 
 export default {
