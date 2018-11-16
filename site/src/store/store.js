@@ -19,11 +19,18 @@ export const store = new Vuex.Store({
       commit('choirID', null)
     },
     fetchUserProfile ({commit, state}) {
+      // for firebase fb login
       usersCollection.doc(state.currentUser.uid).get().then(res => {
         commit('setUserProfile', res.data())
       }).catch(err => {
         console.log(err)
       })
+      // only for firebase email login
+      // usersCollection.doc(state.currentUser.uid).get().then(res => {
+      //   commit('setUserProfile', res.data())
+      // }).catch(err => {
+      //   console.log(err)
+      // })
     }
   },
   mutations: {
