@@ -1,8 +1,8 @@
 <template>
   <div class="has-navbar-fixed-top">
-      <MagicLayoutHeader/>
-      <slot></slot>
-      <MagicLayoutFooter/>
+    <MagicLayoutHeader/>
+    <slot></slot>
+    <MagicLayoutFooter/>
   </div>
 </template>
 <script>

@@ -18,6 +18,5 @@ export default {
   name: 'HuyPage'
 }
 </script>
-
 <style scoped>
 </style>

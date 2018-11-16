@@ -1,4 +1,3 @@
-import Error404Page from '@/pages/public/error/Error404Page.vue'
 // import IndexPage from '@/pages/public/IndexPage.vue'
 import AccountDashboardPage from '@/pages/account/AccountDashboardPage.vue'
 import ProfileSettingsPage from '@/pages/account/ProfileSettingsPage.vue'
@@ -8,6 +7,7 @@ import LiturgyPage from '@/pages/liturgy/LiturgyPage.vue'
 import HuyPage from '@/pages/huy/HuyPage.vue'
 import SleepingPage from '@/pages/sleeping/SleepingPage.vue'
 import PopulatePage from '@/pages/populate/PopulatePage.vue'
+import Error404Page from '@/pages/404/Error404Page.vue'
 import UpdateSongURLsPage from '@/pages/updatesongurls/UpdateSongURLsPage.vue'
 
 const meta = {
@@ -18,7 +18,7 @@ const meta = {
   account: {
     section: 'account',
     layout: 'AccountLayout',
-    auth: true // it's here only for eexample and really not handled in this sandbox
+    auth: true // it's here only for example and really not handled in this sandbox
   },
   magic: {
     section: 'magic',
@@ -31,8 +31,11 @@ const meta = {
   liturgy: {
     section: 'liturgy',
     layout: 'MagicLayout'
+  },
+  error: {
+    section: '*',
+    layout: 'ErrorLayout'
   }
-
 }
 
 /**
@@ -89,7 +92,7 @@ const routes = [
     path: '/huy',
     component: HuyPage,
     meta: {
-      ...meta.magic,
+      ...meta.login,
       requiresAuth: true
     }
   },
@@ -123,7 +126,8 @@ const routes = [
     path: '*',
     component: Error404Page,
     meta: {
-      ...meta.public
+      ...meta.error
+      // requiresAuth: false
     }
   }
 ]
