@@ -4,6 +4,7 @@ const fs = require('fs').promises
 const path = require('path')
 const readlineSync = require('readline-sync')
 const revisedMediaFile = 'newMedia.json'
+const utils = require('../../shared/utils/Misc')
 
 // Must install gRPC and build it from source for firestore to work:
 //     npm install grpc --build-from-source
@@ -189,6 +190,19 @@ async function addSongsToFirestore(songArray){
   }
 }
 
+// extract instrument from path:
+// for example: filePath == 'songs/40 days/40 days.guitar.1.pdf'
+// extract 'guitar' from filePath
+// if not valid, return 'unknown'
+function mediumTypeFrom(filePath) {
+  let extension = ''
+    try { 
+      extension = filePath.split('/').slice(-1)[0].split('.').slice(-3,-2)[0].toLowerCase() 
+    } catch (error) { 
+    }
+    return utils.mediumType(extension)
+}
+
 (async () => {
   try {
     const songs = await readJsonFile(songFile)
@@ -217,9 +231,14 @@ async function addSongsToFirestore(songArray){
       const hash = getDirectoryAndFileName(element.path)
       const medium = mediaIndexedByDirectoryAndMedium.get(hash) 
       if (medium) {
+        let mediumType = mediumTypeFrom(element.path)
         const song_id = medium.song_id
+        const media = {
+          type: mediumType,
+          url: element.path
+        }
         if (songMap.has(song_id)){
-          songMap.get(song_id).urls.push(element.path)
+          songMap.get(song_id).media.push(media)
         } else {
           const oldSong = songIndexedByID.get(song_id)
           songMap.set(song_id, {
@@ -227,7 +246,7 @@ async function addSongsToFirestore(songArray){
             title: oldSong.title,
             firstline: oldSong.firstline,
             publisherid: oldSong.publisherid,
-            urls: [element.path]
+            media: [media]
           })
         }
       } else {

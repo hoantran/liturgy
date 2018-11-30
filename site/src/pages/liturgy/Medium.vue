@@ -6,6 +6,7 @@
     </span>
 </template>
 <script>
+import utils from '../../../../shared/utils/Misc.js'
 export default {
   name: 'Medium',
   data () {
@@ -27,11 +28,7 @@ export default {
   ],
   computed: {
     getImageLink () {
-      let instruments = ['guitar', 'piano', 'vocal', 'link', 'unknown']
-      let type = this.medium.type
-      if (!instruments.includes(type)) {
-        type = 'unknown'
-      }
+      let type = utils.mediumType(this.medium.type)
       return require('../../assets/instruments/' + type + '.png')
     }
   }
