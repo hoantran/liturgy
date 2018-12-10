@@ -1,0 +1,1117 @@
+[
+	{
+		"id" : 2,
+		"title" : "Second Sunday of Easter (Divine Mercy)",
+		"date" : "2014-04-27 20:30:00"
+	},
+	{
+		"id" : 1,
+		"title" : "Easter Sunday",
+		"date" : "2014-04-20 20:30:00"
+	},
+	{
+		"id" : 3,
+		"title" : "Third Sunday of Easter",
+		"date" : "2014-05-04 20:30:00"
+	},
+	{
+		"id" : 4,
+		"title" : "Fourth Sunday of Easter",
+		"date" : "2014-05-11 20:30:00"
+	},
+	{
+		"id" : 5,
+		"title" : "Fifth Sunday of Easter",
+		"date" : "2014-05-18 20:30:00"
+	},
+	{
+		"id" : 6,
+		"title" : "Sixth Sunday of Easter",
+		"date" : "2014-05-25 20:30:00"
+	},
+	{
+		"id" : 7,
+		"title" : "The Ascension of the Lord",
+		"date" : "2014-06-01 20:30:00"
+	},
+	{
+		"id" : 8,
+		"title" : "Pentecost",
+		"date" : "2014-06-08 20:30:00"
+	},
+	{
+		"id" : 9,
+		"title" : "The Most Holy Trinity",
+		"date" : "2014-06-15 20:30:00"
+	},
+	{
+		"id" : 10,
+		"title" : "The Most Holy Body & Blood of Christ",
+		"date" : "2014-06-22 20:30:00"
+	},
+	{
+		"id" : 11,
+		"title" : "St. Peter & Paul",
+		"date" : "2014-06-29 20:30:00"
+	},
+	{
+		"id" : 12,
+		"title" : "14th Sunday of Ordinary Time",
+		"date" : "2014-07-06 20:30:00"
+	},
+	{
+		"id" : 13,
+		"title" : "15th Sunday of Ordinary Time",
+		"date" : "2014-07-13 20:30:00"
+	},
+	{
+		"id" : 14,
+		"title" : "16th Sunday of Ordinary Time",
+		"date" : "2014-07-20 20:30:00"
+	},
+	{
+		"id" : 15,
+		"title" : "17th Sunday of Ordinary Time",
+		"date" : "2014-07-27 20:30:00"
+	},
+	{
+		"id" : 16,
+		"title" : "18th Sunday of Ordinary Time",
+		"date" : "2014-08-03 20:30:00"
+	},
+	{
+		"id" : 17,
+		"title" : "19th Sunday of Ordinary Time",
+		"date" : "2014-08-10 20:30:00"
+	},
+	{
+		"id" : 18,
+		"title" : "20th Sunday of Ordinary Time",
+		"date" : "2014-08-17 20:30:00"
+	},
+	{
+		"id" : 19,
+		"title" : "21th Sunday of Ordinary Time",
+		"date" : "2014-08-24 20:30:00"
+	},
+	{
+		"id" : 20,
+		"title" : "22th Sunday of Ordinary Time",
+		"date" : "2014-08-31 20:30:00"
+	},
+	{
+		"id" : 21,
+		"title" : "23th Sunday of Ordinary Time",
+		"date" : "2014-09-07 20:30:00"
+	},
+	{
+		"id" : 22,
+		"title" : "Feast of the Exaltation of the Holy Cross",
+		"date" : "2014-09-14 20:30:00"
+	},
+	{
+		"id" : 23,
+		"title" : "25th Sunday of Ordinary Time",
+		"date" : "2014-09-21 20:30:00"
+	},
+	{
+		"id" : 24,
+		"title" : "26th Sunday of Ordinary Time",
+		"date" : "2014-09-28 20:30:00"
+	},
+	{
+		"id" : 25,
+		"title" : "27th Sunday of Ordinary Time",
+		"date" : "2014-10-05 20:30:00"
+	},
+	{
+		"id" : 26,
+		"title" : "Wedding Liturgy: Chú Quinn & Cô Duyên",
+		"date" : "2014-09-06 14:00:00"
+	},
+	{
+		"id" : 27,
+		"title" : "28th Sunday of Ordinary Time",
+		"date" : "2014-10-12 20:30:00"
+	},
+	{
+		"id" : 28,
+		"title" : "29th Sunday of Ordinary Time",
+		"date" : "2014-10-19 20:30:00"
+	},
+	{
+		"id" : 29,
+		"title" : "30th Sunday of Ordinary Time",
+		"date" : "2014-10-26 20:30:00"
+	},
+	{
+		"id" : 30,
+		"title" : "Wedding: Minh",
+		"date" : "2014-10-04 11:00:00"
+	},
+	{
+		"id" : 31,
+		"title" : "Kathy and Nino's Wedding",
+		"date" : "2014-10-25 12:00:00"
+	},
+	{
+		"id" : 32,
+		"title" : "Commemoration of All the Faithful",
+		"date" : "2014-11-02 20:30:00"
+	},
+	{
+		"id" : 33,
+		"title" : "Feast of the Dedication of the Lateran Basilica in Rome",
+		"date" : "2014-11-09 20:30:00"
+	},
+	{
+		"id" : 34,
+		"title" : "33rd Sunday in Ordinary Time",
+		"date" : "2014-11-16 20:30:00"
+	},
+	{
+		"id" : 35,
+		"title" : "Solemnity of Our Lord Jesus Christ",
+		"date" : "2014-11-23 20:30:00"
+	},
+	{
+		"id" : 36,
+		"title" : "1st Sunday of Advent",
+		"date" : "2014-11-30 20:30:00"
+	},
+	{
+		"id" : 37,
+		"title" : "2nd Sunday of Advent",
+		"date" : "2014-12-07 20:30:00"
+	},
+	{
+		"id" : 38,
+		"title" : "3rd Sunday of Advent",
+		"date" : "2014-12-14 20:30:00"
+	},
+	{
+		"id" : 39,
+		"title" : "4th Sunday of Advent",
+		"date" : "2014-12-21 20:30:00"
+	},
+	{
+		"id" : 40,
+		"title" : "Thanksgiving",
+		"date" : "2014-11-27 10:30:00"
+	},
+	{
+		"id" : 41,
+		"title" : "Christmas Mass",
+		"date" : "2014-12-25 11:00:00"
+	},
+	{
+		"id" : 42,
+		"title" : "The Holy Family of Jesus, Mary, and Joseph",
+		"date" : "2014-12-28 20:30:00"
+	},
+	{
+		"id" : 43,
+		"title" : "The Epiphany of the Lord",
+		"date" : "2015-01-04 20:30:00"
+	},
+	{
+		"id" : 44,
+		"title" : "The Baptism of the Lord",
+		"date" : "2015-01-11 20:30:00"
+	},
+	{
+		"id" : 45,
+		"title" : "Second Sunday Of Ordinary Time",
+		"date" : "2015-01-18 20:30:00"
+	},
+	{
+		"id" : 46,
+		"title" : "Third Sunday of Ordinary Time",
+		"date" : "2015-01-25 20:30:00"
+	},
+	{
+		"id" : 47,
+		"title" : "Fourth Sunday of Ordinary Time",
+		"date" : "2015-02-01 20:30:00"
+	},
+	{
+		"id" : 48,
+		"title" : "Fifth Sunday of Ordinary Time",
+		"date" : "2015-02-08 20:30:00"
+	},
+	{
+		"id" : 49,
+		"title" : "Sixth Sunday in Ordinary Time",
+		"date" : "2015-02-15 20:30:00"
+	},
+	{
+		"id" : 50,
+		"title" : "First Sunday of Lent",
+		"date" : "2015-02-22 20:30:00"
+	},
+	{
+		"id" : 51,
+		"title" : "Second Sunday of Lent",
+		"date" : "2015-03-01 20:30:00"
+	},
+	{
+		"id" : 52,
+		"title" : "Third Sunday of Lent",
+		"date" : "2015-03-08 20:30:00"
+	},
+	{
+		"id" : 53,
+		"title" : "Fourth Sunday of Lent",
+		"date" : "2015-03-15 20:30:00"
+	},
+	{
+		"id" : 54,
+		"title" : "Fifth Sunday of Lent",
+		"date" : "2015-03-22 20:30:00"
+	},
+	{
+		"id" : 55,
+		"title" : "Palm Sunday",
+		"date" : "2015-03-29 20:30:00"
+	},
+	{
+		"id" : 56,
+		"title" : "2nd Sunday of Easter (Divine Mercy)",
+		"date" : "2015-04-12 20:30:00"
+	},
+	{
+		"id" : 57,
+		"title" : "3rd Sunday of Easter",
+		"date" : "2015-04-19 20:30:00"
+	},
+	{
+		"id" : 58,
+		"title" : "4th Sunday of Easter",
+		"date" : "2015-04-26 20:30:00"
+	},
+	{
+		"id" : 59,
+		"title" : "5th Sunday of Easter",
+		"date" : "2015-05-03 20:30:00"
+	},
+	{
+		"id" : 60,
+		"title" : "6th Sunday of Easter",
+		"date" : "2015-05-10 20:30:00"
+	},
+	{
+		"id" : 61,
+		"title" : "7th Sunday of Easter (Solemnity of the Ascension of the Lord)",
+		"date" : "2015-05-17 20:30:00"
+	},
+	{
+		"id" : 62,
+		"title" : "Pentecost Sunday",
+		"date" : "2015-05-24 20:30:00"
+	},
+	{
+		"id" : 63,
+		"title" : "The Solemnity of the Most Holy Trinity",
+		"date" : "2015-05-31 20:30:00"
+	},
+	{
+		"id" : 64,
+		"title" : "The Solemnity of the Most Holy Body and Blood of Christ (Corpus ",
+		"date" : "2015-06-07 20:30:00"
+	},
+	{
+		"id" : 65,
+		"title" : "Eleventh Sunday of Ordinary Time",
+		"date" : "2015-06-14 20:30:00"
+	},
+	{
+		"id" : 66,
+		"title" : "Twelfth Sunday of Ordinary Time",
+		"date" : "2015-06-21 20:30:00"
+	},
+	{
+		"id" : 67,
+		"title" : "Thirteenth Sunday of Ordinary Time",
+		"date" : "2015-06-28 20:30:00"
+	},
+	{
+		"id" : 68,
+		"title" : "Easter Sunday",
+		"date" : "2015-04-05 20:30:00"
+	},
+	{
+		"id" : 69,
+		"title" : "Fourteenth Sunday of Ordinary Time",
+		"date" : "2015-07-05 20:30:00"
+	},
+	{
+		"id" : 70,
+		"title" : "Fifteenth Sunday of Ordinary Time",
+		"date" : "2015-07-12 20:30:00"
+	},
+	{
+		"id" : 71,
+		"title" : "Sixteenth Sunday in Ordinary Time",
+		"date" : "2015-07-19 20:30:00"
+	},
+	{
+		"id" : 72,
+		"title" : "Seventeenth Sunday in Ordinary Time",
+		"date" : "2015-07-26 20:30:00"
+	},
+	{
+		"id" : 73,
+		"title" : "Eighteenth Sunday in Ordinary Time",
+		"date" : "2015-08-02 20:30:00"
+	},
+	{
+		"id" : 74,
+		"title" : "Nineteenth Sunday in Ordinary Time",
+		"date" : "2015-08-09 20:30:00"
+	},
+	{
+		"id" : 75,
+		"title" : "Twentieth Sunday in Ordinary Time",
+		"date" : "2015-08-16 20:30:00"
+	},
+	{
+		"id" : 76,
+		"title" : "21st Sunday of Ordinary Time",
+		"date" : "2015-08-23 20:30:00"
+	},
+	{
+		"id" : 77,
+		"title" : "22nd Sunday of Ordinary Time",
+		"date" : "2015-08-30 20:30:00"
+	},
+	{
+		"id" : 78,
+		"title" : "23rd Sunday of Ordinary Time (Patron Saint Anniversary Mass)",
+		"date" : "2015-09-06 20:30:00"
+	},
+	{
+		"id" : 79,
+		"title" : "24th Sunday of Ordinary Time",
+		"date" : "2015-09-13 20:30:00"
+	},
+	{
+		"id" : 80,
+		"title" : "25th Sunday of Ordinary Time",
+		"date" : "2015-09-20 20:30:00"
+	},
+	{
+		"id" : 81,
+		"title" : "26th Sunday of Ordinary Time",
+		"date" : "2015-09-27 20:30:00"
+	},
+	{
+		"id" : 82,
+		"title" : "27th Sunday of Ordinary Time",
+		"date" : "2015-10-04 20:30:00"
+	},
+	{
+		"id" : 83,
+		"title" : "28th Sunday of Ordinary Time",
+		"date" : "2015-10-11 20:30:00"
+	},
+	{
+		"id" : 84,
+		"title" : "29th Sunday of Ordinary Time",
+		"date" : "2015-10-18 20:30:00"
+	},
+	{
+		"id" : 85,
+		"title" : "30th Sunday of Ordinary Time",
+		"date" : "2015-10-25 20:30:00"
+	},
+	{
+		"id" : 86,
+		"title" : "31st Sunday of Ordinary Time, Solemnity of All Saints",
+		"date" : "2015-11-01 20:30:00"
+	},
+	{
+		"id" : 87,
+		"title" : "32nd Sunday of Ordinary Time",
+		"date" : "2015-11-08 20:30:00"
+	},
+	{
+		"id" : 88,
+		"title" : "33rd Sunday of Ordinary Time",
+		"date" : "2015-11-15 20:30:00"
+	},
+	{
+		"id" : 90,
+		"title" : "Thanksgiving",
+		"date" : "2015-11-26 20:30:00"
+	},
+	{
+		"id" : 91,
+		"title" : "The Solemnity Our Lord Jesus Christ",
+		"date" : "2015-11-22 20:30:00"
+	},
+	{
+		"id" : 92,
+		"title" : "1st Sunday of Advent",
+		"date" : "2015-11-29 20:30:00"
+	},
+	{
+		"id" : 94,
+		"title" : "2nd Sunday of Advent",
+		"date" : "2015-12-06 20:30:00"
+	},
+	{
+		"id" : 95,
+		"title" : "3rd Sunday of Advent",
+		"date" : "2015-12-13 20:30:00"
+	},
+	{
+		"id" : 96,
+		"title" : "4th Sunday of Advent",
+		"date" : "2015-12-20 20:30:00"
+	},
+	{
+		"id" : 97,
+		"title" : "Christmas",
+		"date" : "2015-12-24 20:30:00"
+	},
+	{
+		"id" : 98,
+		"title" : "The Holy Family of Jesus, Mary and Joseph",
+		"date" : "2015-12-27 20:30:00"
+	},
+	{
+		"id" : 99,
+		"title" : "The Epiphany of the Lord",
+		"date" : "2016-01-03 20:30:00"
+	},
+	{
+		"id" : 100,
+		"title" : "The Baptism of the Lord",
+		"date" : "2016-01-10 20:30:00"
+	},
+	{
+		"id" : 101,
+		"title" : "2nd Sunday of Ordinary Time",
+		"date" : "2016-01-17 20:30:00"
+	},
+	{
+		"id" : 102,
+		"title" : "3rd Sunday in Ordinary Time",
+		"date" : "2016-01-24 20:30:00"
+	},
+	{
+		"id" : 103,
+		"title" : "4th Sunday in Ordinary Time",
+		"date" : "2016-01-31 20:30:00"
+	},
+	{
+		"id" : 104,
+		"title" : "5th Sunday in Ordinary Time",
+		"date" : "2016-02-07 20:30:00"
+	},
+	{
+		"id" : 105,
+		"title" : "1st Sunday of Lent",
+		"date" : "2016-02-14 20:30:00"
+	},
+	{
+		"id" : 106,
+		"title" : "2nd Sunday of Lent",
+		"date" : "2016-02-21 20:30:00"
+	},
+	{
+		"id" : 107,
+		"title" : "3rd Sunday of Lent",
+		"date" : "2016-02-28 20:30:00"
+	},
+	{
+		"id" : 108,
+		"title" : "4th Sunday of Lent",
+		"date" : "2016-03-06 20:30:00"
+	},
+	{
+		"id" : 109,
+		"title" : "5th Sunday of Lent ",
+		"date" : "2016-03-13 20:30:00"
+	},
+	{
+		"id" : 110,
+		"title" : "Palm Sunday of the Lord’s Passion",
+		"date" : "2016-03-20 20:30:00"
+	},
+	{
+		"id" : 111,
+		"title" : "The Resurrection of the Lord; Easter Day",
+		"date" : "2016-03-27 20:30:00"
+	},
+	{
+		"id" : 112,
+		"title" : "2nd Sunday of Easter",
+		"date" : "2016-04-03 20:30:00"
+	},
+	{
+		"id" : 113,
+		"title" : "3rd Sunday of Easter",
+		"date" : "2016-04-10 20:30:00"
+	},
+	{
+		"id" : 114,
+		"title" : "4th Sunday of Easter",
+		"date" : "2016-04-17 20:30:00"
+	},
+	{
+		"id" : 116,
+		"title" : "6th Sunday of Easter",
+		"date" : "2016-05-01 20:30:00"
+	},
+	{
+		"id" : 124,
+		"title" : "Ascension of the Lord, 7th Sunday of Easter",
+		"date" : "2016-05-08 20:30:00"
+	},
+	{
+		"id" : 118,
+		"title" : "Pentecost",
+		"date" : "2016-05-15 20:30:00"
+	},
+	{
+		"id" : 119,
+		"title" : "The Solemnity of the Most Holy Trinity",
+		"date" : "2016-05-22 20:30:00"
+	},
+	{
+		"id" : 120,
+		"title" : "The Solemnity of the Most Holy Body and Blood of Christ",
+		"date" : "2016-05-29 20:30:00"
+	},
+	{
+		"id" : 121,
+		"title" : "Tenth Sunday in Ordinary Time",
+		"date" : "2016-06-05 20:30:00"
+	},
+	{
+		"id" : 122,
+		"title" : "5th Sunday of Easter",
+		"date" : "2016-04-24 20:30:00"
+	},
+	{
+		"id" : 125,
+		"title" : "Twenty-Seventh Sunday in Ordinary Time",
+		"date" : "2016-10-02 20:30:00"
+	},
+	{
+		"id" : 126,
+		"title" : "Twenty-ninth Sunday in Ordinary time",
+		"date" : "2016-10-16 20:30:00"
+	},
+	{
+		"id" : 127,
+		"title" : "Thirtieth Sunday in Ordinary time",
+		"date" : "2016-10-23 20:30:00"
+	},
+	{
+		"id" : 128,
+		"title" : "Thirty-first Sunday in Ordinary time",
+		"date" : "2016-10-30 20:30:00"
+	},
+	{
+		"id" : 129,
+		"title" : "Thirty-second Sunday in Ordinary time",
+		"date" : "2016-11-06 20:30:00"
+	},
+	{
+		"id" : 130,
+		"title" : "Thirty-third Sunday in Ordinary time",
+		"date" : "2016-11-13 20:30:00"
+	},
+	{
+		"id" : 131,
+		"title" : "The Solemnity of Our Lord Jesus Christ, King of the Universe",
+		"date" : "2016-11-20 20:30:00"
+	},
+	{
+		"id" : 132,
+		"title" : "First Sunday of Advent",
+		"date" : "2016-11-27 20:30:00"
+	},
+	{
+		"id" : 133,
+		"title" : "Second Sunday of Advent",
+		"date" : "2016-12-04 20:30:00"
+	},
+	{
+		"id" : 134,
+		"title" : "Third Sunday of Advent",
+		"date" : "2016-12-11 20:30:00"
+	},
+	{
+		"id" : 135,
+		"title" : "Fourth Sunday of Advent",
+		"date" : "2016-12-18 20:30:00"
+	},
+	{
+		"id" : 136,
+		"title" : "\"Christmas Day: Nativity of The Lord",
+		"date" : "2016-12-25 20:30:00"
+	},
+	{
+		"id" : 137,
+		"title" : "Solemnity of Mary, The Holy Mother of God",
+		"date" : "2017-01-01 20:30:00"
+	},
+	{
+		"id" : 138,
+		"title" : "The Epiphany of The Lord",
+		"date" : "2017-01-08 20:30:00"
+	},
+	{
+		"id" : 139,
+		"title" : "Second Sunday in Ordinary Time",
+		"date" : "2017-01-15 20:30:00"
+	},
+	{
+		"id" : 140,
+		"title" : "Third Sunday in Ordinary Time",
+		"date" : "2017-01-22 20:30:00"
+	},
+	{
+		"id" : 141,
+		"title" : "Fourth Sunday in Ordinary Time",
+		"date" : "2017-01-29 20:30:00"
+	},
+	{
+		"id" : 142,
+		"title" : "Sixth Sunday in Ordinary Time",
+		"date" : "2017-02-12 20:30:00"
+	},
+	{
+		"id" : 143,
+		"title" : "Seventh Sunday in Ordinary Time",
+		"date" : "2017-02-19 20:30:00"
+	},
+	{
+		"id" : 144,
+		"title" : "Eight Sunday in Ordinary Time",
+		"date" : "2017-02-26 20:30:00"
+	},
+	{
+		"id" : 149,
+		"title" : "Second Sunday of Lent",
+		"date" : "2017-03-12 20:30:00"
+	},
+	{
+		"id" : 148,
+		"title" : "First Sunday of Lent",
+		"date" : "2017-03-05 20:30:00"
+	},
+	{
+		"id" : 150,
+		"title" : "Third Sunday of Lent",
+		"date" : "2017-03-19 20:30:00"
+	},
+	{
+		"id" : 151,
+		"title" : "Fourth Sunday of Lent",
+		"date" : "2017-03-26 20:30:00"
+	},
+	{
+		"id" : 152,
+		"title" : "Fifth Sunday of Lent",
+		"date" : "2017-04-02 20:30:00"
+	},
+	{
+		"id" : 153,
+		"title" : "Palm Sunday",
+		"date" : "2017-04-02 20:30:00"
+	},
+	{
+		"id" : 154,
+		"title" : "Fifth Sunday in Ordinary Time",
+		"date" : "2017-02-05 20:30:00"
+	},
+	{
+		"id" : 155,
+		"title" : "Most Holy Trinity",
+		"date" : "2017-06-11 20:30:00"
+	},
+	{
+		"id" : 156,
+		"title" : "Palm Sunday",
+		"date" : "2017-04-02 20:30:00"
+	},
+	{
+		"id" : 157,
+		"title" : "Body and Blood of Christ",
+		"date" : "2017-06-18 20:30:00"
+	},
+	{
+		"id" : 158,
+		"title" : "12th Sunday of Ordinary Time",
+		"date" : "2017-06-25 20:30:00"
+	},
+	{
+		"id" : 159,
+		"title" : "13th Sunday of Ordinary Time",
+		"date" : "2017-07-02 20:30:00"
+	},
+	{
+		"id" : 160,
+		"title" : "14th Sunday of Ordinary Time",
+		"date" : "2017-07-09 20:30:00"
+	},
+	{
+		"id" : 161,
+		"title" : "15th Sunday of Ordinary Time",
+		"date" : "2017-07-16 20:30:00"
+	},
+	{
+		"id" : 162,
+		"title" : "16th Sunday of Ordinary Time",
+		"date" : "2017-07-23 20:30:00"
+	},
+	{
+		"id" : 163,
+		"title" : "17th Sunday of Ordinary Time",
+		"date" : "2017-07-30 20:30:00"
+	},
+	{
+		"id" : 164,
+		"title" : "18th Sunday of Ordinary Time (Feast of the Transfiguration of th",
+		"date" : "2017-08-06 20:30:00"
+	},
+	{
+		"id" : 165,
+		"title" : "19th Sunday of Ordinary Time",
+		"date" : "2017-08-13 20:30:00"
+	},
+	{
+		"id" : 166,
+		"title" : "20th Sunday of Ordinary Time",
+		"date" : "2017-08-20 20:30:00"
+	},
+	{
+		"id" : 167,
+		"title" : "21st Sunday of Ordinary Time",
+		"date" : "2017-08-27 20:30:00"
+	},
+	{
+		"id" : 168,
+		"title" : "22nd Sunday of Ordinary Time",
+		"date" : "2017-09-03 20:30:00"
+	},
+	{
+		"id" : 169,
+		"title" : "23rd Sunday of Ordinary Time",
+		"date" : "2017-09-10 20:30:00"
+	},
+	{
+		"id" : 170,
+		"title" : "24th Sunday of Ordinary Time",
+		"date" : "2017-09-17 20:30:00"
+	},
+	{
+		"id" : 171,
+		"title" : "25th Sunday of Ordinary Time",
+		"date" : "2017-09-24 20:30:00"
+	},
+	{
+		"id" : 172,
+		"title" : "26th Sunday of Ordinary Time",
+		"date" : "2017-10-01 20:30:00"
+	},
+	{
+		"id" : 173,
+		"title" : "27th Sunday of Ordinary Time",
+		"date" : "2017-10-08 20:30:00"
+	},
+	{
+		"id" : 174,
+		"title" : "28th Sunday of Ordinary Time",
+		"date" : "2017-10-15 20:30:00"
+	},
+	{
+		"id" : 175,
+		"title" : "Emily & Phuoc’s Wedding",
+		"date" : "2017-08-05 14:00:00"
+	},
+	{
+		"id" : 176,
+		"title" : "29th Sunday in Ordinary Time",
+		"date" : "2017-10-22 20:30:00"
+	},
+	{
+		"id" : 177,
+		"title" : "30th Sunday in Ordinary Time",
+		"date" : "2017-10-29 20:30:00"
+	},
+	{
+		"id" : 178,
+		"title" : "31st Sunday in Ordinary Time",
+		"date" : "2017-11-05 20:30:00"
+	},
+	{
+		"id" : 179,
+		"title" : "32nd Sunday in Ordinary Time",
+		"date" : "2017-11-12 20:30:00"
+	},
+	{
+		"id" : 180,
+		"title" : "33rd Sunday in Ordinary Time",
+		"date" : "2017-11-19 20:30:00"
+	},
+	{
+		"id" : 181,
+		"title" : "Solemnity of Our Lord Jesus Christ",
+		"date" : "2017-11-26 20:30:00"
+	},
+	{
+		"id" : 182,
+		"title" : "1st Sunday of Advent",
+		"date" : "2017-12-03 20:30:00"
+	},
+	{
+		"id" : 184,
+		"title" : "3rd Sunday of Advent",
+		"date" : "2017-12-17 20:30:00"
+	},
+	{
+		"id" : 185,
+		"title" : "2nd Sunday of Advent",
+		"date" : "2017-12-10 20:30:00"
+	},
+	{
+		"id" : 186,
+		"title" : "The Holy Family of Jesus, Mary, and Joseph",
+		"date" : "2017-12-31 20:30:00"
+	},
+	{
+		"id" : 187,
+		"title" : "The Epiphany of the Lord",
+		"date" : "2018-01-07 20:30:00"
+	},
+	{
+		"id" : 188,
+		"title" : "Thanksgiving Mass",
+		"date" : "2017-11-23 20:30:00"
+	},
+	{
+		"id" : 189,
+		"title" : "Christmas Mass",
+		"date" : "2017-12-25 11:00:00"
+	},
+	{
+		"id" : 190,
+		"title" : "2nd Sunday of Ordinary Time",
+		"date" : "2018-01-14 20:30:00"
+	},
+	{
+		"id" : 191,
+		"title" : "3rd Sunday of Ordinary Time",
+		"date" : "2018-01-21 20:30:00"
+	},
+	{
+		"id" : 192,
+		"title" : "4th Sunday of Ordinary Time",
+		"date" : "2018-01-28 20:30:00"
+	},
+	{
+		"id" : 193,
+		"title" : "5th Sunday of Ordinary Time",
+		"date" : "2018-02-04 20:30:00"
+	},
+	{
+		"id" : 194,
+		"title" : "6th Sunday of Ordinary Time",
+		"date" : "2018-02-11 20:30:00"
+	},
+	{
+		"id" : 195,
+		"title" : "First Sunday of Lent",
+		"date" : "2018-02-18 20:30:00"
+	},
+	{
+		"id" : 196,
+		"title" : "Second Sunday of Lent",
+		"date" : "2018-02-25 20:30:00"
+	},
+	{
+		"id" : 197,
+		"title" : "Third Sunday of Lent",
+		"date" : "2018-03-04 20:30:00"
+	},
+	{
+		"id" : 198,
+		"title" : "Fourth Sunday of Lent",
+		"date" : "2018-03-11 20:30:00"
+	},
+	{
+		"id" : 199,
+		"title" : "Palm Sunday",
+		"date" : "2018-03-25 20:30:00"
+	},
+	{
+		"id" : 200,
+		"title" : "Fifth Sunday of Lent",
+		"date" : "2018-03-18 20:30:00"
+	},
+	{
+		"id" : 201,
+		"title" : "Easter Sunday",
+		"date" : "2018-04-01 20:30:00"
+	},
+	{
+		"id" : 202,
+		"title" : "2nd Sunday of Easter",
+		"date" : "2018-04-08 20:30:00"
+	},
+	{
+		"id" : 203,
+		"title" : "3rd Sunday of Easter",
+		"date" : "2018-04-15 20:30:00"
+	},
+	{
+		"id" : 204,
+		"title" : "4th Sunday of Easter",
+		"date" : "2018-04-22 20:30:00"
+	},
+	{
+		"id" : 205,
+		"title" : "5th Sunday of Easter",
+		"date" : "2018-04-29 20:30:00"
+	},
+	{
+		"id" : 206,
+		"title" : "6th Sunday of Easter",
+		"date" : "2018-05-06 20:30:00"
+	},
+	{
+		"id" : 207,
+		"title" : "Ascension of the Lord",
+		"date" : "2018-05-13 20:30:00"
+	},
+	{
+		"id" : 208,
+		"title" : "Pentacost",
+		"date" : "2018-05-20 20:30:00"
+	},
+	{
+		"id" : 209,
+		"title" : "The Solemnity of the Most Holy Trinity",
+		"date" : "2018-05-27 20:30:00"
+	},
+	{
+		"id" : 210,
+		"title" : "The Solemnity of the Most Holy Body and Blood of Christ",
+		"date" : "2018-06-03 20:30:00"
+	},
+	{
+		"id" : 211,
+		"title" : "10th Sunday of Ordinary Time",
+		"date" : "2018-06-10 20:30:00"
+	},
+	{
+		"id" : 212,
+		"title" : "11th Sunday in Ordinary Time",
+		"date" : "2018-06-17 20:30:00"
+	},
+	{
+		"id" : 213,
+		"title" : "Solemnity of the Nativity of Saint John the Baptist",
+		"date" : "2018-06-24 20:30:00"
+	},
+	{
+		"id" : 214,
+		"title" : "13th Sunday in Ordinary Time",
+		"date" : "2018-07-01 20:30:00"
+	},
+	{
+		"id" : 215,
+		"title" : "14th Sunday in Ordinary Time",
+		"date" : "2018-07-08 20:30:00"
+	},
+	{
+		"id" : 216,
+		"title" : "15th Sunday in Ordinary Time",
+		"date" : "2018-07-15 20:30:00"
+	},
+	{
+		"id" : 217,
+		"title" : "16th Sunday in Ordinary Time",
+		"date" : "2018-07-22 20:30:00"
+	},
+	{
+		"id" : 218,
+		"title" : "17th Sunday in Ordinary Time",
+		"date" : "2018-07-29 20:30:00"
+	},
+	{
+		"id" : 219,
+		"title" : "18th Sunday in Ordinary Time",
+		"date" : "2018-08-05 20:30:00"
+	},
+	{
+		"id" : 220,
+		"title" : "19th Sunday in Ordinary Time",
+		"date" : "2018-08-12 20:30:00"
+	},
+	{
+		"id" : 221,
+		"title" : "20th Sunday in Ordinary Time",
+		"date" : "2018-08-19 20:30:00"
+	},
+	{
+		"id" : 222,
+		"title" : "21st Sunday in Ordinary Time",
+		"date" : "2018-08-26 20:30:00"
+	},
+	{
+		"id" : 223,
+		"title" : "22nd Sunday in Ordinary Time",
+		"date" : "2018-09-02 20:30:00"
+	},
+	{
+		"id" : 224,
+		"title" : "23rd Sunday in Ordinary Time(Patron Saint Day; Anniversary)",
+		"date" : "2018-09-09 20:30:00"
+	},
+	{
+		"id" : 225,
+		"title" : "24th Sunday in Ordinary Time",
+		"date" : "2018-09-16 20:30:00"
+	},
+	{
+		"id" : 226,
+		"title" : "25th Sunday in Ordinary Time",
+		"date" : "2018-09-23 20:30:00"
+	},
+	{
+		"id" : 227,
+		"title" : "26th Sunday in Ordinary Time",
+		"date" : "2018-09-30 20:30:00"
+	},
+	{
+		"id" : 228,
+		"title" : "27th Sunday in Ordinary Time",
+		"date" : "2018-10-07 20:30:00"
+	},
+	{
+		"id" : 229,
+		"title" : "28th Sunday in Ordinary Time",
+		"date" : "2018-10-14 20:30:00"
+	},
+	{
+		"id" : 230,
+		"title" : "29th Sunday in Ordinary Time",
+		"date" : "2018-10-21 20:30:00"
+	},
+	{
+		"id" : 231,
+		"title" : "30th Sunday in Ordinary Time",
+		"date" : "2018-10-28 20:30:00"
+	},
+	{
+		"id" : 232,
+		"title" : "31st Sunday in Ordinary Time",
+		"date" : "2018-11-04 20:30:00"
+	}
+]
