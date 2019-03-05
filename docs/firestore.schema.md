@@ -10,13 +10,13 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
 
 # Song
 ```
- uuid    : song_id (directory_name where song files are)
- int     : legacy_id (for relating to the legacy MySQL tables)
+ uuid    : id 
+ int     : legacy id (for relating to the legacy MySQL tables)
  string  : title
  string  : first line   
 [uuid]   : [composer_id]
 [ {
-  string : media_type [piano | guitar | vocal]
+  string : media_type [piano | guitar | vocal | mp3 | link | solo | octavo | lead ]
   url    : url which initially is a file_storage_path of a media file to be updated with 
            download URL by an admin client
 }]
@@ -29,6 +29,7 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
  string  : last name
 [string] : publisher
 [string] : url to portrait
+[string] : url's to external bio sources
 ```
 
 # Choir (collection)
@@ -44,16 +45,24 @@ These are root level collections, [as suggested by Firebase] (https://firebase.g
  uuid           : choir_id
  string         : title
  timestamp      : date
+ boolean        : enable (can be used as visibility flag)
  ```
 
 # Liturgy Parts (collection)
 ```
- uuid : liturgy id
- string : part section
- string : part name
- uuid : song id
- int : order
+ uuid   : liturgy id
+ uuid   : part id (standard part of a liturgy)
+ string : part section ( used mainly for non-standard section )
+ string : part name ( used mainly for non-standard part )
+ uuid   : song id
+ int    : legacy song id - used for verifying song identity during database migration from MySQL to Firestore
+ int    : order ('global' within this liturgy and not just section)
 ```
 
-
- 
+# Standard Liturgy Parts (collection)
+```
+ uuid   : id
+ string : part section 
+ string : part name 
+ int    : order (within a liturgy)
+```
