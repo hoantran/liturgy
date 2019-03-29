@@ -5,8 +5,7 @@ import config from './FirebaseConfig'
 const firebaseApp = firebase.initializeApp(config)
 
 const firestore = firebaseApp.firestore()
-const settings = {timestampsInSnapshots: true}
-firestore.settings(settings)
+
 const usersCollection = firestore.collection('users')
 const publishersCollection = firestore.collection('publishers')
 const choirsCollection = firestore.collection('choirs')

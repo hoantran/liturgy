@@ -23,7 +23,7 @@
           <tr v-for="liturgy in liturgies" :key="liturgy.id" @click="selected(liturgy.id)">
               <!-- <router-link :to="{ name: 'liturgy', params: { id: liturgy.id }}"> -->
                 <!-- <td><router-link :to="{ name: 'liturgy', params: { id: index }}">Sunday #{{index}} in Ordinary Time</router-link></td> -->
-                <td>{{liturgy.date}}</td>
+                <td>{{liturgy.date | formatDate}}</td>
                 <td>{{liturgy.title}}</td>
               <!-- </router-link> -->
             <!-- {{ shoppingItems[index].name }} - {{ shoppingItems[index].price }} -->
@@ -39,6 +39,8 @@ import {
   choirsCollection,
   liturgiesCollection
 } from '../../firebase/FirebaseInit'
+
+import moment from 'moment'
 
 export default {
   name: 'LiturgyListPage',
@@ -80,6 +82,13 @@ export default {
       this.$router.push({ path: '/liturgy/' + liturgyID })
     }
   },
+  filters: {
+  formatDate: function (value) {
+    if (!value) return ''
+    value = value.toDate()
+    return moment(String(value)).format('MM/DD/YYYY')
+  }
+},
   created () {
     let choirID = this.$store.getters.choirID
     if (choirID) {

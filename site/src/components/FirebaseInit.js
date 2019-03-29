@@ -8,6 +8,4 @@ console.log('app: ' + firebaseApp)
 console.log(firebaseApp.name)
 
 const firestore = firebaseApp.firestore()
-const settings = {timestampsInSnapshots: true}
-firestore.settings(settings)
 export default firestore

@@ -1,5 +1,5 @@
 <template>
-  <div class="container col-lg-2 col-md-3 col-sm-4 col-xs-6 " style="text-align:center" >
+  <div class="container col-lg-2 col-md-3 col-sm-4 col-xs-6" style="text-align:center;margin-top:80px">
      <img :src="imageFile" alt="Page Not Found" height="400" width="400">
     <h1>Sorry! The page you're looking for doesn't exist..</h1>
   </div>
