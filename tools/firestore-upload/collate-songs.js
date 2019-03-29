@@ -182,8 +182,7 @@ function clarifyMediaMap(ambigious, indexed, songIndexedByID) {
 async function addSongsToFirestore(songArray){
   admin.initializeApp(project.config)
   let firestore = admin.firestore()
-  const settings = {timestampsInSnapshots: true}
-  firestore.settings(settings)
+
 
   for (let song of songArray) {
     await firestore.collection('songs').add(song)
