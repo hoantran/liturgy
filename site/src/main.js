@@ -7,7 +7,6 @@ import { store } from './store/store'
 import 'bulma'
 import {auth} from './firebase/FirebaseInit'
 import VueAnalytics from 'vue-analytics'
-//import moment from 'moment'
 
 Vue.config.productionTip = false
 
@@ -35,9 +34,3 @@ auth.onAuthStateChanged(user => {
     })
   }
 })
-
-// Vue.filter('formatDate', function(value) {
-//   if (value) {
-//     return moment(String(value)).format('MM/DD/YYYY hh:mm')
-//   }
-// })
