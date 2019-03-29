@@ -83,12 +83,12 @@ export default {
     }
   },
   filters: {
-  formatDate: function (value) {
-    if (!value) return ''
-    value = value.toDate()
-    return moment(String(value)).format('MM/DD/YYYY')
-  }
-},
+    formatDate: function (value) {
+      if (!value) return ''
+      value = value.toDate()
+      return moment(String(value)).format('MM/DD/YYYY')
+    }
+  },
   created () {
     let choirID = this.$store.getters.choirID
     if (choirID) {
