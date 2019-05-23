@@ -11,6 +11,10 @@ const utils =  {
     } else {
       return this.defaultMediaType
     }
+  },
+  formateTonyDate(timestamp) {
+    // do someformating
+    return 'formatted string'
   }
 }
 

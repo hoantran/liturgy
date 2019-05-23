@@ -82,11 +82,7 @@ async function walk(dir, fileLists = { goodList: [], badList: [] }, depth = 0 ) 
 function getLastTwoSegments(filepath) {
   let result = ''
   if (filepath) {
-<<<<<<< HEAD
-    let exploded = filepath.split('\\')
-=======
     let exploded = filepath.split(path.sep)
->>>>>>> d9fbcf77f1809ae38dd028f4fdd52cd51bcd9274
     const length = exploded.length
     if (length > 2) {
       result = exploded[length - 2] + '/' + exploded[length - 1]
