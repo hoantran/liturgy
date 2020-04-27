@@ -1,6 +1,8 @@
 SONG LINEUP FOR LITURGY
 ==================================
 
+** This branch is suspended and being replaced by a different branch **
+
 This project is to develop a website to communicate weekly (music, and maybe at most other liturgical ministry) needs of a choir within its members
 
 This is the 3rd version of the project.
