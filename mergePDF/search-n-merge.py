@@ -24,8 +24,8 @@ date = sheet.find('5/10/2020')
 # format_frame = pd.DataFrame(sheet.col_values(1))
 # songs = pd.DataFrame(sheet.col_values(date.col))
 
-extensions = ['.pdf','.mp3','guitar', '.vocal','.piano', '.1','.2','manibusan'] # to omit; it improves the match result
-def remove_multiple_strings(cur_string, extensions): # function to remove extensions in string
+extensions = ['.pdf','.mp3','guitar', '.vocal','.piano', '.1','.2','manibusan'] # to omit
+def remove_multiple_strings(cur_string, extensions): # function to remove extensions in matched strings. Improve match results
     for cur_word in extensions:
         cur_string = cur_string.replace(cur_word, '')
     return cur_string
