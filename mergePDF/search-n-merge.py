@@ -42,7 +42,7 @@ for i in range(2,7): # index 2 to 7 of tmp[] contain the songs
 for song in merge:
     for root,dirs,files in os.walk("/Users/huygiang/Desktop/songs"): # change to your directory
         for file in files:
-            if fuzz.token_set_ratio(remove_multiple_strings(file, extensions), song)>80:
+            if fuzz.token_set_ratio(remove_multiple_strings(file, extensions), song)>80: # i think score of 80 is reliable. dont ask me why
                 print(fuzz.token_set_ratio(remove_multiple_strings(file, extensions), song), file)
             # i've tried .ratio, .partial_ratio, .token_sort_ratio, 
 
