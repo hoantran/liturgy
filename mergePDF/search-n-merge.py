@@ -17,7 +17,7 @@ sheet = client.open("FLOCK Song List").sheet1
 # date = sheet.find(input('Enter date(M/D/YYYY): '))
 date = sheet.find('5/10/2020')
 
-# TODO: can we improve date search to allow different date formats?
+# TODO: can we improve by allowing different/multiple date formats?
 # date = parse(input('Enter date: '), fuzzy=True)
 # print(sheet.col_values(1),sheet.col_values(date.col))
 
