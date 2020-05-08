@@ -68,25 +68,18 @@ def handle_matching_error(song):
     while(not os.path.exists(filepath)):
         print("User provided filepath does not exists. Please provide path again: ")
         filepath = input()
+    return filepath
 
 if song_directory == "":
     print("Error please set song_directory filepath to your local song directory.")
     assert()
 
-cells = sheet.col_values(sheet.find(date).col) # all cells of the column
-tmp=[]  # temporary list to parse songs
-merge=[] # actual list of songs
+cells = sheet.col_values(sheet.find(date).col)[2:] # remove first 2 cells which are Sunday and Date
+songs = list(filter(None, cells)) #filter out empty cells
 filepaths=[] #list of filepaths for pdfs to merge
 
-#extract songs from google sheet cells
-for song in cells:
-    if song != '': # omit empty cells
-        tmp.append(song)
-for i in range(2,7): # index 2 to 7 of tmp[] contain the songs
-    merge.append(tmp[i])
-
 #finding pdf match for each song
-for song in merge:
+for song in songs:
     found_pdf = False
     for dir in os.listdir(song_directory):
         if fuzz.token_set_ratio(dir, song)>80: # i think score of 80 is reliable. dont ask me why
@@ -98,7 +91,7 @@ for song in merge:
             break
     #Matching PDF for song could not be found
     if(not found_pdf):
-        handle_matching_error(song)
+        filepaths.append(handle_matching_error(song))
 
 #creating pdf
 filename = "FLOCK_" + date.replace("/", "_") + "_vocal.pdf"
