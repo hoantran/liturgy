@@ -1,8 +1,10 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from fuzzywuzzy import fuzz, process
+from dateutil.parser import parse
 import pandas as pd
 import numpy as np
-import os
+import os, glob
 
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
@@ -12,36 +14,35 @@ client = gspread.authorize(creds)
 # Make sure you use the right name here.
 sheet = client.open("FLOCK Song List").sheet1
 
-date = sheet.find(input('Enter date(M/D/YYYY): '))
+# date = sheet.find(input('Enter date(M/D/YYYY): '))
+date = sheet.find('5/10/2020')
+
+# TODO: can we improve date search to allow different date formats?
+# date = parse(input('Enter date: '), fuzzy=True)
 # print(sheet.col_values(1),sheet.col_values(date.col))
 
 # format_frame = pd.DataFrame(sheet.col_values(1))
 # songs = pd.DataFrame(sheet.col_values(date.col))
 
-# print(pd.concat([format_frame,songs], keys=['format_frame','songs'], axis=1))
-# print(format_frame)
+extensions = ['.pdf','.mp3','guitar', '.vocal','.piano', '.1','.2','manibusan'] # to omit; it improves the match result
+def remove_multiple_strings(cur_string, extensions): # function to remove extensions in string
+    for cur_word in extensions:
+        cur_string = cur_string.replace(cur_word, '')
+    return cur_string
 
-def get_songs(str):
-    songs = sheet.col_values(date.col)
-    songs_to_merge = []
-    tmp=[]
-    for song in songs:
-        if song != '':
-            tmp.append(song)
-    for i in range(2,7):
-        songs_to_merge.append(tmp[i])
-    
-    for song in songs_to_merge:
-        path = os.path.join("/Users/huygiang/Desktop/songs/",f"{song}")
-        if os.path.exists(path):
-            print(song + ' exists')
-            if os.path.isdir(path):
-                print(song + ' is a directory')
-            else:
-                print(song + ' is not a directory')
-        else:
-            print(song + ' does not exist')
+cells = sheet.col_values(date.col) # all cells of the column
+tmp=[]  # temporary list to parse songs
+merge=[] # actual list of songs
+for song in cells:
+    if song != '': # omit empty cells
+        tmp.append(song)
+for i in range(2,7): # index 2 to 7 of tmp[] contain the songs
+    merge.append(tmp[i])
 
-get_songs(date)
-
+for song in merge:
+    for root,dirs,files in os.walk("/Users/huygiang/Desktop/songs"): # change to your directory
+        for file in files:
+            if fuzz.token_set_ratio(remove_multiple_strings(file, extensions), song)>80:
+                print(fuzz.token_set_ratio(remove_multiple_strings(file, extensions), song), file)
+            # i've tried .ratio, .partial_ratio, .token_sort_ratio, 
 
