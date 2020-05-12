@@ -2,12 +2,13 @@ import fnmatch
 import gspread
 import os
 import PyPDF2
+import sys
+import unidecode
 from fuzzywuzzy import process
 from oauth2client.service_account import ServiceAccountCredentials
 
-#Set Sunday date below and set path to your local song directory
-date = '5/10/2020'
-song_directory = ""
+#Set path to your local song directory
+song_directory = "" #Set path to your local song directory
 
 def find_vocal_pdf(directory):
     '''
@@ -82,8 +83,14 @@ def handle_matching_error(song):
     return filepath
 
 if song_directory == "":
-    print("Error please set song_directory filepath variable in this P to your local song directory.")
+    print("Error please set song_directory filepath variable to your local song directory.")
     assert()
+
+if len(sys.argv) == 1:
+    print("Error please provide Sunday date as command line parameter MM/DD/YYYY")
+    assert()
+
+date = sys.argv[1]
 
 #Pull data from Google Sheet
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
@@ -99,21 +106,21 @@ instrumental_set=[]
 dirs = os.listdir(song_directory)
 
 for song in songs:
+    song = unidecode.unidecode(song) #remove Vietnamese diacritics from song name
     directory_name, match_score = process.extractOne(song, dirs)
     if match_score > 80:
         directory_path = os.path.join(song_directory, directory_name)
 
         vocal_filename = find_vocal_pdf(directory_path)
-        print("For [" + song + "] found a " + str(match_score) + "% matching directory ["
-         + directory_name +  "] and vocal file [" + vocal_filename + "]")
         filepath = os.path.join(directory_path, vocal_filename)
         vocal_set.append(filepath)
 
         instrumental_filename = find_instrumental_pdf(directory_path)
-        print("For [" + song + "] found a " + str(match_score) + "% matching directory ["
-         + directory_name +  "] and instrumental file [" + instrumental_filename + "]")
         filepath = os.path.join(directory_path, instrumental_filename)
         instrumental_set.append(filepath)
+        print("[" + song + "] " + str(match_score) + "% match w/ directory ["
+         + directory_name +  "] and files [" + vocal_filename + ", " + 
+         instrumental_filename + "]\n")
     
     else:
         print("pdf not found for song: " + song)
