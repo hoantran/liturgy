@@ -7,8 +7,8 @@ import unidecode
 from fuzzywuzzy import process
 from oauth2client.service_account import ServiceAccountCredentials
 
-#Set path to your local song directory
-song_directory = "" #Set path to your local song directory
+song_directory = "/Users/baotuannguyen/Desktop/liturgy/tools/firestore-upload/songs" #Set path to your local song directory
+selected_parts = ["Processional", "Responsorial", "Prep. Of Lord's Table", "Communion", "Sending Forth"]
 
 def find_vocal_pdf(directory):
     '''
@@ -82,6 +82,25 @@ def handle_matching_error(song):
         filepath = input()
     return filepath
 
+def get_song_list(selected_parts, column):
+    '''
+    Function to parse a list of song names from a Google sheet column.
+
+    Parameters
+        selected_parts (list <str>) - set of parts to include (i.e. Proecessional,
+                                     Responsorial, Sending Forth, etc.)
+        column (list) - A list of values for a Sunday column from Google sheet.
+
+    Retuns
+        songs (list <str>) - Songs parsed from Google sheet based on selected_parts
+    '''
+    keys = sheet.col_values(1)
+    song_list = []
+    for part in selected_parts:
+        index = keys.index(part)
+        song_list.append(column[index])
+    return song_list
+
 if song_directory == "":
     print("Error please set song_directory filepath variable to your local song directory.")
     assert()
@@ -97,8 +116,8 @@ scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/au
 creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
 client = gspread.authorize(creds)
 sheet = client.open("FLOCK Song List").sheet1
-cells = sheet.col_values(sheet.find(date).col)[2:] # remove first 2 cells which are Sunday and Date
-songs = list(filter(None, cells)) #filter out empty cells
+column = sheet.col_values(sheet.find(date).col)
+songs = get_song_list(selected_parts, column)
 
 #Search song directory pdfs for each song
 vocal_set=[]
@@ -106,8 +125,13 @@ instrumental_set=[]
 dirs = os.listdir(song_directory)
 
 for song in songs:
-    song = unidecode.unidecode(song) #remove Vietnamese diacritics from song name
+
+    #Map unicode to ASCII, i.e. remove Vietnamese diacritics from song name
+    song = unidecode.unidecode(song)
+
+    #fuzzy matching over all song directory names
     directory_name, match_score = process.extractOne(song, dirs)
+
     if match_score > 80:
         directory_path = os.path.join(song_directory, directory_name)
 
@@ -120,7 +144,7 @@ for song in songs:
         instrumental_set.append(filepath)
         print("[" + song + "] " + str(match_score) + "% match w/ directory ["
          + directory_name +  "] and files [" + vocal_filename + ", " + 
-         instrumental_filename + "]\n")
+         instrumental_filename + "]")
     
     else:
         print("pdf not found for song: " + song)
