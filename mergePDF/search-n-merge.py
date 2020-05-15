@@ -7,8 +7,25 @@ import unidecode
 from fuzzywuzzy import process
 from oauth2client.service_account import ServiceAccountCredentials
 
-song_directory = "/Users/baotuannguyen/Desktop/liturgy/tools/firestore-upload/songs" #Set path to your local song directory
-selected_parts = ["Processional", "Responsorial", "Prep. Of Lord's Table", "Communion", "Sending Forth"]
+song_directory = "" #Set path to your local song directory
+selected_parts = ["Processional", "Gloria", "Responsorial", "Gospel Accl.", 
+"Prep. Of Lord's Table", "Holy", "Acclamation", "Great Amen", "Lamb of God",
+"Communion", "Sending Forth"]
+
+def pdf_splitter(path):
+    fname = os.path.splitext(os.path.basename(path))[0]
+    
+    pdf = PdfFileReader(path)
+    for page in range(pdf.getNumPages()):
+        pdf_writer = PdfFileWriter()
+        pdf_writer.addPage(pdf.getPage(page))
+        output_filename = '{}_page_{}.pdf'.format(
+            fname, page+1)
+        
+        with open(output_filename, 'wb') as out:
+            pdf_writer.write(out)
+            
+        print('Created: {}'.format(output_filename))
 
 def find_vocal_pdf(directory):
     '''
@@ -33,12 +50,15 @@ def find_vocal_pdf(directory):
         for file in files:
             if("guitar" in file):
                 return file
+        for file in files:
+            if("piano" in file):
+                return file
         return files[0]
 
-def find_instrumental_pdf(directory):
+def find_guitar_pdf(directory):
     '''
-    Function to find a filename with 'guitar' or 'piano' as a substring. Will assert if no
-    pdfs are found in directory.
+    Function to find a filename with 'guitar' as a substring. If no match is
+    found, try piano or vocal.  Will assert if no pdfs are found in directory.
 
     Parameters
         directory (str) - absolute path to directory to be searched
@@ -57,6 +77,34 @@ def find_instrumental_pdf(directory):
                 return file
         for file in files:
             if("piano" in file):
+                return file
+        for file in files:
+            if("vocal" in file):
+                return file
+        return files[0]
+
+def find_piano_pdf(directory):
+    '''
+    Function to find a filename with 'piano' as a substring. If no match is
+    found, try guitar or vocal.  Will assert if no pdfs are found in directory.
+
+    Parameters
+        directory (str) - absolute path to directory to be searched
+
+    Returns
+        filename (str) - filename of vocal PDF
+    '''
+
+    files = fnmatch.filter(os.listdir(directory), "*.pdf")
+    assert(len(files) != 0)
+    if(len(files) == 1):
+        return files[0]
+    else:
+        for file in files:
+            if("piano" in file):
+                return file
+        for file in files:
+            if("guitar" in file):
                 return file
         for file in files:
             if("vocal" in file):
@@ -121,7 +169,9 @@ songs = get_song_list(selected_parts, column)
 
 #Search song directory pdfs for each song
 vocal_set=[]
-instrumental_set=[]
+guitar_set=[]
+piano_set=[]
+
 dirs = os.listdir(song_directory)
 
 for song in songs:
@@ -131,7 +181,7 @@ for song in songs:
 
     #fuzzy matching over all song directory names
     directory_name, match_score = process.extractOne(song, dirs)
-
+    
     if match_score > 80:
         directory_path = os.path.join(song_directory, directory_name)
 
@@ -139,12 +189,17 @@ for song in songs:
         filepath = os.path.join(directory_path, vocal_filename)
         vocal_set.append(filepath)
 
-        instrumental_filename = find_instrumental_pdf(directory_path)
-        filepath = os.path.join(directory_path, instrumental_filename)
-        instrumental_set.append(filepath)
+        guitar_filename = find_guitar_pdf(directory_path)
+        filepath = os.path.join(directory_path, guitar_filename)
+        guitar_set.append(filepath)
+
+        piano_filename = find_piano_pdf(directory_path)
+        filepath = os.path.join(directory_path, piano_filename)
+        piano_set.append(filepath)
+
         print("[" + song + "] " + str(match_score) + "% match w/ directory ["
          + directory_name +  "] and files [" + vocal_filename + ", " + 
-         instrumental_filename + "]")
+         guitar_filename + ", " + piano_filename + "]\n")
     
     else:
         print("pdf not found for song: " + song)
@@ -157,9 +212,15 @@ for filepath in vocal_set:
     merger.append(filepath)
 merger.write("./"+filename)
 
-filename = "FLOCK_" + date.replace("/", "_") + "_instrumental.pdf"
+filename = "FLOCK_" + date.replace("/", "_") + "_guitar.pdf"
 merger = PyPDF2.PdfFileMerger(strict=False)
-for filepath in instrumental_set:
+for filepath in guitar_set:
+    merger.append(filepath)
+merger.write("./"+filename)
+
+filename = "FLOCK_" + date.replace("/", "_") + "_piano.pdf"
+merger = PyPDF2.PdfFileMerger(strict=False)
+for filepath in piano_set:
     merger.append(filepath)
 merger.write("./"+filename)
 
