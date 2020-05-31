@@ -1,11 +1,18 @@
+'''Setup script that must be run prior to running search and merge script.
+
+This script does the following in the song directory:
+    1. Split Mass setting PDF into parts using page maps defined below and 
+    storing them in their own directory.
+    2. Rename directories starting with ps... to psalm... to improve fuzzy 
+    matching accuracy
+'''
 import os
 import PyPDF2
 import sys
 from shutil import rmtree
 
 #Must be set to local song directory location
-song_directory_root = "/Users/baotuannguyen/Desktop/liturgy/tools/firestore-upload/songs/"
-
+song_directory_root = "/Users/baotuannguyen/Desktop/ProgrammingProjects/liturgy/tools/firestore-upload/songs"
 #list of directories to create, also serves as key set for page maps defined below
 dirs = [
     "mass of st ann kyrie",
@@ -111,3 +118,8 @@ for dir in dirs:
     target_filename = dir + ".piano.1.pdf"
     target_filepath = os.path.join(song_directory_root, dir, target_filename)
     subset_pdf(source_piano_pdf, start, stop, target_filepath)
+
+#Rename ps directories to psalm to improve fuzzy match accuracyf
+for dir in os.listdir(song_directory_root):
+    if(dir.startswith("ps ")):
+        os.rename(os.path.join(song_directory_root,dir), os.path.join(song_directory_root,dir.replace("ps ", "psalm ", 1)))
