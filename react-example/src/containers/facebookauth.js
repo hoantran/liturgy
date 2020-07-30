@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import config from '../config.json'
 
 let firebase = require("firebase/app")
 let firebaseConfig = config.firebaseConfig;
 
-// Initialize Firebase
+// // Initialize Firebase
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 
@@ -18,11 +19,15 @@ class FacebookAuth extends Component {
             user: null,
             token: null,
             isNewUser: null,
+            authenticated: false,
+            role: null
         }
         //Bind functions to this
         this.login = this.login.bind(this);
         this.logout = this.logout.bind(this);
         this.isNewUser = this.isNewUser.bind(this);
+        this.enterSite = this.enterSite.bind(this);
+        this.getUserRole = this.getUserRole.bind(this);
     }
 
     isNewUser(uid) {
@@ -30,17 +35,32 @@ class FacebookAuth extends Component {
             console.log(uid)
 
             db.collection('users').where('uid', '==', uid).get().then( snapshot => {
+                //Ask Anh Hoan is this good approach?
                 if (snapshot.docs[0]) {
-                    console.log(snapshot.docs[0])
+                    console.log('1')
+                    console.log(snapshot.docs[0].data())
                     console.log(snapshot)
                     resolve(false)
                 } else {
                     console.log(snapshot.docs[0])
                     console.log(snapshot)
+                    console.log('sending true')
                     resolve(true)
                 }
             })
             
+        })
+    }
+
+    getUserRole(uid) {
+        return new Promise((resolve, reject) => {
+            db.collection('users').where('uid', '==', uid).get().then( snapshot => {
+                if (snapshot.docs[0]) {
+                    resolve(snapshot.docs[0].data()['role'])
+                } else {
+                    reject(Error)
+                }
+            })
         })
     }
     
@@ -48,26 +68,37 @@ class FacebookAuth extends Component {
         let userData = null;
         let tokenId = null;
         let isNew = null;
+        let userRole = null;
+        let firebaseToken = null;
 
         firebase.auth().signInWithPopup(provider).then( async (result) => {
             console.log(result)
             console.log(result.credential);
             userData = result.user;
             tokenId = result.credential.accessToken;
+            localStorage.setItem('firebaseToken', result.credential.accessToken);
+            //tokenId is token to use with facebook api
+            //firebaseToken is the jwt associated to the current user
+            firebaseToken = await firebase.auth().currentUser.getIdToken();
+            localStorage.setItem('firebaseToken', firebaseToken);
             //need to wait for isNewUser results before setState is executed
             console.log('uid is ' + userData.uid)
             isNew = await this.isNewUser(userData.uid)
+            userRole = await this.getUserRole(userData.uid)
+
           this.setState({
               user: result.user,
-              token: result.credential.accessToken,
-              isNewUser: isNew
+              token: tokenId,
+              isNewUser: isNew,
+              authenticated: true,
+              role: userRole
           })
         })
-        this.setState({
-            user: userData,
-            token: tokenId,
-            isNewUser: isNew
-        })
+        // this.setState({
+        //     user: userData,
+        //     token: tokenId,
+        //     isNewUser: isNew
+        // })
     } 
 
     componentDidMount() {
@@ -84,19 +115,43 @@ class FacebookAuth extends Component {
 
     logout() {
         firebase.auth().signOut().then(() => {
-            console.log('20')
             this.setState({
                 user: null,
                 token: null,
                 isNewUser: null,
+                authenticated: false
             })
         }).catch((error) => {
             console.log(error);
         })
     }
+//
+    enterSite() {
+        if (this.state.authenticated && this.state.isNewUser == false) {
+            console.log('role is ' + this.state.role)
+            return (
+                <div>
+                    <button>
+                        {/* inline style is uses double curly braces, outer braces for javascript, inner brace denotes object */}
+                        <Link style={{color:"white"}} 
+                            to={{
+                                pathname: "/main",
+                                props: {
+                                    role: this.state.role
+                                }
+                            }}>
+                            Enter Site
+                        </Link>
+                    </button>
+                </div>
+                // <div>
+                //     <button>Enter</button>
+                // </div>
+            )
+        }
+    }
 
     render() {
-        console.log('22')
         firebase.auth().getRedirectResult().then(function(result) {
             if (result.credential) {
               // This gives you a Facebook Access Token. You can use it to access the Facebook API.
@@ -119,19 +174,16 @@ class FacebookAuth extends Component {
         
         let controlButton = this.state.user ? <button className="button" onClick={ this.logout }>Logout</button>
           : <button className="button" onClick={ this.login }>Login</button>
-
         let displayName = this.state.user ? <p>{this.state.user.displayName}</p> : null
         let token = this.state.user ? <p>{this.state.token}</p> : null
-        console.log('2')
-        console.log(this.state.token)
-
         let contents = <div>{controlButton}
         </div>
 
         return <div>
             {controlButton}
             <Contents user={this.state.user} token={this.state.token} isNewUser={this.state.isNewUser}/>
-            <button onClick={this.isNewUser}>test</button>
+            {/* <button onClick={this.isNewUser}>Enter</button> */}
+            {this.enterSite()}
         </div>
 
     }
@@ -139,13 +191,12 @@ class FacebookAuth extends Component {
 
 class Contents extends React.Component {
     render() {
-        console.log('1')
         console.log(this.props.isNewUser)
         if (this.props.isNewUser) {
             return <div><h1>Seems you don't have access. Please request access.</h1></div>
         }
 
-        else if (!this.props.isNewUser && this.props.user) {
+        else if (this.props.isNewUser == false && this.props.user) {
             return <div>
                 <h1>{this.props.isNewUser}</h1>
                 <h1>Welcome, {this.props.user.displayName}!</h1>

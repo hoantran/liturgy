@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Table from '../components/Table'
 import Form from '../components/Form'
 import NavBar from '../components/NavBar'
@@ -7,7 +6,9 @@ import 'bulma/css/bulma.css'
 
 class Main extends Component {
     state = {
-        characters: []
+        characters: [],
+        role: this.props.location.role,
+        firebaseToken: localStorage.getItem('firebaseToken')
     }
     removeCharacter = (index) => {
         const { characters } = this.state
@@ -24,16 +25,25 @@ class Main extends Component {
         this.setState({ characters: [...this.state.characters, character] })
     }
 
-    //Ask Anh Hoan about { characters } and this.removeCharacter
+    componentDidMount() {
+      console.log('did mount')
+      console.log(this.props.location)
+    }
+
     //const { characters } = this.state === const characters = this.state.characters
     render() {
+        console.log('rendering')
+        console.log(this.props.location.props.role)
         const { characters } = this.state
-
       return (
         <div className="container">
           <NavBar />
           <Table characterData={characters} removeCharacter={this.removeCharacter}/>
           <Form handleSubmit={this.handleSubmit}/>
+          <button onClick={() => console.log(this.state.role)}>Test</button>
+          <div>From state {this.state.role}</div>
+          <div>From props.location {this.props.location.props.role}</div>
+          <div>FirebaseToken {this.state.firebaseToken}</div>
         </div>
       )
     }

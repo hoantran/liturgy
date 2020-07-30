@@ -12,36 +12,30 @@ import FacebookAuth from './containers/facebookauth'
 import UserDetails from './containers/userdetails'
 import 'bulma/css/bulma.css'
 
-// var firebase = require("firease/app")
-// require("firebase/auth")
-// require("firebase/firestore")
-
-
-
-// var firebaseConfig = {
-//   apiKey: "AIzaSyC5aPWQBNHfqDyjCErWi5emHKynTmRbSOA",
-//   authDomain: "tonypham-97baf.firebaseapp.com",
-//   databaseURL: "https://tonypham-97baf.firebaseio.com",
-//   projectId: "tonypham-97baf",
-//   storageBucket: "tonypham-97baf.appspot.com",
-//   messagingSenderId: "618558281718",
-//   appId: "1:618558281718:web:828aaf044021ef447c19d7"
-// };
-
 //Abstract components into their own files
 //Note that below is JSX, which is indicative by className
 //JSX is camelcase for methods and properties, so onclick will be onClick
-export default function App() {
-  return <Router>
+class App extends Component {
+  render() {
+    return <Router>
     {/* <Routes> */}
-      {/* <Route path="/login" component={Login} /> */}
+    <Switch>
+      {/* <Route path="/main" 
+        render={props => (<Main {...props} role={this.state.role}/>)
+        } /> */}
       <Route path="/main" component={Main} />
-      {/* <Route path="/cloy" component={CloyList} /> */}
-      <Route path="/jaqjaq" component={JaqJaqList} />
+      <Route path="/jaqjaq" render={props => (
+        <JaqJaqList role={this.state.role}/>)
+        }/>
       <Route path="/engagement" component={EngagementPhotos} />
-      <Route path="/facebookAuth" component={FacebookAuth} />
+      <Route exact path="/" component={FacebookAuth} />
       <Route path="/user-details" component={UserDetails} />
+    </Switch>
     {/* </Routes> */}
   </Router>
+  }
+
 }
+
+export default App
 
