@@ -1,16 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import config from '../config.json'
-
-let firebase = require("firebase/app")
-let firebaseConfig = config.firebaseConfig;
-
-// // Initialize Firebase
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = firebaseApp.firestore();
-
-let provider = new firebase.auth.FacebookAuthProvider();
-// firebase.auth().signInWithRedirect(provider);
+import { firestore, auth, provider } from '../firebase.js'
 
 class FacebookAuth extends Component {
     constructor(props) {
@@ -34,7 +25,7 @@ class FacebookAuth extends Component {
         return new Promise((resolve, reject) => {
             console.log(uid)
 
-            db.collection('users').where('uid', '==', uid).get().then( snapshot => {
+            firestore.collection('users').where('uid', '==', uid).get().then( snapshot => {
                 //Ask Anh Hoan is this good approach?
                 if (snapshot.docs[0]) {
                     console.log('1')
@@ -54,8 +45,8 @@ class FacebookAuth extends Component {
 
     getUserRole(uid) {
         return new Promise((resolve, reject) => {
-            db.collection('users').where('uid', '==', uid).get().then( snapshot => {
-                if (snapshot.docs[0]) {
+            firestore.collection('users').where('uid', '==', uid).get().then( snapshot => {
+                if (snapshot.docs[0]) { //user array destructure here to provie more meaning?
                     resolve(snapshot.docs[0].data()['role'])
                 } else {
                     reject(Error)
@@ -71,7 +62,7 @@ class FacebookAuth extends Component {
         let userRole = null;
         let firebaseToken = null;
 
-        firebase.auth().signInWithPopup(provider).then( async (result) => {
+        auth.signInWithPopup(provider).then( async (result) => {
             console.log(result)
             console.log(result.credential);
             userData = result.user;
@@ -79,7 +70,7 @@ class FacebookAuth extends Component {
             localStorage.setItem('firebaseToken', result.credential.accessToken);
             //tokenId is token to use with facebook api
             //firebaseToken is the jwt associated to the current user
-            firebaseToken = await firebase.auth().currentUser.getIdToken();
+            firebaseToken = await auth.currentUser.getIdToken();
             localStorage.setItem('firebaseToken', firebaseToken);
             //need to wait for isNewUser results before setState is executed
             console.log('uid is ' + userData.uid)
@@ -94,15 +85,10 @@ class FacebookAuth extends Component {
               role: userRole
           })
         })
-        // this.setState({
-        //     user: userData,
-        //     token: tokenId,
-        //     isNewUser: isNew
-        // })
     } 
 
     componentDidMount() {
-        firebase.auth().onAuthStateChanged((user) => {
+        auth.onAuthStateChanged((user) => {
           if (user) {
             this.setState({
                 user: user
@@ -114,7 +100,7 @@ class FacebookAuth extends Component {
       }    
 
     logout() {
-        firebase.auth().signOut().then(() => {
+        auth.signOut().then(() => {
             this.setState({
                 user: null,
                 token: null,
@@ -152,7 +138,7 @@ class FacebookAuth extends Component {
     }
 
     render() {
-        firebase.auth().getRedirectResult().then(function(result) {
+        auth.getRedirectResult().then(function(result) {
             if (result.credential) {
               // This gives you a Facebook Access Token. You can use it to access the Facebook API.
               var token = result.credential.accessToken;

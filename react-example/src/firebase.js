@@ -1,11 +1,17 @@
 import firebase from 'firebase'
 import config from './config.json'
 
-let firebase = require("firebase/app")
-let firebaseConfig = config.firebaseConfig;
+// let firebase = require("firebase/app")
+const firebaseConfig = config.firebaseConfig;
 
 // Initialize Firebase
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = firebaseApp.firestore();
+export const auth = firebase.auth();
+export const firestore = firebaseApp.firestore();
 
-let provider = new firebase.auth.FacebookAuthProvider();
+export const provider = new firebase.auth.FacebookAuthProvider();
+
+//Should firebase functions be stored here or in a separate file?
+// export const checkUserRoleHasAccessToRoute = (uid, route) => {
+
+// }
