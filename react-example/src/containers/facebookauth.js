@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect, useHistory } from 'react-router-dom'
 import config from '../config.json'
 import { firestore, auth, provider } from '../firebase.js'
+import { checkUserRoleHasAccessToRoute } from '../firebase.js'
 
 class FacebookAuth extends Component {
     constructor(props) {
@@ -68,6 +69,7 @@ class FacebookAuth extends Component {
             userData = result.user;
             tokenId = result.credential.accessToken;
             localStorage.setItem('firebaseToken', result.credential.accessToken);
+
             //tokenId is token to use with facebook api
             //firebaseToken is the jwt associated to the current user
             firebaseToken = await auth.currentUser.getIdToken();
@@ -76,6 +78,9 @@ class FacebookAuth extends Component {
             console.log('uid is ' + userData.uid)
             isNew = await this.isNewUser(userData.uid)
             userRole = await this.getUserRole(userData.uid)
+            localStorage.setItem('userRole', userRole);
+            localStorage.setItem('authenticated', true);
+            
 
           this.setState({
               user: result.user,
@@ -85,6 +90,9 @@ class FacebookAuth extends Component {
               role: userRole
           })
         })
+        // let history = useHistory()
+        // history.push('/jaqjjaq')
+        return <Redirect to='/jaqjaq' />
     } 
 
     componentDidMount() {
@@ -110,6 +118,9 @@ class FacebookAuth extends Component {
         }).catch((error) => {
             console.log(error);
         })
+        localStorage.setItem('authenticated', false);
+        localStorage.setItem('firebaseToken', null);
+        localStorage.setItem('userRole', null);
     }
 //
     enterSite() {
@@ -137,40 +148,27 @@ class FacebookAuth extends Component {
         }
     }
 
-    render() {
-        auth.getRedirectResult().then(function(result) {
-            if (result.credential) {
-              // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-              var token = result.credential.accessToken;
-              // ...
-            }
-            // The signed-in user info.
-            var user = result.user;
-            console.log(user)
-          }).catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // The email of the user's account used.
-            var email = error.email;
-            // The firebase.auth.AuthCredential type that was used.
-            var credential = error.credential;
-            // ...
-          });
-        
-        let controlButton = this.state.user ? <button className="button" onClick={ this.logout }>Logout</button>
-          : <button className="button" onClick={ this.login }>Login</button>
+    render() {       
+        let controlButton = this.state.user && this.state.authenticated ? <button className="button" onClick={ this.logout }>Logout</button>
+          : <button className="button" onClick={ this.login }>Login With Facebook Authentication</button>
         let displayName = this.state.user ? <p>{this.state.user.displayName}</p> : null
         let token = this.state.user ? <p>{this.state.token}</p> : null
         let contents = <div>{controlButton}
         </div>
 
-        return <div>
-            {controlButton}
-            <Contents user={this.state.user} token={this.state.token} isNewUser={this.state.isNewUser}/>
-            {/* <button onClick={this.isNewUser}>Enter</button> */}
-            {this.enterSite()}
-        </div>
+        if (localStorage.getItem('authenticated')) {
+            return <Redirect to='/main' />
+        } else {
+            return <div>
+                {controlButton}
+            </div>
+        }
+        // return <div>
+        //     <Contents user={this.state.user} token={this.state.token} isNewUser={this.state.isNewUser}/>
+        //     {controlButton}
+        //     {/* <button onClick={this.isNewUser}>Enter</button> */}
+        //     {/* {this.enterSite()} */}
+        // </div>
 
     }
 }

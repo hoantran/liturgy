@@ -14,7 +14,7 @@ import trees1 from '../assets/trees1.jpg'
 class EngagementPhotos extends Component {
     render() {
         return <div className="container">
-            <NavBar />
+            {/* <NavBar /> */}
             <div class="columns padding-top">
                 <div class="column">
                     <ul><img className="photo" src={beach1} /></ul>

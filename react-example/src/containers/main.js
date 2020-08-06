@@ -3,12 +3,16 @@ import Table from '../components/Table'
 import Form from '../components/Form'
 import NavBar from '../components/NavBar'
 import 'bulma/css/bulma.css'
+import  { insufficientAccessWarning } from '../components/insufficient_access_warning.js'
+import { checkUserRoleHasAccessToRoute } from '../firebase.js'
 
 class Main extends Component {
     state = {
         characters: [],
-        role: this.props.location.role,
-        firebaseToken: localStorage.getItem('firebaseToken')
+        role: localStorage.getItem('userRole'),
+        firebaseToken: localStorage.getItem('firebaseToken'),
+        hasAccess: null
+
     }
     removeCharacter = (index) => {
         const { characters } = this.state
@@ -26,24 +30,36 @@ class Main extends Component {
     }
 
     componentDidMount() {
-      console.log('did mount')
-      console.log(this.props.location)
+      console.log('1')
+      checkUserRoleHasAccessToRoute(this.state.role, 'main').then(hasAccess => {
+        this.setState({
+          hasAccess: hasAccess
+        })
+      })//.catch(err) => {
+       // this.setState({
+       //   hasAccess: err
+       // })
+   //   }
+      console.log(this.state.hasAccess)
+      console.log('2')
     }
 
     //const { characters } = this.state === const characters = this.state.characters
     render() {
         console.log('rendering')
-        console.log(this.props.location.props.role)
         const { characters } = this.state
+        let contents = this.state.hasAccess === true ? <div><Table characterData={characters} removeCharacter={this.removeCharacter}/>
+        <Form handleSubmit={this.handleSubmit}/> </div> : this.state.hasAccess === false ? insufficientAccessWarning() : <div>loading</div>
+
       return (
         <div className="container">
-          <NavBar />
-          <Table characterData={characters} removeCharacter={this.removeCharacter}/>
+          {/* <NavBar /> */}
+          {/* <Table characterData={characters} removeCharacter={this.removeCharacter}/>
           <Form handleSubmit={this.handleSubmit}/>
           <button onClick={() => console.log(this.state.role)}>Test</button>
           <div>From state {this.state.role}</div>
-          <div>From props.location {this.props.location.props.role}</div>
-          <div>FirebaseToken {this.state.firebaseToken}</div>
+          <div>FirebaseToken {this.state.firebaseToken}</div> */}
+          {contents}
         </div>
       )
     }
