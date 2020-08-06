@@ -30,3 +30,20 @@ export const checkUserRoleHasAccessToRoute = (role, route) => {
         })
     })
 }
+
+export const logout = () => {
+    auth.signOut().then(() => {
+        // this.setState({
+        //     user: null,
+        //     token: null,
+        //     isNewUser: null,
+        //     authenticated: false
+        // })
+    }).catch((error) => {
+        console.log(error);
+    })
+    localStorage.setItem('authenticated', false);
+    localStorage.setItem('firebaseToken', null);
+    localStorage.setItem('userRole', null);
+    console.log('logged out1')
+}

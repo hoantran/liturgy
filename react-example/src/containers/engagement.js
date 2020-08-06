@@ -15,17 +15,17 @@ class EngagementPhotos extends Component {
     render() {
         return <div className="container">
             {/* <NavBar /> */}
-            <div class="columns padding-top">
-                <div class="column">
+            <div className="columns padding-top">
+                <div className="column">
                     <ul><img className="photo" src={beach1} /></ul>
                     <ul><img className="photo" src={beach2} /></ul>
                 </div>
-                <div class="column">
+                <div className="column">
                     <ul><img className="photo" src={hall1} /></ul>
                     <ul><img className="photo" src={hall2} /></ul>
                     <ul><img className="photo" src={hall3} /></ul>
                 </div>
-                <div class="column">
+                <div className="column">
                     <ul><img className="photo" src={trees1} /></ul>
                 </div>
             </div>

@@ -29,20 +29,20 @@ class Main extends Component {
         this.setState({ characters: [...this.state.characters, character] })
     }
 
-    componentDidMount() {
-      console.log('1')
-      checkUserRoleHasAccessToRoute(this.state.role, 'main').then(hasAccess => {
-        this.setState({
-          hasAccess: hasAccess
-        })
-      })//.catch(err) => {
-       // this.setState({
-       //   hasAccess: err
-       // })
-   //   }
-      console.log(this.state.hasAccess)
-      console.log('2')
-    }
+  //   componentDidMount() {
+  //     console.log('1')
+  //     checkUserRoleHasAccessToRoute(this.state.role, 'main').then(hasAccess => {
+  //       this.setState({
+  //         hasAccess: hasAccess
+  //       })
+  //     })//.catch(err) => {
+  //      // this.setState({
+  //      //   hasAccess: err
+  //      // })
+  //  //   }
+  //     // console.log(this.state.hasAccess)
+  //     // console.log('2')
+  //   }
 
     //const { characters } = this.state === const characters = this.state.characters
     render() {
@@ -54,12 +54,9 @@ class Main extends Component {
       return (
         <div className="container">
           {/* <NavBar /> */}
-          {/* <Table characterData={characters} removeCharacter={this.removeCharacter}/>
+          <Table characterData={characters} removeCharacter={this.removeCharacter}/>
           <Form handleSubmit={this.handleSubmit}/>
-          <button onClick={() => console.log(this.state.role)}>Test</button>
-          <div>From state {this.state.role}</div>
-          <div>FirebaseToken {this.state.firebaseToken}</div> */}
-          {contents}
+          {/* <button onClick={() => console.log(this.state.role)}>Test</button> */}
         </div>
       )
     }

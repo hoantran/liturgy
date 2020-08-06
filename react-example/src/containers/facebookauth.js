@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import { Link, Redirect, useHistory } from 'react-router-dom'
 import config from '../config.json'
-import { firestore, auth, provider } from '../firebase.js'
-import { checkUserRoleHasAccessToRoute } from '../firebase.js'
+import { 
+    firestore, 
+    auth, 
+    provider,
+    checkUserRoleHasAccessToRoute,
+    logout } from '../firebase.js'
 
 class FacebookAuth extends Component {
     constructor(props) {
@@ -16,9 +20,9 @@ class FacebookAuth extends Component {
         }
         //Bind functions to this
         this.login = this.login.bind(this);
-        this.logout = this.logout.bind(this);
+        // this.logout = this.logout.bind(this);
         this.isNewUser = this.isNewUser.bind(this);
-        this.enterSite = this.enterSite.bind(this);
+        // this.enterSite = this.enterSite.bind(this);
         this.getUserRole = this.getUserRole.bind(this);
     }
 
@@ -90,9 +94,6 @@ class FacebookAuth extends Component {
               role: userRole
           })
         })
-        // let history = useHistory()
-        // history.push('/jaqjjaq')
-        return <Redirect to='/jaqjaq' />
     } 
 
     componentDidMount() {
@@ -107,46 +108,30 @@ class FacebookAuth extends Component {
         })
       }    
 
-    logout() {
-        auth.signOut().then(() => {
-            this.setState({
-                user: null,
-                token: null,
-                isNewUser: null,
-                authenticated: false
-            })
-        }).catch((error) => {
-            console.log(error);
-        })
-        localStorage.setItem('authenticated', false);
-        localStorage.setItem('firebaseToken', null);
-        localStorage.setItem('userRole', null);
-    }
-//
-    enterSite() {
-        if (this.state.authenticated && this.state.isNewUser == false) {
-            console.log('role is ' + this.state.role)
-            return (
-                <div>
-                    <button>
-                        {/* inline style is uses double curly braces, outer braces for javascript, inner brace denotes object */}
-                        <Link style={{color:"white"}} 
-                            to={{
-                                pathname: "/main",
-                                props: {
-                                    role: this.state.role
-                                }
-                            }}>
-                            Enter Site
-                        </Link>
-                    </button>
-                </div>
-                // <div>
-                //     <button>Enter</button>
-                // </div>
-            )
-        }
-    }
+    // enterSite() {
+    //     if (this.state.authenticated && this.state.isNewUser == false) {
+    //         console.log('role is ' + this.state.role)
+    //         return (
+    //             <div>
+    //                 <button>
+    //                     {/* inline style is uses double curly braces, outer braces for javascript, inner brace denotes object */}
+    //                     <Link style={{color:"white"}} 
+    //                         to={{
+    //                             pathname: "/main",
+    //                             props: {
+    //                                 role: this.state.role
+    //                             }
+    //                         }}>
+    //                         Enter Site
+    //                     </Link>
+    //                 </button>
+    //             </div>
+    //             // <div>
+    //             //     <button>Enter</button>
+    //             // </div>
+    //         )
+    //     }
+    // }
 
     render() {       
         let controlButton = this.state.user && this.state.authenticated ? <button className="button" onClick={ this.logout }>Logout</button>
@@ -156,10 +141,13 @@ class FacebookAuth extends Component {
         let contents = <div>{controlButton}
         </div>
 
-        if (localStorage.getItem('authenticated')) {
-            return <Redirect to='/main' />
+        if (localStorage.getItem("authenticated") === "true") {
+            console.log('auth true')
+            return <Redirect to='/' />
         } else {
+            console.log('auth false')
             return <div>
+                <h1>Please login</h1>
                 {controlButton}
             </div>
         }

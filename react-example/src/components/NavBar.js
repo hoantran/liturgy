@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import 'bulma/css/bulma.css'
 import chopper from '../assets/chopper.jpg'
+import { logout } from '../firebase.js'
 
 const homeUrl = 'http://localhost:3000'
 
@@ -10,7 +11,8 @@ export default class NavBar extends Component {
         const navStyle = {
             color:"white"
         }
-        if (localStorage.getItem('authenticated')) {
+        if (localStorage.getItem("authenticated") === "true") {
+            console.log('1')
             return  <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <a className="navbar-item">
@@ -26,7 +28,7 @@ export default class NavBar extends Component {
                 <div id="navbarBasicExample" className="navbar-menu">
                     <div className="navbar-start">
                         <div className="navbar-item">
-                            <Link style={navStyle} to="/main">
+                            <Link style={navStyle} to="/">
                                 Home
                             </Link>
                         </div>
@@ -43,16 +45,17 @@ export default class NavBar extends Component {
                     </div>
                     <div className="navbar-end">
                         <div className="navbar-item">
-                            <div className="buttons">
-                                <a className="button is-light" href={homeUrl + "/"}>
+                            <Link to="/login">
+                                <button className="buttons" onClick={logout}>
                                     Logout
-                                </a>
-                            </div>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </nav>
         } else {
+            console.log('2')
             return  <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item">
@@ -68,7 +71,7 @@ export default class NavBar extends Component {
             <div id="navbarBasicExample" className="navbar-menu">
                 <div className="navbar-start">
                     <div className="navbar-item">
-                        <Link style={navStyle} to="/main">
+                        <Link style={navStyle} to="/">
                             Home
                         </Link>
                     </div>
@@ -85,11 +88,11 @@ export default class NavBar extends Component {
                 </div>
                 <div className="navbar-end">
                     <div className="navbar-item">
-                        <div className="buttons">
-                            <a className="button is-light" href={homeUrl + "/login"}>
+                        <Link to='/login'>
+                            <button className="buttons is-light">
                                 Login
-                            </a>
-                        </div>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
