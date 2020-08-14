@@ -4,26 +4,21 @@ import 'bulma/css/bulma.css'
 import chopper from '../assets/chopper.jpg'
 import { logout, checkAccessableRoutes } from '../firebase.js'
 
-const homeUrl = 'http://localhost:3000'
+// const homeUrl = 'http://localhost:3000'
 
-//define a get routes from role function
 export default class NavBar extends Component {
-    state = {
-        authenticated: false
-    }
-    
-    componentDidMount() {
-        this.setState({
-            authenticated: localStorage.getItem("authenticated")
-        })
-    }
+
     render () {
+        console.log('rendering navbar')
+        console.log(`auth is ${this.props.authenticated}`)
         const navStyle = {
             color:"white"
         }
+        console.log('2.5')
+        console.log(this.props.authenticated)
 
-        let isAuthenticated = (this.state.authenticated === "true") ? true : false
-        let logoutButton = <button className="buttons" onClick={ () => logout(this) }>Logout</button>
+        let isAuthenticated = (this.props.authenticated === true || this.props.authenticated === "true") ? true : false
+        let logoutButton = <button className="buttons" onClick={ () => logout(this.props.setAuthenticated, this.props.setRole) }>Logout</button>
         let loginButton = <button className="buttons is-light">Login</button>
         let controlButton = isAuthenticated ? logoutButton : loginButton
         
@@ -44,6 +39,7 @@ export default class NavBar extends Component {
                         {navItem('Home', '/', navStyle)}
                         {isAuthenticated && checkAccessableRoutes('jaqjaq') && navItem('Jaqjaq', '/jaqjaq', navStyle)}
                         {isAuthenticated && checkAccessableRoutes('engagement') && navItem('Engagement', '/engagement', navStyle)}
+                        <div className="navbar-item">{this.props.authenticated}</div>
                     </div>
                     <div className="navbar-end">
                         <div className="navbar-item">

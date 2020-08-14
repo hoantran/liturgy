@@ -17,8 +17,6 @@ export const checkUserRoleHasAccessToRoute = (role, route) => {
         console.log(role)
         firestore.collection('roles').doc(role).get().then( snapshot => {
             let { routes } = snapshot.data()
-            // console.log(typeof routes)
-            // console.log(routes)
             if (routes.includes(route)) {
                 console.log('true')
                 resolve(true)
@@ -87,7 +85,7 @@ export const getUserRole = (uid) => {
     })
 }
 
-export const login = (component) => {
+export const login = (setAuthenticated, setRole) => {
     let userData = null;
     let tokenId = null;
     let isNew = null;
@@ -115,20 +113,16 @@ export const login = (component) => {
         routes = await getUserRouteAccess(userRole)
         localStorage.setItem('accessableRoutes', routes)
         
-        component.setState({
-            authenticated: "true"
-        })
+        // component.setState({
+        //     authenticated: "true"
+        // })
+        setAuthenticated(true);
+        setRole(userRole);
     })
 } 
 
-export const logout = (component) => {
+export const logout = (setAuthenticated, setRole) => {
     auth.signOut().then(() => {
-        // this.setState({
-        //     user: null,
-        //     token: null,
-        //     isNewUser: null,
-        //     authenticated: false
-        // })
     }).catch((error) => {
         console.log(error);
     })
@@ -138,7 +132,6 @@ export const logout = (component) => {
     localStorage.setItem('routes', null)
     console.log('logged out1')
 
-    component.setState({
-        authenticated: localStorage.getItem("authenticated")
-    })
+    setAuthenticated(false)
+    setRole(null)
 }
